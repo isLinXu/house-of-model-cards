@@ -1,0 +1,19 @@
+section,key,value
+summary,model,torchvision/regnet_y_32gf.onnx
+summary,node_count,329
+summary,input_count,1
+summary,output_count,1
+summary,num_params,144894546
+summary,model_size,552.7990579605103
+parameter_data_types,FLOAT,144894546
+operators,Identity,"count=60, percentage=18.237082066869302"
+operators,Conv,"count=105, percentage=31.914893617021278"
+operators,Relu,"count=81, percentage=24.620060790273556"
+operators,GlobalAveragePool,"count=21, percentage=6.382978723404255"
+operators,Sigmoid,"count=20, percentage=6.079027355623101"
+operators,Mul,"count=20, percentage=6.079027355623101"
+operators,Add,"count=20, percentage=6.079027355623101"
+operators,Flatten,"count=1, percentage=0.303951367781155"
+operators,Gemm,"count=1, percentage=0.303951367781155"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

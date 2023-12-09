@@ -1,0 +1,17 @@
+section,key,value
+summary,model,torchvision/vgg13.onnx
+summary,node_count,39
+summary,input_count,1
+summary,output_count,1
+summary,num_params,133041768
+summary,model_size,507.5204963684082
+parameter_data_types,FLOAT,133041768
+operators,Identity,"count=7, percentage=17.94871794871795"
+operators,Conv,"count=10, percentage=25.64102564102564"
+operators,Relu,"count=12, percentage=30.76923076923077"
+operators,MaxPool,"count=5, percentage=12.82051282051282"
+operators,AveragePool,"count=1, percentage=2.564102564102564"
+operators,Flatten,"count=1, percentage=2.564102564102564"
+operators,Gemm,"count=3, percentage=7.6923076923076925"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

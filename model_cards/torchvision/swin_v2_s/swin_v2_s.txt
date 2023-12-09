@@ -1,0 +1,62 @@
+██████╗ ███╗   ██╗███╗   ██╗██╗  ██╗     ███████╗██╗  ██╗██████╗ ██╗      ██████╗ ██████╗ ███████╗██████╗ 
+██╔═══██╗████╗  ██║████╗  ██║╚██╗██╔╝     ██╔════╝╚██╗██╔╝██╔══██╗██║     ██╔═══██╗██╔══██╗██╔════╝██╔══██╗ 
+██║   ██║██╔██╗ ██║██╔██╗ ██║ ╚███╔╝█████╗█████╗   ╚███╔╝ ██████╔╝██║     ██║   ██║██████╔╝█████╗  ██████╔╝ 
+██║   ██║██║╚██╗██║██║╚██╗██║ ██╔██╗╚════╝██╔══╝   ██╔██╗ ██╔═══╝ ██║     ██║   ██║██╔══██╗██╔══╝  ██╔══██╗
+╚██████╔╝██║ ╚████║██║ ╚████║██╔╝ ██╗     ███████╗██╔╝ ██╗██║     ███████╗╚██████╔╝██║  ██║███████╗██║  ██║ 
+╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═══╝╚═╝  ╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝     ╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
+================================【summary】================================
+| model: torchvision/swin_v2_s.onnx
+| node_count: 13690
+| input_count: 1
+| output_count: 1
+| num_params: 49620059
+| model_size: 192.0587329864502
+=====================【parameter_data_types】=====================
+| FLOAT: 49615959
+| INT64: 4100
+===========================【operators-lists】===========================
+| ['Identity', 'Constant', 'Conv', 'Transpose', 'ReduceMean', 'Sub', 'Pow', 'Add', 'Sqrt', 'Div', 'Mul', 'MatMul', 'Relu', 'Reshape', 'Gather', 'Unsqueeze', 'Sigmoid', 'Shape', 'Mod', 'Concat', 'Cast', 'ConstantOfShape', 'Slice', 'Pad', 'Expand', 'ScatterND', 'Abs', 'ReduceSum', 'Clip', 'Exp', 'Softmax', 'Erf', 'Range', 'Equal', 'Where', 'Not', 'GlobalAveragePool', 'Flatten', 'Gemm']
+===========================【operators】===========================
+| Identity: count=321, percentage=2.3447772096420745
+| Constant: count=4851, percentage=35.43462381300219
+| Conv: count=1, percentage=0.007304601899196493
+| Transpose: count=184, percentage=1.3440467494521549
+| ReduceMean: count=106, percentage=0.7742878013148283
+| Sub: count=139, percentage=1.0153396639883125
+| Pow: count=149, percentage=1.0883856829802776
+| Add: count=432, percentage=3.1555880204528854
+| Sqrt: count=53, percentage=0.38714390065741416
+| Div: count=208, percentage=1.5193571950328708
+| Mul: count=395, percentage=2.8853177501826153
+| MatMul: count=195, percentage=1.4243973703433161
+| Relu: count=24, percentage=0.17531044558071585
+| Reshape: count=512, percentage=3.7399561723886046
+| Gather: count=519, percentage=3.79108838568298
+| Unsqueeze: count=1023, percentage=7.472607742878014
+| Sigmoid: count=24, percentage=0.17531044558071585
+| Shape: count=1065, percentage=7.779401022644265
+| Mod: count=102, percentage=0.7450693937180424
+| Concat: count=525, percentage=3.8349159970781597
+| Cast: count=440, percentage=3.214024835646457
+| ConstantOfShape: count=335, percentage=2.4470416362308254
+| Slice: count=676, percentage=4.93791088385683
+| Pad: count=27, percentage=0.19722425127830534
+| Expand: count=369, percentage=2.695398100803506
+| ScatterND: count=123, percentage=0.8984660336011687
+| Abs: count=48, percentage=0.3506208911614317
+| ReduceSum: count=48, percentage=0.3506208911614317
+| Clip: count=72, percentage=0.5259313367421475
+| Exp: count=24, percentage=0.17531044558071585
+| Softmax: count=24, percentage=0.17531044558071585
+| Erf: count=24, percentage=0.17531044558071585
+| Range: count=198, percentage=1.4463111760409058
+| Equal: count=220, percentage=1.6070124178232286
+| Where: count=220, percentage=1.6070124178232286
+| Not: count=11, percentage=0.08035062089116143
+| GlobalAveragePool: count=1, percentage=0.007304601899196493
+| Flatten: count=1, percentage=0.007304601899196493
+| Gemm: count=1, percentage=0.007304601899196493
+===========================【inputs】==============================
+| name=input, dtype=FLOAT, shape=[0, 3, 224, 224]
+===========================【outputs】=============================
+name=output, dtype=FLOAT, shape=[0, 1000]

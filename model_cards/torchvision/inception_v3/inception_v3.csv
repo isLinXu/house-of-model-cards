@@ -1,0 +1,21 @@
+section,key,value
+summary,model,torchvision/inception_v3.onnx
+summary,node_count,316
+summary,input_count,1
+summary,output_count,1
+summary,num_params,23802088
+summary,model_size,90.84562492370605
+parameter_data_types,FLOAT,23802088
+operators,Identity,"count=83, percentage=26.265822784810126"
+operators,Conv,"count=94, percentage=29.746835443037973"
+operators,Relu,"count=94, percentage=29.746835443037973"
+operators,MaxPool,"count=4, percentage=1.2658227848101267"
+operators,Constant,"count=9, percentage=2.848101265822785"
+operators,Pad,"count=9, percentage=2.848101265822785"
+operators,AveragePool,"count=9, percentage=2.848101265822785"
+operators,Concat,"count=11, percentage=3.481012658227848"
+operators,GlobalAveragePool,"count=1, percentage=0.31645569620253167"
+operators,Flatten,"count=1, percentage=0.31645569620253167"
+operators,Gemm,"count=1, percentage=0.31645569620253167"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

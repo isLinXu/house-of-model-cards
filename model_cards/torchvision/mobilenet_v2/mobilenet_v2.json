@@ -1,0 +1,79 @@
+{
+  "summary": {
+    "model": "torchvision/mobilenet_v2.onnx",
+    "node_count": 209,
+    "input_count": 1,
+    "output_count": 1,
+    "num_params": 3475008,
+    "model_size": 13.296339988708496
+  },
+  "parameter_data_types": {
+    "FLOAT": 3475008
+  },
+  "operators": {
+    "Identity": {
+      "count": 39,
+      "percentage": 18.660287081339714
+    },
+    "Conv": {
+      "count": 52,
+      "percentage": 24.880382775119617
+    },
+    "Constant": {
+      "count": 70,
+      "percentage": 33.49282296650718
+    },
+    "Clip": {
+      "count": 35,
+      "percentage": 16.74641148325359
+    },
+    "Add": {
+      "count": 10,
+      "percentage": 4.784688995215311
+    },
+    "GlobalAveragePool": {
+      "count": 1,
+      "percentage": 0.4784688995215311
+    },
+    "Flatten": {
+      "count": 1,
+      "percentage": 0.4784688995215311
+    },
+    "Gemm": {
+      "count": 1,
+      "percentage": 0.4784688995215311
+    }
+  },
+  "operators_list": [
+    "Identity",
+    "Conv",
+    "Constant",
+    "Clip",
+    "Add",
+    "GlobalAveragePool",
+    "Flatten",
+    "Gemm"
+  ],
+  "inputs": [
+    {
+      "name": "input",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        3,
+        224,
+        224
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        1000
+      ]
+    }
+  ]
+}

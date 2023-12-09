@@ -1,0 +1,204 @@
+{
+  "summary": {
+    "model": "torchvision/swin_s.onnx",
+    "node_count": 12572,
+    "input_count": 1,
+    "output_count": 1,
+    "num_params": 50124610,
+    "model_size": 193.69661903381348
+  },
+  "parameter_data_types": {
+    "FLOAT": 50124610
+  },
+  "operators": {
+    "Identity": {
+      "count": 187,
+      "percentage": 1.4874323894368437
+    },
+    "Constant": {
+      "count": 4587,
+      "percentage": 36.485841552656694
+    },
+    "Conv": {
+      "count": 1,
+      "percentage": 0.007954183900731784
+    },
+    "Transpose": {
+      "count": 160,
+      "percentage": 1.2726694241170855
+    },
+    "ReduceMean": {
+      "count": 106,
+      "percentage": 0.8431434934775692
+    },
+    "Sub": {
+      "count": 139,
+      "percentage": 1.105631562201718
+    },
+    "Pow": {
+      "count": 77,
+      "percentage": 0.6124721603563474
+    },
+    "Add": {
+      "count": 408,
+      "percentage": 3.2453070314985686
+    },
+    "Sqrt": {
+      "count": 53,
+      "percentage": 0.4215717467387846
+    },
+    "Div": {
+      "count": 160,
+      "percentage": 1.2726694241170855
+    },
+    "Mul": {
+      "count": 371,
+      "percentage": 2.951002227171492
+    },
+    "Shape": {
+      "count": 1017,
+      "percentage": 8.089405027044224
+    },
+    "Gather": {
+      "count": 495,
+      "percentage": 3.9373210308622335
+    },
+    "Mod": {
+      "count": 102,
+      "percentage": 0.8113267578746421
+    },
+    "Unsqueeze": {
+      "count": 999,
+      "percentage": 7.946229716831053
+    },
+    "Concat": {
+      "count": 525,
+      "percentage": 4.1759465478841875
+    },
+    "Cast": {
+      "count": 464,
+      "percentage": 3.690741329939548
+    },
+    "ConstantOfShape": {
+      "count": 335,
+      "percentage": 2.664651606745148
+    },
+    "Reshape": {
+      "count": 440,
+      "percentage": 3.4998409163219857
+    },
+    "Slice": {
+      "count": 676,
+      "percentage": 5.377028316894687
+    },
+    "Pad": {
+      "count": 27,
+      "percentage": 0.2147629653197582
+    },
+    "MatMul": {
+      "count": 147,
+      "percentage": 1.1692650334075725
+    },
+    "Softmax": {
+      "count": 24,
+      "percentage": 0.19090041361756285
+    },
+    "Erf": {
+      "count": 24,
+      "percentage": 0.19090041361756285
+    },
+    "Expand": {
+      "count": 297,
+      "percentage": 2.3623926185173403
+    },
+    "Range": {
+      "count": 198,
+      "percentage": 1.5749284123448934
+    },
+    "Equal": {
+      "count": 220,
+      "percentage": 1.7499204581609928
+    },
+    "Where": {
+      "count": 220,
+      "percentage": 1.7499204581609928
+    },
+    "ScatterND": {
+      "count": 99,
+      "percentage": 0.7874642061724467
+    },
+    "Not": {
+      "count": 11,
+      "percentage": 0.08749602290804964
+    },
+    "GlobalAveragePool": {
+      "count": 1,
+      "percentage": 0.007954183900731784
+    },
+    "Flatten": {
+      "count": 1,
+      "percentage": 0.007954183900731784
+    },
+    "Gemm": {
+      "count": 1,
+      "percentage": 0.007954183900731784
+    }
+  },
+  "operators_list": [
+    "Identity",
+    "Constant",
+    "Conv",
+    "Transpose",
+    "ReduceMean",
+    "Sub",
+    "Pow",
+    "Add",
+    "Sqrt",
+    "Div",
+    "Mul",
+    "Shape",
+    "Gather",
+    "Mod",
+    "Unsqueeze",
+    "Concat",
+    "Cast",
+    "ConstantOfShape",
+    "Reshape",
+    "Slice",
+    "Pad",
+    "MatMul",
+    "Softmax",
+    "Erf",
+    "Expand",
+    "Range",
+    "Equal",
+    "Where",
+    "ScatterND",
+    "Not",
+    "GlobalAveragePool",
+    "Flatten",
+    "Gemm"
+  ],
+  "inputs": [
+    {
+      "name": "input",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        3,
+        224,
+        224
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        1000
+      ]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+section,key,value
+summary,model,torchvision/alexnet.onnx
+summary,node_count,20
+summary,input_count,1
+summary,output_count,1
+summary,num_params,61100840
+summary,model_size,233.0850315093994
+parameter_data_types,FLOAT,61100840
+operators,Conv,"count=5, percentage=25.0"
+operators,Relu,"count=7, percentage=35.0"
+operators,MaxPool,"count=3, percentage=15.0"
+operators,AveragePool,"count=1, percentage=5.0"
+operators,Flatten,"count=1, percentage=5.0"
+operators,Gemm,"count=3, percentage=15.0"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

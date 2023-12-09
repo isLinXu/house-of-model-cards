@@ -1,0 +1,43 @@
+section,key,value
+summary,model,torchvision/swin_t.onnx
+summary,node_count,6086
+summary,input_count,1
+summary,output_count,1
+summary,num_params,28545202
+summary,model_size,110.07929134368896
+parameter_data_types,FLOAT,28545202
+operators,Identity,"count=91, percentage=1.4952349654945776"
+operators,Constant,"count=2223, percentage=36.52645415708183"
+operators,Conv,"count=1, percentage=0.016431153466973384"
+operators,Transpose,"count=82, percentage=1.3473545842918173"
+operators,ReduceMean,"count=58, percentage=0.9530069010844562"
+operators,Sub,"count=73, percentage=1.1994742030890568"
+operators,Pow,"count=41, percentage=0.6736772921459087"
+operators,Add,"count=204, percentage=3.35195530726257"
+operators,Sqrt,"count=29, percentage=0.4765034505422281"
+operators,Div,"count=82, percentage=1.3473545842918173"
+operators,Mul,"count=179, percentage=2.941176470588235"
+operators,Shape,"count=477, percentage=7.837660203746304"
+operators,Gather,"count=243, percentage=3.992770292474532"
+operators,Mod,"count=54, percentage=0.8872822872165627"
+operators,Unsqueeze,"count=489, percentage=8.034834045349983"
+operators,Concat,"count=255, percentage=4.189944134078212"
+operators,Cast,"count=224, percentage=3.6805783766020372"
+operators,ConstantOfShape,"count=155, percentage=2.546828787380874"
+operators,Reshape,"count=212, percentage=3.483404534998357"
+operators,Slice,"count=322, percentage=5.290831416365429"
+operators,Pad,"count=15, percentage=0.2464673020046007"
+operators,MatMul,"count=75, percentage=1.2323365100230035"
+operators,Softmax,"count=12, percentage=0.1971738416036806"
+operators,Erf,"count=12, percentage=0.1971738416036806"
+operators,Expand,"count=135, percentage=2.2182057180414065"
+operators,Range,"count=90, percentage=1.4788038120276044"
+operators,Equal,"count=100, percentage=1.643115346697338"
+operators,Where,"count=100, percentage=1.643115346697338"
+operators,ScatterND,"count=45, percentage=0.7394019060138022"
+operators,Not,"count=5, percentage=0.0821557673348669"
+operators,GlobalAveragePool,"count=1, percentage=0.016431153466973384"
+operators,Flatten,"count=1, percentage=0.016431153466973384"
+operators,Gemm,"count=1, percentage=0.016431153466973384"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

@@ -1,0 +1,74 @@
+{
+  "summary": {
+    "model": "torchvision/regnet_x_400mf.onnx",
+    "node_count": 230,
+    "input_count": 1,
+    "output_count": 1,
+    "num_params": 5458776,
+    "model_size": 20.863622665405273
+  },
+  "parameter_data_types": {
+    "FLOAT": 5458776
+  },
+  "operators": {
+    "Identity": {
+      "count": 67,
+      "percentage": 29.130434782608695
+    },
+    "Conv": {
+      "count": 71,
+      "percentage": 30.869565217391305
+    },
+    "Relu": {
+      "count": 67,
+      "percentage": 29.130434782608695
+    },
+    "Add": {
+      "count": 22,
+      "percentage": 9.565217391304348
+    },
+    "GlobalAveragePool": {
+      "count": 1,
+      "percentage": 0.43478260869565216
+    },
+    "Flatten": {
+      "count": 1,
+      "percentage": 0.43478260869565216
+    },
+    "Gemm": {
+      "count": 1,
+      "percentage": 0.43478260869565216
+    }
+  },
+  "operators_list": [
+    "Identity",
+    "Conv",
+    "Relu",
+    "Add",
+    "GlobalAveragePool",
+    "Flatten",
+    "Gemm"
+  ],
+  "inputs": [
+    {
+      "name": "input",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        3,
+        224,
+        224
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        1000
+      ]
+    }
+  ]
+}

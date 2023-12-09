@@ -1,0 +1,74 @@
+{
+  "summary": {
+    "model": "torchvision/squeezenet1_0.onnx",
+    "node_count": 82,
+    "input_count": 1,
+    "output_count": 1,
+    "num_params": 1246280,
+    "model_size": 4.770313262939453
+  },
+  "parameter_data_types": {
+    "FLOAT": 1246280
+  },
+  "operators": {
+    "Identity": {
+      "count": 17,
+      "percentage": 20.73170731707317
+    },
+    "Conv": {
+      "count": 26,
+      "percentage": 31.70731707317073
+    },
+    "Relu": {
+      "count": 26,
+      "percentage": 31.70731707317073
+    },
+    "MaxPool": {
+      "count": 3,
+      "percentage": 3.6585365853658534
+    },
+    "Concat": {
+      "count": 8,
+      "percentage": 9.75609756097561
+    },
+    "GlobalAveragePool": {
+      "count": 1,
+      "percentage": 1.2195121951219512
+    },
+    "Flatten": {
+      "count": 1,
+      "percentage": 1.2195121951219512
+    }
+  },
+  "operators_list": [
+    "Identity",
+    "Conv",
+    "Relu",
+    "MaxPool",
+    "Concat",
+    "GlobalAveragePool",
+    "Flatten"
+  ],
+  "inputs": [
+    {
+      "name": "input",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        3,
+        224,
+        224
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        1000
+      ]
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "summary": {
+    "model": "torchvision/resnet18.onnx",
+    "node_count": 65,
+    "input_count": 1,
+    "output_count": 1,
+    "num_params": 11680872,
+    "model_size": 44.56869411468506
+  },
+  "parameter_data_types": {
+    "FLOAT": 11680872
+  },
+  "operators": {
+    "Identity": {
+      "count": 16,
+      "percentage": 24.615384615384617
+    },
+    "Conv": {
+      "count": 20,
+      "percentage": 30.76923076923077
+    },
+    "Relu": {
+      "count": 17,
+      "percentage": 26.153846153846157
+    },
+    "MaxPool": {
+      "count": 1,
+      "percentage": 1.5384615384615385
+    },
+    "Add": {
+      "count": 8,
+      "percentage": 12.307692307692308
+    },
+    "GlobalAveragePool": {
+      "count": 1,
+      "percentage": 1.5384615384615385
+    },
+    "Flatten": {
+      "count": 1,
+      "percentage": 1.5384615384615385
+    },
+    "Gemm": {
+      "count": 1,
+      "percentage": 1.5384615384615385
+    }
+  },
+  "operators_list": [
+    "Identity",
+    "Conv",
+    "Relu",
+    "MaxPool",
+    "Add",
+    "GlobalAveragePool",
+    "Flatten",
+    "Gemm"
+  ],
+  "inputs": [
+    {
+      "name": "input",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        3,
+        224,
+        224
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        1000
+      ]
+    }
+  ]
+}

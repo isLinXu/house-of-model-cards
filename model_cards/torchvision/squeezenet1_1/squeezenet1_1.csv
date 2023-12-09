@@ -1,0 +1,17 @@
+section,key,value
+summary,model,torchvision/squeezenet1_1.onnx
+summary,node_count,83
+summary,input_count,1
+summary,output_count,1
+summary,num_params,1233288
+summary,model_size,4.720763206481934
+parameter_data_types,FLOAT,1233288
+operators,Identity,"count=18, percentage=21.686746987951807"
+operators,Conv,"count=26, percentage=31.32530120481928"
+operators,Relu,"count=26, percentage=31.32530120481928"
+operators,MaxPool,"count=3, percentage=3.614457831325301"
+operators,Concat,"count=8, percentage=9.63855421686747"
+operators,GlobalAveragePool,"count=1, percentage=1.2048192771084338"
+operators,Flatten,"count=1, percentage=1.2048192771084338"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

@@ -1,0 +1,18 @@
+section,key,value
+summary,model,torchvision/resnet152.onnx
+summary,node_count,509
+summary,input_count,1
+summary,output_count,1
+summary,num_params,60045416
+summary,model_size,229.12888622283936
+parameter_data_types,FLOAT,60045416
+operators,Identity,"count=149, percentage=29.273084479371313"
+operators,Conv,"count=155, percentage=30.451866404715126"
+operators,Relu,"count=151, percentage=29.66601178781925"
+operators,MaxPool,"count=1, percentage=0.19646365422396855"
+operators,Add,"count=50, percentage=9.823182711198427"
+operators,GlobalAveragePool,"count=1, percentage=0.19646365422396855"
+operators,Flatten,"count=1, percentage=0.19646365422396855"
+operators,Gemm,"count=1, percentage=0.19646365422396855"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

@@ -1,0 +1,99 @@
+{
+  "summary": {
+    "model": "torchvision/densenet121.onnx",
+    "node_count": 623,
+    "input_count": 1,
+    "output_count": 1,
+    "num_params": 7928936,
+    "model_size": 30.401779174804688
+  },
+  "parameter_data_types": {
+    "FLOAT": 7928936
+  },
+  "operators": {
+    "Identity": {
+      "count": 245,
+      "percentage": 39.325842696629216
+    },
+    "Conv": {
+      "count": 120,
+      "percentage": 19.26163723916533
+    },
+    "Relu": {
+      "count": 121,
+      "percentage": 19.42215088282504
+    },
+    "MaxPool": {
+      "count": 1,
+      "percentage": 0.16051364365971107
+    },
+    "Concat": {
+      "count": 62,
+      "percentage": 9.951845906902086
+    },
+    "BatchNormalization": {
+      "count": 62,
+      "percentage": 9.951845906902086
+    },
+    "Constant": {
+      "count": 3,
+      "percentage": 0.4815409309791332
+    },
+    "Pad": {
+      "count": 3,
+      "percentage": 0.4815409309791332
+    },
+    "AveragePool": {
+      "count": 3,
+      "percentage": 0.4815409309791332
+    },
+    "GlobalAveragePool": {
+      "count": 1,
+      "percentage": 0.16051364365971107
+    },
+    "Flatten": {
+      "count": 1,
+      "percentage": 0.16051364365971107
+    },
+    "Gemm": {
+      "count": 1,
+      "percentage": 0.16051364365971107
+    }
+  },
+  "operators_list": [
+    "Identity",
+    "Conv",
+    "Relu",
+    "MaxPool",
+    "Concat",
+    "BatchNormalization",
+    "Constant",
+    "Pad",
+    "AveragePool",
+    "GlobalAveragePool",
+    "Flatten",
+    "Gemm"
+  ],
+  "inputs": [
+    {
+      "name": "input",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        3,
+        224,
+        224
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        1000
+      ]
+    }
+  ]
+}

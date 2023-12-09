@@ -1,0 +1,50 @@
+section,key,value
+summary,model,torchvision/swin_v2_b.onnx
+summary,node_count,13691
+summary,input_count,1
+summary,output_count,1
+summary,num_params,87776234
+summary,model_size,337.636679649353
+parameter_data_types,FLOAT,87772134
+parameter_data_types,INT64,4100
+operators,Identity,"count=322, percentage=2.35191001387773"
+operators,Constant,"count=4851, percentage=35.432035643853624"
+operators,Conv,"count=1, percentage=0.007304068366079906"
+operators,Transpose,"count=184, percentage=1.343948579358703"
+operators,ReduceMean,"count=106, percentage=0.7742312468044701"
+operators,Sub,"count=139, percentage=1.0152655028851072"
+operators,Pow,"count=149, percentage=1.088306186545906"
+operators,Add,"count=432, percentage=3.15535753414652"
+operators,Sqrt,"count=53, percentage=0.38711562340223504"
+operators,Div,"count=208, percentage=1.5192462201446206"
+operators,Mul,"count=395, percentage=2.885107004601563"
+operators,MatMul,"count=195, percentage=1.4242933313855817"
+operators,Relu,"count=24, percentage=0.17529764078591775"
+operators,Reshape,"count=512, percentage=3.739683003432912"
+operators,Gather,"count=519, percentage=3.7908114819954717"
+operators,Unsqueeze,"count=1023, percentage=7.472061938499744"
+operators,Sigmoid,"count=24, percentage=0.17529764078591775"
+operators,Shape,"count=1065, percentage=7.778832809875101"
+operators,Mod,"count=102, percentage=0.7450149733401505"
+operators,Concat,"count=525, percentage=3.834635892191951"
+operators,Cast,"count=440, percentage=3.213790081075159"
+operators,ConstantOfShape,"count=335, percentage=2.4468629026367688"
+operators,Slice,"count=676, percentage=4.937550215470017"
+operators,Pad,"count=27, percentage=0.1972098458841575"
+operators,Expand,"count=369, percentage=2.6952012270834858"
+operators,ScatterND,"count=123, percentage=0.8984004090278285"
+operators,Abs,"count=48, percentage=0.3505952815718355"
+operators,ReduceSum,"count=48, percentage=0.3505952815718355"
+operators,Clip,"count=72, percentage=0.5258929223577533"
+operators,Exp,"count=24, percentage=0.17529764078591775"
+operators,Softmax,"count=24, percentage=0.17529764078591775"
+operators,Erf,"count=24, percentage=0.17529764078591775"
+operators,Range,"count=198, percentage=1.4462055364838216"
+operators,Equal,"count=220, percentage=1.6068950405375795"
+operators,Where,"count=220, percentage=1.6068950405375795"
+operators,Not,"count=11, percentage=0.08034475202687898"
+operators,GlobalAveragePool,"count=1, percentage=0.007304068366079906"
+operators,Flatten,"count=1, percentage=0.007304068366079906"
+operators,Gemm,"count=1, percentage=0.007304068366079906"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

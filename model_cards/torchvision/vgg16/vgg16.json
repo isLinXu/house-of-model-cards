@@ -1,0 +1,74 @@
+{
+  "summary": {
+    "model": "torchvision/vgg16.onnx",
+    "node_count": 48,
+    "input_count": 1,
+    "output_count": 1,
+    "num_params": 138350184,
+    "model_size": 527.7717981338501
+  },
+  "parameter_data_types": {
+    "FLOAT": 138350184
+  },
+  "operators": {
+    "Identity": {
+      "count": 10,
+      "percentage": 20.833333333333336
+    },
+    "Conv": {
+      "count": 13,
+      "percentage": 27.083333333333332
+    },
+    "Relu": {
+      "count": 15,
+      "percentage": 31.25
+    },
+    "MaxPool": {
+      "count": 5,
+      "percentage": 10.416666666666668
+    },
+    "AveragePool": {
+      "count": 1,
+      "percentage": 2.083333333333333
+    },
+    "Flatten": {
+      "count": 1,
+      "percentage": 2.083333333333333
+    },
+    "Gemm": {
+      "count": 3,
+      "percentage": 6.25
+    }
+  },
+  "operators_list": [
+    "Identity",
+    "Conv",
+    "Relu",
+    "MaxPool",
+    "AveragePool",
+    "Flatten",
+    "Gemm"
+  ],
+  "inputs": [
+    {
+      "name": "input",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        3,
+        224,
+        224
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        1000
+      ]
+    }
+  ]
+}

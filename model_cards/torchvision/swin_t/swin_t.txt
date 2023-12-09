@@ -1,0 +1,55 @@
+██████╗ ███╗   ██╗███╗   ██╗██╗  ██╗     ███████╗██╗  ██╗██████╗ ██╗      ██████╗ ██████╗ ███████╗██████╗ 
+██╔═══██╗████╗  ██║████╗  ██║╚██╗██╔╝     ██╔════╝╚██╗██╔╝██╔══██╗██║     ██╔═══██╗██╔══██╗██╔════╝██╔══██╗ 
+██║   ██║██╔██╗ ██║██╔██╗ ██║ ╚███╔╝█████╗█████╗   ╚███╔╝ ██████╔╝██║     ██║   ██║██████╔╝█████╗  ██████╔╝ 
+██║   ██║██║╚██╗██║██║╚██╗██║ ██╔██╗╚════╝██╔══╝   ██╔██╗ ██╔═══╝ ██║     ██║   ██║██╔══██╗██╔══╝  ██╔══██╗
+╚██████╔╝██║ ╚████║██║ ╚████║██╔╝ ██╗     ███████╗██╔╝ ██╗██║     ███████╗╚██████╔╝██║  ██║███████╗██║  ██║ 
+╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═══╝╚═╝  ╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝     ╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
+================================【summary】================================
+| model: torchvision/swin_t.onnx
+| node_count: 6086
+| input_count: 1
+| output_count: 1
+| num_params: 28545202
+| model_size: 110.07929134368896
+=====================【parameter_data_types】=====================
+| FLOAT: 28545202
+===========================【operators-lists】===========================
+| ['Identity', 'Constant', 'Conv', 'Transpose', 'ReduceMean', 'Sub', 'Pow', 'Add', 'Sqrt', 'Div', 'Mul', 'Shape', 'Gather', 'Mod', 'Unsqueeze', 'Concat', 'Cast', 'ConstantOfShape', 'Reshape', 'Slice', 'Pad', 'MatMul', 'Softmax', 'Erf', 'Expand', 'Range', 'Equal', 'Where', 'ScatterND', 'Not', 'GlobalAveragePool', 'Flatten', 'Gemm']
+===========================【operators】===========================
+| Identity: count=91, percentage=1.4952349654945776
+| Constant: count=2223, percentage=36.52645415708183
+| Conv: count=1, percentage=0.016431153466973384
+| Transpose: count=82, percentage=1.3473545842918173
+| ReduceMean: count=58, percentage=0.9530069010844562
+| Sub: count=73, percentage=1.1994742030890568
+| Pow: count=41, percentage=0.6736772921459087
+| Add: count=204, percentage=3.35195530726257
+| Sqrt: count=29, percentage=0.4765034505422281
+| Div: count=82, percentage=1.3473545842918173
+| Mul: count=179, percentage=2.941176470588235
+| Shape: count=477, percentage=7.837660203746304
+| Gather: count=243, percentage=3.992770292474532
+| Mod: count=54, percentage=0.8872822872165627
+| Unsqueeze: count=489, percentage=8.034834045349983
+| Concat: count=255, percentage=4.189944134078212
+| Cast: count=224, percentage=3.6805783766020372
+| ConstantOfShape: count=155, percentage=2.546828787380874
+| Reshape: count=212, percentage=3.483404534998357
+| Slice: count=322, percentage=5.290831416365429
+| Pad: count=15, percentage=0.2464673020046007
+| MatMul: count=75, percentage=1.2323365100230035
+| Softmax: count=12, percentage=0.1971738416036806
+| Erf: count=12, percentage=0.1971738416036806
+| Expand: count=135, percentage=2.2182057180414065
+| Range: count=90, percentage=1.4788038120276044
+| Equal: count=100, percentage=1.643115346697338
+| Where: count=100, percentage=1.643115346697338
+| ScatterND: count=45, percentage=0.7394019060138022
+| Not: count=5, percentage=0.0821557673348669
+| GlobalAveragePool: count=1, percentage=0.016431153466973384
+| Flatten: count=1, percentage=0.016431153466973384
+| Gemm: count=1, percentage=0.016431153466973384
+===========================【inputs】==============================
+| name=input, dtype=FLOAT, shape=[0, 3, 224, 224]
+===========================【outputs】=============================
+name=output, dtype=FLOAT, shape=[0, 1000]

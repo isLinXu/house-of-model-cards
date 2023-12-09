@@ -1,0 +1,84 @@
+{
+  "summary": {
+    "model": "torchvision/regnet_y_8gf.onnx",
+    "node_count": 281,
+    "input_count": 1,
+    "output_count": 1,
+    "num_params": 39298560,
+    "model_size": 149.97197437286377
+  },
+  "parameter_data_types": {
+    "FLOAT": 39298560
+  },
+  "operators": {
+    "Identity": {
+      "count": 51,
+      "percentage": 18.14946619217082
+    },
+    "Conv": {
+      "count": 90,
+      "percentage": 32.028469750889684
+    },
+    "Relu": {
+      "count": 69,
+      "percentage": 24.555160142348754
+    },
+    "GlobalAveragePool": {
+      "count": 18,
+      "percentage": 6.405693950177936
+    },
+    "Sigmoid": {
+      "count": 17,
+      "percentage": 6.049822064056939
+    },
+    "Mul": {
+      "count": 17,
+      "percentage": 6.049822064056939
+    },
+    "Add": {
+      "count": 17,
+      "percentage": 6.049822064056939
+    },
+    "Flatten": {
+      "count": 1,
+      "percentage": 0.3558718861209964
+    },
+    "Gemm": {
+      "count": 1,
+      "percentage": 0.3558718861209964
+    }
+  },
+  "operators_list": [
+    "Identity",
+    "Conv",
+    "Relu",
+    "GlobalAveragePool",
+    "Sigmoid",
+    "Mul",
+    "Add",
+    "Flatten",
+    "Gemm"
+  ],
+  "inputs": [
+    {
+      "name": "input",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        3,
+        224,
+        224
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        1000
+      ]
+    }
+  ]
+}

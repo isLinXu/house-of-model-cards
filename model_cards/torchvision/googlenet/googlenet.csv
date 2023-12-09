@@ -1,0 +1,18 @@
+section,key,value
+summary,model,torchvision/googlenet.onnx
+summary,node_count,179
+summary,input_count,1
+summary,output_count,1
+summary,num_params,6613040
+summary,model_size,25.25766944885254
+parameter_data_types,FLOAT,6613040
+operators,Identity,"count=40, percentage=22.3463687150838"
+operators,Conv,"count=57, percentage=31.843575418994412"
+operators,Relu,"count=57, percentage=31.843575418994412"
+operators,MaxPool,"count=13, percentage=7.262569832402235"
+operators,Concat,"count=9, percentage=5.027932960893855"
+operators,GlobalAveragePool,"count=1, percentage=0.5586592178770949"
+operators,Flatten,"count=1, percentage=0.5586592178770949"
+operators,Gemm,"count=1, percentage=0.5586592178770949"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

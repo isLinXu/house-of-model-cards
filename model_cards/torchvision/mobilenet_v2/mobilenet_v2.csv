@@ -1,0 +1,18 @@
+section,key,value
+summary,model,torchvision/mobilenet_v2.onnx
+summary,node_count,209
+summary,input_count,1
+summary,output_count,1
+summary,num_params,3475008
+summary,model_size,13.296339988708496
+parameter_data_types,FLOAT,3475008
+operators,Identity,"count=39, percentage=18.660287081339714"
+operators,Conv,"count=52, percentage=24.880382775119617"
+operators,Constant,"count=70, percentage=33.49282296650718"
+operators,Clip,"count=35, percentage=16.74641148325359"
+operators,Add,"count=10, percentage=4.784688995215311"
+operators,GlobalAveragePool,"count=1, percentage=0.4784688995215311"
+operators,Flatten,"count=1, percentage=0.4784688995215311"
+operators,Gemm,"count=1, percentage=0.4784688995215311"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

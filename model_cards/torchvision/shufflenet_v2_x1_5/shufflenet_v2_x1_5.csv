@@ -1,0 +1,28 @@
+section,key,value
+summary,model,torchvision/shufflenet_v2_x1_5.onnx
+summary,node_count,825
+summary,input_count,1
+summary,output_count,1
+summary,num_params,3481848
+summary,model_size,13.393887519836426
+parameter_data_types,FLOAT,3481848
+operators,Identity,"count=51, percentage=6.181818181818182"
+operators,Conv,"count=56, percentage=6.787878787878789"
+operators,Relu,"count=37, percentage=4.484848484848484"
+operators,MaxPool,"count=1, percentage=0.12121212121212122"
+operators,Concat,"count=48, percentage=5.818181818181818"
+operators,Shape,"count=77, percentage=9.333333333333334"
+operators,Constant,"count=190, percentage=23.03030303030303"
+operators,Gather,"count=77, percentage=9.333333333333334"
+operators,Div,"count=29, percentage=3.5151515151515147"
+operators,Cast,"count=32, percentage=3.878787878787879"
+operators,Unsqueeze,"count=112, percentage=13.575757575757578"
+operators,Reshape,"count=32, percentage=3.878787878787879"
+operators,Transpose,"count=16, percentage=1.9393939393939394"
+operators,Add,"count=13, percentage=1.575757575757576"
+operators,Mul,"count=26, percentage=3.151515151515152"
+operators,Slice,"count=26, percentage=3.151515151515152"
+operators,ReduceMean,"count=1, percentage=0.12121212121212122"
+operators,Gemm,"count=1, percentage=0.12121212121212122"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

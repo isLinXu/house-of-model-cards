@@ -1,0 +1,22 @@
+section,key,value
+summary,model,torchvision/densenet121.onnx
+summary,node_count,623
+summary,input_count,1
+summary,output_count,1
+summary,num_params,7928936
+summary,model_size,30.401779174804688
+parameter_data_types,FLOAT,7928936
+operators,Identity,"count=245, percentage=39.325842696629216"
+operators,Conv,"count=120, percentage=19.26163723916533"
+operators,Relu,"count=121, percentage=19.42215088282504"
+operators,MaxPool,"count=1, percentage=0.16051364365971107"
+operators,Concat,"count=62, percentage=9.951845906902086"
+operators,BatchNormalization,"count=62, percentage=9.951845906902086"
+operators,Constant,"count=3, percentage=0.4815409309791332"
+operators,Pad,"count=3, percentage=0.4815409309791332"
+operators,AveragePool,"count=3, percentage=0.4815409309791332"
+operators,GlobalAveragePool,"count=1, percentage=0.16051364365971107"
+operators,Flatten,"count=1, percentage=0.16051364365971107"
+operators,Gemm,"count=1, percentage=0.16051364365971107"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

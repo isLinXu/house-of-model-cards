@@ -1,0 +1,40 @@
+██████╗ ███╗   ██╗███╗   ██╗██╗  ██╗     ███████╗██╗  ██╗██████╗ ██╗      ██████╗ ██████╗ ███████╗██████╗ 
+██╔═══██╗████╗  ██║████╗  ██║╚██╗██╔╝     ██╔════╝╚██╗██╔╝██╔══██╗██║     ██╔═══██╗██╔══██╗██╔════╝██╔══██╗ 
+██║   ██║██╔██╗ ██║██╔██╗ ██║ ╚███╔╝█████╗█████╗   ╚███╔╝ ██████╔╝██║     ██║   ██║██████╔╝█████╗  ██████╔╝ 
+██║   ██║██║╚██╗██║██║╚██╗██║ ██╔██╗╚════╝██╔══╝   ██╔██╗ ██╔═══╝ ██║     ██║   ██║██╔══██╗██╔══╝  ██╔══██╗
+╚██████╔╝██║ ╚████║██║ ╚████║██╔╝ ██╗     ███████╗██╔╝ ██╗██║     ███████╗╚██████╔╝██║  ██║███████╗██║  ██║ 
+╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═══╝╚═╝  ╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝     ╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
+================================【summary】================================
+| model: torchvision/shufflenet_v2_x0_5.onnx
+| node_count: 826
+| input_count: 1
+| output_count: 1
+| num_params: 1360032
+| model_size: 5.29970645904541
+=====================【parameter_data_types】=====================
+| FLOAT: 1360032
+===========================【operators-lists】===========================
+| ['Identity', 'Conv', 'Relu', 'MaxPool', 'Concat', 'Shape', 'Constant', 'Gather', 'Div', 'Cast', 'Unsqueeze', 'Reshape', 'Transpose', 'Add', 'Mul', 'Slice', 'ReduceMean', 'Gemm']
+===========================【operators】===========================
+| Identity: count=52, percentage=6.2953995157385
+| Conv: count=56, percentage=6.779661016949152
+| Relu: count=37, percentage=4.479418886198547
+| MaxPool: count=1, percentage=0.12106537530266344
+| Concat: count=48, percentage=5.811138014527845
+| Shape: count=77, percentage=9.322033898305085
+| Constant: count=190, percentage=23.002421307506054
+| Gather: count=77, percentage=9.322033898305085
+| Div: count=29, percentage=3.5108958837772395
+| Cast: count=32, percentage=3.87409200968523
+| Unsqueeze: count=112, percentage=13.559322033898304
+| Reshape: count=32, percentage=3.87409200968523
+| Transpose: count=16, percentage=1.937046004842615
+| Add: count=13, percentage=1.573849878934625
+| Mul: count=26, percentage=3.14769975786925
+| Slice: count=26, percentage=3.14769975786925
+| ReduceMean: count=1, percentage=0.12106537530266344
+| Gemm: count=1, percentage=0.12106537530266344
+===========================【inputs】==============================
+| name=input, dtype=FLOAT, shape=[0, 3, 224, 224]
+===========================【outputs】=============================
+name=output, dtype=FLOAT, shape=[0, 1000]

@@ -1,0 +1,16 @@
+section,key,value
+summary,model,torchvision/mnasnet0_75.onnx
+summary,node_count,137
+summary,input_count,1
+summary,output_count,1
+summary,num_params,3144288
+summary,model_size,12.0214204788208
+parameter_data_types,FLOAT,3144288
+operators,Identity,"count=38, percentage=27.73722627737226"
+operators,Conv,"count=52, percentage=37.95620437956204"
+operators,Relu,"count=35, percentage=25.547445255474454"
+operators,Add,"count=10, percentage=7.2992700729927"
+operators,ReduceMean,"count=1, percentage=0.7299270072992701"
+operators,Gemm,"count=1, percentage=0.7299270072992701"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

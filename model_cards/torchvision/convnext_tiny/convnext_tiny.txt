@@ -1,0 +1,38 @@
+██████╗ ███╗   ██╗███╗   ██╗██╗  ██╗     ███████╗██╗  ██╗██████╗ ██╗      ██████╗ ██████╗ ███████╗██████╗ 
+██╔═══██╗████╗  ██║████╗  ██║╚██╗██╔╝     ██╔════╝╚██╗██╔╝██╔══██╗██║     ██╔═══██╗██╔══██╗██╔════╝██╔══██╗ 
+██║   ██║██╔██╗ ██║██╔██╗ ██║ ╚███╔╝█████╗█████╗   ╚███╔╝ ██████╔╝██║     ██║   ██║██████╔╝█████╗  ██████╔╝ 
+██║   ██║██║╚██╗██║██║╚██╗██║ ██╔██╗╚════╝██╔══╝   ██╔██╗ ██╔═══╝ ██║     ██║   ██║██╔══██╗██╔══╝  ██╔══██╗
+╚██████╔╝██║ ╚████║██║ ╚████║██╔╝ ██╗     ███████╗██╔╝ ██╗██║     ███████╗╚██████╔╝██║  ██║███████╗██║  ██║ 
+╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═══╝╚═╝  ╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝     ╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
+================================【summary】================================
+| model: torchvision/convnext_tiny.onnx
+| node_count: 684
+| input_count: 1
+| output_count: 1
+| num_params: 28533928
+| model_size: 108.97625637054443
+=====================【parameter_data_types】=====================
+| FLOAT: 28533928
+===========================【operators-lists】===========================
+| ['Identity', 'Conv', 'Transpose', 'ReduceMean', 'Sub', 'Constant', 'Pow', 'Add', 'Sqrt', 'Div', 'Mul', 'MatMul', 'Erf', 'GlobalAveragePool', 'Flatten', 'Gemm']
+===========================【operators】===========================
+| Identity: count=108, percentage=15.789473684210526
+| Conv: count=22, percentage=3.216374269005848
+| Transpose: count=46, percentage=6.725146198830409
+| ReduceMean: count=46, percentage=6.725146198830409
+| Sub: count=23, percentage=3.3625730994152043
+| Constant: count=100, percentage=14.619883040935672
+| Pow: count=23, percentage=3.3625730994152043
+| Add: count=118, percentage=17.251461988304094
+| Sqrt: count=23, percentage=3.3625730994152043
+| Div: count=41, percentage=5.994152046783626
+| Mul: count=77, percentage=11.257309941520468
+| MatMul: count=36, percentage=5.263157894736842
+| Erf: count=18, percentage=2.631578947368421
+| GlobalAveragePool: count=1, percentage=0.14619883040935672
+| Flatten: count=1, percentage=0.14619883040935672
+| Gemm: count=1, percentage=0.14619883040935672
+===========================【inputs】==============================
+| name=input, dtype=FLOAT, shape=[0, 3, 224, 224]
+===========================【outputs】=============================
+name=output, dtype=FLOAT, shape=[0, 1000]

@@ -1,0 +1,94 @@
+{
+  "summary": {
+    "model": "torchvision/inception_v3.onnx",
+    "node_count": 316,
+    "input_count": 1,
+    "output_count": 1,
+    "num_params": 23802088,
+    "model_size": 90.84562492370605
+  },
+  "parameter_data_types": {
+    "FLOAT": 23802088
+  },
+  "operators": {
+    "Identity": {
+      "count": 83,
+      "percentage": 26.265822784810126
+    },
+    "Conv": {
+      "count": 94,
+      "percentage": 29.746835443037973
+    },
+    "Relu": {
+      "count": 94,
+      "percentage": 29.746835443037973
+    },
+    "MaxPool": {
+      "count": 4,
+      "percentage": 1.2658227848101267
+    },
+    "Constant": {
+      "count": 9,
+      "percentage": 2.848101265822785
+    },
+    "Pad": {
+      "count": 9,
+      "percentage": 2.848101265822785
+    },
+    "AveragePool": {
+      "count": 9,
+      "percentage": 2.848101265822785
+    },
+    "Concat": {
+      "count": 11,
+      "percentage": 3.481012658227848
+    },
+    "GlobalAveragePool": {
+      "count": 1,
+      "percentage": 0.31645569620253167
+    },
+    "Flatten": {
+      "count": 1,
+      "percentage": 0.31645569620253167
+    },
+    "Gemm": {
+      "count": 1,
+      "percentage": 0.31645569620253167
+    }
+  },
+  "operators_list": [
+    "Identity",
+    "Conv",
+    "Relu",
+    "MaxPool",
+    "Constant",
+    "Pad",
+    "AveragePool",
+    "Concat",
+    "GlobalAveragePool",
+    "Flatten",
+    "Gemm"
+  ],
+  "inputs": [
+    {
+      "name": "input",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        3,
+        224,
+        224
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        1000
+      ]
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "summary": {
+    "model": "torchvision/efficientnet_b7.onnx",
+    "node_count": 1065,
+    "input_count": 1,
+    "output_count": 1,
+    "num_params": 65977888,
+    "model_size": 251.9379472732544
+  },
+  "parameter_data_types": {
+    "FLOAT": 65977888
+  },
+  "operators": {
+    "Identity": {
+      "count": 250,
+      "percentage": 23.474178403755868
+    },
+    "Conv": {
+      "count": 273,
+      "percentage": 25.633802816901408
+    },
+    "Sigmoid": {
+      "count": 218,
+      "percentage": 20.469483568075116
+    },
+    "Mul": {
+      "count": 218,
+      "percentage": 20.469483568075116
+    },
+    "GlobalAveragePool": {
+      "count": 56,
+      "percentage": 5.258215962441314
+    },
+    "Add": {
+      "count": 48,
+      "percentage": 4.507042253521127
+    },
+    "Flatten": {
+      "count": 1,
+      "percentage": 0.09389671361502347
+    },
+    "Gemm": {
+      "count": 1,
+      "percentage": 0.09389671361502347
+    }
+  },
+  "operators_list": [
+    "Identity",
+    "Conv",
+    "Sigmoid",
+    "Mul",
+    "GlobalAveragePool",
+    "Add",
+    "Flatten",
+    "Gemm"
+  ],
+  "inputs": [
+    {
+      "name": "input",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        3,
+        224,
+        224
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        1000
+      ]
+    }
+  ]
+}

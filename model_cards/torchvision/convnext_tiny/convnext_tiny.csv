@@ -1,0 +1,26 @@
+section,key,value
+summary,model,torchvision/convnext_tiny.onnx
+summary,node_count,684
+summary,input_count,1
+summary,output_count,1
+summary,num_params,28533928
+summary,model_size,108.97625637054443
+parameter_data_types,FLOAT,28533928
+operators,Identity,"count=108, percentage=15.789473684210526"
+operators,Conv,"count=22, percentage=3.216374269005848"
+operators,Transpose,"count=46, percentage=6.725146198830409"
+operators,ReduceMean,"count=46, percentage=6.725146198830409"
+operators,Sub,"count=23, percentage=3.3625730994152043"
+operators,Constant,"count=100, percentage=14.619883040935672"
+operators,Pow,"count=23, percentage=3.3625730994152043"
+operators,Add,"count=118, percentage=17.251461988304094"
+operators,Sqrt,"count=23, percentage=3.3625730994152043"
+operators,Div,"count=41, percentage=5.994152046783626"
+operators,Mul,"count=77, percentage=11.257309941520468"
+operators,MatMul,"count=36, percentage=5.263157894736842"
+operators,Erf,"count=18, percentage=2.631578947368421"
+operators,GlobalAveragePool,"count=1, percentage=0.14619883040935672"
+operators,Flatten,"count=1, percentage=0.14619883040935672"
+operators,Gemm,"count=1, percentage=0.14619883040935672"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

@@ -1,0 +1,18 @@
+section,key,value
+summary,model,torchvision/efficientnet_v2_m.onnx
+summary,node_count,949
+summary,input_count,1
+summary,output_count,1
+summary,num_params,53790556
+summary,model_size,205.4188051223755
+parameter_data_types,FLOAT,53790556
+operators,Identity,"count=224, percentage=23.603793466807165"
+operators,Conv,"count=245, percentage=25.816649104320337"
+operators,Sigmoid,"count=191, percentage=20.12644889357218"
+operators,Mul,"count=191, percentage=20.12644889357218"
+operators,Add,"count=51, percentage=5.374077976817703"
+operators,GlobalAveragePool,"count=45, percentage=4.7418335089567965"
+operators,Flatten,"count=1, percentage=0.10537407797681769"
+operators,Gemm,"count=1, percentage=0.10537407797681769"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

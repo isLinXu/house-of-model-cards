@@ -1,0 +1,30 @@
+section,key,value
+summary,model,./mobilevitv2_100.onnx
+summary,node_count,505
+summary,input_count,1
+summary,output_count,1
+summary,num_params,4894065
+summary,model_size,18.798325538635254
+parameter_data_types,FLOAT,4894065
+operators,Conv,"count=64, percentage=12.673267326732674"
+operators,Sigmoid,"count=25, percentage=4.9504950495049505"
+operators,Mul,"count=64, percentage=12.673267326732674"
+operators,Add,"count=40, percentage=7.920792079207921"
+operators,Shape,"count=36, percentage=7.128712871287128"
+operators,Constant,"count=105, percentage=20.792079207920793"
+operators,Gather,"count=6, percentage=1.188118811881188"
+operators,Unsqueeze,"count=24, percentage=4.752475247524752"
+operators,Concat,"count=12, percentage=2.376237623762376"
+operators,Reshape,"count=54, percentage=10.693069306930694"
+operators,Transpose,"count=6, percentage=1.188118811881188"
+operators,InstanceNormalization,"count=21, percentage=4.158415841584159"
+operators,Split,"count=9, percentage=1.782178217821782"
+operators,Softmax,"count=9, percentage=1.782178217821782"
+operators,ReduceSum,"count=9, percentage=1.782178217821782"
+operators,Relu,"count=9, percentage=1.782178217821782"
+operators,Expand,"count=9, percentage=1.782178217821782"
+operators,GlobalAveragePool,"count=1, percentage=0.19801980198019803"
+operators,Flatten,"count=1, percentage=0.19801980198019803"
+operators,Gemm,"count=1, percentage=0.19801980198019803"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 256, 256]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

@@ -1,0 +1,42 @@
+██████╗ ███╗   ██╗███╗   ██╗██╗  ██╗     ███████╗██╗  ██╗██████╗ ██╗      ██████╗ ██████╗ ███████╗██████╗ 
+██╔═══██╗████╗  ██║████╗  ██║╚██╗██╔╝     ██╔════╝╚██╗██╔╝██╔══██╗██║     ██╔═══██╗██╔══██╗██╔════╝██╔══██╗ 
+██║   ██║██╔██╗ ██║██╔██╗ ██║ ╚███╔╝█████╗█████╗   ╚███╔╝ ██████╔╝██║     ██║   ██║██████╔╝█████╗  ██████╔╝ 
+██║   ██║██║╚██╗██║██║╚██╗██║ ██╔██╗╚════╝██╔══╝   ██╔██╗ ██╔═══╝ ██║     ██║   ██║██╔══██╗██╔══╝  ██╔══██╗
+╚██████╔╝██║ ╚████║██║ ╚████║██╔╝ ██╗     ███████╗██╔╝ ██╗██║     ███████╗╚██████╔╝██║  ██║███████╗██║  ██║ 
+╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═══╝╚═╝  ╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝     ╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
+================================【summary】================================
+| model: ./ghostnetv2_130.onnx
+| node_count: 747
+| input_count: 1
+| output_count: 1
+| num_params: 8919880
+| model_size: 34.19641590118408
+=====================【parameter_data_types】=====================
+| FLOAT: 8919880
+===========================【operators-lists】===========================
+| ['Conv', 'Relu', 'Concat', 'Constant', 'Slice', 'Add', 'Pad', 'AveragePool', 'Sigmoid', 'Shape', 'Gather', 'Unsqueeze', 'Cast', 'Resize', 'Mul', 'ReduceMean', 'HardSigmoid', 'GlobalAveragePool', 'Flatten', 'Gemm']
+===========================【operators】===========================
+| Conv: count=137, percentage=18.340026773761714
+| Relu: count=42, percentage=5.622489959839357
+| Concat: count=60, percentage=8.032128514056225
+| Constant: count=240, percentage=32.1285140562249
+| Slice: count=46, percentage=6.157965194109773
+| Add: count=16, percentage=2.14190093708166
+| Pad: count=14, percentage=1.8741633199464525
+| AveragePool: count=14, percentage=1.8741633199464525
+| Sigmoid: count=14, percentage=1.8741633199464525
+| Shape: count=42, percentage=5.622489959839357
+| Gather: count=28, percentage=3.748326639892905
+| Unsqueeze: count=28, percentage=3.748326639892905
+| Cast: count=14, percentage=1.8741633199464525
+| Resize: count=14, percentage=1.8741633199464525
+| Mul: count=21, percentage=2.8112449799196786
+| ReduceMean: count=7, percentage=0.9370816599732262
+| HardSigmoid: count=7, percentage=0.9370816599732262
+| GlobalAveragePool: count=1, percentage=0.13386880856760375
+| Flatten: count=1, percentage=0.13386880856760375
+| Gemm: count=1, percentage=0.13386880856760375
+===========================【inputs】==============================
+| name=input, dtype=FLOAT, shape=[0, 3, 224, 224]
+===========================【outputs】=============================
+name=output, dtype=FLOAT, shape=[0, 1000]

@@ -1,0 +1,26 @@
+section,key,value
+summary,model,./inception_next_tiny.onnx
+summary,node_count,354
+summary,input_count,1
+summary,output_count,1
+summary,num_params,28070080
+summary,model_size,107.1810417175293
+parameter_data_types,FLOAT,28070080
+operators,Conv,"count=94, percentage=26.55367231638418"
+operators,Split,"count=18, percentage=5.084745762711865"
+operators,Concat,"count=18, percentage=5.084745762711865"
+operators,BatchNormalization,"count=21, percentage=5.932203389830509"
+operators,Constant,"count=59, percentage=16.666666666666664"
+operators,Div,"count=20, percentage=5.649717514124294"
+operators,Erf,"count=19, percentage=5.367231638418079"
+operators,Add,"count=39, percentage=11.016949152542372"
+operators,Mul,"count=57, percentage=16.101694915254235"
+operators,GlobalAveragePool,"count=1, percentage=0.2824858757062147"
+operators,Flatten,"count=1, percentage=0.2824858757062147"
+operators,Gemm,"count=2, percentage=0.5649717514124294"
+operators,ReduceMean,"count=2, percentage=0.5649717514124294"
+operators,Sub,"count=1, percentage=0.2824858757062147"
+operators,Pow,"count=1, percentage=0.2824858757062147"
+operators,Sqrt,"count=1, percentage=0.2824858757062147"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

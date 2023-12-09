@@ -1,0 +1,18 @@
+section,key,value
+summary,model,./cspdarknet53.onnx
+summary,node_count,170
+summary,input_count,1
+summary,output_count,1
+summary,num_params,27624520
+summary,model_size,105.4215726852417
+parameter_data_types,FLOAT,27624520
+operators,Conv,"count=67, percentage=39.411764705882355"
+operators,LeakyRelu,"count=67, percentage=39.411764705882355"
+operators,Split,"count=5, percentage=2.941176470588235"
+operators,Add,"count=23, percentage=13.529411764705882"
+operators,Concat,"count=5, percentage=2.941176470588235"
+operators,GlobalAveragePool,"count=1, percentage=0.5882352941176471"
+operators,Flatten,"count=1, percentage=0.5882352941176471"
+operators,Gemm,"count=1, percentage=0.5882352941176471"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 256, 256]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

@@ -1,0 +1,109 @@
+{
+  "summary": {
+    "model": "./resmlp_12_224.onnx",
+    "node_count": 352,
+    "input_count": 1,
+    "output_count": 1,
+    "num_params": 15350872,
+    "model_size": 58.61342239379883
+  },
+  "parameter_data_types": {
+    "FLOAT": 15350872
+  },
+  "operators": {
+    "Conv": {
+      "count": 1,
+      "percentage": 0.2840909090909091
+    },
+    "Shape": {
+      "count": 1,
+      "percentage": 0.2840909090909091
+    },
+    "Constant": {
+      "count": 65,
+      "percentage": 18.46590909090909
+    },
+    "Slice": {
+      "count": 1,
+      "percentage": 0.2840909090909091
+    },
+    "Concat": {
+      "count": 1,
+      "percentage": 0.2840909090909091
+    },
+    "Reshape": {
+      "count": 1,
+      "percentage": 0.2840909090909091
+    },
+    "Transpose": {
+      "count": 25,
+      "percentage": 7.1022727272727275
+    },
+    "Mul": {
+      "count": 98,
+      "percentage": 27.84090909090909
+    },
+    "Add": {
+      "count": 97,
+      "percentage": 27.556818181818183
+    },
+    "MatMul": {
+      "count": 36,
+      "percentage": 10.227272727272728
+    },
+    "Div": {
+      "count": 12,
+      "percentage": 3.4090909090909087
+    },
+    "Erf": {
+      "count": 12,
+      "percentage": 3.4090909090909087
+    },
+    "ReduceMean": {
+      "count": 1,
+      "percentage": 0.2840909090909091
+    },
+    "Gemm": {
+      "count": 1,
+      "percentage": 0.2840909090909091
+    }
+  },
+  "operators_list": [
+    "Conv",
+    "Shape",
+    "Constant",
+    "Slice",
+    "Concat",
+    "Reshape",
+    "Transpose",
+    "Mul",
+    "Add",
+    "MatMul",
+    "Div",
+    "Erf",
+    "ReduceMean",
+    "Gemm"
+  ],
+  "inputs": [
+    {
+      "name": "input",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        3,
+        224,
+        224
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        1000
+      ]
+    }
+  ]
+}

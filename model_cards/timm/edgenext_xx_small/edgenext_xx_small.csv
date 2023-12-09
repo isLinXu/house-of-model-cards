@@ -1,0 +1,44 @@
+section,key,value
+summary,model,./edgenext_xx_small.onnx
+summary,node_count,851
+summary,input_count,1
+summary,output_count,1
+summary,num_params,1327216
+summary,model_size,5.226853370666504
+parameter_data_types,FLOAT,1327216
+operators,Conv,"count=20, percentage=2.3501762632197414"
+operators,Transpose,"count=45, percentage=5.287896592244419"
+operators,ReduceMean,"count=40, percentage=4.700352526439483"
+operators,Sub,"count=20, percentage=2.3501762632197414"
+operators,Constant,"count=187, percentage=21.974148061104586"
+operators,Pow,"count=32, percentage=3.7602820211515864"
+operators,Add,"count=106, percentage=12.45593419506463"
+operators,Sqrt,"count=20, percentage=2.3501762632197414"
+operators,Div,"count=45, percentage=5.287896592244419"
+operators,Mul,"count=76, percentage=8.930669800235018"
+operators,MatMul,"count=36, percentage=4.230317273795535"
+operators,Erf,"count=12, percentage=1.410105757931845"
+operators,Shape,"count=33, percentage=3.8777908343125738"
+operators,Gather,"count=25, percentage=2.937720329024677"
+operators,Slice,"count=17, percentage=1.9976498237367801"
+operators,Concat,"count=22, percentage=2.5851938895417157"
+operators,Unsqueeze,"count=47, percentage=5.522914218566393"
+operators,Reshape,"count=15, percentage=1.762632197414806"
+operators,ConstantOfShape,"count=1, percentage=0.11750881316098707"
+operators,Cast,"count=3, percentage=0.35252643948296125"
+operators,Not,"count=1, percentage=0.11750881316098707"
+operators,CumSum,"count=2, percentage=0.23501762632197415"
+operators,Sin,"count=2, percentage=0.23501762632197415"
+operators,Cos,"count=2, percentage=0.23501762632197415"
+operators,Split,"count=3, percentage=0.35252643948296125"
+operators,Squeeze,"count=9, percentage=1.0575793184488838"
+operators,Abs,"count=6, percentage=0.7050528789659225"
+operators,ReduceSum,"count=6, percentage=0.7050528789659225"
+operators,Clip,"count=6, percentage=0.7050528789659225"
+operators,Expand,"count=6, percentage=0.7050528789659225"
+operators,Softmax,"count=3, percentage=0.35252643948296125"
+operators,GlobalAveragePool,"count=1, percentage=0.11750881316098707"
+operators,Flatten,"count=1, percentage=0.11750881316098707"
+operators,Gemm,"count=1, percentage=0.11750881316098707"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 256, 256]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

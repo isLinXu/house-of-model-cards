@@ -1,0 +1,19 @@
+section,key,value
+summary,model,./resnetaa101d.onnx
+summary,node_count,259
+summary,input_count,1
+summary,output_count,1
+summary,num_params,44515656
+summary,model_size,169.8630495071411
+parameter_data_types,FLOAT,44515656
+operators,Conv,"count=106, percentage=40.92664092664093"
+operators,Relu,"count=102, percentage=39.38223938223938"
+operators,Constant,"count=4, percentage=1.5444015444015444"
+operators,Pad,"count=4, percentage=1.5444015444015444"
+operators,AveragePool,"count=7, percentage=2.7027027027027026"
+operators,Add,"count=33, percentage=12.741312741312742"
+operators,GlobalAveragePool,"count=1, percentage=0.3861003861003861"
+operators,Flatten,"count=1, percentage=0.3861003861003861"
+operators,Gemm,"count=1, percentage=0.3861003861003861"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

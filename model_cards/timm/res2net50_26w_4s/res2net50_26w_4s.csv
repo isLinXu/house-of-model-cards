@@ -1,0 +1,22 @@
+section,key,value
+summary,model,./res2net50_26w_4s.onnx
+summary,node_count,254
+summary,input_count,1
+summary,output_count,1
+summary,num_params,25669374
+summary,model_size,97.96948337554932
+parameter_data_types,FLOAT,25669374
+operators,Conv,"count=85, percentage=33.46456692913386"
+operators,Relu,"count=81, percentage=31.88976377952756"
+operators,MaxPool,"count=1, percentage=0.39370078740157477"
+operators,Split,"count=16, percentage=6.299212598425196"
+operators,Constant,"count=4, percentage=1.574803149606299"
+operators,Pad,"count=4, percentage=1.574803149606299"
+operators,AveragePool,"count=4, percentage=1.574803149606299"
+operators,Concat,"count=16, percentage=6.299212598425196"
+operators,Add,"count=40, percentage=15.748031496062993"
+operators,GlobalAveragePool,"count=1, percentage=0.39370078740157477"
+operators,Flatten,"count=1, percentage=0.39370078740157477"
+operators,Gemm,"count=1, percentage=0.39370078740157477"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

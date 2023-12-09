@@ -1,0 +1,56 @@
+██████╗ ███╗   ██╗███╗   ██╗██╗  ██╗     ███████╗██╗  ██╗██████╗ ██╗      ██████╗ ██████╗ ███████╗██████╗ 
+██╔═══██╗████╗  ██║████╗  ██║╚██╗██╔╝     ██╔════╝╚██╗██╔╝██╔══██╗██║     ██╔═══██╗██╔══██╗██╔════╝██╔══██╗ 
+██║   ██║██╔██╗ ██║██╔██╗ ██║ ╚███╔╝█████╗█████╗   ╚███╔╝ ██████╔╝██║     ██║   ██║██████╔╝█████╗  ██████╔╝ 
+██║   ██║██║╚██╗██║██║╚██╗██║ ██╔██╗╚════╝██╔══╝   ██╔██╗ ██╔═══╝ ██║     ██║   ██║██╔══██╗██╔══╝  ██╔══██╗
+╚██████╔╝██║ ╚████║██║ ╚████║██╔╝ ██╗     ███████╗██╔╝ ██╗██║     ███████╗╚██████╔╝██║  ██║███████╗██║  ██║ 
+╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═══╝╚═╝  ╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝     ╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
+================================【summary】================================
+| model: ./edgenext_xx_small.onnx
+| node_count: 851
+| input_count: 1
+| output_count: 1
+| num_params: 1327216
+| model_size: 5.226853370666504
+=====================【parameter_data_types】=====================
+| FLOAT: 1327216
+===========================【operators-lists】===========================
+| ['Conv', 'Transpose', 'ReduceMean', 'Sub', 'Constant', 'Pow', 'Add', 'Sqrt', 'Div', 'Mul', 'MatMul', 'Erf', 'Shape', 'Gather', 'Slice', 'Concat', 'Unsqueeze', 'Reshape', 'ConstantOfShape', 'Cast', 'Not', 'CumSum', 'Sin', 'Cos', 'Split', 'Squeeze', 'Abs', 'ReduceSum', 'Clip', 'Expand', 'Softmax', 'GlobalAveragePool', 'Flatten', 'Gemm']
+===========================【operators】===========================
+| Conv: count=20, percentage=2.3501762632197414
+| Transpose: count=45, percentage=5.287896592244419
+| ReduceMean: count=40, percentage=4.700352526439483
+| Sub: count=20, percentage=2.3501762632197414
+| Constant: count=187, percentage=21.974148061104586
+| Pow: count=32, percentage=3.7602820211515864
+| Add: count=106, percentage=12.45593419506463
+| Sqrt: count=20, percentage=2.3501762632197414
+| Div: count=45, percentage=5.287896592244419
+| Mul: count=76, percentage=8.930669800235018
+| MatMul: count=36, percentage=4.230317273795535
+| Erf: count=12, percentage=1.410105757931845
+| Shape: count=33, percentage=3.8777908343125738
+| Gather: count=25, percentage=2.937720329024677
+| Slice: count=17, percentage=1.9976498237367801
+| Concat: count=22, percentage=2.5851938895417157
+| Unsqueeze: count=47, percentage=5.522914218566393
+| Reshape: count=15, percentage=1.762632197414806
+| ConstantOfShape: count=1, percentage=0.11750881316098707
+| Cast: count=3, percentage=0.35252643948296125
+| Not: count=1, percentage=0.11750881316098707
+| CumSum: count=2, percentage=0.23501762632197415
+| Sin: count=2, percentage=0.23501762632197415
+| Cos: count=2, percentage=0.23501762632197415
+| Split: count=3, percentage=0.35252643948296125
+| Squeeze: count=9, percentage=1.0575793184488838
+| Abs: count=6, percentage=0.7050528789659225
+| ReduceSum: count=6, percentage=0.7050528789659225
+| Clip: count=6, percentage=0.7050528789659225
+| Expand: count=6, percentage=0.7050528789659225
+| Softmax: count=3, percentage=0.35252643948296125
+| GlobalAveragePool: count=1, percentage=0.11750881316098707
+| Flatten: count=1, percentage=0.11750881316098707
+| Gemm: count=1, percentage=0.11750881316098707
+===========================【inputs】==============================
+| name=input, dtype=FLOAT, shape=[0, 3, 256, 256]
+===========================【outputs】=============================
+name=output, dtype=FLOAT, shape=[0, 1000]

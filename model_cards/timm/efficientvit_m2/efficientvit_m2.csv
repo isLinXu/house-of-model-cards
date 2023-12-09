@@ -1,0 +1,35 @@
+section,key,value
+summary,model,./efficientvit_m2.onnx
+summary,node_count,1163
+summary,input_count,1
+summary,output_count,1
+summary,num_params,4169234
+summary,model_size,16.19618797302246
+parameter_data_types,FLOAT,4169234
+operators,Constant,"count=336, percentage=28.890799656061912"
+operators,Conv,"count=100, percentage=8.598452278589853"
+operators,Relu,"count=31, percentage=2.6655202063628547"
+operators,Add,"count=70, percentage=6.0189165950128976"
+operators,Shape,"count=74, percentage=6.362854686156492"
+operators,Gather,"count=48, percentage=4.12725709372313"
+operators,Transpose,"count=39, percentage=3.353396388650043"
+operators,ConstantOfShape,"count=1, percentage=0.08598452278589853"
+operators,Concat,"count=91, percentage=7.824591573516767"
+operators,Reshape,"count=86, percentage=7.394668959587274"
+operators,Slice,"count=67, percentage=5.760963026655202"
+operators,Cast,"count=1, percentage=0.08598452278589853"
+operators,Pad,"count=1, percentage=0.08598452278589853"
+operators,Unsqueeze,"count=104, percentage=8.942390369733449"
+operators,Mul,"count=36, percentage=3.095442820292347"
+operators,Div,"count=6, percentage=0.5159071367153912"
+operators,Split,"count=16, percentage=1.3757523645743766"
+operators,MatMul,"count=32, percentage=2.751504729148753"
+operators,Softmax,"count=16, percentage=1.3757523645743766"
+operators,ReduceMean,"count=2, percentage=0.17196904557179707"
+operators,Sigmoid,"count=2, percentage=0.17196904557179707"
+operators,GlobalAveragePool,"count=1, percentage=0.08598452278589853"
+operators,Flatten,"count=1, percentage=0.08598452278589853"
+operators,BatchNormalization,"count=1, percentage=0.08598452278589853"
+operators,Gemm,"count=1, percentage=0.08598452278589853"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

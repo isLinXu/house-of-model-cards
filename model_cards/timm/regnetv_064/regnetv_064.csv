@@ -1,0 +1,20 @@
+section,key,value
+summary,model,./regnetv_064.onnx
+summary,node_count,488
+summary,input_count,1
+summary,output_count,1
+summary,num_params,30612308
+summary,model_size,116.86260509490967
+parameter_data_types,FLOAT,30612308
+operators,Conv,"count=130, percentage=26.639344262295083"
+operators,Sigmoid,"count=126, percentage=25.81967213114754"
+operators,Mul,"count=126, percentage=25.81967213114754"
+operators,ReduceMean,"count=25, percentage=5.122950819672131"
+operators,BatchNormalization,"count=49, percentage=10.040983606557377"
+operators,AveragePool,"count=4, percentage=0.819672131147541"
+operators,Add,"count=25, percentage=5.122950819672131"
+operators,GlobalAveragePool,"count=1, percentage=0.20491803278688525"
+operators,Flatten,"count=1, percentage=0.20491803278688525"
+operators,Gemm,"count=1, percentage=0.20491803278688525"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

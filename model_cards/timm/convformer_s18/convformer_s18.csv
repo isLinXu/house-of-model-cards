@@ -1,0 +1,24 @@
+section,key,value
+summary,model,./convformer_s18.onnx
+summary,node_count,843
+summary,input_count,1
+summary,output_count,1
+summary,num_params,26774448
+summary,model_size,102.3123664855957
+parameter_data_types,FLOAT,26774448
+operators,Conv,"count=94, percentage=11.150652431791222"
+operators,Transpose,"count=81, percentage=9.608540925266903"
+operators,ReduceMean,"count=84, percentage=9.9644128113879"
+operators,Sub,"count=42, percentage=4.98220640569395"
+operators,Constant,"count=120, percentage=14.23487544483986"
+operators,Pow,"count=78, percentage=9.252669039145907"
+operators,Add,"count=116, percentage=13.76037959667853"
+operators,Sqrt,"count=42, percentage=4.98220640569395"
+operators,Div,"count=42, percentage=4.98220640569395"
+operators,Mul,"count=103, percentage=12.218268090154211"
+operators,Relu,"count=37, percentage=4.389086595492289"
+operators,GlobalAveragePool,"count=1, percentage=0.11862396204033215"
+operators,Flatten,"count=1, percentage=0.11862396204033215"
+operators,Gemm,"count=2, percentage=0.2372479240806643"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

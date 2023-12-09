@@ -1,0 +1,104 @@
+{
+  "summary": {
+    "model": "./rexnet_300.onnx",
+    "node_count": 344,
+    "input_count": 1,
+    "output_count": 1,
+    "num_params": 34644646,
+    "model_size": 132.22330570220947
+  },
+  "parameter_data_types": {
+    "FLOAT": 34644646
+  },
+  "operators": {
+    "Conv": {
+      "count": 75,
+      "percentage": 21.802325581395348
+    },
+    "Sigmoid": {
+      "count": 30,
+      "percentage": 8.720930232558139
+    },
+    "Mul": {
+      "count": 30,
+      "percentage": 8.720930232558139
+    },
+    "Constant": {
+      "count": 120,
+      "percentage": 34.883720930232556
+    },
+    "Clip": {
+      "count": 16,
+      "percentage": 4.651162790697675
+    },
+    "Slice": {
+      "count": 22,
+      "percentage": 6.395348837209303
+    },
+    "Add": {
+      "count": 11,
+      "percentage": 3.1976744186046515
+    },
+    "Concat": {
+      "count": 11,
+      "percentage": 3.1976744186046515
+    },
+    "ReduceMean": {
+      "count": 13,
+      "percentage": 3.77906976744186
+    },
+    "Relu": {
+      "count": 13,
+      "percentage": 3.77906976744186
+    },
+    "GlobalAveragePool": {
+      "count": 1,
+      "percentage": 0.29069767441860467
+    },
+    "Flatten": {
+      "count": 1,
+      "percentage": 0.29069767441860467
+    },
+    "Gemm": {
+      "count": 1,
+      "percentage": 0.29069767441860467
+    }
+  },
+  "operators_list": [
+    "Conv",
+    "Sigmoid",
+    "Mul",
+    "Constant",
+    "Clip",
+    "Slice",
+    "Add",
+    "Concat",
+    "ReduceMean",
+    "Relu",
+    "GlobalAveragePool",
+    "Flatten",
+    "Gemm"
+  ],
+  "inputs": [
+    {
+      "name": "input",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        3,
+        224,
+        224
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        1000
+      ]
+    }
+  ]
+}

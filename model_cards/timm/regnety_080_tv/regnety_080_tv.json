@@ -1,0 +1,84 @@
+{
+  "summary": {
+    "model": "./regnety_080_tv.onnx",
+    "node_count": 230,
+    "input_count": 1,
+    "output_count": 1,
+    "num_params": 39338208,
+    "model_size": 150.10189819335938
+  },
+  "parameter_data_types": {
+    "FLOAT": 39338208
+  },
+  "operators": {
+    "Conv": {
+      "count": 90,
+      "percentage": 39.130434782608695
+    },
+    "Relu": {
+      "count": 69,
+      "percentage": 30.0
+    },
+    "ReduceMean": {
+      "count": 17,
+      "percentage": 7.391304347826087
+    },
+    "Sigmoid": {
+      "count": 17,
+      "percentage": 7.391304347826087
+    },
+    "Mul": {
+      "count": 17,
+      "percentage": 7.391304347826087
+    },
+    "Add": {
+      "count": 17,
+      "percentage": 7.391304347826087
+    },
+    "GlobalAveragePool": {
+      "count": 1,
+      "percentage": 0.43478260869565216
+    },
+    "Flatten": {
+      "count": 1,
+      "percentage": 0.43478260869565216
+    },
+    "Gemm": {
+      "count": 1,
+      "percentage": 0.43478260869565216
+    }
+  },
+  "operators_list": [
+    "Conv",
+    "Relu",
+    "ReduceMean",
+    "Sigmoid",
+    "Mul",
+    "Add",
+    "GlobalAveragePool",
+    "Flatten",
+    "Gemm"
+  ],
+  "inputs": [
+    {
+      "name": "input",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        3,
+        224,
+        224
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        1000
+      ]
+    }
+  ]
+}

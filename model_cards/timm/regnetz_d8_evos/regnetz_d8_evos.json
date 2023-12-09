@@ -1,0 +1,154 @@
+{
+  "summary": {
+    "model": "./regnetz_d8_evos.onnx",
+    "node_count": 5796,
+    "input_count": 1,
+    "output_count": 1,
+    "num_params": 23464296,
+    "model_size": 90.6722183227539
+  },
+  "parameter_data_types": {
+    "FLOAT": 23464296
+  },
+  "operators": {
+    "Conv": {
+      "count": 124,
+      "percentage": 2.139406487232574
+    },
+    "Shape": {
+      "count": 760,
+      "percentage": 13.112491373360937
+    },
+    "Constant": {
+      "count": 1064,
+      "percentage": 18.357487922705314
+    },
+    "Gather": {
+      "count": 684,
+      "percentage": 11.801242236024844
+    },
+    "Div": {
+      "count": 152,
+      "percentage": 2.6224982746721874
+    },
+    "Cast": {
+      "count": 304,
+      "percentage": 5.244996549344375
+    },
+    "Unsqueeze": {
+      "count": 988,
+      "percentage": 17.04623878536922
+    },
+    "Concat": {
+      "count": 228,
+      "percentage": 3.9337474120082816
+    },
+    "Reshape": {
+      "count": 228,
+      "percentage": 3.9337474120082816
+    },
+    "ReduceMean": {
+      "count": 176,
+      "percentage": 3.036576949620428
+    },
+    "Sub": {
+      "count": 76,
+      "percentage": 1.3112491373360937
+    },
+    "Mul": {
+      "count": 356,
+      "percentage": 6.142167011732229
+    },
+    "Add": {
+      "count": 173,
+      "percentage": 2.984817115251898
+    },
+    "Sqrt": {
+      "count": 76,
+      "percentage": 1.3112491373360937
+    },
+    "ConstantOfShape": {
+      "count": 76,
+      "percentage": 1.3112491373360937
+    },
+    "Equal": {
+      "count": 76,
+      "percentage": 1.3112491373360937
+    },
+    "Where": {
+      "count": 76,
+      "percentage": 1.3112491373360937
+    },
+    "Expand": {
+      "count": 76,
+      "percentage": 1.3112491373360937
+    },
+    "Sigmoid": {
+      "count": 76,
+      "percentage": 1.3112491373360937
+    },
+    "Relu": {
+      "count": 24,
+      "percentage": 0.4140786749482402
+    },
+    "GlobalAveragePool": {
+      "count": 1,
+      "percentage": 0.01725327812284334
+    },
+    "Flatten": {
+      "count": 1,
+      "percentage": 0.01725327812284334
+    },
+    "Gemm": {
+      "count": 1,
+      "percentage": 0.01725327812284334
+    }
+  },
+  "operators_list": [
+    "Conv",
+    "Shape",
+    "Constant",
+    "Gather",
+    "Div",
+    "Cast",
+    "Unsqueeze",
+    "Concat",
+    "Reshape",
+    "ReduceMean",
+    "Sub",
+    "Mul",
+    "Add",
+    "Sqrt",
+    "ConstantOfShape",
+    "Equal",
+    "Where",
+    "Expand",
+    "Sigmoid",
+    "Relu",
+    "GlobalAveragePool",
+    "Flatten",
+    "Gemm"
+  ],
+  "inputs": [
+    {
+      "name": "input",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        3,
+        256,
+        256
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        1000
+      ]
+    }
+  ]
+}

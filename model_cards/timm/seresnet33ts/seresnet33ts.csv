@@ -1,0 +1,19 @@
+section,key,value
+summary,model,./seresnet33ts.onnx
+summary,node_count,179
+summary,input_count,1
+summary,output_count,1
+summary,num_params,19759368
+summary,model_size,75.41755390167236
+parameter_data_types,FLOAT,19759368
+operators,Conv,"count=58, percentage=32.402234636871505"
+operators,Sigmoid,"count=44, percentage=24.581005586592177"
+operators,Mul,"count=44, percentage=24.581005586592177"
+operators,ReduceMean,"count=10, percentage=5.58659217877095"
+operators,Relu,"count=10, percentage=5.58659217877095"
+operators,Add,"count=10, percentage=5.58659217877095"
+operators,GlobalAveragePool,"count=1, percentage=0.5586592178770949"
+operators,Flatten,"count=1, percentage=0.5586592178770949"
+operators,Gemm,"count=1, percentage=0.5586592178770949"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 256, 256]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

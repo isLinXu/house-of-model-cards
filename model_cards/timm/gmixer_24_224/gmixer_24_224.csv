@@ -1,0 +1,28 @@
+section,key,value
+summary,model,./gmixer_24_224.onnx
+summary,node_count,1655
+summary,input_count,1
+summary,output_count,1
+summary,num_params,24721096
+summary,model_size,94.56613636016846
+parameter_data_types,FLOAT,24721096
+operators,Conv,"count=1, percentage=0.060422960725075525"
+operators,Shape,"count=49, percentage=2.9607250755287007"
+operators,Constant,"count=390, percentage=23.564954682779458"
+operators,Slice,"count=97, percentage=5.861027190332326"
+operators,Concat,"count=1, percentage=0.060422960725075525"
+operators,Reshape,"count=1, percentage=0.060422960725075525"
+operators,Transpose,"count=49, percentage=2.9607250755287007"
+operators,ReduceMean,"count=99, percentage=5.981873111782477"
+operators,Sub,"count=49, percentage=2.9607250755287007"
+operators,Pow,"count=49, percentage=2.9607250755287007"
+operators,Add,"count=290, percentage=17.522658610271904"
+operators,Sqrt,"count=49, percentage=2.9607250755287007"
+operators,Div,"count=97, percentage=5.861027190332326"
+operators,Mul,"count=241, percentage=14.561933534743202"
+operators,MatMul,"count=96, percentage=5.80060422960725"
+operators,Gather,"count=48, percentage=2.900302114803625"
+operators,Sigmoid,"count=48, percentage=2.900302114803625"
+operators,Gemm,"count=1, percentage=0.060422960725075525"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

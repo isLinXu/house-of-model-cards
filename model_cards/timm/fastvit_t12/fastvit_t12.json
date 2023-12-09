@@ -1,0 +1,114 @@
+{
+  "summary": {
+    "model": "./fastvit_t12.onnx",
+    "node_count": 397,
+    "input_count": 1,
+    "output_count": 1,
+    "num_params": 7547624,
+    "model_size": 28.88732624053955
+  },
+  "parameter_data_types": {
+    "FLOAT": 7547624
+  },
+  "operators": {
+    "Identity": {
+      "count": 24,
+      "percentage": 6.045340050377834
+    },
+    "Conv": {
+      "count": 78,
+      "percentage": 19.64735516372796
+    },
+    "Constant": {
+      "count": 64,
+      "percentage": 16.120906801007557
+    },
+    "Add": {
+      "count": 84,
+      "percentage": 21.158690176322416
+    },
+    "Div": {
+      "count": 19,
+      "percentage": 4.785894206549118
+    },
+    "Erf": {
+      "count": 19,
+      "percentage": 4.785894206549118
+    },
+    "Mul": {
+      "count": 63,
+      "percentage": 15.869017632241814
+    },
+    "BatchNormalization": {
+      "count": 28,
+      "percentage": 7.052896725440807
+    },
+    "Sub": {
+      "count": 12,
+      "percentage": 3.022670025188917
+    },
+    "ReduceMean": {
+      "count": 1,
+      "percentage": 0.2518891687657431
+    },
+    "Relu": {
+      "count": 1,
+      "percentage": 0.2518891687657431
+    },
+    "Sigmoid": {
+      "count": 1,
+      "percentage": 0.2518891687657431
+    },
+    "GlobalAveragePool": {
+      "count": 1,
+      "percentage": 0.2518891687657431
+    },
+    "Flatten": {
+      "count": 1,
+      "percentage": 0.2518891687657431
+    },
+    "Gemm": {
+      "count": 1,
+      "percentage": 0.2518891687657431
+    }
+  },
+  "operators_list": [
+    "Identity",
+    "Conv",
+    "Constant",
+    "Add",
+    "Div",
+    "Erf",
+    "Mul",
+    "BatchNormalization",
+    "Sub",
+    "ReduceMean",
+    "Relu",
+    "Sigmoid",
+    "GlobalAveragePool",
+    "Flatten",
+    "Gemm"
+  ],
+  "inputs": [
+    {
+      "name": "input",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        3,
+        256,
+        256
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        1000
+      ]
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+██████╗ ███╗   ██╗███╗   ██╗██╗  ██╗     ███████╗██╗  ██╗██████╗ ██╗      ██████╗ ██████╗ ███████╗██████╗ 
+██╔═══██╗████╗  ██║████╗  ██║╚██╗██╔╝     ██╔════╝╚██╗██╔╝██╔══██╗██║     ██╔═══██╗██╔══██╗██╔════╝██╔══██╗ 
+██║   ██║██╔██╗ ██║██╔██╗ ██║ ╚███╔╝█████╗█████╗   ╚███╔╝ ██████╔╝██║     ██║   ██║██████╔╝█████╗  ██████╔╝ 
+██║   ██║██║╚██╗██║██║╚██╗██║ ██╔██╗╚════╝██╔══╝   ██╔██╗ ██╔═══╝ ██║     ██║   ██║██╔══██╗██╔══╝  ██╔══██╗
+╚██████╔╝██║ ╚████║██║ ╚████║██╔╝ ██╗     ███████╗██╔╝ ██╗██║     ███████╗╚██████╔╝██║  ██║███████╗██║  ██║ 
+╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═══╝╚═╝  ╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝     ╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
+================================【summary】================================
+| model: ./inception_next_tiny.onnx
+| node_count: 354
+| input_count: 1
+| output_count: 1
+| num_params: 28070080
+| model_size: 107.1810417175293
+=====================【parameter_data_types】=====================
+| FLOAT: 28070080
+===========================【operators-lists】===========================
+| ['Conv', 'Split', 'Concat', 'BatchNormalization', 'Constant', 'Div', 'Erf', 'Add', 'Mul', 'GlobalAveragePool', 'Flatten', 'Gemm', 'ReduceMean', 'Sub', 'Pow', 'Sqrt']
+===========================【operators】===========================
+| Conv: count=94, percentage=26.55367231638418
+| Split: count=18, percentage=5.084745762711865
+| Concat: count=18, percentage=5.084745762711865
+| BatchNormalization: count=21, percentage=5.932203389830509
+| Constant: count=59, percentage=16.666666666666664
+| Div: count=20, percentage=5.649717514124294
+| Erf: count=19, percentage=5.367231638418079
+| Add: count=39, percentage=11.016949152542372
+| Mul: count=57, percentage=16.101694915254235
+| GlobalAveragePool: count=1, percentage=0.2824858757062147
+| Flatten: count=1, percentage=0.2824858757062147
+| Gemm: count=2, percentage=0.5649717514124294
+| ReduceMean: count=2, percentage=0.5649717514124294
+| Sub: count=1, percentage=0.2824858757062147
+| Pow: count=1, percentage=0.2824858757062147
+| Sqrt: count=1, percentage=0.2824858757062147
+===========================【inputs】==============================
+| name=input, dtype=FLOAT, shape=[0, 3, 224, 224]
+===========================【outputs】=============================
+name=output, dtype=FLOAT, shape=[0, 1000]

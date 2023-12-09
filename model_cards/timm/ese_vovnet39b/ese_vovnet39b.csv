@@ -1,0 +1,21 @@
+section,key,value
+summary,model,./ese_vovnet39b.onnx
+summary,node_count,108
+summary,input_count,1
+summary,output_count,1
+summary,num_params,24558728
+summary,model_size,93.71547031402588
+parameter_data_types,FLOAT,24558728
+operators,Conv,"count=43, percentage=39.81481481481482"
+operators,Relu,"count=39, percentage=36.11111111111111"
+operators,Concat,"count=6, percentage=5.555555555555555"
+operators,ReduceMean,"count=4, percentage=3.7037037037037033"
+operators,HardSigmoid,"count=4, percentage=3.7037037037037033"
+operators,Mul,"count=4, percentage=3.7037037037037033"
+operators,MaxPool,"count=3, percentage=2.7777777777777777"
+operators,Add,"count=2, percentage=1.8518518518518516"
+operators,GlobalAveragePool,"count=1, percentage=0.9259259259259258"
+operators,Flatten,"count=1, percentage=0.9259259259259258"
+operators,Gemm,"count=1, percentage=0.9259259259259258"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

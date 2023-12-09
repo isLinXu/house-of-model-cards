@@ -1,0 +1,84 @@
+{
+  "summary": {
+    "model": "./hrnet_w48_ssld.onnx",
+    "node_count": 883,
+    "input_count": 1,
+    "output_count": 1,
+    "num_params": 77394600,
+    "model_size": 295.46127223968506
+  },
+  "parameter_data_types": {
+    "FLOAT": 77394600
+  },
+  "operators": {
+    "Identity": {
+      "count": 1,
+      "percentage": 0.11325028312570783
+    },
+    "Conv": {
+      "count": 325,
+      "percentage": 36.80634201585504
+    },
+    "Relu": {
+      "count": 284,
+      "percentage": 32.16308040770102
+    },
+    "Add": {
+      "count": 177,
+      "percentage": 20.045300113250285
+    },
+    "Constant": {
+      "count": 62,
+      "percentage": 7.021517553793885
+    },
+    "Resize": {
+      "count": 31,
+      "percentage": 3.5107587768969424
+    },
+    "GlobalAveragePool": {
+      "count": 1,
+      "percentage": 0.11325028312570783
+    },
+    "Flatten": {
+      "count": 1,
+      "percentage": 0.11325028312570783
+    },
+    "Gemm": {
+      "count": 1,
+      "percentage": 0.11325028312570783
+    }
+  },
+  "operators_list": [
+    "Identity",
+    "Conv",
+    "Relu",
+    "Add",
+    "Constant",
+    "Resize",
+    "GlobalAveragePool",
+    "Flatten",
+    "Gemm"
+  ],
+  "inputs": [
+    {
+      "name": "input",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        3,
+        224,
+        224
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        1000
+      ]
+    }
+  ]
+}

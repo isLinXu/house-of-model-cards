@@ -1,0 +1,20 @@
+section,key,value
+summary,model,./cs3sedarknet_l.onnx
+summary,node_count,347
+summary,input_count,1
+summary,output_count,1
+summary,num_params,21899096
+summary,model_size,83.62257862091064
+parameter_data_types,FLOAT,21899096
+operators,Conv,"count=98, percentage=28.24207492795389"
+operators,Sigmoid,"count=98, percentage=28.24207492795389"
+operators,Mul,"count=98, percentage=28.24207492795389"
+operators,Split,"count=4, percentage=1.1527377521613833"
+operators,ReduceMean,"count=21, percentage=6.051873198847262"
+operators,Add,"count=21, percentage=6.051873198847262"
+operators,Concat,"count=4, percentage=1.1527377521613833"
+operators,GlobalAveragePool,"count=1, percentage=0.2881844380403458"
+operators,Flatten,"count=1, percentage=0.2881844380403458"
+operators,Gemm,"count=1, percentage=0.2881844380403458"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 256, 256]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

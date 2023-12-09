@@ -1,0 +1,74 @@
+{
+  "summary": {
+    "model": "./mobilenetv2_120d.onnx",
+    "node_count": 260,
+    "input_count": 1,
+    "output_count": 1,
+    "num_params": 5799256,
+    "model_size": 22.17859649658203
+  },
+  "parameter_data_types": {
+    "FLOAT": 5799256
+  },
+  "operators": {
+    "Conv": {
+      "count": 79,
+      "percentage": 30.384615384615383
+    },
+    "Constant": {
+      "count": 106,
+      "percentage": 40.76923076923077
+    },
+    "Clip": {
+      "count": 53,
+      "percentage": 20.384615384615383
+    },
+    "Add": {
+      "count": 19,
+      "percentage": 7.307692307692308
+    },
+    "GlobalAveragePool": {
+      "count": 1,
+      "percentage": 0.38461538461538464
+    },
+    "Flatten": {
+      "count": 1,
+      "percentage": 0.38461538461538464
+    },
+    "Gemm": {
+      "count": 1,
+      "percentage": 0.38461538461538464
+    }
+  },
+  "operators_list": [
+    "Conv",
+    "Constant",
+    "Clip",
+    "Add",
+    "GlobalAveragePool",
+    "Flatten",
+    "Gemm"
+  ],
+  "inputs": [
+    {
+      "name": "input",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        3,
+        224,
+        224
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        1000
+      ]
+    }
+  ]
+}

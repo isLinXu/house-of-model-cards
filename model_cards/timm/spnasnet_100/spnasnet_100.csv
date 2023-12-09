@@ -1,0 +1,16 @@
+section,key,value
+summary,model,./spnasnet_100.onnx
+summary,node_count,124
+summary,input_count,1
+summary,output_count,1
+summary,num_params,4401864
+summary,model_size,16.821395874023438
+parameter_data_types,FLOAT,4401864
+operators,Conv,"count=64, percentage=51.61290322580645"
+operators,Relu,"count=43, percentage=34.67741935483871"
+operators,Add,"count=14, percentage=11.29032258064516"
+operators,GlobalAveragePool,"count=1, percentage=0.8064516129032258"
+operators,Flatten,"count=1, percentage=0.8064516129032258"
+operators,Gemm,"count=1, percentage=0.8064516129032258"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

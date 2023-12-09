@@ -1,0 +1,84 @@
+{
+  "summary": {
+    "model": "./hardcorenas_e.onnx",
+    "node_count": 222,
+    "input_count": 1,
+    "output_count": 1,
+    "num_params": 8053104,
+    "model_size": 30.7740535736084
+  },
+  "parameter_data_types": {
+    "FLOAT": 8053104
+  },
+  "operators": {
+    "Conv": {
+      "count": 85,
+      "percentage": 38.288288288288285
+    },
+    "HardSigmoid": {
+      "count": 39,
+      "percentage": 17.56756756756757
+    },
+    "Mul": {
+      "count": 39,
+      "percentage": 17.56756756756757
+    },
+    "Relu": {
+      "count": 29,
+      "percentage": 13.063063063063062
+    },
+    "ReduceMean": {
+      "count": 16,
+      "percentage": 7.207207207207207
+    },
+    "Add": {
+      "count": 11,
+      "percentage": 4.954954954954955
+    },
+    "GlobalAveragePool": {
+      "count": 1,
+      "percentage": 0.45045045045045046
+    },
+    "Flatten": {
+      "count": 1,
+      "percentage": 0.45045045045045046
+    },
+    "Gemm": {
+      "count": 1,
+      "percentage": 0.45045045045045046
+    }
+  },
+  "operators_list": [
+    "Conv",
+    "HardSigmoid",
+    "Mul",
+    "Relu",
+    "ReduceMean",
+    "Add",
+    "GlobalAveragePool",
+    "Flatten",
+    "Gemm"
+  ],
+  "inputs": [
+    {
+      "name": "input",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        3,
+        224,
+        224
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        1000
+      ]
+    }
+  ]
+}

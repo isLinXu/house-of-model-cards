@@ -1,0 +1,31 @@
+section,key,value
+summary,model,./levit_128.onnx
+summary,node_count,872
+summary,input_count,1
+summary,output_count,1
+summary,num_params,9261056
+summary,model_size,35.922030448913574
+parameter_data_types,FLOAT,9261056
+operators,Identity,"count=2, percentage=0.22935779816513763"
+operators,Conv,"count=4, percentage=0.45871559633027525"
+operators,HardSigmoid,"count=31, percentage=3.555045871559633"
+operators,Mul,"count=45, percentage=5.160550458715597"
+operators,Shape,"count=89, percentage=10.206422018348624"
+operators,Constant,"count=126, percentage=14.449541284403669"
+operators,Slice,"count=5, percentage=0.573394495412844"
+operators,Concat,"count=35, percentage=4.013761467889909"
+operators,Reshape,"count=93, percentage=10.6651376146789"
+operators,Transpose,"count=57, percentage=6.536697247706422"
+operators,Gather,"count=44, percentage=5.045871559633028"
+operators,MatMul,"count=86, percentage=9.862385321100918"
+operators,Flatten,"count=58, percentage=6.651376146788992"
+operators,BatchNormalization,"count=60, percentage=6.8807339449541285"
+operators,Unsqueeze,"count=64, percentage=7.339449541284404"
+operators,Split,"count=14, percentage=1.6055045871559634"
+operators,Add,"count=41, percentage=4.701834862385321"
+operators,Softmax,"count=14, percentage=1.6055045871559634"
+operators,ReduceMean,"count=1, percentage=0.11467889908256881"
+operators,Gemm,"count=2, percentage=0.22935779816513763"
+operators,Div,"count=1, percentage=0.11467889908256881"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

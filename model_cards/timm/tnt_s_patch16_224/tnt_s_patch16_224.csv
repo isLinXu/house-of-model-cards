@@ -1,0 +1,38 @@
+section,key,value
+summary,model,./tnt_s_patch16_224.onnx
+summary,node_count,2402
+summary,input_count,1
+summary,output_count,1
+summary,num_params,23755336
+summary,model_size,90.92772674560547
+parameter_data_types,FLOAT,23755336
+operators,Constant,"count=589, percentage=24.521232306411324"
+operators,Shape,"count=78, percentage=3.24729392173189"
+operators,Gather,"count=80, percentage=3.330557868442964"
+operators,Conv,"count=1, percentage=0.041631973355537054"
+operators,Add,"count=301, percentage=12.531223980016653"
+operators,Sub,"count=77, percentage=3.205661948376353"
+operators,Range,"count=2, percentage=0.08326394671107411"
+operators,Unsqueeze,"count=176, percentage=7.327227310574521"
+operators,Mul,"count=138, percentage=5.745212323064113"
+operators,Concat,"count=102, percentage=4.24646128226478"
+operators,Pad,"count=1, percentage=0.041631973355537054"
+operators,Transpose,"count=99, percentage=4.121565362198168"
+operators,Reshape,"count=89, percentage=3.7052456286427975"
+operators,ReduceMean,"count=126, percentage=5.245628642797668"
+operators,Pow,"count=63, percentage=2.622814321398834"
+operators,Sqrt,"count=63, percentage=2.622814321398834"
+operators,Div,"count=87, percentage=3.6219816819317234"
+operators,MatMul,"count=181, percentage=7.535387177352207"
+operators,ConstantOfShape,"count=1, percentage=0.041631973355537054"
+operators,Equal,"count=1, percentage=0.041631973355537054"
+operators,Where,"count=1, percentage=0.041631973355537054"
+operators,Expand,"count=1, percentage=0.041631973355537054"
+operators,Split,"count=24, percentage=0.9991673605328892"
+operators,Squeeze,"count=48, percentage=1.9983347210657785"
+operators,Softmax,"count=24, percentage=0.9991673605328892"
+operators,Erf,"count=24, percentage=0.9991673605328892"
+operators,Slice,"count=24, percentage=0.9991673605328892"
+operators,Gemm,"count=1, percentage=0.041631973355537054"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

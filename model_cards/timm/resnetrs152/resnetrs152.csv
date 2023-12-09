@@ -1,0 +1,20 @@
+section,key,value
+summary,model,./resnetrs152.onnx
+summary,node_count,668
+summary,input_count,1
+summary,output_count,1
+summary,num_params,86545736
+summary,model_size,330.2748746871948
+parameter_data_types,FLOAT,86545736
+operators,Conv,"count=258, percentage=38.622754491017965"
+operators,Relu,"count=204, percentage=30.538922155688624"
+operators,ReduceMean,"count=50, percentage=7.48502994011976"
+operators,Sigmoid,"count=50, percentage=7.48502994011976"
+operators,Mul,"count=50, percentage=7.48502994011976"
+operators,Add,"count=50, percentage=7.48502994011976"
+operators,AveragePool,"count=3, percentage=0.4491017964071856"
+operators,GlobalAveragePool,"count=1, percentage=0.14970059880239522"
+operators,Flatten,"count=1, percentage=0.14970059880239522"
+operators,Gemm,"count=1, percentage=0.14970059880239522"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 256, 256]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

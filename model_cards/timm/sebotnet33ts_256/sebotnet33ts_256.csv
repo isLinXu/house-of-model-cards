@@ -1,0 +1,39 @@
+section,key,value
+summary,model,./sebotnet33ts_256.onnx
+summary,node_count,1238
+summary,input_count,1
+summary,output_count,1
+summary,num_params,13688680
+summary,model_size,52.4938383102417
+parameter_data_types,FLOAT,13688680
+operators,Conv,"count=50, percentage=4.038772213247173"
+operators,Sigmoid,"count=40, percentage=3.231017770597738"
+operators,Mul,"count=64, percentage=5.169628432956381"
+operators,ReduceMean,"count=6, percentage=0.48465266558966075"
+operators,Relu,"count=6, percentage=0.48465266558966075"
+operators,Add,"count=26, percentage=2.10016155088853"
+operators,Shape,"count=60, percentage=4.846526655896607"
+operators,Constant,"count=389, percentage=31.421647819063004"
+operators,Gather,"count=52, percentage=4.20032310177706"
+operators,Split,"count=4, percentage=0.32310177705977383"
+operators,Unsqueeze,"count=144, percentage=11.631663974151857"
+operators,Concat,"count=88, percentage=7.1082390953150245"
+operators,Reshape,"count=88, percentage=7.1082390953150245"
+operators,Transpose,"count=40, percentage=3.231017770597738"
+operators,MatMul,"count=16, percentage=1.2924071082390953"
+operators,Sub,"count=24, percentage=1.938610662358643"
+operators,ConstantOfShape,"count=24, percentage=1.938610662358643"
+operators,Slice,"count=32, percentage=2.5848142164781907"
+operators,Cast,"count=24, percentage=1.938610662358643"
+operators,Pad,"count=17, percentage=1.3731825525040386"
+operators,Flatten,"count=9, percentage=0.7269789983844911"
+operators,Equal,"count=8, percentage=0.6462035541195477"
+operators,Where,"count=8, percentage=0.6462035541195477"
+operators,Expand,"count=8, percentage=0.6462035541195477"
+operators,Softmax,"count=4, percentage=0.32310177705977383"
+operators,BatchNormalization,"count=4, percentage=0.32310177705977383"
+operators,AveragePool,"count=1, percentage=0.08077544426494346"
+operators,GlobalAveragePool,"count=1, percentage=0.08077544426494346"
+operators,Gemm,"count=1, percentage=0.08077544426494346"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 256, 256]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

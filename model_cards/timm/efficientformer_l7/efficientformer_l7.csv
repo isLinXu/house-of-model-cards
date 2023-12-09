@@ -1,0 +1,35 @@
+section,key,value
+summary,model,./efficientformer_l7.onnx
+summary,node_count,1080
+summary,input_count,1
+summary,output_count,1
+summary,num_params,82142353
+summary,model_size,313.5805549621582
+parameter_data_types,FLOAT,82139952
+parameter_data_types,INT64,2401
+operators,Identity,"count=7, percentage=0.6481481481481481"
+operators,Conv,"count=65, percentage=6.018518518518518"
+operators,Relu,"count=2, percentage=0.1851851851851852"
+operators,AveragePool,"count=30, percentage=2.7777777777777777"
+operators,Sub,"count=47, percentage=4.351851851851852"
+operators,Mul,"count=177, percentage=16.38888888888889"
+operators,Add,"count=189, percentage=17.5"
+operators,Constant,"count=201, percentage=18.61111111111111"
+operators,Div,"count=56, percentage=5.185185185185185"
+operators,Erf,"count=38, percentage=3.5185185185185186"
+operators,Shape,"count=17, percentage=1.574074074074074"
+operators,Slice,"count=1, percentage=0.0925925925925926"
+operators,Concat,"count=17, percentage=1.574074074074074"
+operators,Reshape,"count=17, percentage=1.574074074074074"
+operators,Transpose,"count=25, percentage=2.314814814814815"
+operators,ReduceMean,"count=35, percentage=3.2407407407407405"
+operators,Pow,"count=17, percentage=1.574074074074074"
+operators,Sqrt,"count=17, percentage=1.574074074074074"
+operators,Gather,"count=24, percentage=2.2222222222222223"
+operators,MatMul,"count=48, percentage=4.444444444444445"
+operators,Unsqueeze,"count=32, percentage=2.9629629629629632"
+operators,Split,"count=8, percentage=0.7407407407407408"
+operators,Softmax,"count=8, percentage=0.7407407407407408"
+operators,Gemm,"count=2, percentage=0.1851851851851852"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

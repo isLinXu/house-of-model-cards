@@ -1,0 +1,25 @@
+section,key,value
+summary,model,./fastvit_s12.onnx
+summary,node_count,397
+summary,input_count,1
+summary,output_count,1
+summary,num_params,9467496
+summary,model_size,36.21105670928955
+parameter_data_types,FLOAT,9467496
+operators,Identity,"count=24, percentage=6.045340050377834"
+operators,Conv,"count=78, percentage=19.64735516372796"
+operators,Constant,"count=64, percentage=16.120906801007557"
+operators,Add,"count=84, percentage=21.158690176322416"
+operators,Div,"count=19, percentage=4.785894206549118"
+operators,Erf,"count=19, percentage=4.785894206549118"
+operators,Mul,"count=63, percentage=15.869017632241814"
+operators,BatchNormalization,"count=28, percentage=7.052896725440807"
+operators,Sub,"count=12, percentage=3.022670025188917"
+operators,ReduceMean,"count=1, percentage=0.2518891687657431"
+operators,Relu,"count=1, percentage=0.2518891687657431"
+operators,Sigmoid,"count=1, percentage=0.2518891687657431"
+operators,GlobalAveragePool,"count=1, percentage=0.2518891687657431"
+operators,Flatten,"count=1, percentage=0.2518891687657431"
+operators,Gemm,"count=1, percentage=0.2518891687657431"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 256, 256]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

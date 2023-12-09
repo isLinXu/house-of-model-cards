@@ -1,0 +1,36 @@
+section,key,value
+summary,model,./tf_mixnet_s.onnx
+summary,node_count,1390
+summary,input_count,1
+summary,output_count,1
+summary,num_params,4147430
+summary,model_size,16.123053550720215
+parameter_data_types,FLOAT,4147430
+operators,Shape,"count=39, percentage=2.805755395683453"
+operators,Constant,"count=325, percentage=23.381294964028775"
+operators,Gather,"count=39, percentage=2.805755395683453"
+operators,Cast,"count=130, percentage=9.352517985611511"
+operators,Div,"count=52, percentage=3.741007194244604"
+operators,Ceil,"count=26, percentage=1.870503597122302"
+operators,Sub,"count=91, percentage=6.546762589928059"
+operators,Mul,"count=78, percentage=5.611510791366906"
+operators,Add,"count=63, percentage=4.532374100719425"
+operators,Clip,"count=26, percentage=1.870503597122302"
+operators,Unsqueeze,"count=104, percentage=7.482014388489208"
+operators,Concat,"count=73, percentage=5.251798561151079"
+operators,ConstantOfShape,"count=13, percentage=0.935251798561151"
+operators,Reshape,"count=26, percentage=1.870503597122302"
+operators,Slice,"count=13, percentage=0.935251798561151"
+operators,Transpose,"count=13, percentage=0.935251798561151"
+operators,Pad,"count=13, percentage=0.935251798561151"
+operators,Conv,"count=123, percentage=8.848920863309353"
+operators,Relu,"count=7, percentage=0.5035971223021583"
+operators,Split,"count=34, percentage=2.446043165467626"
+operators,BatchNormalization,"count=34, percentage=2.446043165467626"
+operators,Sigmoid,"count=52, percentage=3.741007194244604"
+operators,ReduceMean,"count=13, percentage=0.935251798561151"
+operators,GlobalAveragePool,"count=1, percentage=0.07194244604316546"
+operators,Flatten,"count=1, percentage=0.07194244604316546"
+operators,Gemm,"count=1, percentage=0.07194244604316546"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

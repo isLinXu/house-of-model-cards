@@ -1,0 +1,74 @@
+{
+  "summary": {
+    "model": "./resnet51q.onnx",
+    "node_count": 178,
+    "input_count": 1,
+    "output_count": 1,
+    "num_params": 35654744,
+    "model_size": 136.05325603485107
+  },
+  "parameter_data_types": {
+    "FLOAT": 35654744
+  },
+  "operators": {
+    "Conv": {
+      "count": 57,
+      "percentage": 32.02247191011236
+    },
+    "Sigmoid": {
+      "count": 51,
+      "percentage": 28.651685393258425
+    },
+    "Mul": {
+      "count": 51,
+      "percentage": 28.651685393258425
+    },
+    "Add": {
+      "count": 16,
+      "percentage": 8.98876404494382
+    },
+    "GlobalAveragePool": {
+      "count": 1,
+      "percentage": 0.5617977528089888
+    },
+    "Flatten": {
+      "count": 1,
+      "percentage": 0.5617977528089888
+    },
+    "Gemm": {
+      "count": 1,
+      "percentage": 0.5617977528089888
+    }
+  },
+  "operators_list": [
+    "Conv",
+    "Sigmoid",
+    "Mul",
+    "Add",
+    "GlobalAveragePool",
+    "Flatten",
+    "Gemm"
+  ],
+  "inputs": [
+    {
+      "name": "input",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        3,
+        256,
+        256
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        1000
+      ]
+    }
+  ]
+}

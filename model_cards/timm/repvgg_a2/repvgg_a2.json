@@ -1,0 +1,74 @@
+{
+  "summary": {
+    "model": "./repvgg_a2.onnx",
+    "node_count": 125,
+    "input_count": 1,
+    "output_count": 1,
+    "num_params": 28206312,
+    "model_size": 107.6321849822998
+  },
+  "parameter_data_types": {
+    "FLOAT": 28206312
+  },
+  "operators": {
+    "Conv": {
+      "count": 44,
+      "percentage": 35.199999999999996
+    },
+    "Add": {
+      "count": 39,
+      "percentage": 31.2
+    },
+    "Relu": {
+      "count": 22,
+      "percentage": 17.599999999999998
+    },
+    "BatchNormalization": {
+      "count": 17,
+      "percentage": 13.600000000000001
+    },
+    "GlobalAveragePool": {
+      "count": 1,
+      "percentage": 0.8
+    },
+    "Flatten": {
+      "count": 1,
+      "percentage": 0.8
+    },
+    "Gemm": {
+      "count": 1,
+      "percentage": 0.8
+    }
+  },
+  "operators_list": [
+    "Conv",
+    "Add",
+    "Relu",
+    "BatchNormalization",
+    "GlobalAveragePool",
+    "Flatten",
+    "Gemm"
+  ],
+  "inputs": [
+    {
+      "name": "input",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        3,
+        224,
+        224
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        1000
+      ]
+    }
+  ]
+}

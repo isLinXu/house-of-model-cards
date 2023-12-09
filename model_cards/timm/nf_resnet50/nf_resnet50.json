@@ -1,0 +1,115 @@
+{
+  "summary": {
+    "model": "./nf_resnet50.onnx",
+    "node_count": 646,
+    "input_count": 1,
+    "output_count": 1,
+    "num_params": 49012024,
+    "model_size": 187.21069717407227
+  },
+  "parameter_data_types": {
+    "FLOAT": 49011944,
+    "INT64": 80
+  },
+  "operators": {
+    "Identity": {
+      "count": 33,
+      "percentage": 5.108359133126935
+    },
+    "Constant": {
+      "count": 85,
+      "percentage": 13.157894736842104
+    },
+    "ReduceMean": {
+      "count": 159,
+      "percentage": 24.613003095975234
+    },
+    "Sub": {
+      "count": 53,
+      "percentage": 8.204334365325078
+    },
+    "Mul": {
+      "count": 85,
+      "percentage": 13.157894736842104
+    },
+    "BatchNormalization": {
+      "count": 53,
+      "percentage": 8.204334365325078
+    },
+    "Reshape": {
+      "count": 53,
+      "percentage": 8.204334365325078
+    },
+    "Conv": {
+      "count": 53,
+      "percentage": 8.204334365325078
+    },
+    "MaxPool": {
+      "count": 1,
+      "percentage": 0.15479876160990713
+    },
+    "Relu": {
+      "count": 49,
+      "percentage": 7.5851393188854495
+    },
+    "Add": {
+      "count": 16,
+      "percentage": 2.476780185758514
+    },
+    "AveragePool": {
+      "count": 3,
+      "percentage": 0.46439628482972134
+    },
+    "GlobalAveragePool": {
+      "count": 1,
+      "percentage": 0.15479876160990713
+    },
+    "Flatten": {
+      "count": 1,
+      "percentage": 0.15479876160990713
+    },
+    "Gemm": {
+      "count": 1,
+      "percentage": 0.15479876160990713
+    }
+  },
+  "operators_list": [
+    "Identity",
+    "Constant",
+    "ReduceMean",
+    "Sub",
+    "Mul",
+    "BatchNormalization",
+    "Reshape",
+    "Conv",
+    "MaxPool",
+    "Relu",
+    "Add",
+    "AveragePool",
+    "GlobalAveragePool",
+    "Flatten",
+    "Gemm"
+  ],
+  "inputs": [
+    {
+      "name": "input",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        3,
+        256,
+        256
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        1000
+      ]
+    }
+  ]
+}

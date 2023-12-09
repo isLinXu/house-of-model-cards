@@ -1,0 +1,51 @@
+██████╗ ███╗   ██╗███╗   ██╗██╗  ██╗     ███████╗██╗  ██╗██████╗ ██╗      ██████╗ ██████╗ ███████╗██████╗ 
+██╔═══██╗████╗  ██║████╗  ██║╚██╗██╔╝     ██╔════╝╚██╗██╔╝██╔══██╗██║     ██╔═══██╗██╔══██╗██╔════╝██╔══██╗ 
+██║   ██║██╔██╗ ██║██╔██╗ ██║ ╚███╔╝█████╗█████╗   ╚███╔╝ ██████╔╝██║     ██║   ██║██████╔╝█████╗  ██████╔╝ 
+██║   ██║██║╚██╗██║██║╚██╗██║ ██╔██╗╚════╝██╔══╝   ██╔██╗ ██╔═══╝ ██║     ██║   ██║██╔══██╗██╔══╝  ██╔══██╗
+╚██████╔╝██║ ╚████║██║ ╚████║██╔╝ ██╗     ███████╗██╔╝ ██╗██║     ███████╗╚██████╔╝██║  ██║███████╗██║  ██║ 
+╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═══╝╚═╝  ╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝     ╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
+================================【summary】================================
+| model: ./sebotnet33ts_256.onnx
+| node_count: 1238
+| input_count: 1
+| output_count: 1
+| num_params: 13688680
+| model_size: 52.4938383102417
+=====================【parameter_data_types】=====================
+| FLOAT: 13688680
+===========================【operators-lists】===========================
+| ['Conv', 'Sigmoid', 'Mul', 'ReduceMean', 'Relu', 'Add', 'Shape', 'Constant', 'Gather', 'Split', 'Unsqueeze', 'Concat', 'Reshape', 'Transpose', 'MatMul', 'Sub', 'ConstantOfShape', 'Slice', 'Cast', 'Pad', 'Flatten', 'Equal', 'Where', 'Expand', 'Softmax', 'BatchNormalization', 'AveragePool', 'GlobalAveragePool', 'Gemm']
+===========================【operators】===========================
+| Conv: count=50, percentage=4.038772213247173
+| Sigmoid: count=40, percentage=3.231017770597738
+| Mul: count=64, percentage=5.169628432956381
+| ReduceMean: count=6, percentage=0.48465266558966075
+| Relu: count=6, percentage=0.48465266558966075
+| Add: count=26, percentage=2.10016155088853
+| Shape: count=60, percentage=4.846526655896607
+| Constant: count=389, percentage=31.421647819063004
+| Gather: count=52, percentage=4.20032310177706
+| Split: count=4, percentage=0.32310177705977383
+| Unsqueeze: count=144, percentage=11.631663974151857
+| Concat: count=88, percentage=7.1082390953150245
+| Reshape: count=88, percentage=7.1082390953150245
+| Transpose: count=40, percentage=3.231017770597738
+| MatMul: count=16, percentage=1.2924071082390953
+| Sub: count=24, percentage=1.938610662358643
+| ConstantOfShape: count=24, percentage=1.938610662358643
+| Slice: count=32, percentage=2.5848142164781907
+| Cast: count=24, percentage=1.938610662358643
+| Pad: count=17, percentage=1.3731825525040386
+| Flatten: count=9, percentage=0.7269789983844911
+| Equal: count=8, percentage=0.6462035541195477
+| Where: count=8, percentage=0.6462035541195477
+| Expand: count=8, percentage=0.6462035541195477
+| Softmax: count=4, percentage=0.32310177705977383
+| BatchNormalization: count=4, percentage=0.32310177705977383
+| AveragePool: count=1, percentage=0.08077544426494346
+| GlobalAveragePool: count=1, percentage=0.08077544426494346
+| Gemm: count=1, percentage=0.08077544426494346
+===========================【inputs】==============================
+| name=input, dtype=FLOAT, shape=[0, 3, 256, 256]
+===========================【outputs】=============================
+name=output, dtype=FLOAT, shape=[0, 1000]

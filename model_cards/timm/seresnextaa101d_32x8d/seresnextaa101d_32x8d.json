@@ -1,0 +1,99 @@
+{
+  "summary": {
+    "model": "./seresnextaa101d_32x8d.onnx",
+    "node_count": 457,
+    "input_count": 1,
+    "output_count": 1,
+    "num_params": 93486776,
+    "model_size": 356.7115707397461
+  },
+  "parameter_data_types": {
+    "FLOAT": 93486776
+  },
+  "operators": {
+    "Conv": {
+      "count": 172,
+      "percentage": 37.63676148796499
+    },
+    "Relu": {
+      "count": 135,
+      "percentage": 29.540481400437635
+    },
+    "Constant": {
+      "count": 4,
+      "percentage": 0.87527352297593
+    },
+    "Pad": {
+      "count": 4,
+      "percentage": 0.87527352297593
+    },
+    "AveragePool": {
+      "count": 7,
+      "percentage": 1.5317286652078774
+    },
+    "ReduceMean": {
+      "count": 33,
+      "percentage": 7.2210065645514225
+    },
+    "Sigmoid": {
+      "count": 33,
+      "percentage": 7.2210065645514225
+    },
+    "Mul": {
+      "count": 33,
+      "percentage": 7.2210065645514225
+    },
+    "Add": {
+      "count": 33,
+      "percentage": 7.2210065645514225
+    },
+    "GlobalAveragePool": {
+      "count": 1,
+      "percentage": 0.2188183807439825
+    },
+    "Flatten": {
+      "count": 1,
+      "percentage": 0.2188183807439825
+    },
+    "Gemm": {
+      "count": 1,
+      "percentage": 0.2188183807439825
+    }
+  },
+  "operators_list": [
+    "Conv",
+    "Relu",
+    "Constant",
+    "Pad",
+    "AveragePool",
+    "ReduceMean",
+    "Sigmoid",
+    "Mul",
+    "Add",
+    "GlobalAveragePool",
+    "Flatten",
+    "Gemm"
+  ],
+  "inputs": [
+    {
+      "name": "input",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        3,
+        288,
+        288
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        1000
+      ]
+    }
+  ]
+}

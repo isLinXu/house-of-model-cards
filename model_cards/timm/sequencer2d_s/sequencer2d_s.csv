@@ -1,0 +1,30 @@
+section,key,value
+summary,model,./sequencer2d_s.onnx
+summary,node_count,1878
+summary,input_count,1
+summary,output_count,1
+summary,num_params,27651688
+summary,model_size,105.89657402038574
+parameter_data_types,FLOAT,27651688
+operators,Conv,"count=4, percentage=0.21299254526091588"
+operators,Transpose,"count=151, percentage=8.040468583599573"
+operators,ReduceMean,"count=75, percentage=3.993610223642172"
+operators,Sub,"count=37, percentage=1.970181043663472"
+operators,Constant,"count=416, percentage=22.15122470713525"
+operators,Pow,"count=37, percentage=1.970181043663472"
+operators,Add,"count=182, percentage=9.691160809371672"
+operators,Sqrt,"count=37, percentage=1.970181043663472"
+operators,Div,"count=55, percentage=2.928647497337593"
+operators,Mul,"count=73, percentage=3.887113951011715"
+operators,Shape,"count=108, percentage=5.7507987220447285"
+operators,Gather,"count=108, percentage=5.7507987220447285"
+operators,Unsqueeze,"count=216, percentage=11.501597444089457"
+operators,Concat,"count=126, percentage=6.7092651757188495"
+operators,Reshape,"count=108, percentage=5.7507987220447285"
+operators,ConstantOfShape,"count=36, percentage=1.9169329073482428"
+operators,LSTM,"count=36, percentage=1.9169329073482428"
+operators,MatMul,"count=54, percentage=2.8753993610223643"
+operators,Erf,"count=18, percentage=0.9584664536741214"
+operators,Gemm,"count=1, percentage=0.05324813631522897"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

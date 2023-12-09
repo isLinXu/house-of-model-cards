@@ -1,0 +1,26 @@
+section,key,value
+summary,model,./densenetblur121d.onnx
+summary,node_count,400
+summary,input_count,1
+summary,output_count,1
+summary,num_params,8059208
+summary,model_size,30.89209747314453
+parameter_data_types,FLOAT,8059208
+operators,Conv,"count=123, percentage=30.75"
+operators,Relu,"count=123, percentage=30.75"
+operators,MaxPool,"count=1, percentage=0.25"
+operators,Constant,"count=12, percentage=3.0"
+operators,ConstantOfShape,"count=1, percentage=0.25"
+operators,Concat,"count=63, percentage=15.75"
+operators,Reshape,"count=2, percentage=0.5"
+operators,Slice,"count=1, percentage=0.25"
+operators,Transpose,"count=1, percentage=0.25"
+operators,Cast,"count=1, percentage=0.25"
+operators,Pad,"count=4, percentage=1.0"
+operators,BatchNormalization,"count=62, percentage=15.5"
+operators,AveragePool,"count=3, percentage=0.75"
+operators,GlobalAveragePool,"count=1, percentage=0.25"
+operators,Flatten,"count=1, percentage=0.25"
+operators,Gemm,"count=1, percentage=0.25"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

@@ -1,0 +1,69 @@
+{
+  "summary": {
+    "model": "./vgg19_bn.onnx",
+    "node_count": 44,
+    "input_count": 1,
+    "output_count": 1,
+    "num_params": 143667240,
+    "model_size": 548.055591583252
+  },
+  "parameter_data_types": {
+    "FLOAT": 143667240
+  },
+  "operators": {
+    "Conv": {
+      "count": 18,
+      "percentage": 40.909090909090914
+    },
+    "Relu": {
+      "count": 18,
+      "percentage": 40.909090909090914
+    },
+    "MaxPool": {
+      "count": 5,
+      "percentage": 11.363636363636363
+    },
+    "GlobalAveragePool": {
+      "count": 1,
+      "percentage": 2.272727272727273
+    },
+    "Flatten": {
+      "count": 1,
+      "percentage": 2.272727272727273
+    },
+    "Gemm": {
+      "count": 1,
+      "percentage": 2.272727272727273
+    }
+  },
+  "operators_list": [
+    "Conv",
+    "Relu",
+    "MaxPool",
+    "GlobalAveragePool",
+    "Flatten",
+    "Gemm"
+  ],
+  "inputs": [
+    {
+      "name": "input",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        3,
+        224,
+        224
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        1000
+      ]
+    }
+  ]
+}

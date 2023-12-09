@@ -1,0 +1,79 @@
+{
+  "summary": {
+    "model": "./efficientnetv2_rw_s.onnx",
+    "node_count": 504,
+    "input_count": 1,
+    "output_count": 1,
+    "num_params": 23860872,
+    "model_size": 91.14081192016602
+  },
+  "parameter_data_types": {
+    "FLOAT": 23860872
+  },
+  "operators": {
+    "Conv": {
+      "count": 172,
+      "percentage": 34.12698412698413
+    },
+    "Sigmoid": {
+      "count": 132,
+      "percentage": 26.190476190476193
+    },
+    "Mul": {
+      "count": 132,
+      "percentage": 26.190476190476193
+    },
+    "Add": {
+      "count": 35,
+      "percentage": 6.944444444444445
+    },
+    "ReduceMean": {
+      "count": 30,
+      "percentage": 5.952380952380952
+    },
+    "GlobalAveragePool": {
+      "count": 1,
+      "percentage": 0.1984126984126984
+    },
+    "Flatten": {
+      "count": 1,
+      "percentage": 0.1984126984126984
+    },
+    "Gemm": {
+      "count": 1,
+      "percentage": 0.1984126984126984
+    }
+  },
+  "operators_list": [
+    "Conv",
+    "Sigmoid",
+    "Mul",
+    "Add",
+    "ReduceMean",
+    "GlobalAveragePool",
+    "Flatten",
+    "Gemm"
+  ],
+  "inputs": [
+    {
+      "name": "input",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        3,
+        288,
+        288
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        1000
+      ]
+    }
+  ]
+}

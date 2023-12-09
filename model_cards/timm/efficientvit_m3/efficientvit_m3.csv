@@ -1,0 +1,35 @@
+section,key,value
+summary,model,/Users/gatilin/PycharmProjects/onnx-easy-tools/efficientvit_m3.onnx
+summary,node_count,1475
+summary,input_count,1
+summary,output_count,1
+summary,num_params,6877170
+summary,model_size,26.599926948547363
+parameter_data_types,FLOAT,6877170
+operators,Constant,"count=432, percentage=29.28813559322034"
+operators,Conv,"count=112, percentage=7.59322033898305"
+operators,Relu,"count=31, percentage=2.1016949152542375"
+operators,Add,"count=82, percentage=5.5593220338983045"
+operators,Shape,"count=92, percentage=6.237288135593221"
+operators,Gather,"count=54, percentage=3.6610169491525424"
+operators,Transpose,"count=51, percentage=3.457627118644068"
+operators,ConstantOfShape,"count=1, percentage=0.06779661016949153"
+operators,Concat,"count=121, percentage=8.203389830508474"
+operators,Reshape,"count=116, percentage=7.864406779661016"
+operators,Slice,"count=91, percentage=6.169491525423728"
+operators,Cast,"count=1, percentage=0.06779661016949153"
+operators,Pad,"count=1, percentage=0.06779661016949153"
+operators,Unsqueeze,"count=140, percentage=9.491525423728813"
+operators,Mul,"count=48, percentage=3.2542372881355934"
+operators,Div,"count=6, percentage=0.4067796610169492"
+operators,Split,"count=22, percentage=1.4915254237288136"
+operators,MatMul,"count=44, percentage=2.983050847457627"
+operators,Softmax,"count=22, percentage=1.4915254237288136"
+operators,ReduceMean,"count=2, percentage=0.13559322033898305"
+operators,Sigmoid,"count=2, percentage=0.13559322033898305"
+operators,GlobalAveragePool,"count=1, percentage=0.06779661016949153"
+operators,Flatten,"count=1, percentage=0.06779661016949153"
+operators,BatchNormalization,"count=1, percentage=0.06779661016949153"
+operators,Gemm,"count=1, percentage=0.06779661016949153"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

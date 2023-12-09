@@ -1,0 +1,89 @@
+{
+  "summary": {
+    "model": "./repghostnet_080.onnx",
+    "node_count": 241,
+    "input_count": 1,
+    "output_count": 1,
+    "num_params": 3277228,
+    "model_size": 12.580233573913574
+  },
+  "parameter_data_types": {
+    "FLOAT": 3277228
+  },
+  "operators": {
+    "Conv": {
+      "count": 95,
+      "percentage": 39.41908713692946
+    },
+    "Relu": {
+      "count": 42,
+      "percentage": 17.42738589211618
+    },
+    "BatchNormalization": {
+      "count": 32,
+      "percentage": 13.278008298755188
+    },
+    "Add": {
+      "count": 48,
+      "percentage": 19.91701244813278
+    },
+    "ReduceMean": {
+      "count": 7,
+      "percentage": 2.904564315352697
+    },
+    "HardSigmoid": {
+      "count": 7,
+      "percentage": 2.904564315352697
+    },
+    "Mul": {
+      "count": 7,
+      "percentage": 2.904564315352697
+    },
+    "GlobalAveragePool": {
+      "count": 1,
+      "percentage": 0.4149377593360996
+    },
+    "Flatten": {
+      "count": 1,
+      "percentage": 0.4149377593360996
+    },
+    "Gemm": {
+      "count": 1,
+      "percentage": 0.4149377593360996
+    }
+  },
+  "operators_list": [
+    "Conv",
+    "Relu",
+    "BatchNormalization",
+    "Add",
+    "ReduceMean",
+    "HardSigmoid",
+    "Mul",
+    "GlobalAveragePool",
+    "Flatten",
+    "Gemm"
+  ],
+  "inputs": [
+    {
+      "name": "input",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        3,
+        224,
+        224
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        1000
+      ]
+    }
+  ]
+}

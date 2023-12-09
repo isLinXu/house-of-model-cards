@@ -1,0 +1,44 @@
+██████╗ ███╗   ██╗███╗   ██╗██╗  ██╗     ███████╗██╗  ██╗██████╗ ██╗      ██████╗ ██████╗ ███████╗██████╗ 
+██╔═══██╗████╗  ██║████╗  ██║╚██╗██╔╝     ██╔════╝╚██╗██╔╝██╔══██╗██║     ██╔═══██╗██╔══██╗██╔════╝██╔══██╗ 
+██║   ██║██╔██╗ ██║██╔██╗ ██║ ╚███╔╝█████╗█████╗   ╚███╔╝ ██████╔╝██║     ██║   ██║██████╔╝█████╗  ██████╔╝ 
+██║   ██║██║╚██╗██║██║╚██╗██║ ██╔██╗╚════╝██╔══╝   ██╔██╗ ██╔═══╝ ██║     ██║   ██║██╔══██╗██╔══╝  ██╔══██╗
+╚██████╔╝██║ ╚████║██║ ╚████║██╔╝ ██╗     ███████╗██╔╝ ██╗██║     ███████╗╚██████╔╝██║  ██║███████╗██║  ██║ 
+╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═══╝╚═╝  ╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝     ╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
+================================【summary】================================
+| model: ./resnetv2_50x1_bit.onnx
+| node_count: 1090
+| input_count: 1
+| output_count: 1
+| num_params: 49004344
+| model_size: 187.3866024017334
+=====================【parameter_data_types】=====================
+| FLOAT: 49004264
+| INT64: 80
+===========================【operators-lists】===========================
+| ['Identity', 'Constant', 'ReduceMean', 'Sub', 'Mul', 'BatchNormalization', 'Reshape', 'Conv', 'ConstantOfShape', 'Concat', 'Slice', 'Transpose', 'Cast', 'Pad', 'MaxPool', 'InstanceNormalization', 'Shape', 'Add', 'Relu', 'GlobalAveragePool', 'Flatten']
+===========================【operators】===========================
+| Identity: count=33, percentage=3.0275229357798166
+| Constant: count=262, percentage=24.036697247706424
+| ReduceMean: count=159, percentage=14.587155963302752
+| Sub: count=53, percentage=4.862385321100918
+| Mul: count=102, percentage=9.357798165137615
+| BatchNormalization: count=53, percentage=4.862385321100918
+| Reshape: count=153, percentage=14.036697247706423
+| Conv: count=54, percentage=4.954128440366973
+| ConstantOfShape: count=1, percentage=0.09174311926605505
+| Concat: count=1, percentage=0.09174311926605505
+| Slice: count=1, percentage=0.09174311926605505
+| Transpose: count=1, percentage=0.09174311926605505
+| Cast: count=1, percentage=0.09174311926605505
+| Pad: count=1, percentage=0.09174311926605505
+| MaxPool: count=1, percentage=0.09174311926605505
+| InstanceNormalization: count=49, percentage=4.495412844036697
+| Shape: count=49, percentage=4.495412844036697
+| Add: count=65, percentage=5.963302752293578
+| Relu: count=49, percentage=4.495412844036697
+| GlobalAveragePool: count=1, percentage=0.09174311926605505
+| Flatten: count=1, percentage=0.09174311926605505
+===========================【inputs】==============================
+| name=input, dtype=FLOAT, shape=[0, 3, 224, 224]
+===========================【outputs】=============================
+name=output, dtype=FLOAT, shape=[0, 1000]

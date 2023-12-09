@@ -1,0 +1,42 @@
+██████╗ ███╗   ██╗███╗   ██╗██╗  ██╗     ███████╗██╗  ██╗██████╗ ██╗      ██████╗ ██████╗ ███████╗██████╗ 
+██╔═══██╗████╗  ██║████╗  ██║╚██╗██╔╝     ██╔════╝╚██╗██╔╝██╔══██╗██║     ██╔═══██╗██╔══██╗██╔════╝██╔══██╗ 
+██║   ██║██╔██╗ ██║██╔██╗ ██║ ╚███╔╝█████╗█████╗   ╚███╔╝ ██████╔╝██║     ██║   ██║██████╔╝█████╗  ██████╔╝ 
+██║   ██║██║╚██╗██║██║╚██╗██║ ██╔██╗╚════╝██╔══╝   ██╔██╗ ██╔═══╝ ██║     ██║   ██║██╔══██╗██╔══╝  ██╔══██╗
+╚██████╔╝██║ ╚████║██║ ╚████║██╔╝ ██╗     ███████╗██╔╝ ██╗██║     ███████╗╚██████╔╝██║  ██║███████╗██║  ██║ 
+╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═══╝╚═╝  ╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝     ╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
+================================【summary】================================
+| model: ./efficientformerv2_l.onnx
+| node_count: 1506
+| input_count: 1
+| output_count: 1
+| num_params: 26127400
+| model_size: 100.1054630279541
+=====================【parameter_data_types】=====================
+| FLOAT: 26127400
+===========================【operators-lists】===========================
+| ['Conv', 'Constant', 'Div', 'Erf', 'Add', 'Mul', 'Shape', 'Gather', 'Unsqueeze', 'Concat', 'Reshape', 'Transpose', 'MatMul', 'Softmax', 'Resize', 'Pad', 'AveragePool', 'BatchNormalization', 'ReduceMean', 'Gemm']
+===========================【operators】===========================
+| Conv: count=206, percentage=13.678618857901725
+| Constant: count=453, percentage=30.0796812749004
+| Div: count=86, percentage=5.710491367861885
+| Erf: count=85, percentage=5.6440903054448865
+| Add: count=161, percentage=10.690571049136786
+| Mul: count=230, percentage=15.272244355909695
+| Shape: count=13, percentage=0.8632138114209826
+| Gather: count=26, percentage=1.7264276228419653
+| Unsqueeze: count=52, percentage=3.4528552456839305
+| Concat: count=52, percentage=3.4528552456839305
+| Reshape: count=52, percentage=3.4528552456839305
+| Transpose: count=39, percentage=2.589641434262948
+| MatMul: count=26, percentage=1.7264276228419653
+| Softmax: count=13, percentage=0.8632138114209826
+| Resize: count=6, percentage=0.398406374501992
+| Pad: count=1, percentage=0.06640106241699867
+| AveragePool: count=1, percentage=0.06640106241699867
+| BatchNormalization: count=1, percentage=0.06640106241699867
+| ReduceMean: count=1, percentage=0.06640106241699867
+| Gemm: count=2, percentage=0.13280212483399734
+===========================【inputs】==============================
+| name=input, dtype=FLOAT, shape=[0, 3, 224, 224]
+===========================【outputs】=============================
+name=output, dtype=FLOAT, shape=[0, 1000]

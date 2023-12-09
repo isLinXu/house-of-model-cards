@@ -1,0 +1,79 @@
+{
+  "summary": {
+    "model": "./inception_v4.onnx",
+    "node_count": 338,
+    "input_count": 1,
+    "output_count": 1,
+    "num_params": 42648232,
+    "model_size": 162.77616691589355
+  },
+  "parameter_data_types": {
+    "FLOAT": 42648232
+  },
+  "operators": {
+    "Conv": {
+      "count": 149,
+      "percentage": 44.08284023668639
+    },
+    "Relu": {
+      "count": 149,
+      "percentage": 44.08284023668639
+    },
+    "MaxPool": {
+      "count": 4,
+      "percentage": 1.183431952662722
+    },
+    "Concat": {
+      "count": 19,
+      "percentage": 5.621301775147929
+    },
+    "AveragePool": {
+      "count": 14,
+      "percentage": 4.142011834319527
+    },
+    "GlobalAveragePool": {
+      "count": 1,
+      "percentage": 0.2958579881656805
+    },
+    "Flatten": {
+      "count": 1,
+      "percentage": 0.2958579881656805
+    },
+    "Gemm": {
+      "count": 1,
+      "percentage": 0.2958579881656805
+    }
+  },
+  "operators_list": [
+    "Conv",
+    "Relu",
+    "MaxPool",
+    "Concat",
+    "AveragePool",
+    "GlobalAveragePool",
+    "Flatten",
+    "Gemm"
+  ],
+  "inputs": [
+    {
+      "name": "input",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        3,
+        299,
+        299
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        1000
+      ]
+    }
+  ]
+}

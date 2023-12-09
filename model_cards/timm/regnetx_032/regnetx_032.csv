@@ -1,0 +1,16 @@
+section,key,value
+summary,model,./regnetx_032.onnx
+summary,node_count,184
+summary,input_count,1
+summary,output_count,1
+summary,num_params,15265272
+summary,model_size,58.26410675048828
+parameter_data_types,FLOAT,15265272
+operators,Conv,"count=80, percentage=43.47826086956522"
+operators,Relu,"count=76, percentage=41.30434782608695"
+operators,Add,"count=25, percentage=13.586956521739129"
+operators,GlobalAveragePool,"count=1, percentage=0.5434782608695652"
+operators,Flatten,"count=1, percentage=0.5434782608695652"
+operators,Gemm,"count=1, percentage=0.5434782608695652"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

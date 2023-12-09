@@ -1,0 +1,52 @@
+██████╗ ███╗   ██╗███╗   ██╗██╗  ██╗     ███████╗██╗  ██╗██████╗ ██╗      ██████╗ ██████╗ ███████╗██████╗ 
+██╔═══██╗████╗  ██║████╗  ██║╚██╗██╔╝     ██╔════╝╚██╗██╔╝██╔══██╗██║     ██╔═══██╗██╔══██╗██╔════╝██╔══██╗ 
+██║   ██║██╔██╗ ██║██╔██╗ ██║ ╚███╔╝█████╗█████╗   ╚███╔╝ ██████╔╝██║     ██║   ██║██████╔╝█████╗  ██████╔╝ 
+██║   ██║██║╚██╗██║██║╚██╗██║ ██╔██╗╚════╝██╔══╝   ██╔██╗ ██╔═══╝ ██║     ██║   ██║██╔══██╗██╔══╝  ██╔══██╗
+╚██████╔╝██║ ╚████║██║ ╚████║██╔╝ ██╗     ███████╗██╔╝ ██╗██║     ███████╗╚██████╔╝██║  ██║███████╗██║  ██║ 
+╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═══╝╚═╝  ╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝     ╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
+================================【summary】================================
+| model: ./swinv2_tiny_window16_256.onnx
+| node_count: 2547
+| input_count: 1
+| output_count: 1
+| num_params: 28351570
+| model_size: 114.11466693878174
+=====================【parameter_data_types】=====================
+| FLOAT: 28351570
+===========================【operators-lists】===========================
+| ['Conv', 'Transpose', 'ReduceMean', 'Sub', 'Constant', 'Pow', 'Add', 'Sqrt', 'Div', 'Mul', 'Shape', 'Gather', 'Cast', 'Unsqueeze', 'Concat', 'Reshape', 'MatMul', 'Split', 'Squeeze', 'Abs', 'ReduceSum', 'Clip', 'Expand', 'Exp', 'Relu', 'Sigmoid', 'Softmax', 'Erf', 'Slice', 'Gemm']
+===========================【operators】===========================
+| Conv: count=1, percentage=0.03926187671770711
+| Transpose: count=76, percentage=2.98390263054574
+| ReduceMean: count=59, percentage=2.316450726344719
+| Sub: count=29, percentage=1.138594424813506
+| Constant: count=706, percentage=27.718884962701217
+| Pow: count=77, percentage=3.023164507263447
+| Add: count=168, percentage=6.595995288574794
+| Sqrt: count=29, percentage=1.138594424813506
+| Div: count=95, percentage=3.729878288182175
+| Mul: count=77, percentage=3.023164507263447
+| Shape: count=143, percentage=5.614448370632116
+| Gather: count=128, percentage=5.02552021986651
+| Cast: count=60, percentage=2.3557126030624262
+| Unsqueeze: count=272, percentage=10.679230467216334
+| Concat: count=138, percentage=5.418138987043581
+| Reshape: count=154, percentage=6.046329014526894
+| MatMul: count=99, percentage=3.8869257950530036
+| Split: count=12, percentage=0.47114252061248524
+| Squeeze: count=36, percentage=1.4134275618374559
+| Abs: count=24, percentage=0.9422850412249705
+| ReduceSum: count=24, percentage=0.9422850412249705
+| Clip: count=36, percentage=1.4134275618374559
+| Expand: count=24, percentage=0.9422850412249705
+| Exp: count=12, percentage=0.47114252061248524
+| Relu: count=12, percentage=0.47114252061248524
+| Sigmoid: count=12, percentage=0.47114252061248524
+| Softmax: count=12, percentage=0.47114252061248524
+| Erf: count=12, percentage=0.47114252061248524
+| Slice: count=19, percentage=0.745975657636435
+| Gemm: count=1, percentage=0.03926187671770711
+===========================【inputs】==============================
+| name=input, dtype=FLOAT, shape=[0, 3, 256, 256]
+===========================【outputs】=============================
+name=output, dtype=FLOAT, shape=[0, 1000]

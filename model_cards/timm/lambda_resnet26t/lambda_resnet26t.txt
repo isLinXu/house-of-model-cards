@@ -1,0 +1,44 @@
+██████╗ ███╗   ██╗███╗   ██╗██╗  ██╗     ███████╗██╗  ██╗██████╗ ██╗      ██████╗ ██████╗ ███████╗██████╗ 
+██╔═══██╗████╗  ██║████╗  ██║╚██╗██╔╝     ██╔════╝╚██╗██╔╝██╔══██╗██║     ██╔═══██╗██╔══██╗██╔════╝██╔══██╗ 
+██║   ██║██╔██╗ ██║██╔██╗ ██║ ╚███╔╝█████╗█████╗   ╚███╔╝ ██████╔╝██║     ██║   ██║██████╔╝█████╗  ██████╔╝ 
+██║   ██║██║╚██╗██║██║╚██╗██║ ██╔██╗╚════╝██╔══╝   ██╔██╗ ██╔═══╝ ██║     ██║   ██║██╔══██╗██╔══╝  ██╔══██╗
+╚██████╔╝██║ ╚████║██║ ╚████║██╔╝ ██╗     ███████╗██╔╝ ██╗██║     ███████╗╚██████╔╝██║  ██║███████╗██║  ██║ 
+╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═══╝╚═╝  ╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝     ╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
+================================【summary】================================
+| model: ./lambda_resnet26t.onnx
+| node_count: 271
+| input_count: 1
+| output_count: 1
+| num_params: 10947656
+| model_size: 41.82326889038086
+=====================【parameter_data_types】=====================
+| FLOAT: 10947656
+===========================【operators-lists】===========================
+| ['Conv', 'Relu', 'MaxPool', 'Add', 'Shape', 'Constant', 'Gather', 'Mul', 'Split', 'BatchNormalization', 'Unsqueeze', 'Concat', 'Reshape', 'Transpose', 'Softmax', 'MatMul', 'Squeeze', 'Pad', 'AveragePool', 'GlobalAveragePool', 'Flatten', 'Gemm']
+===========================【operators】===========================
+| Conv: count=34, percentage=12.546125461254611
+| Relu: count=27, percentage=9.96309963099631
+| MaxPool: count=1, percentage=0.36900369003690037
+| Add: count=11, percentage=4.059040590405904
+| Shape: count=12, percentage=4.428044280442804
+| Constant: count=40, percentage=14.760147601476014
+| Gather: count=12, percentage=4.428044280442804
+| Mul: count=3, percentage=1.107011070110701
+| Split: count=3, percentage=1.107011070110701
+| BatchNormalization: count=9, percentage=3.3210332103321036
+| Unsqueeze: count=51, percentage=18.81918819188192
+| Concat: count=18, percentage=6.642066420664207
+| Reshape: count=18, percentage=6.642066420664207
+| Transpose: count=12, percentage=4.428044280442804
+| Softmax: count=3, percentage=1.107011070110701
+| MatMul: count=9, percentage=3.3210332103321036
+| Squeeze: count=3, percentage=1.107011070110701
+| Pad: count=1, percentage=0.36900369003690037
+| AveragePool: count=1, percentage=0.36900369003690037
+| GlobalAveragePool: count=1, percentage=0.36900369003690037
+| Flatten: count=1, percentage=0.36900369003690037
+| Gemm: count=1, percentage=0.36900369003690037
+===========================【inputs】==============================
+| name=input, dtype=FLOAT, shape=[0, 3, 256, 256]
+===========================【outputs】=============================
+name=output, dtype=FLOAT, shape=[0, 1000]

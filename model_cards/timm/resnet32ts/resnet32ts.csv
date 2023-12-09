@@ -1,0 +1,17 @@
+section,key,value
+summary,model,./resnet32ts.onnx
+summary,node_count,116
+summary,input_count,1
+summary,output_count,1
+summary,num_params,17945064
+summary,model_size,68.48175239562988
+parameter_data_types,FLOAT,17945064
+operators,Conv,"count=37, percentage=31.896551724137932"
+operators,Sigmoid,"count=33, percentage=28.448275862068968"
+operators,Mul,"count=33, percentage=28.448275862068968"
+operators,Add,"count=10, percentage=8.620689655172415"
+operators,GlobalAveragePool,"count=1, percentage=0.8620689655172413"
+operators,Flatten,"count=1, percentage=0.8620689655172413"
+operators,Gemm,"count=1, percentage=0.8620689655172413"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 256, 256]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

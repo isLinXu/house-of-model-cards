@@ -1,0 +1,19 @@
+section,key,value
+summary,model,./hardcorenas_d.onnx
+summary,node_count,238
+summary,input_count,1
+summary,output_count,1
+summary,num_params,7483624
+summary,model_size,28.60550880432129
+parameter_data_types,FLOAT,7483624
+operators,Conv,"count=90, percentage=37.81512605042017"
+operators,HardSigmoid,"count=44, percentage=18.487394957983195"
+operators,Mul,"count=44, percentage=18.487394957983195"
+operators,Relu,"count=28, percentage=11.76470588235294"
+operators,ReduceMean,"count=17, percentage=7.142857142857142"
+operators,Add,"count=12, percentage=5.042016806722689"
+operators,GlobalAveragePool,"count=1, percentage=0.42016806722689076"
+operators,Flatten,"count=1, percentage=0.42016806722689076"
+operators,Gemm,"count=1, percentage=0.42016806722689076"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

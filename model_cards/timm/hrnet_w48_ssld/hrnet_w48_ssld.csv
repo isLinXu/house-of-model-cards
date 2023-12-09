@@ -1,0 +1,19 @@
+section,key,value
+summary,model,./hrnet_w48_ssld.onnx
+summary,node_count,883
+summary,input_count,1
+summary,output_count,1
+summary,num_params,77394600
+summary,model_size,295.46127223968506
+parameter_data_types,FLOAT,77394600
+operators,Identity,"count=1, percentage=0.11325028312570783"
+operators,Conv,"count=325, percentage=36.80634201585504"
+operators,Relu,"count=284, percentage=32.16308040770102"
+operators,Add,"count=177, percentage=20.045300113250285"
+operators,Constant,"count=62, percentage=7.021517553793885"
+operators,Resize,"count=31, percentage=3.5107587768969424"
+operators,GlobalAveragePool,"count=1, percentage=0.11325028312570783"
+operators,Flatten,"count=1, percentage=0.11325028312570783"
+operators,Gemm,"count=1, percentage=0.11325028312570783"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

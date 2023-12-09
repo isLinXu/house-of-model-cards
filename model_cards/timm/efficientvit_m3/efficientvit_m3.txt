@@ -1,0 +1,47 @@
+██████╗ ███╗   ██╗███╗   ██╗██╗  ██╗     ███████╗██╗  ██╗██████╗ ██╗      ██████╗ ██████╗ ███████╗██████╗ 
+██╔═══██╗████╗  ██║████╗  ██║╚██╗██╔╝     ██╔════╝╚██╗██╔╝██╔══██╗██║     ██╔═══██╗██╔══██╗██╔════╝██╔══██╗ 
+██║   ██║██╔██╗ ██║██╔██╗ ██║ ╚███╔╝█████╗█████╗   ╚███╔╝ ██████╔╝██║     ██║   ██║██████╔╝█████╗  ██████╔╝ 
+██║   ██║██║╚██╗██║██║╚██╗██║ ██╔██╗╚════╝██╔══╝   ██╔██╗ ██╔═══╝ ██║     ██║   ██║██╔══██╗██╔══╝  ██╔══██╗
+╚██████╔╝██║ ╚████║██║ ╚████║██╔╝ ██╗     ███████╗██╔╝ ██╗██║     ███████╗╚██████╔╝██║  ██║███████╗██║  ██║ 
+╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═══╝╚═╝  ╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝     ╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
+================================【summary】================================
+| model: /Users/gatilin/PycharmProjects/onnx-easy-tools/efficientvit_m3.onnx
+| node_count: 1475
+| input_count: 1
+| output_count: 1
+| num_params: 6877170
+| model_size: 26.599926948547363
+=====================【parameter_data_types】=====================
+| FLOAT: 6877170
+===========================【operators-lists】===========================
+| ['Constant', 'Conv', 'Relu', 'Add', 'Shape', 'Gather', 'Transpose', 'ConstantOfShape', 'Concat', 'Reshape', 'Slice', 'Cast', 'Pad', 'Unsqueeze', 'Mul', 'Div', 'Split', 'MatMul', 'Softmax', 'ReduceMean', 'Sigmoid', 'GlobalAveragePool', 'Flatten', 'BatchNormalization', 'Gemm']
+===========================【operators】===========================
+| Constant: count=432, percentage=29.28813559322034
+| Conv: count=112, percentage=7.59322033898305
+| Relu: count=31, percentage=2.1016949152542375
+| Add: count=82, percentage=5.5593220338983045
+| Shape: count=92, percentage=6.237288135593221
+| Gather: count=54, percentage=3.6610169491525424
+| Transpose: count=51, percentage=3.457627118644068
+| ConstantOfShape: count=1, percentage=0.06779661016949153
+| Concat: count=121, percentage=8.203389830508474
+| Reshape: count=116, percentage=7.864406779661016
+| Slice: count=91, percentage=6.169491525423728
+| Cast: count=1, percentage=0.06779661016949153
+| Pad: count=1, percentage=0.06779661016949153
+| Unsqueeze: count=140, percentage=9.491525423728813
+| Mul: count=48, percentage=3.2542372881355934
+| Div: count=6, percentage=0.4067796610169492
+| Split: count=22, percentage=1.4915254237288136
+| MatMul: count=44, percentage=2.983050847457627
+| Softmax: count=22, percentage=1.4915254237288136
+| ReduceMean: count=2, percentage=0.13559322033898305
+| Sigmoid: count=2, percentage=0.13559322033898305
+| GlobalAveragePool: count=1, percentage=0.06779661016949153
+| Flatten: count=1, percentage=0.06779661016949153
+| BatchNormalization: count=1, percentage=0.06779661016949153
+| Gemm: count=1, percentage=0.06779661016949153
+===========================【inputs】==============================
+| name=input, dtype=FLOAT, shape=[0, 3, 224, 224]
+===========================【outputs】=============================
+name=output, dtype=FLOAT, shape=[0, 1000]

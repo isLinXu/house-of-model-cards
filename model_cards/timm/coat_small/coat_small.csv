@@ -1,0 +1,40 @@
+section,key,value
+summary,model,./coat_small.onnx
+summary,node_count,5453
+summary,input_count,1
+summary,output_count,1
+summary,num_params,21693908
+summary,model_size,83.65401554107666
+parameter_data_types,FLOAT,21693908
+operators,Identity,"count=24, percentage=0.4401247019988997"
+operators,Constant,"count=1741, percentage=31.927379424170184"
+operators,Shape,"count=283, percentage=5.189803777737025"
+operators,Gather,"count=252, percentage=4.621309370988447"
+operators,Conv,"count=109, percentage=1.9988996882450027"
+operators,Slice,"count=197, percentage=3.6126902622409682"
+operators,Concat,"count=340, percentage=6.2350999449844124"
+operators,Reshape,"count=273, percentage=5.006418485237484"
+operators,Transpose,"count=269, percentage=4.933064368237668"
+operators,ReduceMean,"count=118, percentage=2.1639464514945903"
+operators,Sub,"count=59, percentage=1.0819732257472952"
+operators,Pow,"count=59, percentage=1.0819732257472952"
+operators,Add,"count=388, percentage=7.115349348982211"
+operators,Sqrt,"count=59, percentage=1.0819732257472952"
+operators,Div,"count=111, percentage=2.035576746744911"
+operators,Mul,"count=193, percentage=3.5393361452411516"
+operators,Unsqueeze,"count=456, percentage=8.362369337979095"
+operators,ConstantOfShape,"count=30, percentage=0.5501558774986246"
+operators,Equal,"count=4, percentage=0.07335411699981662"
+operators,Where,"count=4, percentage=0.07335411699981662"
+operators,Expand,"count=4, percentage=0.07335411699981662"
+operators,MatMul,"count=156, percentage=2.8608105629928477"
+operators,Cast,"count=78, percentage=1.4304052814964239"
+operators,Split,"count=52, percentage=0.9536035209976159"
+operators,Squeeze,"count=79, percentage=1.4487438107463781"
+operators,Softmax,"count=26, percentage=0.47680176049880796"
+operators,Pad,"count=26, percentage=0.47680176049880796"
+operators,Erf,"count=26, percentage=0.47680176049880796"
+operators,Resize,"count=36, percentage=0.6601870529983496"
+operators,Gemm,"count=1, percentage=0.018338529249954154"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

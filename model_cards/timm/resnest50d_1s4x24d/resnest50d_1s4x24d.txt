@@ -1,0 +1,40 @@
+██████╗ ███╗   ██╗███╗   ██╗██╗  ██╗     ███████╗██╗  ██╗██████╗ ██╗      ██████╗ ██████╗ ███████╗██████╗ 
+██╔═══██╗████╗  ██║████╗  ██║╚██╗██╔╝     ██╔════╝╚██╗██╔╝██╔══██╗██║     ██╔═══██╗██╔══██╗██╔════╝██╔══██╗ 
+██║   ██║██╔██╗ ██║██╔██╗ ██║ ╚███╔╝█████╗█████╗   ╚███╔╝ ██████╔╝██║     ██║   ██║██████╔╝█████╗  ██████╔╝ 
+██║   ██║██║╚██╗██║██║╚██╗██║ ██╔██╗╚════╝██╔══╝   ██╔██╗ ██╔═══╝ ██║     ██║   ██║██╔══██╗██╔══╝  ██╔══██╗
+╚██████╔╝██║ ╚████║██║ ╚████║██╔╝ ██╗     ███████╗██╔╝ ██╗██║     ███████╗╚██████╔╝██║  ██║███████╗██║  ██║ 
+╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═══╝╚═╝  ╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝     ╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
+================================【summary】================================
+| model: ./resnest50d_1s4x24d.onnx
+| node_count: 378
+| input_count: 1
+| output_count: 1
+| num_params: 25643720
+| model_size: 97.8899393081665
+=====================【parameter_data_types】=====================
+| FLOAT: 25643720
+===========================【operators-lists】===========================
+| ['Conv', 'Relu', 'MaxPool', 'Shape', 'Constant', 'Gather', 'ReduceMean', 'Sigmoid', 'Unsqueeze', 'Concat', 'Reshape', 'Mul', 'Add', 'Pad', 'AveragePool', 'GlobalAveragePool', 'Flatten', 'Gemm']
+===========================【operators】===========================
+| Conv: count=87, percentage=23.015873015873016
+| Relu: count=67, percentage=17.724867724867725
+| MaxPool: count=1, percentage=0.26455026455026454
+| Shape: count=16, percentage=4.232804232804233
+| Constant: count=67, percentage=17.724867724867725
+| Gather: count=16, percentage=4.232804232804233
+| ReduceMean: count=16, percentage=4.232804232804233
+| Sigmoid: count=16, percentage=4.232804232804233
+| Unsqueeze: count=16, percentage=4.232804232804233
+| Concat: count=16, percentage=4.232804232804233
+| Reshape: count=16, percentage=4.232804232804233
+| Mul: count=16, percentage=4.232804232804233
+| Add: count=16, percentage=4.232804232804233
+| Pad: count=3, percentage=0.7936507936507936
+| AveragePool: count=6, percentage=1.5873015873015872
+| GlobalAveragePool: count=1, percentage=0.26455026455026454
+| Flatten: count=1, percentage=0.26455026455026454
+| Gemm: count=1, percentage=0.26455026455026454
+===========================【inputs】==============================
+| name=input, dtype=FLOAT, shape=[0, 3, 224, 224]
+===========================【outputs】=============================
+name=output, dtype=FLOAT, shape=[0, 1000]

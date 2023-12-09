@@ -1,0 +1,26 @@
+section,key,value
+summary,model,./focalnet_tiny_lrf.onnx
+summary,node_count,1340
+summary,input_count,1
+summary,output_count,1
+summary,num_params,28647928
+summary,model_size,109.5713939666748
+parameter_data_types,FLOAT,28647928
+operators,Conv,"count=100, percentage=7.462686567164178"
+operators,Transpose,"count=54, percentage=4.029850746268656"
+operators,ReduceMean,"count=70, percentage=5.223880597014925"
+operators,Sub,"count=29, percentage=2.164179104477612"
+operators,Constant,"count=430, percentage=32.08955223880597"
+operators,Pow,"count=29, percentage=2.164179104477612"
+operators,Add,"count=178, percentage=13.28358208955224"
+operators,Sqrt,"count=29, percentage=2.164179104477612"
+operators,Div,"count=89, percentage=6.64179104477612"
+operators,Mul,"count=209, percentage=15.597014925373134"
+operators,Split,"count=12, percentage=0.8955223880597015"
+operators,Erf,"count=60, percentage=4.477611940298507"
+operators,Slice,"count=48, percentage=3.582089552238806"
+operators,GlobalAveragePool,"count=1, percentage=0.0746268656716418"
+operators,Flatten,"count=1, percentage=0.0746268656716418"
+operators,Gemm,"count=1, percentage=0.0746268656716418"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

@@ -1,0 +1,23 @@
+section,key,value
+summary,model,./rexnet_150.onnx
+summary,node_count,344
+summary,input_count,1
+summary,output_count,1
+summary,num_params,9696522
+summary,model_size,37.053677558898926
+parameter_data_types,FLOAT,9696522
+operators,Conv,"count=75, percentage=21.802325581395348"
+operators,Sigmoid,"count=30, percentage=8.720930232558139"
+operators,Mul,"count=30, percentage=8.720930232558139"
+operators,Constant,"count=120, percentage=34.883720930232556"
+operators,Clip,"count=16, percentage=4.651162790697675"
+operators,Slice,"count=22, percentage=6.395348837209303"
+operators,Add,"count=11, percentage=3.1976744186046515"
+operators,Concat,"count=11, percentage=3.1976744186046515"
+operators,ReduceMean,"count=13, percentage=3.77906976744186"
+operators,Relu,"count=13, percentage=3.77906976744186"
+operators,GlobalAveragePool,"count=1, percentage=0.29069767441860467"
+operators,Flatten,"count=1, percentage=0.29069767441860467"
+operators,Gemm,"count=1, percentage=0.29069767441860467"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

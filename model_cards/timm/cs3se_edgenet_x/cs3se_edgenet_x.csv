@@ -1,0 +1,20 @@
+section,key,value
+summary,model,./cs3se_edgenet_x.onnx
+summary,node_count,389
+summary,input_count,1
+summary,output_count,1
+summary,num_params,50698464
+summary,model_size,193.49415588378906
+parameter_data_types,FLOAT,50698464
+operators,Conv,"count=110, percentage=28.277634961439592"
+operators,Sigmoid,"count=110, percentage=28.277634961439592"
+operators,Mul,"count=110, percentage=28.277634961439592"
+operators,Split,"count=4, percentage=1.0282776349614395"
+operators,ReduceMean,"count=24, percentage=6.169665809768637"
+operators,Add,"count=24, percentage=6.169665809768637"
+operators,Concat,"count=4, percentage=1.0282776349614395"
+operators,GlobalAveragePool,"count=1, percentage=0.2570694087403599"
+operators,Flatten,"count=1, percentage=0.2570694087403599"
+operators,Gemm,"count=1, percentage=0.2570694087403599"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 256, 256]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

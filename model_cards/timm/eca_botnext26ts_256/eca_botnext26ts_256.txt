@@ -1,0 +1,51 @@
+██████╗ ███╗   ██╗███╗   ██╗██╗  ██╗     ███████╗██╗  ██╗██████╗ ██╗      ██████╗ ██████╗ ███████╗██████╗ 
+██╔═══██╗████╗  ██║████╗  ██║╚██╗██╔╝     ██╔════╝╚██╗██╔╝██╔══██╗██║     ██╔═══██╗██╔══██╗██╔════╝██╔══██╗ 
+██║   ██║██╔██╗ ██║██╔██╗ ██║ ╚███╔╝█████╗█████╗   ╚███╔╝ ██████╔╝██║     ██║   ██║██████╔╝█████╗  ██████╔╝ 
+██║   ██║██║╚██╗██║██║╚██╗██║ ██╔██╗╚════╝██╔══╝   ██╔██╗ ██╔═══╝ ██║     ██║   ██║██╔══██╗██╔══╝  ██╔══██╗
+╚██████╔╝██║ ╚████║██║ ╚████║██╔╝ ██╗     ███████╗██╔╝ ██╗██║     ███████╗╚██████╔╝██║  ██║███████╗██║  ██║ 
+╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═══╝╚═╝  ╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝     ╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
+================================【summary】================================
+| model: ./eca_botnext26ts_256.onnx
+| node_count: 1025
+| input_count: 1
+| output_count: 1
+| num_params: 10581661
+| model_size: 40.58895397186279
+=====================【parameter_data_types】=====================
+| FLOAT: 10581661
+===========================【operators-lists】===========================
+| ['Conv', 'Sigmoid', 'Mul', 'MaxPool', 'ReduceMean', 'Shape', 'Constant', 'Gather', 'Unsqueeze', 'Concat', 'Reshape', 'Expand', 'Add', 'Split', 'Transpose', 'MatMul', 'Sub', 'ConstantOfShape', 'Slice', 'Cast', 'Pad', 'Flatten', 'Equal', 'Where', 'Softmax', 'BatchNormalization', 'AveragePool', 'GlobalAveragePool', 'Gemm']
+===========================【operators】===========================
+| Conv: count=36, percentage=3.51219512195122
+| Sigmoid: count=32, percentage=3.1219512195121952
+| Mul: count=50, percentage=4.878048780487805
+| MaxPool: count=1, percentage=0.0975609756097561
+| ReduceMean: count=5, percentage=0.4878048780487805
+| Shape: count=60, percentage=5.853658536585367
+| Constant: count=327, percentage=31.902439024390244
+| Gather: count=49, percentage=4.780487804878049
+| Unsqueeze: count=118, percentage=11.51219512195122
+| Concat: count=76, percentage=7.414634146341463
+| Reshape: count=76, percentage=7.414634146341463
+| Expand: count=11, percentage=1.0731707317073171
+| Add: count=20, percentage=1.951219512195122
+| Split: count=3, percentage=0.2926829268292683
+| Transpose: count=30, percentage=2.9268292682926833
+| MatMul: count=12, percentage=1.170731707317073
+| Sub: count=18, percentage=1.75609756097561
+| ConstantOfShape: count=18, percentage=1.75609756097561
+| Slice: count=24, percentage=2.341463414634146
+| Cast: count=18, percentage=1.75609756097561
+| Pad: count=13, percentage=1.2682926829268293
+| Flatten: count=7, percentage=0.6829268292682927
+| Equal: count=6, percentage=0.5853658536585366
+| Where: count=6, percentage=0.5853658536585366
+| Softmax: count=3, percentage=0.2926829268292683
+| BatchNormalization: count=3, percentage=0.2926829268292683
+| AveragePool: count=1, percentage=0.0975609756097561
+| GlobalAveragePool: count=1, percentage=0.0975609756097561
+| Gemm: count=1, percentage=0.0975609756097561
+===========================【inputs】==============================
+| name=input, dtype=FLOAT, shape=[0, 3, 256, 256]
+===========================【outputs】=============================
+name=output, dtype=FLOAT, shape=[0, 1000]

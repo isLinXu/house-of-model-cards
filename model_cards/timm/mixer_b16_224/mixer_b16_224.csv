@@ -1,0 +1,27 @@
+section,key,value
+summary,model,./mixer_b16_224.onnx
+summary,node_count,623
+summary,input_count,1
+summary,output_count,1
+summary,num_params,59880472
+summary,model_size,228.52013874053955
+parameter_data_types,FLOAT,59880472
+operators,Conv,"count=1, percentage=0.16051364365971107"
+operators,Shape,"count=1, percentage=0.16051364365971107"
+operators,Constant,"count=126, percentage=20.224719101123593"
+operators,Slice,"count=1, percentage=0.16051364365971107"
+operators,Concat,"count=1, percentage=0.16051364365971107"
+operators,Reshape,"count=1, percentage=0.16051364365971107"
+operators,Transpose,"count=25, percentage=4.012841091492777"
+operators,ReduceMean,"count=51, percentage=8.186195826645266"
+operators,Sub,"count=25, percentage=4.012841091492777"
+operators,Pow,"count=25, percentage=4.012841091492777"
+operators,Add,"count=146, percentage=23.434991974317818"
+operators,Sqrt,"count=25, percentage=4.012841091492777"
+operators,Div,"count=49, percentage=7.865168539325842"
+operators,Mul,"count=73, percentage=11.717495987158909"
+operators,MatMul,"count=48, percentage=7.704654895666131"
+operators,Erf,"count=24, percentage=3.8523274478330656"
+operators,Gemm,"count=1, percentage=0.16051364365971107"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

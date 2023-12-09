@@ -1,0 +1,69 @@
+{
+  "summary": {
+    "model": "./regnetx_004_tv.onnx",
+    "node_count": 163,
+    "input_count": 1,
+    "output_count": 1,
+    "num_params": 5477048,
+    "model_size": 20.92136287689209
+  },
+  "parameter_data_types": {
+    "FLOAT": 5477048
+  },
+  "operators": {
+    "Conv": {
+      "count": 71,
+      "percentage": 43.558282208588956
+    },
+    "Relu": {
+      "count": 67,
+      "percentage": 41.104294478527606
+    },
+    "Add": {
+      "count": 22,
+      "percentage": 13.496932515337424
+    },
+    "GlobalAveragePool": {
+      "count": 1,
+      "percentage": 0.6134969325153374
+    },
+    "Flatten": {
+      "count": 1,
+      "percentage": 0.6134969325153374
+    },
+    "Gemm": {
+      "count": 1,
+      "percentage": 0.6134969325153374
+    }
+  },
+  "operators_list": [
+    "Conv",
+    "Relu",
+    "Add",
+    "GlobalAveragePool",
+    "Flatten",
+    "Gemm"
+  ],
+  "inputs": [
+    {
+      "name": "input",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        3,
+        224,
+        224
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        1000
+      ]
+    }
+  ]
+}

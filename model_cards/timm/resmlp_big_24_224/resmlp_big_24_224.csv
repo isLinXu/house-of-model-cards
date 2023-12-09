@@ -1,0 +1,24 @@
+section,key,value
+summary,model,./resmlp_big_24_224.onnx
+summary,node_count,688
+summary,input_count,1
+summary,output_count,1
+summary,num_params,129138280
+summary,model_size,492.7318754196167
+parameter_data_types,FLOAT,129138280
+operators,Conv,"count=1, percentage=0.14534883720930233"
+operators,Shape,"count=1, percentage=0.14534883720930233"
+operators,Constant,"count=125, percentage=18.168604651162788"
+operators,Slice,"count=1, percentage=0.14534883720930233"
+operators,Concat,"count=1, percentage=0.14534883720930233"
+operators,Reshape,"count=1, percentage=0.14534883720930233"
+operators,Transpose,"count=49, percentage=7.122093023255814"
+operators,Mul,"count=194, percentage=28.197674418604652"
+operators,Add,"count=193, percentage=28.052325581395348"
+operators,MatMul,"count=72, percentage=10.465116279069768"
+operators,Div,"count=24, percentage=3.488372093023256"
+operators,Erf,"count=24, percentage=3.488372093023256"
+operators,ReduceMean,"count=1, percentage=0.14534883720930233"
+operators,Gemm,"count=1, percentage=0.14534883720930233"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

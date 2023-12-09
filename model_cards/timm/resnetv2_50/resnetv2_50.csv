@@ -1,0 +1,17 @@
+section,key,value
+summary,model,./resnetv2_50.onnx
+summary,node_count,139
+summary,input_count,1
+summary,output_count,1
+summary,num_params,25572136
+summary,model_size,97.58832263946533
+parameter_data_types,FLOAT,25572136
+operators,Conv,"count=54, percentage=38.84892086330935"
+operators,MaxPool,"count=1, percentage=0.7194244604316548"
+operators,BatchNormalization,"count=17, percentage=12.23021582733813"
+operators,Relu,"count=49, percentage=35.25179856115108"
+operators,Add,"count=16, percentage=11.510791366906476"
+operators,GlobalAveragePool,"count=1, percentage=0.7194244604316548"
+operators,Flatten,"count=1, percentage=0.7194244604316548"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

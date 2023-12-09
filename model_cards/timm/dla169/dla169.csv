@@ -1,0 +1,17 @@
+section,key,value
+summary,model,./dla169.onnx
+summary,node_count,433
+summary,input_count,1
+summary,output_count,1
+summary,num_params,53335256
+summary,model_size,203.56029891967773
+parameter_data_types,FLOAT,53335256
+operators,Conv,"count=169, percentage=39.03002309468822"
+operators,Relu,"count=164, percentage=37.87528868360277"
+operators,MaxPool,"count=6, percentage=1.3856812933025404"
+operators,Add,"count=69, percentage=15.935334872979215"
+operators,Concat,"count=23, percentage=5.311778290993072"
+operators,GlobalAveragePool,"count=1, percentage=0.23094688221709006"
+operators,Flatten,"count=1, percentage=0.23094688221709006"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

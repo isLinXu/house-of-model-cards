@@ -1,0 +1,74 @@
+{
+  "summary": {
+    "model": "./legacy_xception.onnx",
+    "node_count": 128,
+    "input_count": 1,
+    "output_count": 1,
+    "num_params": 22828688,
+    "model_size": 87.11096382141113
+  },
+  "parameter_data_types": {
+    "FLOAT": 22828688
+  },
+  "operators": {
+    "Conv": {
+      "count": 74,
+      "percentage": 57.8125
+    },
+    "Relu": {
+      "count": 35,
+      "percentage": 27.34375
+    },
+    "MaxPool": {
+      "count": 4,
+      "percentage": 3.125
+    },
+    "Add": {
+      "count": 12,
+      "percentage": 9.375
+    },
+    "GlobalAveragePool": {
+      "count": 1,
+      "percentage": 0.78125
+    },
+    "Flatten": {
+      "count": 1,
+      "percentage": 0.78125
+    },
+    "Gemm": {
+      "count": 1,
+      "percentage": 0.78125
+    }
+  },
+  "operators_list": [
+    "Conv",
+    "Relu",
+    "MaxPool",
+    "Add",
+    "GlobalAveragePool",
+    "Flatten",
+    "Gemm"
+  ],
+  "inputs": [
+    {
+      "name": "input",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        3,
+        299,
+        299
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        1000
+      ]
+    }
+  ]
+}

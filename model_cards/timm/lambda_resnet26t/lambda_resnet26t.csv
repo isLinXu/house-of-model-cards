@@ -1,0 +1,32 @@
+section,key,value
+summary,model,./lambda_resnet26t.onnx
+summary,node_count,271
+summary,input_count,1
+summary,output_count,1
+summary,num_params,10947656
+summary,model_size,41.82326889038086
+parameter_data_types,FLOAT,10947656
+operators,Conv,"count=34, percentage=12.546125461254611"
+operators,Relu,"count=27, percentage=9.96309963099631"
+operators,MaxPool,"count=1, percentage=0.36900369003690037"
+operators,Add,"count=11, percentage=4.059040590405904"
+operators,Shape,"count=12, percentage=4.428044280442804"
+operators,Constant,"count=40, percentage=14.760147601476014"
+operators,Gather,"count=12, percentage=4.428044280442804"
+operators,Mul,"count=3, percentage=1.107011070110701"
+operators,Split,"count=3, percentage=1.107011070110701"
+operators,BatchNormalization,"count=9, percentage=3.3210332103321036"
+operators,Unsqueeze,"count=51, percentage=18.81918819188192"
+operators,Concat,"count=18, percentage=6.642066420664207"
+operators,Reshape,"count=18, percentage=6.642066420664207"
+operators,Transpose,"count=12, percentage=4.428044280442804"
+operators,Softmax,"count=3, percentage=1.107011070110701"
+operators,MatMul,"count=9, percentage=3.3210332103321036"
+operators,Squeeze,"count=3, percentage=1.107011070110701"
+operators,Pad,"count=1, percentage=0.36900369003690037"
+operators,AveragePool,"count=1, percentage=0.36900369003690037"
+operators,GlobalAveragePool,"count=1, percentage=0.36900369003690037"
+operators,Flatten,"count=1, percentage=0.36900369003690037"
+operators,Gemm,"count=1, percentage=0.36900369003690037"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 256, 256]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

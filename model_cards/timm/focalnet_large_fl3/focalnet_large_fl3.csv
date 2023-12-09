@@ -1,0 +1,26 @@
+section,key,value
+summary,model,./focalnet_large_fl3.onnx
+summary,node_count,2664
+summary,input_count,1
+summary,output_count,1
+summary,num_params,239134898
+summary,model_size,912.8157367706299
+parameter_data_types,FLOAT,239134898
+operators,Conv,"count=196, percentage=7.3573573573573565"
+operators,Transpose,"count=106, percentage=3.978978978978979"
+operators,ReduceMean,"count=130, percentage=4.87987987987988"
+operators,Sub,"count=53, percentage=1.9894894894894894"
+operators,Constant,"count=850, percentage=31.906906906906908"
+operators,Pow,"count=53, percentage=1.9894894894894894"
+operators,Add,"count=346, percentage=12.987987987987987"
+operators,Sqrt,"count=53, percentage=1.9894894894894894"
+operators,Div,"count=173, percentage=6.4939939939939935"
+operators,Mul,"count=461, percentage=17.304804804804803"
+operators,Split,"count=24, percentage=0.9009009009009009"
+operators,Erf,"count=120, percentage=4.504504504504505"
+operators,Slice,"count=96, percentage=3.6036036036036037"
+operators,GlobalAveragePool,"count=1, percentage=0.03753753753753754"
+operators,Flatten,"count=1, percentage=0.03753753753753754"
+operators,Gemm,"count=1, percentage=0.03753753753753754"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 384, 384]"
+outputs,output,"dtype=FLOAT, shape=[0, 21842]"

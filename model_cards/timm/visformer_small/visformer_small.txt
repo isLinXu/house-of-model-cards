@@ -1,0 +1,43 @@
+██████╗ ███╗   ██╗███╗   ██╗██╗  ██╗     ███████╗██╗  ██╗██████╗ ██╗      ██████╗ ██████╗ ███████╗██████╗ 
+██╔═══██╗████╗  ██║████╗  ██║╚██╗██╔╝     ██╔════╝╚██╗██╔╝██╔══██╗██║     ██╔═══██╗██╔══██╗██╔════╝██╔══██╗ 
+██║   ██║██╔██╗ ██║██╔██╗ ██║ ╚███╔╝█████╗█████╗   ╚███╔╝ ██████╔╝██║     ██║   ██║██████╔╝█████╗  ██████╔╝ 
+██║   ██║██║╚██╗██║██║╚██╗██║ ██╔██╗╚════╝██╔══╝   ██╔██╗ ██╔═══╝ ██║     ██║   ██║██╔══██╗██╔══╝  ██╔══██╗
+╚██████╔╝██║ ╚████║██║ ╚████║██╔╝ ██╗     ███████╗██╔╝ ██╗██║     ███████╗╚██████╔╝██║  ██║███████╗██║  ██║ 
+╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═══╝╚═╝  ╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝     ╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
+================================【summary】================================
+| model: ./visformer_small.onnx
+| node_count: 559
+| input_count: 1
+| output_count: 1
+| num_params: 40239528
+| model_size: 153.5946502685547
+=====================【parameter_data_types】=====================
+| FLOAT: 40239528
+===========================【operators-lists】===========================
+| ['Conv', 'Relu', 'Add', 'BatchNormalization', 'Constant', 'Div', 'Erf', 'Mul', 'Shape', 'Gather', 'Unsqueeze', 'Concat', 'Reshape', 'Transpose', 'Split', 'Squeeze', 'MatMul', 'Softmax', 'GlobalAveragePool', 'Flatten', 'Gemm']
+===========================【operators】===========================
+| Conv: count=57, percentage=10.196779964221825
+| Relu: count=1, percentage=0.17889087656529518
+| Add: count=48, percentage=8.586762075134168
+| BatchNormalization: count=24, percentage=4.293381037567084
+| Constant: count=138, percentage=24.686940966010734
+| Div: count=22, percentage=3.9355992844364938
+| Erf: count=22, percentage=3.9355992844364938
+| Mul: count=52, percentage=9.30232558139535
+| Shape: count=24, percentage=4.293381037567084
+| Gather: count=24, percentage=4.293381037567084
+| Unsqueeze: count=32, percentage=5.724508050089446
+| Concat: count=16, percentage=2.862254025044723
+| Reshape: count=16, percentage=2.862254025044723
+| Transpose: count=24, percentage=4.293381037567084
+| Split: count=8, percentage=1.4311270125223614
+| Squeeze: count=24, percentage=4.293381037567084
+| MatMul: count=16, percentage=2.862254025044723
+| Softmax: count=8, percentage=1.4311270125223614
+| GlobalAveragePool: count=1, percentage=0.17889087656529518
+| Flatten: count=1, percentage=0.17889087656529518
+| Gemm: count=1, percentage=0.17889087656529518
+===========================【inputs】==============================
+| name=input, dtype=FLOAT, shape=[0, 3, 224, 224]
+===========================【outputs】=============================
+name=output, dtype=FLOAT, shape=[0, 1000]

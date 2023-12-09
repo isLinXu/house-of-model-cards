@@ -1,0 +1,30 @@
+section,key,value
+summary,model,./efficientformerv2_s1.onnx
+summary,node_count,756
+summary,input_count,1
+summary,output_count,1
+summary,num_params,6115544
+summary,model_size,23.589412689208984
+parameter_data_types,FLOAT,6115544
+operators,Conv,"count=104, percentage=13.756613756613756"
+operators,Constant,"count=225, percentage=29.761904761904763"
+operators,Div,"count=50, percentage=6.613756613756613"
+operators,Erf,"count=49, percentage=6.481481481481481"
+operators,Add,"count=87, percentage=11.507936507936508"
+operators,Mul,"count=128, percentage=16.93121693121693"
+operators,Shape,"count=5, percentage=0.6613756613756614"
+operators,Gather,"count=10, percentage=1.3227513227513228"
+operators,Unsqueeze,"count=20, percentage=2.6455026455026456"
+operators,Concat,"count=20, percentage=2.6455026455026456"
+operators,Reshape,"count=20, percentage=2.6455026455026456"
+operators,Transpose,"count=15, percentage=1.984126984126984"
+operators,MatMul,"count=10, percentage=1.3227513227513228"
+operators,Softmax,"count=5, percentage=0.6613756613756614"
+operators,Resize,"count=2, percentage=0.26455026455026454"
+operators,Pad,"count=1, percentage=0.13227513227513227"
+operators,AveragePool,"count=1, percentage=0.13227513227513227"
+operators,BatchNormalization,"count=1, percentage=0.13227513227513227"
+operators,ReduceMean,"count=1, percentage=0.13227513227513227"
+operators,Gemm,"count=2, percentage=0.26455026455026454"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

@@ -1,0 +1,139 @@
+{
+  "summary": {
+    "model": "./sequencer2d_m.onnx",
+    "node_count": 2496,
+    "input_count": 1,
+    "output_count": 1,
+    "num_params": 38307688,
+    "model_size": 146.68418312072754
+  },
+  "parameter_data_types": {
+    "FLOAT": 38307688
+  },
+  "operators": {
+    "Conv": {
+      "count": 4,
+      "percentage": 0.16025641025641024
+    },
+    "Transpose": {
+      "count": 199,
+      "percentage": 7.97275641025641
+    },
+    "ReduceMean": {
+      "count": 99,
+      "percentage": 3.9663461538461537
+    },
+    "Sub": {
+      "count": 49,
+      "percentage": 1.9631410256410255
+    },
+    "Constant": {
+      "count": 554,
+      "percentage": 22.195512820512818
+    },
+    "Pow": {
+      "count": 49,
+      "percentage": 1.9631410256410255
+    },
+    "Add": {
+      "count": 242,
+      "percentage": 9.695512820512821
+    },
+    "Sqrt": {
+      "count": 49,
+      "percentage": 1.9631410256410255
+    },
+    "Div": {
+      "count": 73,
+      "percentage": 2.9246794871794872
+    },
+    "Mul": {
+      "count": 97,
+      "percentage": 3.886217948717949
+    },
+    "Shape": {
+      "count": 144,
+      "percentage": 5.769230769230769
+    },
+    "Gather": {
+      "count": 144,
+      "percentage": 5.769230769230769
+    },
+    "Unsqueeze": {
+      "count": 288,
+      "percentage": 11.538461538461538
+    },
+    "Concat": {
+      "count": 168,
+      "percentage": 6.730769230769231
+    },
+    "Reshape": {
+      "count": 144,
+      "percentage": 5.769230769230769
+    },
+    "ConstantOfShape": {
+      "count": 48,
+      "percentage": 1.9230769230769231
+    },
+    "LSTM": {
+      "count": 48,
+      "percentage": 1.9230769230769231
+    },
+    "MatMul": {
+      "count": 72,
+      "percentage": 2.8846153846153846
+    },
+    "Erf": {
+      "count": 24,
+      "percentage": 0.9615384615384616
+    },
+    "Gemm": {
+      "count": 1,
+      "percentage": 0.04006410256410256
+    }
+  },
+  "operators_list": [
+    "Conv",
+    "Transpose",
+    "ReduceMean",
+    "Sub",
+    "Constant",
+    "Pow",
+    "Add",
+    "Sqrt",
+    "Div",
+    "Mul",
+    "Shape",
+    "Gather",
+    "Unsqueeze",
+    "Concat",
+    "Reshape",
+    "ConstantOfShape",
+    "LSTM",
+    "MatMul",
+    "Erf",
+    "Gemm"
+  ],
+  "inputs": [
+    {
+      "name": "input",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        3,
+        224,
+        224
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        1000
+      ]
+    }
+  ]
+}

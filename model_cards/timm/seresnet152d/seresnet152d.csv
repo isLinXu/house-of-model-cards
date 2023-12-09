@@ -1,0 +1,21 @@
+section,key,value
+summary,model,./seresnet152d.onnx
+summary,node_count,667
+summary,input_count,1
+summary,output_count,1
+summary,num_params,66765304
+summary,model_size,254.8181438446045
+parameter_data_types,FLOAT,66765304
+operators,Conv,"count=257, percentage=38.53073463268366"
+operators,Relu,"count=203, percentage=30.434782608695656"
+operators,MaxPool,"count=1, percentage=0.14992503748125938"
+operators,ReduceMean,"count=50, percentage=7.496251874062969"
+operators,Sigmoid,"count=50, percentage=7.496251874062969"
+operators,Mul,"count=50, percentage=7.496251874062969"
+operators,Add,"count=50, percentage=7.496251874062969"
+operators,AveragePool,"count=3, percentage=0.4497751124437781"
+operators,GlobalAveragePool,"count=1, percentage=0.14992503748125938"
+operators,Flatten,"count=1, percentage=0.14992503748125938"
+operators,Gemm,"count=1, percentage=0.14992503748125938"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 256, 256]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

@@ -1,0 +1,149 @@
+{
+  "summary": {
+    "model": "./levit_conv_128.onnx",
+    "node_count": 659,
+    "input_count": 1,
+    "output_count": 1,
+    "num_params": 9191168,
+    "model_size": 35.59485149383545
+  },
+  "parameter_data_types": {
+    "FLOAT": 9191168
+  },
+  "operators": {
+    "Identity": {
+      "count": 2,
+      "percentage": 0.30349013657056145
+    },
+    "Conv": {
+      "count": 62,
+      "percentage": 9.408194233687405
+    },
+    "HardSigmoid": {
+      "count": 31,
+      "percentage": 4.704097116843703
+    },
+    "Mul": {
+      "count": 59,
+      "percentage": 8.952959028831563
+    },
+    "Shape": {
+      "count": 42,
+      "percentage": 6.373292867981791
+    },
+    "Constant": {
+      "count": 122,
+      "percentage": 18.512898330804248
+    },
+    "Gather": {
+      "count": 56,
+      "percentage": 8.49772382397572
+    },
+    "Unsqueeze": {
+      "count": 72,
+      "percentage": 10.925644916540213
+    },
+    "Concat": {
+      "count": 30,
+      "percentage": 4.552352048558421
+    },
+    "Reshape": {
+      "count": 30,
+      "percentage": 4.552352048558421
+    },
+    "Split": {
+      "count": 14,
+      "percentage": 2.12443095599393
+    },
+    "Transpose": {
+      "count": 28,
+      "percentage": 4.24886191198786
+    },
+    "MatMul": {
+      "count": 28,
+      "percentage": 4.24886191198786
+    },
+    "Add": {
+      "count": 45,
+      "percentage": 6.828528072837632
+    },
+    "Softmax": {
+      "count": 14,
+      "percentage": 2.12443095599393
+    },
+    "Sub": {
+      "count": 4,
+      "percentage": 0.6069802731411229
+    },
+    "Div": {
+      "count": 5,
+      "percentage": 0.7587253414264037
+    },
+    "Cast": {
+      "count": 8,
+      "percentage": 1.2139605462822458
+    },
+    "AveragePool": {
+      "count": 2,
+      "percentage": 0.30349013657056145
+    },
+    "ReduceMean": {
+      "count": 1,
+      "percentage": 0.15174506828528073
+    },
+    "BatchNormalization": {
+      "count": 2,
+      "percentage": 0.30349013657056145
+    },
+    "Gemm": {
+      "count": 2,
+      "percentage": 0.30349013657056145
+    }
+  },
+  "operators_list": [
+    "Identity",
+    "Conv",
+    "HardSigmoid",
+    "Mul",
+    "Shape",
+    "Constant",
+    "Gather",
+    "Unsqueeze",
+    "Concat",
+    "Reshape",
+    "Split",
+    "Transpose",
+    "MatMul",
+    "Add",
+    "Softmax",
+    "Sub",
+    "Div",
+    "Cast",
+    "AveragePool",
+    "ReduceMean",
+    "BatchNormalization",
+    "Gemm"
+  ],
+  "inputs": [
+    {
+      "name": "input",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        3,
+        224,
+        224
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        1000
+      ]
+    }
+  ]
+}

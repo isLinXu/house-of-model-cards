@@ -1,0 +1,144 @@
+{
+  "summary": {
+    "model": "./tf_efficientnet_lite1.onnx",
+    "node_count": 605,
+    "input_count": 1,
+    "output_count": 1,
+    "num_params": 5389848,
+    "model_size": 20.670414924621582
+  },
+  "parameter_data_types": {
+    "FLOAT": 5389848
+  },
+  "operators": {
+    "Shape": {
+      "count": 15,
+      "percentage": 2.479338842975207
+    },
+    "Constant": {
+      "count": 211,
+      "percentage": 34.87603305785124
+    },
+    "Gather": {
+      "count": 15,
+      "percentage": 2.479338842975207
+    },
+    "Cast": {
+      "count": 50,
+      "percentage": 8.264462809917356
+    },
+    "Div": {
+      "count": 20,
+      "percentage": 3.3057851239669422
+    },
+    "Ceil": {
+      "count": 10,
+      "percentage": 1.6528925619834711
+    },
+    "Sub": {
+      "count": 35,
+      "percentage": 5.785123966942149
+    },
+    "Mul": {
+      "count": 10,
+      "percentage": 1.6528925619834711
+    },
+    "Add": {
+      "count": 34,
+      "percentage": 5.619834710743802
+    },
+    "Clip": {
+      "count": 53,
+      "percentage": 8.760330578512397
+    },
+    "Unsqueeze": {
+      "count": 40,
+      "percentage": 6.6115702479338845
+    },
+    "Concat": {
+      "count": 15,
+      "percentage": 2.479338842975207
+    },
+    "ConstantOfShape": {
+      "count": 5,
+      "percentage": 0.8264462809917356
+    },
+    "Reshape": {
+      "count": 10,
+      "percentage": 1.6528925619834711
+    },
+    "Slice": {
+      "count": 5,
+      "percentage": 0.8264462809917356
+    },
+    "Transpose": {
+      "count": 5,
+      "percentage": 0.8264462809917356
+    },
+    "Pad": {
+      "count": 5,
+      "percentage": 0.8264462809917356
+    },
+    "Conv": {
+      "count": 64,
+      "percentage": 10.578512396694215
+    },
+    "GlobalAveragePool": {
+      "count": 1,
+      "percentage": 0.1652892561983471
+    },
+    "Flatten": {
+      "count": 1,
+      "percentage": 0.1652892561983471
+    },
+    "Gemm": {
+      "count": 1,
+      "percentage": 0.1652892561983471
+    }
+  },
+  "operators_list": [
+    "Shape",
+    "Constant",
+    "Gather",
+    "Cast",
+    "Div",
+    "Ceil",
+    "Sub",
+    "Mul",
+    "Add",
+    "Clip",
+    "Unsqueeze",
+    "Concat",
+    "ConstantOfShape",
+    "Reshape",
+    "Slice",
+    "Transpose",
+    "Pad",
+    "Conv",
+    "GlobalAveragePool",
+    "Flatten",
+    "Gemm"
+  ],
+  "inputs": [
+    {
+      "name": "input",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        3,
+        240,
+        240
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        1000
+      ]
+    }
+  ]
+}

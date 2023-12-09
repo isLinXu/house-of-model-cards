@@ -1,0 +1,18 @@
+section,key,value
+summary,model,./efficientnet_b1.onnx
+summary,node_count,341
+summary,input_count,1
+summary,output_count,1
+summary,num_params,7763160
+summary,model_size,29.69425678253174
+parameter_data_types,FLOAT,7763160
+operators,Conv,"count=115, percentage=33.724340175953074"
+operators,Sigmoid,"count=92, percentage=26.97947214076246"
+operators,Mul,"count=92, percentage=26.97947214076246"
+operators,ReduceMean,"count=23, percentage=6.744868035190615"
+operators,Add,"count=16, percentage=4.69208211143695"
+operators,GlobalAveragePool,"count=1, percentage=0.2932551319648094"
+operators,Flatten,"count=1, percentage=0.2932551319648094"
+operators,Gemm,"count=1, percentage=0.2932551319648094"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

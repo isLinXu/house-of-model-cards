@@ -1,0 +1,129 @@
+{
+  "summary": {
+    "model": "./poolformerv2_s12.onnx",
+    "node_count": 456,
+    "input_count": 1,
+    "output_count": 1,
+    "num_params": 11891712,
+    "model_size": 45.453375816345215
+  },
+  "parameter_data_types": {
+    "FLOAT": 11891712
+  },
+  "operators": {
+    "Conv": {
+      "count": 28,
+      "percentage": 6.140350877192982
+    },
+    "Transpose": {
+      "count": 10,
+      "percentage": 2.1929824561403506
+    },
+    "ReduceMean": {
+      "count": 10,
+      "percentage": 2.1929824561403506
+    },
+    "Sub": {
+      "count": 17,
+      "percentage": 3.7280701754385963
+    },
+    "Constant": {
+      "count": 118,
+      "percentage": 25.877192982456144
+    },
+    "Pow": {
+      "count": 17,
+      "percentage": 3.7280701754385963
+    },
+    "Add": {
+      "count": 66,
+      "percentage": 14.473684210526317
+    },
+    "Sqrt": {
+      "count": 5,
+      "percentage": 1.0964912280701753
+    },
+    "Div": {
+      "count": 5,
+      "percentage": 1.0964912280701753
+    },
+    "Mul": {
+      "count": 57,
+      "percentage": 12.5
+    },
+    "Reshape": {
+      "count": 48,
+      "percentage": 10.526315789473683
+    },
+    "InstanceNormalization": {
+      "count": 24,
+      "percentage": 5.263157894736842
+    },
+    "Shape": {
+      "count": 24,
+      "percentage": 5.263157894736842
+    },
+    "AveragePool": {
+      "count": 12,
+      "percentage": 2.631578947368421
+    },
+    "Relu": {
+      "count": 12,
+      "percentage": 2.631578947368421
+    },
+    "GlobalAveragePool": {
+      "count": 1,
+      "percentage": 0.21929824561403508
+    },
+    "Flatten": {
+      "count": 1,
+      "percentage": 0.21929824561403508
+    },
+    "Gemm": {
+      "count": 1,
+      "percentage": 0.21929824561403508
+    }
+  },
+  "operators_list": [
+    "Conv",
+    "Transpose",
+    "ReduceMean",
+    "Sub",
+    "Constant",
+    "Pow",
+    "Add",
+    "Sqrt",
+    "Div",
+    "Mul",
+    "Reshape",
+    "InstanceNormalization",
+    "Shape",
+    "AveragePool",
+    "Relu",
+    "GlobalAveragePool",
+    "Flatten",
+    "Gemm"
+  ],
+  "inputs": [
+    {
+      "name": "input",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        3,
+        224,
+        224
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        1000
+      ]
+    }
+  ]
+}

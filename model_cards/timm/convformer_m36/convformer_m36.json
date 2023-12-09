@@ -1,0 +1,109 @@
+{
+  "summary": {
+    "model": "./convformer_m36.onnx",
+    "node_count": 1599,
+    "input_count": 1,
+    "output_count": 1,
+    "num_params": 57051640,
+    "model_size": 217.97535514831543
+  },
+  "parameter_data_types": {
+    "FLOAT": 57051640
+  },
+  "operators": {
+    "Conv": {
+      "count": 184,
+      "percentage": 11.507191994996873
+    },
+    "Transpose": {
+      "count": 153,
+      "percentage": 9.568480300187618
+    },
+    "ReduceMean": {
+      "count": 156,
+      "percentage": 9.75609756097561
+    },
+    "Sub": {
+      "count": 78,
+      "percentage": 4.878048780487805
+    },
+    "Constant": {
+      "count": 228,
+      "percentage": 14.258911819887429
+    },
+    "Pow": {
+      "count": 150,
+      "percentage": 9.380863039399625
+    },
+    "Add": {
+      "count": 224,
+      "percentage": 14.008755472170106
+    },
+    "Sqrt": {
+      "count": 78,
+      "percentage": 4.878048780487805
+    },
+    "Div": {
+      "count": 78,
+      "percentage": 4.878048780487805
+    },
+    "Mul": {
+      "count": 193,
+      "percentage": 12.070043777360851
+    },
+    "Relu": {
+      "count": 73,
+      "percentage": 4.56535334584115
+    },
+    "GlobalAveragePool": {
+      "count": 1,
+      "percentage": 0.06253908692933083
+    },
+    "Flatten": {
+      "count": 1,
+      "percentage": 0.06253908692933083
+    },
+    "Gemm": {
+      "count": 2,
+      "percentage": 0.12507817385866166
+    }
+  },
+  "operators_list": [
+    "Conv",
+    "Transpose",
+    "ReduceMean",
+    "Sub",
+    "Constant",
+    "Pow",
+    "Add",
+    "Sqrt",
+    "Div",
+    "Mul",
+    "Relu",
+    "GlobalAveragePool",
+    "Flatten",
+    "Gemm"
+  ],
+  "inputs": [
+    {
+      "name": "input",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        3,
+        224,
+        224
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        1000
+      ]
+    }
+  ]
+}

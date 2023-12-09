@@ -1,0 +1,79 @@
+{
+  "summary": {
+    "model": "./lcnet_100.onnx",
+    "node_count": 99,
+    "input_count": 1,
+    "output_count": 1,
+    "num_params": 2948328,
+    "model_size": 11.269742965698242
+  },
+  "parameter_data_types": {
+    "FLOAT": 2948328
+  },
+  "operators": {
+    "Conv": {
+      "count": 32,
+      "percentage": 32.323232323232325
+    },
+    "HardSigmoid": {
+      "count": 30,
+      "percentage": 30.303030303030305
+    },
+    "Mul": {
+      "count": 30,
+      "percentage": 30.303030303030305
+    },
+    "ReduceMean": {
+      "count": 2,
+      "percentage": 2.0202020202020203
+    },
+    "Relu": {
+      "count": 2,
+      "percentage": 2.0202020202020203
+    },
+    "GlobalAveragePool": {
+      "count": 1,
+      "percentage": 1.0101010101010102
+    },
+    "Flatten": {
+      "count": 1,
+      "percentage": 1.0101010101010102
+    },
+    "Gemm": {
+      "count": 1,
+      "percentage": 1.0101010101010102
+    }
+  },
+  "operators_list": [
+    "Conv",
+    "HardSigmoid",
+    "Mul",
+    "ReduceMean",
+    "Relu",
+    "GlobalAveragePool",
+    "Flatten",
+    "Gemm"
+  ],
+  "inputs": [
+    {
+      "name": "input",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        3,
+        224,
+        224
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        1000
+      ]
+    }
+  ]
+}

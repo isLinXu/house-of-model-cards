@@ -1,0 +1,22 @@
+section,key,value
+summary,model,./ghostnet_100.onnx
+summary,node_count,369
+summary,input_count,1
+summary,output_count,1
+summary,num_params,5171524
+summary,model_size,19.81773853302002
+parameter_data_types,FLOAT,5171524
+operators,Conv,"count=95, percentage=25.745257452574528"
+operators,Relu,"count=42, percentage=11.38211382113821"
+operators,Concat,"count=32, percentage=8.672086720867208"
+operators,Constant,"count=128, percentage=34.68834688346883"
+operators,Slice,"count=32, percentage=8.672086720867208"
+operators,Add,"count=16, percentage=4.336043360433604"
+operators,ReduceMean,"count=7, percentage=1.8970189701897018"
+operators,HardSigmoid,"count=7, percentage=1.8970189701897018"
+operators,Mul,"count=7, percentage=1.8970189701897018"
+operators,GlobalAveragePool,"count=1, percentage=0.27100271002710025"
+operators,Flatten,"count=1, percentage=0.27100271002710025"
+operators,Gemm,"count=1, percentage=0.27100271002710025"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

@@ -1,0 +1,28 @@
+section,key,value
+summary,model,./resnest50d_1s4x24d.onnx
+summary,node_count,378
+summary,input_count,1
+summary,output_count,1
+summary,num_params,25643720
+summary,model_size,97.8899393081665
+parameter_data_types,FLOAT,25643720
+operators,Conv,"count=87, percentage=23.015873015873016"
+operators,Relu,"count=67, percentage=17.724867724867725"
+operators,MaxPool,"count=1, percentage=0.26455026455026454"
+operators,Shape,"count=16, percentage=4.232804232804233"
+operators,Constant,"count=67, percentage=17.724867724867725"
+operators,Gather,"count=16, percentage=4.232804232804233"
+operators,ReduceMean,"count=16, percentage=4.232804232804233"
+operators,Sigmoid,"count=16, percentage=4.232804232804233"
+operators,Unsqueeze,"count=16, percentage=4.232804232804233"
+operators,Concat,"count=16, percentage=4.232804232804233"
+operators,Reshape,"count=16, percentage=4.232804232804233"
+operators,Mul,"count=16, percentage=4.232804232804233"
+operators,Add,"count=16, percentage=4.232804232804233"
+operators,Pad,"count=3, percentage=0.7936507936507936"
+operators,AveragePool,"count=6, percentage=1.5873015873015872"
+operators,GlobalAveragePool,"count=1, percentage=0.26455026455026454"
+operators,Flatten,"count=1, percentage=0.26455026455026454"
+operators,Gemm,"count=1, percentage=0.26455026455026454"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

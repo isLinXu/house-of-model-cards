@@ -1,0 +1,30 @@
+section,key,value
+summary,model,./ghostnetv2_160.onnx
+summary,node_count,747
+summary,input_count,1
+summary,output_count,1
+summary,num_params,12342762
+summary,model_size,47.25374984741211
+parameter_data_types,FLOAT,12342762
+operators,Conv,"count=137, percentage=18.340026773761714"
+operators,Relu,"count=42, percentage=5.622489959839357"
+operators,Concat,"count=60, percentage=8.032128514056225"
+operators,Constant,"count=240, percentage=32.1285140562249"
+operators,Slice,"count=46, percentage=6.157965194109773"
+operators,Add,"count=16, percentage=2.14190093708166"
+operators,Pad,"count=14, percentage=1.8741633199464525"
+operators,AveragePool,"count=14, percentage=1.8741633199464525"
+operators,Sigmoid,"count=14, percentage=1.8741633199464525"
+operators,Shape,"count=42, percentage=5.622489959839357"
+operators,Gather,"count=28, percentage=3.748326639892905"
+operators,Unsqueeze,"count=28, percentage=3.748326639892905"
+operators,Cast,"count=14, percentage=1.8741633199464525"
+operators,Resize,"count=14, percentage=1.8741633199464525"
+operators,Mul,"count=21, percentage=2.8112449799196786"
+operators,ReduceMean,"count=7, percentage=0.9370816599732262"
+operators,HardSigmoid,"count=7, percentage=0.9370816599732262"
+operators,GlobalAveragePool,"count=1, percentage=0.13386880856760375"
+operators,Flatten,"count=1, percentage=0.13386880856760375"
+operators,Gemm,"count=1, percentage=0.13386880856760375"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

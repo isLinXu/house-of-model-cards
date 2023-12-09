@@ -1,0 +1,26 @@
+section,key,value
+summary,model,./nf_resnet50.onnx
+summary,node_count,646
+summary,input_count,1
+summary,output_count,1
+summary,num_params,49012024
+summary,model_size,187.21069717407227
+parameter_data_types,FLOAT,49011944
+parameter_data_types,INT64,80
+operators,Identity,"count=33, percentage=5.108359133126935"
+operators,Constant,"count=85, percentage=13.157894736842104"
+operators,ReduceMean,"count=159, percentage=24.613003095975234"
+operators,Sub,"count=53, percentage=8.204334365325078"
+operators,Mul,"count=85, percentage=13.157894736842104"
+operators,BatchNormalization,"count=53, percentage=8.204334365325078"
+operators,Reshape,"count=53, percentage=8.204334365325078"
+operators,Conv,"count=53, percentage=8.204334365325078"
+operators,MaxPool,"count=1, percentage=0.15479876160990713"
+operators,Relu,"count=49, percentage=7.5851393188854495"
+operators,Add,"count=16, percentage=2.476780185758514"
+operators,AveragePool,"count=3, percentage=0.46439628482972134"
+operators,GlobalAveragePool,"count=1, percentage=0.15479876160990713"
+operators,Flatten,"count=1, percentage=0.15479876160990713"
+operators,Gemm,"count=1, percentage=0.15479876160990713"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 256, 256]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

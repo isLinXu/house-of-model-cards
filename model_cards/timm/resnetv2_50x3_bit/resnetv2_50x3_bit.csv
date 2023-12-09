@@ -1,0 +1,32 @@
+section,key,value
+summary,model,./resnetv2_50x3_bit.onnx
+summary,node_count,1090
+summary,input_count,1
+summary,output_count,1
+summary,num_params,428356920
+summary,model_size,1634.9072942733765
+parameter_data_types,FLOAT,428356840
+parameter_data_types,INT64,80
+operators,Identity,"count=33, percentage=3.0275229357798166"
+operators,Constant,"count=262, percentage=24.036697247706424"
+operators,ReduceMean,"count=159, percentage=14.587155963302752"
+operators,Sub,"count=53, percentage=4.862385321100918"
+operators,Mul,"count=102, percentage=9.357798165137615"
+operators,BatchNormalization,"count=53, percentage=4.862385321100918"
+operators,Reshape,"count=153, percentage=14.036697247706423"
+operators,Conv,"count=54, percentage=4.954128440366973"
+operators,ConstantOfShape,"count=1, percentage=0.09174311926605505"
+operators,Concat,"count=1, percentage=0.09174311926605505"
+operators,Slice,"count=1, percentage=0.09174311926605505"
+operators,Transpose,"count=1, percentage=0.09174311926605505"
+operators,Cast,"count=1, percentage=0.09174311926605505"
+operators,Pad,"count=1, percentage=0.09174311926605505"
+operators,MaxPool,"count=1, percentage=0.09174311926605505"
+operators,InstanceNormalization,"count=49, percentage=4.495412844036697"
+operators,Shape,"count=49, percentage=4.495412844036697"
+operators,Add,"count=65, percentage=5.963302752293578"
+operators,Relu,"count=49, percentage=4.495412844036697"
+operators,GlobalAveragePool,"count=1, percentage=0.09174311926605505"
+operators,Flatten,"count=1, percentage=0.09174311926605505"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 448, 448]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

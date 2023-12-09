@@ -1,0 +1,22 @@
+section,key,value
+summary,model,./mixnet_s.onnx
+summary,node_count,363
+summary,input_count,1
+summary,output_count,1
+summary,num_params,4147430
+summary,model_size,15.920287132263184
+parameter_data_types,FLOAT,4147430
+operators,Conv,"count=123, percentage=33.88429752066116"
+operators,Relu,"count=7, percentage=1.9283746556473829"
+operators,Add,"count=11, percentage=3.0303030303030303"
+operators,Split,"count=34, percentage=9.366391184573002"
+operators,Concat,"count=34, percentage=9.366391184573002"
+operators,BatchNormalization,"count=34, percentage=9.366391184573002"
+operators,Sigmoid,"count=52, percentage=14.325068870523417"
+operators,Mul,"count=52, percentage=14.325068870523417"
+operators,ReduceMean,"count=13, percentage=3.581267217630854"
+operators,GlobalAveragePool,"count=1, percentage=0.27548209366391185"
+operators,Flatten,"count=1, percentage=0.27548209366391185"
+operators,Gemm,"count=1, percentage=0.27548209366391185"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

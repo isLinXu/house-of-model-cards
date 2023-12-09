@@ -1,0 +1,45 @@
+██████╗ ███╗   ██╗███╗   ██╗██╗  ██╗     ███████╗██╗  ██╗██████╗ ██╗      ██████╗ ██████╗ ███████╗██████╗ 
+██╔═══██╗████╗  ██║████╗  ██║╚██╗██╔╝     ██╔════╝╚██╗██╔╝██╔══██╗██║     ██╔═══██╗██╔══██╗██╔════╝██╔══██╗ 
+██║   ██║██╔██╗ ██║██╔██╗ ██║ ╚███╔╝█████╗█████╗   ╚███╔╝ ██████╔╝██║     ██║   ██║██████╔╝█████╗  ██████╔╝ 
+██║   ██║██║╚██╗██║██║╚██╗██║ ██╔██╗╚════╝██╔══╝   ██╔██╗ ██╔═══╝ ██║     ██║   ██║██╔══██╗██╔══╝  ██╔══██╗
+╚██████╔╝██║ ╚████║██║ ╚████║██╔╝ ██╗     ███████╗██╔╝ ██╗██║     ███████╗╚██████╔╝██║  ██║███████╗██║  ██║ 
+╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═══╝╚═╝  ╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝     ╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
+================================【summary】================================
+| model: ./regnetz_c16_evos.onnx
+| node_count: 5187
+| input_count: 1
+| output_count: 1
+| num_params: 13487816
+| model_size: 52.50131607055664
+=====================【parameter_data_types】=====================
+| FLOAT: 13487816
+===========================【operators-lists】===========================
+| ['Conv', 'Shape', 'Constant', 'Gather', 'Div', 'Cast', 'Unsqueeze', 'Concat', 'Reshape', 'ReduceMean', 'Sub', 'Mul', 'Add', 'Sqrt', 'ConstantOfShape', 'Equal', 'Where', 'Expand', 'Sigmoid', 'Relu', 'GlobalAveragePool', 'Flatten', 'Gemm']
+===========================【operators】===========================
+| Conv: count=112, percentage=2.1592442645074224
+| Shape: count=680, percentage=13.109697320223637
+| Constant: count=952, percentage=18.353576248313093
+| Gather: count=612, percentage=11.798727588201272
+| Div: count=136, percentage=2.6219394640447273
+| Cast: count=272, percentage=5.243878928089455
+| Unsqueeze: count=884, percentage=17.042606516290725
+| Concat: count=204, percentage=3.9329091960670906
+| Reshape: count=204, percentage=3.9329091960670906
+| ReduceMean: count=158, percentage=3.0460767302872567
+| Sub: count=68, percentage=1.3109697320223637
+| Mul: count=318, percentage=6.130711393869288
+| Add: count=154, percentage=2.968960863697706
+| Sqrt: count=68, percentage=1.3109697320223637
+| ConstantOfShape: count=68, percentage=1.3109697320223637
+| Equal: count=68, percentage=1.3109697320223637
+| Where: count=68, percentage=1.3109697320223637
+| Expand: count=68, percentage=1.3109697320223637
+| Sigmoid: count=68, percentage=1.3109697320223637
+| Relu: count=22, percentage=0.42413726624252934
+| GlobalAveragePool: count=1, percentage=0.0192789666473877
+| Flatten: count=1, percentage=0.0192789666473877
+| Gemm: count=1, percentage=0.0192789666473877
+===========================【inputs】==============================
+| name=input, dtype=FLOAT, shape=[0, 3, 256, 256]
+===========================【outputs】=============================
+name=output, dtype=FLOAT, shape=[0, 1000]

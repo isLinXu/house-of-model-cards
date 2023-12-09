@@ -1,0 +1,28 @@
+section,key,value
+summary,model,./poolformerv2_s12.onnx
+summary,node_count,456
+summary,input_count,1
+summary,output_count,1
+summary,num_params,11891712
+summary,model_size,45.453375816345215
+parameter_data_types,FLOAT,11891712
+operators,Conv,"count=28, percentage=6.140350877192982"
+operators,Transpose,"count=10, percentage=2.1929824561403506"
+operators,ReduceMean,"count=10, percentage=2.1929824561403506"
+operators,Sub,"count=17, percentage=3.7280701754385963"
+operators,Constant,"count=118, percentage=25.877192982456144"
+operators,Pow,"count=17, percentage=3.7280701754385963"
+operators,Add,"count=66, percentage=14.473684210526317"
+operators,Sqrt,"count=5, percentage=1.0964912280701753"
+operators,Div,"count=5, percentage=1.0964912280701753"
+operators,Mul,"count=57, percentage=12.5"
+operators,Reshape,"count=48, percentage=10.526315789473683"
+operators,InstanceNormalization,"count=24, percentage=5.263157894736842"
+operators,Shape,"count=24, percentage=5.263157894736842"
+operators,AveragePool,"count=12, percentage=2.631578947368421"
+operators,Relu,"count=12, percentage=2.631578947368421"
+operators,GlobalAveragePool,"count=1, percentage=0.21929824561403508"
+operators,Flatten,"count=1, percentage=0.21929824561403508"
+operators,Gemm,"count=1, percentage=0.21929824561403508"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

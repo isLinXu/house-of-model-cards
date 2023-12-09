@@ -1,0 +1,43 @@
+██████╗ ███╗   ██╗███╗   ██╗██╗  ██╗     ███████╗██╗  ██╗██████╗ ██╗      ██████╗ ██████╗ ███████╗██████╗ 
+██╔═══██╗████╗  ██║████╗  ██║╚██╗██╔╝     ██╔════╝╚██╗██╔╝██╔══██╗██║     ██╔═══██╗██╔══██╗██╔════╝██╔══██╗ 
+██║   ██║██╔██╗ ██║██╔██╗ ██║ ╚███╔╝█████╗█████╗   ╚███╔╝ ██████╔╝██║     ██║   ██║██████╔╝█████╗  ██████╔╝ 
+██║   ██║██║╚██╗██║██║╚██╗██║ ██╔██╗╚════╝██╔══╝   ██╔██╗ ██╔═══╝ ██║     ██║   ██║██╔══██╗██╔══╝  ██╔══██╗
+╚██████╔╝██║ ╚████║██║ ╚████║██╔╝ ██╗     ███████╗██╔╝ ██╗██║     ███████╗╚██████╔╝██║  ██║███████╗██║  ██║ 
+╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═══╝╚═╝  ╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝     ╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
+================================【summary】================================
+| model: ./gcresnet50t.onnx
+| node_count: 941
+| input_count: 1
+| output_count: 1
+| num_params: 25870464
+| model_size: 98.88326072692871
+=====================【parameter_data_types】=====================
+| FLOAT: 25870464
+===========================【operators-lists】===========================
+| ['Conv', 'Relu', 'Shape', 'Constant', 'Gather', 'Mul', 'Unsqueeze', 'Concat', 'Reshape', 'Softmax', 'MatMul', 'Transpose', 'ReduceMean', 'Sub', 'Pow', 'Add', 'Sqrt', 'Div', 'GlobalAveragePool', 'Flatten', 'Gemm']
+===========================【operators】===========================
+| Conv: count=103, percentage=10.945802337938364
+| Relu: count=67, percentage=7.1200850159404885
+| Shape: count=64, percentage=6.801275239107333
+| Constant: count=144, percentage=15.3028692879915
+| Gather: count=64, percentage=6.801275239107333
+| Mul: count=32, percentage=3.4006376195536663
+| Unsqueeze: count=144, percentage=15.3028692879915
+| Concat: count=48, percentage=5.100956429330499
+| Reshape: count=48, percentage=5.100956429330499
+| Softmax: count=16, percentage=1.7003188097768331
+| MatMul: count=16, percentage=1.7003188097768331
+| Transpose: count=32, percentage=3.4006376195536663
+| ReduceMean: count=32, percentage=3.4006376195536663
+| Sub: count=16, percentage=1.7003188097768331
+| Pow: count=16, percentage=1.7003188097768331
+| Add: count=64, percentage=6.801275239107333
+| Sqrt: count=16, percentage=1.7003188097768331
+| Div: count=16, percentage=1.7003188097768331
+| GlobalAveragePool: count=1, percentage=0.10626992561105207
+| Flatten: count=1, percentage=0.10626992561105207
+| Gemm: count=1, percentage=0.10626992561105207
+===========================【inputs】==============================
+| name=input, dtype=FLOAT, shape=[0, 3, 256, 256]
+===========================【outputs】=============================
+name=output, dtype=FLOAT, shape=[0, 1000]

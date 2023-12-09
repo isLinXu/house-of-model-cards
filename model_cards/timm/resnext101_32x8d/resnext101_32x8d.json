@@ -1,0 +1,74 @@
+{
+  "summary": {
+    "model": "./resnext101_32x8d.onnx",
+    "node_count": 241,
+    "input_count": 1,
+    "output_count": 1,
+    "num_params": 88689896,
+    "model_size": 338.3712034225464
+  },
+  "parameter_data_types": {
+    "FLOAT": 88689896
+  },
+  "operators": {
+    "Conv": {
+      "count": 104,
+      "percentage": 43.15352697095436
+    },
+    "Relu": {
+      "count": 100,
+      "percentage": 41.49377593360996
+    },
+    "MaxPool": {
+      "count": 1,
+      "percentage": 0.4149377593360996
+    },
+    "Add": {
+      "count": 33,
+      "percentage": 13.692946058091287
+    },
+    "GlobalAveragePool": {
+      "count": 1,
+      "percentage": 0.4149377593360996
+    },
+    "Flatten": {
+      "count": 1,
+      "percentage": 0.4149377593360996
+    },
+    "Gemm": {
+      "count": 1,
+      "percentage": 0.4149377593360996
+    }
+  },
+  "operators_list": [
+    "Conv",
+    "Relu",
+    "MaxPool",
+    "Add",
+    "GlobalAveragePool",
+    "Flatten",
+    "Gemm"
+  ],
+  "inputs": [
+    {
+      "name": "input",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        3,
+        224,
+        224
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        1000
+      ]
+    }
+  ]
+}

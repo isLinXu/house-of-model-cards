@@ -1,0 +1,41 @@
+section,key,value
+summary,model,./swinv2_cr_small_ns_224.onnx
+summary,node_count,5574
+summary,input_count,1
+summary,output_count,1
+summary,num_params,49696444
+summary,model_size,192.00814151763916
+parameter_data_types,FLOAT,49696444
+operators,Conv,"count=1, percentage=0.01794043774668102"
+operators,Transpose,"count=149, percentage=2.673125224255472"
+operators,ReduceMean,"count=112, percentage=2.0093290276282745"
+operators,Sub,"count=56, percentage=1.0046645138141372"
+operators,Constant,"count=1665, percentage=29.870828848223894"
+operators,Pow,"count=152, percentage=2.726946537495515"
+operators,Add,"count=315, percentage=5.651237890204521"
+operators,Sqrt,"count=56, percentage=1.0046645138141372"
+operators,Div,"count=217, percentage=3.893074991029781"
+operators,Mul,"count=128, percentage=2.2963760315751705"
+operators,Shape,"count=362, percentage=6.494438464298528"
+operators,Gather,"count=311, percentage=5.579476139217797"
+operators,Cast,"count=178, percentage=3.1933979189092216"
+operators,Unsqueeze,"count=571, percentage=10.243989953354863"
+operators,Concat,"count=312, percentage=5.597416576964478"
+operators,Reshape,"count=292, percentage=5.238607822030858"
+operators,MatMul,"count=147, percentage=2.63724434876211"
+operators,Split,"count=24, percentage=0.4305705059203444"
+operators,Squeeze,"count=72, percentage=1.2917115177610334"
+operators,Abs,"count=48, percentage=0.8611410118406888"
+operators,ReduceSum,"count=48, percentage=0.8611410118406888"
+operators,Clip,"count=72, percentage=1.2917115177610334"
+operators,Expand,"count=48, percentage=0.8611410118406888"
+operators,Exp,"count=24, percentage=0.4305705059203444"
+operators,Gemm,"count=49, percentage=0.8790814495873699"
+operators,Relu,"count=24, percentage=0.4305705059203444"
+operators,Softmax,"count=24, percentage=0.4305705059203444"
+operators,Erf,"count=24, percentage=0.4305705059203444"
+operators,Slice,"count=91, percentage=1.632579834947973"
+operators,GlobalAveragePool,"count=1, percentage=0.01794043774668102"
+operators,Flatten,"count=1, percentage=0.01794043774668102"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

@@ -1,0 +1,16 @@
+section,key,value
+summary,model,./selecsls60b.onnx
+summary,node_count,130
+summary,input_count,1
+summary,output_count,1
+summary,num_params,32761276
+summary,model_size,125.00417900085449
+parameter_data_types,FLOAT,32761276
+operators,Conv,"count=59, percentage=45.38461538461539"
+operators,Relu,"count=59, percentage=45.38461538461539"
+operators,Concat,"count=9, percentage=6.923076923076923"
+operators,GlobalAveragePool,"count=1, percentage=0.7692307692307693"
+operators,Flatten,"count=1, percentage=0.7692307692307693"
+operators,Gemm,"count=1, percentage=0.7692307692307693"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

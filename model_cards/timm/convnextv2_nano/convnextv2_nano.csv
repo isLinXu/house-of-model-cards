@@ -1,0 +1,26 @@
+section,key,value
+summary,model,./convnextv2_nano.onnx
+summary,node_count,646
+summary,input_count,1
+summary,output_count,1
+summary,num_params,15623800
+summary,model_size,59.72939395904541
+parameter_data_types,FLOAT,15623800
+operators,Conv,"count=46, percentage=7.120743034055728"
+operators,Transpose,"count=38, percentage=5.88235294117647"
+operators,ReduceMean,"count=52, percentage=8.04953560371517"
+operators,Sub,"count=19, percentage=2.941176470588235"
+operators,Constant,"count=136, percentage=21.052631578947366"
+operators,Pow,"count=47, percentage=7.275541795665634"
+operators,Add,"count=108, percentage=16.718266253869967"
+operators,Sqrt,"count=19, percentage=2.941176470588235"
+operators,Div,"count=47, percentage=7.275541795665634"
+operators,Mul,"count=89, percentage=13.777089783281735"
+operators,Erf,"count=14, percentage=2.1671826625387"
+operators,Abs,"count=14, percentage=2.1671826625387"
+operators,ReduceSum,"count=14, percentage=2.1671826625387"
+operators,GlobalAveragePool,"count=1, percentage=0.15479876160990713"
+operators,Flatten,"count=1, percentage=0.15479876160990713"
+operators,Gemm,"count=1, percentage=0.15479876160990713"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

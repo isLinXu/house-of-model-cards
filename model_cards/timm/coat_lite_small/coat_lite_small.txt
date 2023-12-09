@@ -1,0 +1,50 @@
+██████╗ ███╗   ██╗███╗   ██╗██╗  ██╗     ███████╗██╗  ██╗██████╗ ██╗      ██████╗ ██████╗ ███████╗██████╗ 
+██╔═══██╗████╗  ██║████╗  ██║╚██╗██╔╝     ██╔════╝╚██╗██╔╝██╔══██╗██║     ██╔═══██╗██╔══██╗██╔════╝██╔══██╗ 
+██║   ██║██╔██╗ ██║██╔██╗ ██║ ╚███╔╝█████╗█████╗   ╚███╔╝ ██████╔╝██║     ██║   ██║██████╔╝█████╗  ██████╔╝ 
+██║   ██║██║╚██╗██║██║╚██╗██║ ██╔██╗╚════╝██╔══╝   ██╔██╗ ██╔═══╝ ██║     ██║   ██║██╔══██╗██╔══╝  ██╔══██╗
+╚██████╔╝██║ ╚████║██║ ╚████║██╔╝ ██╗     ███████╗██╔╝ ██╗██║     ███████╗╚██████╔╝██║  ██║███████╗██║  ██║ 
+╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═══╝╚═╝  ╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝     ╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
+================================【summary】================================
+| model: ./coat_lite_small.onnx
+| node_count: 2909
+| input_count: 1
+| output_count: 1
+| num_params: 19838504
+| model_size: 76.1736707687378
+=====================【parameter_data_types】=====================
+| FLOAT: 19838504
+===========================【operators-lists】===========================
+| ['Constant', 'Shape', 'Gather', 'Conv', 'Slice', 'Concat', 'Reshape', 'Transpose', 'ReduceMean', 'Sub', 'Pow', 'Add', 'Sqrt', 'Div', 'Mul', 'Unsqueeze', 'ConstantOfShape', 'Equal', 'Where', 'Expand', 'MatMul', 'Cast', 'Split', 'Squeeze', 'Softmax', 'Pad', 'Erf', 'Gemm']
+===========================【operators】===========================
+| Constant: count=901, percentage=30.97284290134067
+| Shape: count=157, percentage=5.397043657614301
+| Gather: count=134, percentage=4.606393949810932
+| Conv: count=68, percentage=2.337573049157786
+| Slice: count=103, percentage=3.5407356479889995
+| Concat: count=159, percentage=5.465795806118941
+| Reshape: count=139, percentage=4.778274321072534
+| Transpose: count=135, percentage=4.640770024063252
+| ReduceMean: count=74, percentage=2.543829494671708
+| Sub: count=37, percentage=1.271914747335854
+| Pow: count=37, percentage=1.271914747335854
+| Add: count=218, percentage=7.493984187005844
+| Sqrt: count=37, percentage=1.271914747335854
+| Div: count=69, percentage=2.371949123410107
+| Mul: count=121, percentage=4.159504984530766
+| Unsqueeze: count=215, percentage=7.390855964248883
+| ConstantOfShape: count=20, percentage=0.6875214850464076
+| Equal: count=4, percentage=0.13750429700928155
+| Where: count=4, percentage=0.13750429700928155
+| Expand: count=4, percentage=0.13750429700928155
+| MatMul: count=96, percentage=3.300103128222757
+| Cast: count=48, percentage=1.6500515641113784
+| Split: count=32, percentage=1.1000343760742524
+| Squeeze: count=48, percentage=1.6500515641113784
+| Softmax: count=16, percentage=0.5500171880371262
+| Pad: count=16, percentage=0.5500171880371262
+| Erf: count=16, percentage=0.5500171880371262
+| Gemm: count=1, percentage=0.034376074252320386
+===========================【inputs】==============================
+| name=input, dtype=FLOAT, shape=[0, 3, 224, 224]
+===========================【outputs】=============================
+name=output, dtype=FLOAT, shape=[0, 1000]

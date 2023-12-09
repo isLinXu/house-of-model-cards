@@ -1,0 +1,79 @@
+{
+  "summary": {
+    "model": "./cspdarknet53.onnx",
+    "node_count": 170,
+    "input_count": 1,
+    "output_count": 1,
+    "num_params": 27624520,
+    "model_size": 105.4215726852417
+  },
+  "parameter_data_types": {
+    "FLOAT": 27624520
+  },
+  "operators": {
+    "Conv": {
+      "count": 67,
+      "percentage": 39.411764705882355
+    },
+    "LeakyRelu": {
+      "count": 67,
+      "percentage": 39.411764705882355
+    },
+    "Split": {
+      "count": 5,
+      "percentage": 2.941176470588235
+    },
+    "Add": {
+      "count": 23,
+      "percentage": 13.529411764705882
+    },
+    "Concat": {
+      "count": 5,
+      "percentage": 2.941176470588235
+    },
+    "GlobalAveragePool": {
+      "count": 1,
+      "percentage": 0.5882352941176471
+    },
+    "Flatten": {
+      "count": 1,
+      "percentage": 0.5882352941176471
+    },
+    "Gemm": {
+      "count": 1,
+      "percentage": 0.5882352941176471
+    }
+  },
+  "operators_list": [
+    "Conv",
+    "LeakyRelu",
+    "Split",
+    "Add",
+    "Concat",
+    "GlobalAveragePool",
+    "Flatten",
+    "Gemm"
+  ],
+  "inputs": [
+    {
+      "name": "input",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        3,
+        256,
+        256
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        1000
+      ]
+    }
+  ]
+}

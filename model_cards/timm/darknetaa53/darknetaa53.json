@@ -1,0 +1,84 @@
+{
+  "summary": {
+    "model": "./darknetaa53.onnx",
+    "node_count": 145,
+    "input_count": 1,
+    "output_count": 1,
+    "num_params": 36005128,
+    "model_size": 137.38564682006836
+  },
+  "parameter_data_types": {
+    "FLOAT": 36005128
+  },
+  "operators": {
+    "Conv": {
+      "count": 52,
+      "percentage": 35.86206896551724
+    },
+    "LeakyRelu": {
+      "count": 52,
+      "percentage": 35.86206896551724
+    },
+    "Constant": {
+      "count": 5,
+      "percentage": 3.4482758620689653
+    },
+    "Pad": {
+      "count": 5,
+      "percentage": 3.4482758620689653
+    },
+    "AveragePool": {
+      "count": 5,
+      "percentage": 3.4482758620689653
+    },
+    "Add": {
+      "count": 23,
+      "percentage": 15.862068965517242
+    },
+    "GlobalAveragePool": {
+      "count": 1,
+      "percentage": 0.6896551724137931
+    },
+    "Flatten": {
+      "count": 1,
+      "percentage": 0.6896551724137931
+    },
+    "Gemm": {
+      "count": 1,
+      "percentage": 0.6896551724137931
+    }
+  },
+  "operators_list": [
+    "Conv",
+    "LeakyRelu",
+    "Constant",
+    "Pad",
+    "AveragePool",
+    "Add",
+    "GlobalAveragePool",
+    "Flatten",
+    "Gemm"
+  ],
+  "inputs": [
+    {
+      "name": "input",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        3,
+        256,
+        256
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        1000
+      ]
+    }
+  ]
+}

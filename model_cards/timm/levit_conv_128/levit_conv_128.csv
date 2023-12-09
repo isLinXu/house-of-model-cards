@@ -1,0 +1,32 @@
+section,key,value
+summary,model,./levit_conv_128.onnx
+summary,node_count,659
+summary,input_count,1
+summary,output_count,1
+summary,num_params,9191168
+summary,model_size,35.59485149383545
+parameter_data_types,FLOAT,9191168
+operators,Identity,"count=2, percentage=0.30349013657056145"
+operators,Conv,"count=62, percentage=9.408194233687405"
+operators,HardSigmoid,"count=31, percentage=4.704097116843703"
+operators,Mul,"count=59, percentage=8.952959028831563"
+operators,Shape,"count=42, percentage=6.373292867981791"
+operators,Constant,"count=122, percentage=18.512898330804248"
+operators,Gather,"count=56, percentage=8.49772382397572"
+operators,Unsqueeze,"count=72, percentage=10.925644916540213"
+operators,Concat,"count=30, percentage=4.552352048558421"
+operators,Reshape,"count=30, percentage=4.552352048558421"
+operators,Split,"count=14, percentage=2.12443095599393"
+operators,Transpose,"count=28, percentage=4.24886191198786"
+operators,MatMul,"count=28, percentage=4.24886191198786"
+operators,Add,"count=45, percentage=6.828528072837632"
+operators,Softmax,"count=14, percentage=2.12443095599393"
+operators,Sub,"count=4, percentage=0.6069802731411229"
+operators,Div,"count=5, percentage=0.7587253414264037"
+operators,Cast,"count=8, percentage=1.2139605462822458"
+operators,AveragePool,"count=2, percentage=0.30349013657056145"
+operators,ReduceMean,"count=1, percentage=0.15174506828528073"
+operators,BatchNormalization,"count=2, percentage=0.30349013657056145"
+operators,Gemm,"count=2, percentage=0.30349013657056145"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

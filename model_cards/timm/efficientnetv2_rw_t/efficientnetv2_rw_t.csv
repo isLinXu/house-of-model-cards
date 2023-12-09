@@ -1,0 +1,18 @@
+section,key,value
+summary,model,./efficientnetv2_rw_t.onnx
+summary,node_count,487
+summary,input_count,1
+summary,output_count,1
+summary,num_params,13589876
+summary,model_size,51.95575523376465
+parameter_data_types,FLOAT,13589876
+operators,Conv,"count=165, percentage=33.880903490759756"
+operators,Sigmoid,"count=128, percentage=26.283367556468175"
+operators,Mul,"count=128, percentage=26.283367556468175"
+operators,Add,"count=34, percentage=6.981519507186857"
+operators,ReduceMean,"count=29, percentage=5.95482546201232"
+operators,GlobalAveragePool,"count=1, percentage=0.20533880903490762"
+operators,Flatten,"count=1, percentage=0.20533880903490762"
+operators,Gemm,"count=1, percentage=0.20533880903490762"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

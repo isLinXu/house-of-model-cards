@@ -1,0 +1,21 @@
+section,key,value
+summary,model,./inception_resnet_v2.onnx
+summary,node_count,658
+summary,input_count,1
+summary,output_count,1
+summary,num_params,55813192
+summary,model_size,213.05277729034424
+parameter_data_types,FLOAT,55813192
+operators,Conv,"count=244, percentage=37.08206686930091"
+operators,Relu,"count=243, percentage=36.93009118541033"
+operators,MaxPool,"count=4, percentage=0.60790273556231"
+operators,AveragePool,"count=1, percentage=0.1519756838905775"
+operators,Concat,"count=43, percentage=6.5349544072948325"
+operators,Constant,"count=40, percentage=6.079027355623101"
+operators,Mul,"count=40, percentage=6.079027355623101"
+operators,Add,"count=40, percentage=6.079027355623101"
+operators,GlobalAveragePool,"count=1, percentage=0.1519756838905775"
+operators,Flatten,"count=1, percentage=0.1519756838905775"
+operators,Gemm,"count=1, percentage=0.1519756838905775"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 299, 299]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

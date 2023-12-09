@@ -1,0 +1,19 @@
+section,key,value
+summary,model,./regnety_040.onnx
+summary,node_count,295
+summary,input_count,1
+summary,output_count,1
+summary,num_params,20615520
+summary,model_size,78.6914005279541
+parameter_data_types,FLOAT,20615520
+operators,Conv,"count=115, percentage=38.983050847457626"
+operators,Relu,"count=89, percentage=30.16949152542373"
+operators,ReduceMean,"count=22, percentage=7.457627118644068"
+operators,Sigmoid,"count=22, percentage=7.457627118644068"
+operators,Mul,"count=22, percentage=7.457627118644068"
+operators,Add,"count=22, percentage=7.457627118644068"
+operators,GlobalAveragePool,"count=1, percentage=0.3389830508474576"
+operators,Flatten,"count=1, percentage=0.3389830508474576"
+operators,Gemm,"count=1, percentage=0.3389830508474576"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

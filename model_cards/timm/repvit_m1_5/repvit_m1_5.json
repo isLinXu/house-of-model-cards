@@ -1,0 +1,99 @@
+{
+  "summary": {
+    "model": "./repvit_m1_5.onnx",
+    "node_count": 791,
+    "input_count": 1,
+    "output_count": 1,
+    "num_params": 14622512,
+    "model_size": 56.000083923339844
+  },
+  "parameter_data_types": {
+    "FLOAT": 14622512
+  },
+  "operators": {
+    "Identity": {
+      "count": 2,
+      "percentage": 0.2528445006321113
+    },
+    "Conv": {
+      "count": 206,
+      "percentage": 26.04298356510746
+    },
+    "Constant": {
+      "count": 130,
+      "percentage": 16.43489254108723
+    },
+    "Div": {
+      "count": 44,
+      "percentage": 5.562579013906448
+    },
+    "Erf": {
+      "count": 43,
+      "percentage": 5.436156763590392
+    },
+    "Add": {
+      "count": 164,
+      "percentage": 20.733249051833123
+    },
+    "Mul": {
+      "count": 104,
+      "percentage": 13.147914032869783
+    },
+    "BatchNormalization": {
+      "count": 41,
+      "percentage": 5.183312262958281
+    },
+    "ReduceMean": {
+      "count": 19,
+      "percentage": 2.402022756005057
+    },
+    "Relu": {
+      "count": 18,
+      "percentage": 2.275600505689001
+    },
+    "Sigmoid": {
+      "count": 18,
+      "percentage": 2.275600505689001
+    },
+    "Gemm": {
+      "count": 2,
+      "percentage": 0.2528445006321113
+    }
+  },
+  "operators_list": [
+    "Identity",
+    "Conv",
+    "Constant",
+    "Div",
+    "Erf",
+    "Add",
+    "Mul",
+    "BatchNormalization",
+    "ReduceMean",
+    "Relu",
+    "Sigmoid",
+    "Gemm"
+  ],
+  "inputs": [
+    {
+      "name": "input",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        3,
+        224,
+        224
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        1000
+      ]
+    }
+  ]
+}

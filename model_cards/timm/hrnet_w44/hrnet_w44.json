@@ -1,0 +1,79 @@
+{
+  "summary": {
+    "model": "./hrnet_w44.onnx",
+    "node_count": 882,
+    "input_count": 1,
+    "output_count": 1,
+    "num_params": 67013800,
+    "model_size": 255.8616247177124
+  },
+  "parameter_data_types": {
+    "FLOAT": 67013800
+  },
+  "operators": {
+    "Conv": {
+      "count": 325,
+      "percentage": 36.848072562358276
+    },
+    "Relu": {
+      "count": 284,
+      "percentage": 32.19954648526077
+    },
+    "Add": {
+      "count": 177,
+      "percentage": 20.068027210884352
+    },
+    "Constant": {
+      "count": 62,
+      "percentage": 7.029478458049887
+    },
+    "Resize": {
+      "count": 31,
+      "percentage": 3.5147392290249435
+    },
+    "GlobalAveragePool": {
+      "count": 1,
+      "percentage": 0.11337868480725624
+    },
+    "Flatten": {
+      "count": 1,
+      "percentage": 0.11337868480725624
+    },
+    "Gemm": {
+      "count": 1,
+      "percentage": 0.11337868480725624
+    }
+  },
+  "operators_list": [
+    "Conv",
+    "Relu",
+    "Add",
+    "Constant",
+    "Resize",
+    "GlobalAveragePool",
+    "Flatten",
+    "Gemm"
+  ],
+  "inputs": [
+    {
+      "name": "input",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        3,
+        224,
+        224
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        1000
+      ]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+section,key,value
+summary,model,./swin_s3_small_224.onnx
+summary,node_count,5867
+summary,input_count,1
+summary,output_count,1
+summary,num_params,58663192
+summary,model_size,227.78931999206543
+parameter_data_types,FLOAT,58663192
+operators,Conv,"count=1, percentage=0.01704448610874382"
+operators,Transpose,"count=148, percentage=2.5225839440940856"
+operators,ReduceMean,"count=107, percentage=1.8237600136355887"
+operators,Sub,"count=125, percentage=2.1305607635929777"
+operators,Constant,"count=1858, percentage=31.668655190046017"
+operators,Pow,"count=53, percentage=0.9033577637634226"
+operators,Add,"count=348, percentage=5.93148116584285"
+operators,Sqrt,"count=53, percentage=0.9033577637634226"
+operators,Div,"count=179, percentage=3.050963013465144"
+operators,Mul,"count=125, percentage=2.1305607635929777"
+operators,Shape,"count=375, percentage=6.391682290778933"
+operators,Gather,"count=372, percentage=6.3405488324527015"
+operators,Mod,"count=96, percentage=1.6362706664394069"
+operators,Unsqueeze,"count=716, percentage=12.203852053860576"
+operators,Concat,"count=330, percentage=5.624680415885461"
+operators,Cast,"count=252, percentage=4.295210499403443"
+operators,ConstantOfShape,"count=24, percentage=0.4090676666098517"
+operators,Reshape,"count=298, percentage=5.079256860405659"
+operators,Slice,"count=91, percentage=1.5510482358956876"
+operators,Pad,"count=24, percentage=0.4090676666098517"
+operators,MatMul,"count=147, percentage=2.505539457985342"
+operators,Split,"count=24, percentage=0.4090676666098517"
+operators,Squeeze,"count=72, percentage=1.227202999829555"
+operators,Softmax,"count=24, percentage=0.4090676666098517"
+operators,Erf,"count=24, percentage=0.4090676666098517"
+operators,Gemm,"count=1, percentage=0.01704448610874382"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

@@ -1,0 +1,47 @@
+██████╗ ███╗   ██╗███╗   ██╗██╗  ██╗     ███████╗██╗  ██╗██████╗ ██╗      ██████╗ ██████╗ ███████╗██████╗ 
+██╔═══██╗████╗  ██║████╗  ██║╚██╗██╔╝     ██╔════╝╚██╗██╔╝██╔══██╗██║     ██╔═══██╗██╔══██╗██╔════╝██╔══██╗ 
+██║   ██║██╔██╗ ██║██╔██╗ ██║ ╚███╔╝█████╗█████╗   ╚███╔╝ ██████╔╝██║     ██║   ██║██████╔╝█████╗  ██████╔╝ 
+██║   ██║██║╚██╗██║██║╚██╗██║ ██╔██╗╚════╝██╔══╝   ██╔██╗ ██╔═══╝ ██║     ██║   ██║██╔══██╗██╔══╝  ██╔══██╗
+╚██████╔╝██║ ╚████║██║ ╚████║██╔╝ ██╗     ███████╗██╔╝ ██╗██║     ███████╗╚██████╔╝██║  ██║███████╗██║  ██║ 
+╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═══╝╚═╝  ╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝     ╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
+================================【summary】================================
+| model: ./nasnetalarge.onnx
+| node_count: 2463
+| input_count: 1
+| output_count: 1
+| num_params: 88658596
+| model_size: 338.8233880996704
+=====================【parameter_data_types】=====================
+| FLOAT: 88658596
+===========================【operators-lists】===========================
+| ['Conv', 'Relu', 'Shape', 'Constant', 'Gather', 'Cast', 'Div', 'Ceil', 'Sub', 'Mul', 'Add', 'Clip', 'Unsqueeze', 'Concat', 'ConstantOfShape', 'Reshape', 'Slice', 'Transpose', 'Pad', 'MaxPool', 'AveragePool', 'BatchNormalization', 'GlobalAveragePool', 'Flatten', 'Gemm']
+===========================【operators】===========================
+| Conv: count=488, percentage=19.813235891189606
+| Relu: count=180, percentage=7.3081607795371495
+| Shape: count=48, percentage=1.9488428745432398
+| Constant: count=508, percentage=20.625253755582623
+| Gather: count=48, percentage=1.9488428745432398
+| Cast: count=196, percentage=7.957775071051564
+| Div: count=64, percentage=2.598457166057653
+| Ceil: count=24, percentage=0.9744214372716199
+| Sub: count=128, percentage=5.196914332115306
+| Mul: count=24, percentage=0.9744214372716199
+| Add: count=190, percentage=7.714169711733658
+| Clip: count=40, percentage=1.6240357287860334
+| Unsqueeze: count=192, percentage=7.795371498172959
+| Concat: count=102, percentage=4.141291108404385
+| ConstantOfShape: count=28, percentage=1.1368250101502233
+| Reshape: count=56, percentage=2.2736500203004466
+| Slice: count=28, percentage=1.1368250101502233
+| Transpose: count=28, percentage=1.1368250101502233
+| Pad: count=28, percentage=1.1368250101502233
+| MaxPool: count=4, percentage=0.16240357287860333
+| AveragePool: count=52, percentage=2.111246447421843
+| BatchNormalization: count=4, percentage=0.16240357287860333
+| GlobalAveragePool: count=1, percentage=0.04060089321965083
+| Flatten: count=1, percentage=0.04060089321965083
+| Gemm: count=1, percentage=0.04060089321965083
+===========================【inputs】==============================
+| name=input, dtype=FLOAT, shape=[0, 3, 331, 331]
+===========================【outputs】=============================
+name=output, dtype=FLOAT, shape=[0, 1000]

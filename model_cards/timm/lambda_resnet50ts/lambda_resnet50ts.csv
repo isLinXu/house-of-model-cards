@@ -1,0 +1,30 @@
+section,key,value
+summary,model,./lambda_resnet50ts.onnx
+summary,node_count,507
+summary,input_count,1
+summary,output_count,1
+summary,num_params,21515784
+summary,model_size,82.19046401977539
+parameter_data_types,FLOAT,21515784
+operators,Conv,"count=60, percentage=11.834319526627219"
+operators,Sigmoid,"count=51, percentage=10.059171597633137"
+operators,Mul,"count=56, percentage=11.045364891518737"
+operators,MaxPool,"count=1, percentage=0.19723865877712032"
+operators,Add,"count=21, percentage=4.142011834319527"
+operators,Shape,"count=20, percentage=3.9447731755424065"
+operators,Constant,"count=65, percentage=12.82051282051282"
+operators,Gather,"count=20, percentage=3.9447731755424065"
+operators,Split,"count=5, percentage=0.9861932938856016"
+operators,BatchNormalization,"count=15, percentage=2.9585798816568047"
+operators,Unsqueeze,"count=85, percentage=16.765285996055226"
+operators,Concat,"count=30, percentage=5.9171597633136095"
+operators,Reshape,"count=30, percentage=5.9171597633136095"
+operators,Transpose,"count=20, percentage=3.9447731755424065"
+operators,Softmax,"count=5, percentage=0.9861932938856016"
+operators,MatMul,"count=15, percentage=2.9585798816568047"
+operators,Squeeze,"count=5, percentage=0.9861932938856016"
+operators,GlobalAveragePool,"count=1, percentage=0.19723865877712032"
+operators,Flatten,"count=1, percentage=0.19723865877712032"
+operators,Gemm,"count=1, percentage=0.19723865877712032"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 256, 256]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

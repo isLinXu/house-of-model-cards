@@ -1,0 +1,17 @@
+section,key,value
+summary,model,./repvgg_a1.onnx
+summary,node_count,125
+summary,input_count,1
+summary,output_count,1
+summary,num_params,14088680
+summary,model_size,53.77768898010254
+parameter_data_types,FLOAT,14088680
+operators,Conv,"count=44, percentage=35.199999999999996"
+operators,Add,"count=39, percentage=31.2"
+operators,Relu,"count=22, percentage=17.599999999999998"
+operators,BatchNormalization,"count=17, percentage=13.600000000000001"
+operators,GlobalAveragePool,"count=1, percentage=0.8"
+operators,Flatten,"count=1, percentage=0.8"
+operators,Gemm,"count=1, percentage=0.8"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

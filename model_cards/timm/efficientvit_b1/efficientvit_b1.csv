@@ -1,0 +1,35 @@
+section,key,value
+summary,model,./efficientvit_b1.onnx
+summary,node_count,738
+summary,input_count,1
+summary,output_count,1
+summary,num_params,9095320
+summary,model_size,34.888296127319336
+parameter_data_types,FLOAT,9095320
+operators,Conv,"count=74, percentage=10.02710027100271"
+operators,HardSigmoid,"count=32, percentage=4.336043360433604"
+operators,Mul,"count=61, percentage=8.26558265582656"
+operators,Add,"count=34, percentage=4.607046070460704"
+operators,Shape,"count=28, percentage=3.7940379403794036"
+operators,Constant,"count=219, percentage=29.67479674796748"
+operators,Gather,"count=28, percentage=3.7940379403794036"
+operators,Concat,"count=28, percentage=3.7940379403794036"
+operators,Unsqueeze,"count=35, percentage=4.742547425474255"
+operators,Reshape,"count=28, percentage=3.7940379403794036"
+operators,Transpose,"count=28, percentage=3.7940379403794036"
+operators,Div,"count=15, percentage=2.0325203252032518"
+operators,Slice,"count=42, percentage=5.691056910569105"
+operators,Relu,"count=14, percentage=1.8970189701897018"
+operators,ConstantOfShape,"count=7, percentage=0.9485094850948509"
+operators,Cast,"count=35, percentage=4.742547425474255"
+operators,Pad,"count=7, percentage=0.9485094850948509"
+operators,MatMul,"count=15, percentage=2.0325203252032518"
+operators,GlobalAveragePool,"count=1, percentage=0.13550135501355012"
+operators,Flatten,"count=1, percentage=0.13550135501355012"
+operators,ReduceMean,"count=2, percentage=0.27100271002710025"
+operators,Sub,"count=1, percentage=0.13550135501355012"
+operators,Pow,"count=1, percentage=0.13550135501355012"
+operators,Sqrt,"count=1, percentage=0.13550135501355012"
+operators,Gemm,"count=1, percentage=0.13550135501355012"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

@@ -1,0 +1,19 @@
+section,key,value
+summary,model,./mnasnet_small.onnx
+summary,node_count,150
+summary,input_count,1
+summary,output_count,1
+summary,num_params,2021800
+summary,model_size,7.748660087585449
+parameter_data_types,FLOAT,2021800
+operators,Conv,"count=66, percentage=44.0"
+operators,Relu,"count=41, percentage=27.333333333333332"
+operators,Add,"count=10, percentage=6.666666666666667"
+operators,ReduceMean,"count=10, percentage=6.666666666666667"
+operators,Sigmoid,"count=10, percentage=6.666666666666667"
+operators,Mul,"count=10, percentage=6.666666666666667"
+operators,GlobalAveragePool,"count=1, percentage=0.6666666666666667"
+operators,Flatten,"count=1, percentage=0.6666666666666667"
+operators,Gemm,"count=1, percentage=0.6666666666666667"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

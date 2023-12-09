@@ -1,0 +1,19 @@
+section,key,value
+summary,model,./semnasnet_100.onnx
+summary,node_count,142
+summary,input_count,1
+summary,output_count,1
+summary,num_params,3870294
+summary,model_size,14.798331260681152
+parameter_data_types,FLOAT,3870294
+operators,Conv,"count=65, percentage=45.774647887323944"
+operators,Relu,"count=41, percentage=28.87323943661972"
+operators,Add,"count=9, percentage=6.338028169014084"
+operators,ReduceMean,"count=8, percentage=5.633802816901409"
+operators,Sigmoid,"count=8, percentage=5.633802816901409"
+operators,Mul,"count=8, percentage=5.633802816901409"
+operators,GlobalAveragePool,"count=1, percentage=0.7042253521126761"
+operators,Flatten,"count=1, percentage=0.7042253521126761"
+operators,Gemm,"count=1, percentage=0.7042253521126761"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

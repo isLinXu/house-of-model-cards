@@ -1,0 +1,23 @@
+section,key,value
+summary,model,./resnet50_gn.onnx
+summary,node_count,600
+summary,input_count,1
+summary,output_count,1
+summary,num_params,25556776
+summary,model_size,97.59651756286621
+parameter_data_types,FLOAT,25556776
+operators,Identity,"count=1, percentage=0.16666666666666669"
+operators,Conv,"count=53, percentage=8.833333333333334"
+operators,Constant,"count=159, percentage=26.5"
+operators,Reshape,"count=106, percentage=17.666666666666668"
+operators,InstanceNormalization,"count=53, percentage=8.833333333333334"
+operators,Shape,"count=53, percentage=8.833333333333334"
+operators,Mul,"count=53, percentage=8.833333333333334"
+operators,Add,"count=69, percentage=11.5"
+operators,Relu,"count=49, percentage=8.166666666666666"
+operators,MaxPool,"count=1, percentage=0.16666666666666669"
+operators,GlobalAveragePool,"count=1, percentage=0.16666666666666669"
+operators,Flatten,"count=1, percentage=0.16666666666666669"
+operators,Gemm,"count=1, percentage=0.16666666666666669"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

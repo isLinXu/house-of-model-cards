@@ -1,0 +1,19 @@
+section,key,value
+summary,model,./mobilenetv3_large_100.onnx
+summary,node_count,161
+summary,input_count,1
+summary,output_count,1
+summary,num_params,5470832
+summary,model_size,20.90813636779785
+parameter_data_types,FLOAT,5470832
+operators,Conv,"count=63, percentage=39.130434782608695"
+operators,HardSigmoid,"count=29, percentage=18.012422360248447"
+operators,Mul,"count=29, percentage=18.012422360248447"
+operators,Relu,"count=19, percentage=11.801242236024844"
+operators,Add,"count=10, percentage=6.211180124223603"
+operators,ReduceMean,"count=8, percentage=4.968944099378882"
+operators,GlobalAveragePool,"count=1, percentage=0.6211180124223602"
+operators,Flatten,"count=1, percentage=0.6211180124223602"
+operators,Gemm,"count=1, percentage=0.6211180124223602"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

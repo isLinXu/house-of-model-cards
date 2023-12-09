@@ -1,0 +1,16 @@
+section,key,value
+summary,model,./fbnetc_100.onnx
+summary,node_count,127
+summary,input_count,1
+summary,output_count,1
+summary,num_params,5550016
+summary,model_size,21.20186424255371
+parameter_data_types,FLOAT,5550016
+operators,Conv,"count=65, percentage=51.181102362204726"
+operators,Relu,"count=44, percentage=34.645669291338585"
+operators,Add,"count=15, percentage=11.811023622047244"
+operators,GlobalAveragePool,"count=1, percentage=0.7874015748031495"
+operators,Flatten,"count=1, percentage=0.7874015748031495"
+operators,Gemm,"count=1, percentage=0.7874015748031495"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

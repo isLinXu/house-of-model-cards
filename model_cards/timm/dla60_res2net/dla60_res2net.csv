@@ -1,0 +1,21 @@
+section,key,value
+summary,model,./dla60_res2net.onnx
+summary,node_count,287
+summary,input_count,1
+summary,output_count,1
+summary,num_params,20823584
+summary,model_size,79.49471759796143
+parameter_data_types,FLOAT,20823584
+operators,Conv,"count=96, percentage=33.44947735191638"
+operators,Relu,"count=91, percentage=31.70731707317073"
+operators,MaxPool,"count=6, percentage=2.0905923344947737"
+operators,Split,"count=16, percentage=5.574912891986063"
+operators,Constant,"count=4, percentage=1.3937282229965158"
+operators,Pad,"count=4, percentage=1.3937282229965158"
+operators,AveragePool,"count=4, percentage=1.3937282229965158"
+operators,Concat,"count=24, percentage=8.362369337979095"
+operators,Add,"count=40, percentage=13.937282229965156"
+operators,GlobalAveragePool,"count=1, percentage=0.34843205574912894"
+operators,Flatten,"count=1, percentage=0.34843205574912894"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

@@ -1,0 +1,114 @@
+{
+  "summary": {
+    "model": "./convnext_base.onnx",
+    "node_count": 1080,
+    "input_count": 1,
+    "output_count": 1,
+    "num_params": 88591464,
+    "model_size": 338.16218757629395
+  },
+  "parameter_data_types": {
+    "FLOAT": 88591464
+  },
+  "operators": {
+    "Conv": {
+      "count": 40,
+      "percentage": 3.7037037037037033
+    },
+    "Transpose": {
+      "count": 82,
+      "percentage": 7.592592592592593
+    },
+    "ReduceMean": {
+      "count": 82,
+      "percentage": 7.592592592592593
+    },
+    "Sub": {
+      "count": 41,
+      "percentage": 3.7962962962962963
+    },
+    "Constant": {
+      "count": 190,
+      "percentage": 17.59259259259259
+    },
+    "Pow": {
+      "count": 41,
+      "percentage": 3.7962962962962963
+    },
+    "Add": {
+      "count": 226,
+      "percentage": 20.925925925925924
+    },
+    "Sqrt": {
+      "count": 41,
+      "percentage": 3.7962962962962963
+    },
+    "Div": {
+      "count": 77,
+      "percentage": 7.12962962962963
+    },
+    "Mul": {
+      "count": 149,
+      "percentage": 13.796296296296296
+    },
+    "MatMul": {
+      "count": 72,
+      "percentage": 6.666666666666667
+    },
+    "Erf": {
+      "count": 36,
+      "percentage": 3.3333333333333335
+    },
+    "GlobalAveragePool": {
+      "count": 1,
+      "percentage": 0.0925925925925926
+    },
+    "Flatten": {
+      "count": 1,
+      "percentage": 0.0925925925925926
+    },
+    "Gemm": {
+      "count": 1,
+      "percentage": 0.0925925925925926
+    }
+  },
+  "operators_list": [
+    "Conv",
+    "Transpose",
+    "ReduceMean",
+    "Sub",
+    "Constant",
+    "Pow",
+    "Add",
+    "Sqrt",
+    "Div",
+    "Mul",
+    "MatMul",
+    "Erf",
+    "GlobalAveragePool",
+    "Flatten",
+    "Gemm"
+  ],
+  "inputs": [
+    {
+      "name": "input",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        3,
+        224,
+        224
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        1000
+      ]
+    }
+  ]
+}

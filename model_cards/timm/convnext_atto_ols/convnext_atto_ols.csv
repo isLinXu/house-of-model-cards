@@ -1,0 +1,24 @@
+section,key,value
+summary,model,./convnext_atto_ols.onnx
+summary,node_count,385
+summary,input_count,1
+summary,output_count,1
+summary,num_params,3702912
+summary,model_size,14.203594207763672
+parameter_data_types,FLOAT,3702912
+operators,Conv,"count=41, percentage=10.649350649350648"
+operators,Transpose,"count=34, percentage=8.831168831168831"
+operators,ReduceMean,"count=34, percentage=8.831168831168831"
+operators,Sub,"count=17, percentage=4.415584415584416"
+operators,Constant,"count=70, percentage=18.181818181818183"
+operators,Pow,"count=17, percentage=4.415584415584416"
+operators,Add,"count=58, percentage=15.064935064935064"
+operators,Sqrt,"count=17, percentage=4.415584415584416"
+operators,Div,"count=29, percentage=7.532467532467532"
+operators,Mul,"count=53, percentage=13.766233766233766"
+operators,Erf,"count=12, percentage=3.116883116883117"
+operators,GlobalAveragePool,"count=1, percentage=0.2597402597402597"
+operators,Flatten,"count=1, percentage=0.2597402597402597"
+operators,Gemm,"count=1, percentage=0.2597402597402597"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

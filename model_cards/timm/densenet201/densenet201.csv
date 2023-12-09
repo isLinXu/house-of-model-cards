@@ -1,0 +1,21 @@
+section,key,value
+summary,model,./densenet201.onnx
+summary,node_count,618
+summary,input_count,1
+summary,output_count,1
+summary,num_params,20205160
+summary,model_size,77.36207866668701
+parameter_data_types,FLOAT,20205160
+operators,Conv,"count=200, percentage=32.362459546925564"
+operators,Relu,"count=201, percentage=32.5242718446602"
+operators,MaxPool,"count=1, percentage=0.16181229773462785"
+operators,Concat,"count=102, percentage=16.50485436893204"
+operators,BatchNormalization,"count=102, percentage=16.50485436893204"
+operators,Constant,"count=3, percentage=0.48543689320388345"
+operators,Pad,"count=3, percentage=0.48543689320388345"
+operators,AveragePool,"count=3, percentage=0.48543689320388345"
+operators,GlobalAveragePool,"count=1, percentage=0.16181229773462785"
+operators,Flatten,"count=1, percentage=0.16181229773462785"
+operators,Gemm,"count=1, percentage=0.16181229773462785"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

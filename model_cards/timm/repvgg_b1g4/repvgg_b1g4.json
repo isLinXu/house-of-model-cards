@@ -1,0 +1,74 @@
+{
+  "summary": {
+    "model": "./repvgg_b1g4.onnx",
+    "node_count": 161,
+    "input_count": 1,
+    "output_count": 1,
+    "num_params": 39960040,
+    "model_size": 152.47916793823242
+  },
+  "parameter_data_types": {
+    "FLOAT": 39960040
+  },
+  "operators": {
+    "Conv": {
+      "count": 56,
+      "percentage": 34.78260869565217
+    },
+    "Add": {
+      "count": 51,
+      "percentage": 31.67701863354037
+    },
+    "Relu": {
+      "count": 28,
+      "percentage": 17.391304347826086
+    },
+    "BatchNormalization": {
+      "count": 23,
+      "percentage": 14.285714285714285
+    },
+    "GlobalAveragePool": {
+      "count": 1,
+      "percentage": 0.6211180124223602
+    },
+    "Flatten": {
+      "count": 1,
+      "percentage": 0.6211180124223602
+    },
+    "Gemm": {
+      "count": 1,
+      "percentage": 0.6211180124223602
+    }
+  },
+  "operators_list": [
+    "Conv",
+    "Add",
+    "Relu",
+    "BatchNormalization",
+    "GlobalAveragePool",
+    "Flatten",
+    "Gemm"
+  ],
+  "inputs": [
+    {
+      "name": "input",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        3,
+        224,
+        224
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        1000
+      ]
+    }
+  ]
+}

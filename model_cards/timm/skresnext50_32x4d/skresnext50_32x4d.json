@@ -1,0 +1,139 @@
+{
+  "summary": {
+    "model": "./skresnext50_32x4d.onnx",
+    "node_count": 730,
+    "input_count": 1,
+    "output_count": 1,
+    "num_params": 27437512,
+    "model_size": 104.79512977600098
+  },
+  "parameter_data_types": {
+    "FLOAT": 27437512
+  },
+  "operators": {
+    "Conv": {
+      "count": 101,
+      "percentage": 13.835616438356164
+    },
+    "Relu": {
+      "count": 81,
+      "percentage": 11.095890410958905
+    },
+    "MaxPool": {
+      "count": 1,
+      "percentage": 0.136986301369863
+    },
+    "Unsqueeze": {
+      "count": 96,
+      "percentage": 13.150684931506849
+    },
+    "Concat": {
+      "count": 32,
+      "percentage": 4.383561643835616
+    },
+    "ReduceSum": {
+      "count": 32,
+      "percentage": 4.383561643835616
+    },
+    "ReduceMean": {
+      "count": 16,
+      "percentage": 2.191780821917808
+    },
+    "Shape": {
+      "count": 64,
+      "percentage": 8.767123287671232
+    },
+    "Constant": {
+      "count": 96,
+      "percentage": 13.150684931506849
+    },
+    "Gather": {
+      "count": 64,
+      "percentage": 8.767123287671232
+    },
+    "Div": {
+      "count": 16,
+      "percentage": 2.191780821917808
+    },
+    "Cast": {
+      "count": 32,
+      "percentage": 4.383561643835616
+    },
+    "Reshape": {
+      "count": 16,
+      "percentage": 2.191780821917808
+    },
+    "Transpose": {
+      "count": 32,
+      "percentage": 4.383561643835616
+    },
+    "Softmax": {
+      "count": 16,
+      "percentage": 2.191780821917808
+    },
+    "Mul": {
+      "count": 16,
+      "percentage": 2.191780821917808
+    },
+    "Add": {
+      "count": 16,
+      "percentage": 2.191780821917808
+    },
+    "GlobalAveragePool": {
+      "count": 1,
+      "percentage": 0.136986301369863
+    },
+    "Flatten": {
+      "count": 1,
+      "percentage": 0.136986301369863
+    },
+    "Gemm": {
+      "count": 1,
+      "percentage": 0.136986301369863
+    }
+  },
+  "operators_list": [
+    "Conv",
+    "Relu",
+    "MaxPool",
+    "Unsqueeze",
+    "Concat",
+    "ReduceSum",
+    "ReduceMean",
+    "Shape",
+    "Constant",
+    "Gather",
+    "Div",
+    "Cast",
+    "Reshape",
+    "Transpose",
+    "Softmax",
+    "Mul",
+    "Add",
+    "GlobalAveragePool",
+    "Flatten",
+    "Gemm"
+  ],
+  "inputs": [
+    {
+      "name": "input",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        3,
+        224,
+        224
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        1000
+      ]
+    }
+  ]
+}

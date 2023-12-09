@@ -1,0 +1,26 @@
+section,key,value
+summary,model,./eca_resnext26ts.onnx
+summary,node_count,281
+summary,input_count,1
+summary,output_count,1
+summary,num_params,10282508
+summary,model_size,39.28020095825195
+parameter_data_types,FLOAT,10282508
+operators,Conv,"count=39, percentage=13.87900355871886"
+operators,Sigmoid,"count=35, percentage=12.455516014234876"
+operators,Mul,"count=35, percentage=12.455516014234876"
+operators,MaxPool,"count=1, percentage=0.3558718861209964"
+operators,ReduceMean,"count=8, percentage=2.8469750889679712"
+operators,Shape,"count=24, percentage=8.540925266903916"
+operators,Constant,"count=56, percentage=19.9288256227758"
+operators,Gather,"count=16, percentage=5.6939501779359425"
+operators,Unsqueeze,"count=16, percentage=5.6939501779359425"
+operators,Concat,"count=16, percentage=5.6939501779359425"
+operators,Reshape,"count=16, percentage=5.6939501779359425"
+operators,Expand,"count=8, percentage=2.8469750889679712"
+operators,Add,"count=8, percentage=2.8469750889679712"
+operators,GlobalAveragePool,"count=1, percentage=0.3558718861209964"
+operators,Flatten,"count=1, percentage=0.3558718861209964"
+operators,Gemm,"count=1, percentage=0.3558718861209964"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 256, 256]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

@@ -1,0 +1,36 @@
+section,key,value
+summary,model,./swin_large_patch4_window12_384.onnx
+summary,node_count,6326
+summary,input_count,1
+summary,output_count,1
+summary,num_params,208132264
+summary,model_size,804.3004207611084
+parameter_data_types,FLOAT,208132264
+operators,Conv,"count=1, percentage=0.015807777426493835"
+operators,Transpose,"count=148, percentage=2.3395510591210877"
+operators,ReduceMean,"count=107, percentage=1.6914321846348404"
+operators,Sub,"count=125, percentage=1.9759721783117294"
+operators,Constant,"count=2128, percentage=33.63895036357888"
+operators,Pow,"count=53, percentage=0.8378122036041732"
+operators,Add,"count=357, percentage=5.6433765412582995"
+operators,Sqrt,"count=53, percentage=0.8378122036041732"
+operators,Div,"count=179, percentage=2.8295921593423965"
+operators,Mul,"count=125, percentage=1.9759721783117294"
+operators,Shape,"count=375, percentage=5.927916534935188"
+operators,Gather,"count=372, percentage=5.880493202655707"
+operators,Mod,"count=96, percentage=1.5175466329434082"
+operators,Unsqueeze,"count=752, percentage=11.887448624723364"
+operators,Concat,"count=384, percentage=6.070186531773633"
+operators,Cast,"count=252, percentage=3.983559911476446"
+operators,ConstantOfShape,"count=24, percentage=0.37938665823585205"
+operators,Reshape,"count=316, percentage=4.995257666772051"
+operators,Slice,"count=163, percentage=2.576667720518495"
+operators,Pad,"count=24, percentage=0.37938665823585205"
+operators,MatMul,"count=147, percentage=2.3237432816945938"
+operators,Split,"count=24, percentage=0.37938665823585205"
+operators,Squeeze,"count=72, percentage=1.138159974707556"
+operators,Softmax,"count=24, percentage=0.37938665823585205"
+operators,Erf,"count=24, percentage=0.37938665823585205"
+operators,Gemm,"count=1, percentage=0.015807777426493835"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 384, 384]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

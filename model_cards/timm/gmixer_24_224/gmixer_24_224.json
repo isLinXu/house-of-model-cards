@@ -1,0 +1,129 @@
+{
+  "summary": {
+    "model": "./gmixer_24_224.onnx",
+    "node_count": 1655,
+    "input_count": 1,
+    "output_count": 1,
+    "num_params": 24721096,
+    "model_size": 94.56613636016846
+  },
+  "parameter_data_types": {
+    "FLOAT": 24721096
+  },
+  "operators": {
+    "Conv": {
+      "count": 1,
+      "percentage": 0.060422960725075525
+    },
+    "Shape": {
+      "count": 49,
+      "percentage": 2.9607250755287007
+    },
+    "Constant": {
+      "count": 390,
+      "percentage": 23.564954682779458
+    },
+    "Slice": {
+      "count": 97,
+      "percentage": 5.861027190332326
+    },
+    "Concat": {
+      "count": 1,
+      "percentage": 0.060422960725075525
+    },
+    "Reshape": {
+      "count": 1,
+      "percentage": 0.060422960725075525
+    },
+    "Transpose": {
+      "count": 49,
+      "percentage": 2.9607250755287007
+    },
+    "ReduceMean": {
+      "count": 99,
+      "percentage": 5.981873111782477
+    },
+    "Sub": {
+      "count": 49,
+      "percentage": 2.9607250755287007
+    },
+    "Pow": {
+      "count": 49,
+      "percentage": 2.9607250755287007
+    },
+    "Add": {
+      "count": 290,
+      "percentage": 17.522658610271904
+    },
+    "Sqrt": {
+      "count": 49,
+      "percentage": 2.9607250755287007
+    },
+    "Div": {
+      "count": 97,
+      "percentage": 5.861027190332326
+    },
+    "Mul": {
+      "count": 241,
+      "percentage": 14.561933534743202
+    },
+    "MatMul": {
+      "count": 96,
+      "percentage": 5.80060422960725
+    },
+    "Gather": {
+      "count": 48,
+      "percentage": 2.900302114803625
+    },
+    "Sigmoid": {
+      "count": 48,
+      "percentage": 2.900302114803625
+    },
+    "Gemm": {
+      "count": 1,
+      "percentage": 0.060422960725075525
+    }
+  },
+  "operators_list": [
+    "Conv",
+    "Shape",
+    "Constant",
+    "Slice",
+    "Concat",
+    "Reshape",
+    "Transpose",
+    "ReduceMean",
+    "Sub",
+    "Pow",
+    "Add",
+    "Sqrt",
+    "Div",
+    "Mul",
+    "MatMul",
+    "Gather",
+    "Sigmoid",
+    "Gemm"
+  ],
+  "inputs": [
+    {
+      "name": "input",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        3,
+        224,
+        224
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        1000
+      ]
+    }
+  ]
+}

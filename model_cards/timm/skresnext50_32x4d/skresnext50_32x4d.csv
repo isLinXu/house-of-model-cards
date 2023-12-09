@@ -1,0 +1,30 @@
+section,key,value
+summary,model,./skresnext50_32x4d.onnx
+summary,node_count,730
+summary,input_count,1
+summary,output_count,1
+summary,num_params,27437512
+summary,model_size,104.79512977600098
+parameter_data_types,FLOAT,27437512
+operators,Conv,"count=101, percentage=13.835616438356164"
+operators,Relu,"count=81, percentage=11.095890410958905"
+operators,MaxPool,"count=1, percentage=0.136986301369863"
+operators,Unsqueeze,"count=96, percentage=13.150684931506849"
+operators,Concat,"count=32, percentage=4.383561643835616"
+operators,ReduceSum,"count=32, percentage=4.383561643835616"
+operators,ReduceMean,"count=16, percentage=2.191780821917808"
+operators,Shape,"count=64, percentage=8.767123287671232"
+operators,Constant,"count=96, percentage=13.150684931506849"
+operators,Gather,"count=64, percentage=8.767123287671232"
+operators,Div,"count=16, percentage=2.191780821917808"
+operators,Cast,"count=32, percentage=4.383561643835616"
+operators,Reshape,"count=16, percentage=2.191780821917808"
+operators,Transpose,"count=32, percentage=4.383561643835616"
+operators,Softmax,"count=16, percentage=2.191780821917808"
+operators,Mul,"count=16, percentage=2.191780821917808"
+operators,Add,"count=16, percentage=2.191780821917808"
+operators,GlobalAveragePool,"count=1, percentage=0.136986301369863"
+operators,Flatten,"count=1, percentage=0.136986301369863"
+operators,Gemm,"count=1, percentage=0.136986301369863"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

@@ -1,0 +1,38 @@
+██████╗ ███╗   ██╗███╗   ██╗██╗  ██╗     ███████╗██╗  ██╗██████╗ ██╗      ██████╗ ██████╗ ███████╗██████╗ 
+██╔═══██╗████╗  ██║████╗  ██║╚██╗██╔╝     ██╔════╝╚██╗██╔╝██╔══██╗██║     ██╔═══██╗██╔══██╗██╔════╝██╔══██╗ 
+██║   ██║██╔██╗ ██║██╔██╗ ██║ ╚███╔╝█████╗█████╗   ╚███╔╝ ██████╔╝██║     ██║   ██║██████╔╝█████╗  ██████╔╝ 
+██║   ██║██║╚██╗██║██║╚██╗██║ ██╔██╗╚════╝██╔══╝   ██╔██╗ ██╔═══╝ ██║     ██║   ██║██╔══██╗██╔══╝  ██╔══██╗
+╚██████╔╝██║ ╚████║██║ ╚████║██╔╝ ██╗     ███████╗██╔╝ ██╗██║     ███████╗╚██████╔╝██║  ██║███████╗██║  ██║ 
+╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═══╝╚═╝  ╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝     ╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
+================================【summary】================================
+| model: ./densenetblur121d.onnx
+| node_count: 400
+| input_count: 1
+| output_count: 1
+| num_params: 8059208
+| model_size: 30.89209747314453
+=====================【parameter_data_types】=====================
+| FLOAT: 8059208
+===========================【operators-lists】===========================
+| ['Conv', 'Relu', 'MaxPool', 'Constant', 'ConstantOfShape', 'Concat', 'Reshape', 'Slice', 'Transpose', 'Cast', 'Pad', 'BatchNormalization', 'AveragePool', 'GlobalAveragePool', 'Flatten', 'Gemm']
+===========================【operators】===========================
+| Conv: count=123, percentage=30.75
+| Relu: count=123, percentage=30.75
+| MaxPool: count=1, percentage=0.25
+| Constant: count=12, percentage=3.0
+| ConstantOfShape: count=1, percentage=0.25
+| Concat: count=63, percentage=15.75
+| Reshape: count=2, percentage=0.5
+| Slice: count=1, percentage=0.25
+| Transpose: count=1, percentage=0.25
+| Cast: count=1, percentage=0.25
+| Pad: count=4, percentage=1.0
+| BatchNormalization: count=62, percentage=15.5
+| AveragePool: count=3, percentage=0.75
+| GlobalAveragePool: count=1, percentage=0.25
+| Flatten: count=1, percentage=0.25
+| Gemm: count=1, percentage=0.25
+===========================【inputs】==============================
+| name=input, dtype=FLOAT, shape=[0, 3, 224, 224]
+===========================【outputs】=============================
+name=output, dtype=FLOAT, shape=[0, 1000]

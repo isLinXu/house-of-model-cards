@@ -1,0 +1,33 @@
+section,key,value
+summary,model,./gcresnext50ts.onnx
+summary,node_count,993
+summary,input_count,1
+summary,output_count,1
+summary,num_params,15640704
+summary,model_size,59.87067127227783
+parameter_data_types,FLOAT,15640704
+operators,Conv,"count=103, percentage=10.372608257804632"
+operators,Sigmoid,"count=51, percentage=5.13595166163142"
+operators,Mul,"count=83, percentage=8.358509566968781"
+operators,MaxPool,"count=1, percentage=0.10070493454179255"
+operators,Shape,"count=64, percentage=6.445115810674723"
+operators,Constant,"count=144, percentage=14.501510574018129"
+operators,Gather,"count=64, percentage=6.445115810674723"
+operators,Unsqueeze,"count=144, percentage=14.501510574018129"
+operators,Concat,"count=48, percentage=4.833836858006042"
+operators,Reshape,"count=48, percentage=4.833836858006042"
+operators,Softmax,"count=16, percentage=1.6112789526686808"
+operators,MatMul,"count=16, percentage=1.6112789526686808"
+operators,Transpose,"count=32, percentage=3.2225579053373616"
+operators,ReduceMean,"count=32, percentage=3.2225579053373616"
+operators,Sub,"count=16, percentage=1.6112789526686808"
+operators,Pow,"count=16, percentage=1.6112789526686808"
+operators,Add,"count=64, percentage=6.445115810674723"
+operators,Sqrt,"count=16, percentage=1.6112789526686808"
+operators,Div,"count=16, percentage=1.6112789526686808"
+operators,Relu,"count=16, percentage=1.6112789526686808"
+operators,GlobalAveragePool,"count=1, percentage=0.10070493454179255"
+operators,Flatten,"count=1, percentage=0.10070493454179255"
+operators,Gemm,"count=1, percentage=0.10070493454179255"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 256, 256]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

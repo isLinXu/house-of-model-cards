@@ -1,0 +1,25 @@
+section,key,value
+summary,model,./eca_resnet33ts.onnx
+summary,node_count,349
+summary,input_count,1
+summary,output_count,1
+summary,num_params,19656470
+summary,model_size,75.0523910522461
+parameter_data_types,FLOAT,19656470
+operators,Conv,"count=48, percentage=13.753581661891118"
+operators,Sigmoid,"count=44, percentage=12.607449856733524"
+operators,Mul,"count=44, percentage=12.607449856733524"
+operators,ReduceMean,"count=10, percentage=2.865329512893983"
+operators,Shape,"count=30, percentage=8.595988538681947"
+operators,Constant,"count=70, percentage=20.057306590257877"
+operators,Gather,"count=20, percentage=5.730659025787966"
+operators,Unsqueeze,"count=20, percentage=5.730659025787966"
+operators,Concat,"count=20, percentage=5.730659025787966"
+operators,Reshape,"count=20, percentage=5.730659025787966"
+operators,Expand,"count=10, percentage=2.865329512893983"
+operators,Add,"count=10, percentage=2.865329512893983"
+operators,GlobalAveragePool,"count=1, percentage=0.28653295128939826"
+operators,Flatten,"count=1, percentage=0.28653295128939826"
+operators,Gemm,"count=1, percentage=0.28653295128939826"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 256, 256]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

@@ -1,0 +1,50 @@
+██████╗ ███╗   ██╗███╗   ██╗██╗  ██╗     ███████╗██╗  ██╗██████╗ ██╗      ██████╗ ██████╗ ███████╗██████╗ 
+██╔═══██╗████╗  ██║████╗  ██║╚██╗██╔╝     ██╔════╝╚██╗██╔╝██╔══██╗██║     ██╔═══██╗██╔══██╗██╔════╝██╔══██╗ 
+██║   ██║██╔██╗ ██║██╔██╗ ██║ ╚███╔╝█████╗█████╗   ╚███╔╝ ██████╔╝██║     ██║   ██║██████╔╝█████╗  ██████╔╝ 
+██║   ██║██║╚██╗██║██║╚██╗██║ ██╔██╗╚════╝██╔══╝   ██╔██╗ ██╔═══╝ ██║     ██║   ██║██╔══██╗██╔══╝  ██╔══██╗
+╚██████╔╝██║ ╚████║██║ ╚████║██╔╝ ██╗     ███████╗██╔╝ ██╗██║     ███████╗╚██████╔╝██║  ██║███████╗██║  ██║ 
+╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═══╝╚═╝  ╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝     ╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
+================================【summary】================================
+| model: ./tnt_s_patch16_224.onnx
+| node_count: 2402
+| input_count: 1
+| output_count: 1
+| num_params: 23755336
+| model_size: 90.92772674560547
+=====================【parameter_data_types】=====================
+| FLOAT: 23755336
+===========================【operators-lists】===========================
+| ['Constant', 'Shape', 'Gather', 'Conv', 'Add', 'Sub', 'Range', 'Unsqueeze', 'Mul', 'Concat', 'Pad', 'Transpose', 'Reshape', 'ReduceMean', 'Pow', 'Sqrt', 'Div', 'MatMul', 'ConstantOfShape', 'Equal', 'Where', 'Expand', 'Split', 'Squeeze', 'Softmax', 'Erf', 'Slice', 'Gemm']
+===========================【operators】===========================
+| Constant: count=589, percentage=24.521232306411324
+| Shape: count=78, percentage=3.24729392173189
+| Gather: count=80, percentage=3.330557868442964
+| Conv: count=1, percentage=0.041631973355537054
+| Add: count=301, percentage=12.531223980016653
+| Sub: count=77, percentage=3.205661948376353
+| Range: count=2, percentage=0.08326394671107411
+| Unsqueeze: count=176, percentage=7.327227310574521
+| Mul: count=138, percentage=5.745212323064113
+| Concat: count=102, percentage=4.24646128226478
+| Pad: count=1, percentage=0.041631973355537054
+| Transpose: count=99, percentage=4.121565362198168
+| Reshape: count=89, percentage=3.7052456286427975
+| ReduceMean: count=126, percentage=5.245628642797668
+| Pow: count=63, percentage=2.622814321398834
+| Sqrt: count=63, percentage=2.622814321398834
+| Div: count=87, percentage=3.6219816819317234
+| MatMul: count=181, percentage=7.535387177352207
+| ConstantOfShape: count=1, percentage=0.041631973355537054
+| Equal: count=1, percentage=0.041631973355537054
+| Where: count=1, percentage=0.041631973355537054
+| Expand: count=1, percentage=0.041631973355537054
+| Split: count=24, percentage=0.9991673605328892
+| Squeeze: count=48, percentage=1.9983347210657785
+| Softmax: count=24, percentage=0.9991673605328892
+| Erf: count=24, percentage=0.9991673605328892
+| Slice: count=24, percentage=0.9991673605328892
+| Gemm: count=1, percentage=0.041631973355537054
+===========================【inputs】==============================
+| name=input, dtype=FLOAT, shape=[0, 3, 224, 224]
+===========================【outputs】=============================
+name=output, dtype=FLOAT, shape=[0, 1000]

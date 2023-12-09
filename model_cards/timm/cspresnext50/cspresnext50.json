@@ -1,0 +1,84 @@
+{
+  "summary": {
+    "model": "./cspresnext50.onnx",
+    "node_count": 131,
+    "input_count": 1,
+    "output_count": 1,
+    "num_params": 20541160,
+    "model_size": 78.39146614074707
+  },
+  "parameter_data_types": {
+    "FLOAT": 20541160
+  },
+  "operators": {
+    "Conv": {
+      "count": 55,
+      "percentage": 41.98473282442748
+    },
+    "LeakyRelu": {
+      "count": 51,
+      "percentage": 38.93129770992366
+    },
+    "MaxPool": {
+      "count": 1,
+      "percentage": 0.7633587786259541
+    },
+    "Split": {
+      "count": 4,
+      "percentage": 3.0534351145038165
+    },
+    "Add": {
+      "count": 13,
+      "percentage": 9.923664122137405
+    },
+    "Concat": {
+      "count": 4,
+      "percentage": 3.0534351145038165
+    },
+    "GlobalAveragePool": {
+      "count": 1,
+      "percentage": 0.7633587786259541
+    },
+    "Flatten": {
+      "count": 1,
+      "percentage": 0.7633587786259541
+    },
+    "Gemm": {
+      "count": 1,
+      "percentage": 0.7633587786259541
+    }
+  },
+  "operators_list": [
+    "Conv",
+    "LeakyRelu",
+    "MaxPool",
+    "Split",
+    "Add",
+    "Concat",
+    "GlobalAveragePool",
+    "Flatten",
+    "Gemm"
+  ],
+  "inputs": [
+    {
+      "name": "input",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        3,
+        256,
+        256
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        1000
+      ]
+    }
+  ]
+}

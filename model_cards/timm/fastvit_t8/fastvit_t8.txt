@@ -1,0 +1,37 @@
+██████╗ ███╗   ██╗███╗   ██╗██╗  ██╗     ███████╗██╗  ██╗██████╗ ██╗      ██████╗ ██████╗ ███████╗██████╗ 
+██╔═══██╗████╗  ██║████╗  ██║╚██╗██╔╝     ██╔════╝╚██╗██╔╝██╔══██╗██║     ██╔═══██╗██╔══██╗██╔════╝██╔══██╗ 
+██║   ██║██╔██╗ ██║██╔██╗ ██║ ╚███╔╝█████╗█████╗   ╚███╔╝ ██████╔╝██║     ██║   ██║██████╔╝█████╗  ██████╔╝ 
+██║   ██║██║╚██╗██║██║╚██╗██║ ██╔██╗╚════╝██╔══╝   ██╔██╗ ██╔═══╝ ██║     ██║   ██║██╔══██╗██╔══╝  ██╔══██╗
+╚██████╔╝██║ ╚████║██║ ╚████║██╔╝ ██╗     ███████╗██╔╝ ██╗██║     ███████╗╚██████╔╝██║  ██║███████╗██║  ██║ 
+╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═══╝╚═╝  ╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝     ╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
+================================【summary】================================
+| model: ./fastvit_t8.onnx
+| node_count: 349
+| input_count: 1
+| output_count: 1
+| num_params: 4022056
+| model_size: 15.425615310668945
+=====================【parameter_data_types】=====================
+| FLOAT: 4022056
+===========================【operators-lists】===========================
+| ['Identity', 'Conv', 'Constant', 'Add', 'Div', 'Erf', 'Mul', 'BatchNormalization', 'Sub', 'ReduceMean', 'Relu', 'Sigmoid', 'GlobalAveragePool', 'Flatten', 'Gemm']
+===========================【operators】===========================
+| Identity: count=20, percentage=5.730659025787966
+| Conv: count=68, percentage=19.484240687679083
+| Constant: count=58, percentage=16.6189111747851
+| Add: count=74, percentage=21.20343839541547
+| Div: count=17, percentage=4.871060171919771
+| Erf: count=17, percentage=4.871060171919771
+| Mul: count=55, percentage=15.759312320916905
+| BatchNormalization: count=24, percentage=6.876790830945559
+| Sub: count=10, percentage=2.865329512893983
+| ReduceMean: count=1, percentage=0.28653295128939826
+| Relu: count=1, percentage=0.28653295128939826
+| Sigmoid: count=1, percentage=0.28653295128939826
+| GlobalAveragePool: count=1, percentage=0.28653295128939826
+| Flatten: count=1, percentage=0.28653295128939826
+| Gemm: count=1, percentage=0.28653295128939826
+===========================【inputs】==============================
+| name=input, dtype=FLOAT, shape=[0, 3, 256, 256]
+===========================【outputs】=============================
+name=output, dtype=FLOAT, shape=[0, 1000]

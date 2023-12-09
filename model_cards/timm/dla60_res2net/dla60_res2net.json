@@ -1,0 +1,94 @@
+{
+  "summary": {
+    "model": "./dla60_res2net.onnx",
+    "node_count": 287,
+    "input_count": 1,
+    "output_count": 1,
+    "num_params": 20823584,
+    "model_size": 79.49471759796143
+  },
+  "parameter_data_types": {
+    "FLOAT": 20823584
+  },
+  "operators": {
+    "Conv": {
+      "count": 96,
+      "percentage": 33.44947735191638
+    },
+    "Relu": {
+      "count": 91,
+      "percentage": 31.70731707317073
+    },
+    "MaxPool": {
+      "count": 6,
+      "percentage": 2.0905923344947737
+    },
+    "Split": {
+      "count": 16,
+      "percentage": 5.574912891986063
+    },
+    "Constant": {
+      "count": 4,
+      "percentage": 1.3937282229965158
+    },
+    "Pad": {
+      "count": 4,
+      "percentage": 1.3937282229965158
+    },
+    "AveragePool": {
+      "count": 4,
+      "percentage": 1.3937282229965158
+    },
+    "Concat": {
+      "count": 24,
+      "percentage": 8.362369337979095
+    },
+    "Add": {
+      "count": 40,
+      "percentage": 13.937282229965156
+    },
+    "GlobalAveragePool": {
+      "count": 1,
+      "percentage": 0.34843205574912894
+    },
+    "Flatten": {
+      "count": 1,
+      "percentage": 0.34843205574912894
+    }
+  },
+  "operators_list": [
+    "Conv",
+    "Relu",
+    "MaxPool",
+    "Split",
+    "Constant",
+    "Pad",
+    "AveragePool",
+    "Concat",
+    "Add",
+    "GlobalAveragePool",
+    "Flatten"
+  ],
+  "inputs": [
+    {
+      "name": "input",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        3,
+        224,
+        224
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        1000
+      ]
+    }
+  ]
+}

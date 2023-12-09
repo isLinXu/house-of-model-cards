@@ -1,0 +1,175 @@
+{
+  "summary": {
+    "model": "./lambda_resnet26rpt_256.onnx",
+    "node_count": 293,
+    "input_count": 1,
+    "output_count": 1,
+    "num_params": 11047712,
+    "model_size": 42.47323513031006
+  },
+  "parameter_data_types": {
+    "FLOAT": 10978072,
+    "INT64": 69640
+  },
+  "operators": {
+    "Identity": {
+      "count": 4,
+      "percentage": 1.3651877133105803
+    },
+    "Conv": {
+      "count": 31,
+      "percentage": 10.580204778156997
+    },
+    "Relu": {
+      "count": 27,
+      "percentage": 9.215017064846416
+    },
+    "MaxPool": {
+      "count": 1,
+      "percentage": 0.3412969283276451
+    },
+    "Add": {
+      "count": 11,
+      "percentage": 3.754266211604096
+    },
+    "Shape": {
+      "count": 15,
+      "percentage": 5.1194539249146755
+    },
+    "Constant": {
+      "count": 40,
+      "percentage": 13.651877133105803
+    },
+    "Gather": {
+      "count": 15,
+      "percentage": 5.1194539249146755
+    },
+    "Mul": {
+      "count": 6,
+      "percentage": 2.04778156996587
+    },
+    "Split": {
+      "count": 3,
+      "percentage": 1.023890784982935
+    },
+    "BatchNormalization": {
+      "count": 9,
+      "percentage": 3.0716723549488054
+    },
+    "Unsqueeze": {
+      "count": 45,
+      "percentage": 15.358361774744028
+    },
+    "Concat": {
+      "count": 15,
+      "percentage": 5.1194539249146755
+    },
+    "Reshape": {
+      "count": 21,
+      "percentage": 7.167235494880546
+    },
+    "Transpose": {
+      "count": 12,
+      "percentage": 4.09556313993174
+    },
+    "Softmax": {
+      "count": 3,
+      "percentage": 1.023890784982935
+    },
+    "MatMul": {
+      "count": 12,
+      "percentage": 4.09556313993174
+    },
+    "Flatten": {
+      "count": 4,
+      "percentage": 1.3651877133105803
+    },
+    "ConstantOfShape": {
+      "count": 3,
+      "percentage": 1.023890784982935
+    },
+    "Equal": {
+      "count": 3,
+      "percentage": 1.023890784982935
+    },
+    "Where": {
+      "count": 3,
+      "percentage": 1.023890784982935
+    },
+    "Expand": {
+      "count": 3,
+      "percentage": 1.023890784982935
+    },
+    "Squeeze": {
+      "count": 3,
+      "percentage": 1.023890784982935
+    },
+    "Pad": {
+      "count": 1,
+      "percentage": 0.3412969283276451
+    },
+    "AveragePool": {
+      "count": 1,
+      "percentage": 0.3412969283276451
+    },
+    "GlobalAveragePool": {
+      "count": 1,
+      "percentage": 0.3412969283276451
+    },
+    "Gemm": {
+      "count": 1,
+      "percentage": 0.3412969283276451
+    }
+  },
+  "operators_list": [
+    "Identity",
+    "Conv",
+    "Relu",
+    "MaxPool",
+    "Add",
+    "Shape",
+    "Constant",
+    "Gather",
+    "Mul",
+    "Split",
+    "BatchNormalization",
+    "Unsqueeze",
+    "Concat",
+    "Reshape",
+    "Transpose",
+    "Softmax",
+    "MatMul",
+    "Flatten",
+    "ConstantOfShape",
+    "Equal",
+    "Where",
+    "Expand",
+    "Squeeze",
+    "Pad",
+    "AveragePool",
+    "GlobalAveragePool",
+    "Gemm"
+  ],
+  "inputs": [
+    {
+      "name": "input",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        3,
+        256,
+        256
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        1000
+      ]
+    }
+  ]
+}

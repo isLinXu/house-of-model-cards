@@ -1,0 +1,74 @@
+{
+  "summary": {
+    "model": "./dla60.onnx",
+    "node_count": 155,
+    "input_count": 1,
+    "output_count": 1,
+    "num_params": 22016088,
+    "model_size": 84.01622867584229
+  },
+  "parameter_data_types": {
+    "FLOAT": 22016088
+  },
+  "operators": {
+    "Conv": {
+      "count": 64,
+      "percentage": 41.29032258064516
+    },
+    "Relu": {
+      "count": 59,
+      "percentage": 38.064516129032256
+    },
+    "MaxPool": {
+      "count": 6,
+      "percentage": 3.870967741935484
+    },
+    "Add": {
+      "count": 16,
+      "percentage": 10.32258064516129
+    },
+    "Concat": {
+      "count": 8,
+      "percentage": 5.161290322580645
+    },
+    "GlobalAveragePool": {
+      "count": 1,
+      "percentage": 0.6451612903225806
+    },
+    "Flatten": {
+      "count": 1,
+      "percentage": 0.6451612903225806
+    }
+  },
+  "operators_list": [
+    "Conv",
+    "Relu",
+    "MaxPool",
+    "Add",
+    "Concat",
+    "GlobalAveragePool",
+    "Flatten"
+  ],
+  "inputs": [
+    {
+      "name": "input",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        3,
+        224,
+        224
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        1000
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+██████╗ ███╗   ██╗███╗   ██╗██╗  ██╗     ███████╗██╗  ██╗██████╗ ██╗      ██████╗ ██████╗ ███████╗██████╗ 
+██╔═══██╗████╗  ██║████╗  ██║╚██╗██╔╝     ██╔════╝╚██╗██╔╝██╔══██╗██║     ██╔═══██╗██╔══██╗██╔════╝██╔══██╗ 
+██║   ██║██╔██╗ ██║██╔██╗ ██║ ╚███╔╝█████╗█████╗   ╚███╔╝ ██████╔╝██║     ██║   ██║██████╔╝█████╗  ██████╔╝ 
+██║   ██║██║╚██╗██║██║╚██╗██║ ██╔██╗╚════╝██╔══╝   ██╔██╗ ██╔═══╝ ██║     ██║   ██║██╔══██╗██╔══╝  ██╔══██╗
+╚██████╔╝██║ ╚████║██║ ╚████║██╔╝ ██╗     ███████╗██╔╝ ██╗██║     ███████╗╚██████╔╝██║  ██║███████╗██║  ██║ 
+╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═══╝╚═╝  ╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝     ╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
+================================【summary】================================
+| model: ./efficientvit_b2.onnx
+| node_count: 1036
+| input_count: 1
+| output_count: 1
+| num_params: 24317440
+| model_size: 93.03410530090332
+=====================【parameter_data_types】=====================
+| FLOAT: 24317440
+===========================【operators-lists】===========================
+| ['Conv', 'HardSigmoid', 'Mul', 'Add', 'Shape', 'Constant', 'Gather', 'Concat', 'Unsqueeze', 'Reshape', 'Transpose', 'Div', 'Slice', 'Relu', 'ConstantOfShape', 'Cast', 'Pad', 'MatMul', 'GlobalAveragePool', 'Flatten', 'ReduceMean', 'Sub', 'Pow', 'Sqrt', 'Gemm']
+===========================【operators】===========================
+| Conv: count=101, percentage=9.749034749034749
+| HardSigmoid: count=42, percentage=4.054054054054054
+| Mul: count=83, percentage=8.011583011583012
+| Add: count=48, percentage=4.633204633204633
+| Shape: count=40, percentage=3.861003861003861
+| Constant: count=312, percentage=30.115830115830118
+| Gather: count=40, percentage=3.861003861003861
+| Concat: count=40, percentage=3.861003861003861
+| Unsqueeze: count=50, percentage=4.826254826254826
+| Reshape: count=40, percentage=3.861003861003861
+| Transpose: count=40, percentage=3.861003861003861
+| Div: count=21, percentage=2.027027027027027
+| Slice: count=60, percentage=5.7915057915057915
+| Relu: count=20, percentage=1.9305019305019304
+| ConstantOfShape: count=10, percentage=0.9652509652509652
+| Cast: count=50, percentage=4.826254826254826
+| Pad: count=10, percentage=0.9652509652509652
+| MatMul: count=21, percentage=2.027027027027027
+| GlobalAveragePool: count=1, percentage=0.09652509652509653
+| Flatten: count=1, percentage=0.09652509652509653
+| ReduceMean: count=2, percentage=0.19305019305019305
+| Sub: count=1, percentage=0.09652509652509653
+| Pow: count=1, percentage=0.09652509652509653
+| Sqrt: count=1, percentage=0.09652509652509653
+| Gemm: count=1, percentage=0.09652509652509653
+===========================【inputs】==============================
+| name=input, dtype=FLOAT, shape=[0, 3, 224, 224]
+===========================【outputs】=============================
+name=output, dtype=FLOAT, shape=[0, 1000]

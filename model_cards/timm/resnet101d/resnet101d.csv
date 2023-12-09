@@ -1,0 +1,18 @@
+section,key,value
+summary,model,./resnet101d.onnx
+summary,node_count,248
+summary,input_count,1
+summary,output_count,1
+summary,num_params,44515656
+summary,model_size,169.8613042831421
+parameter_data_types,FLOAT,44515656
+operators,Conv,"count=106, percentage=42.74193548387097"
+operators,Relu,"count=102, percentage=41.12903225806452"
+operators,MaxPool,"count=1, percentage=0.4032258064516129"
+operators,Add,"count=33, percentage=13.306451612903224"
+operators,AveragePool,"count=3, percentage=1.2096774193548387"
+operators,GlobalAveragePool,"count=1, percentage=0.4032258064516129"
+operators,Flatten,"count=1, percentage=0.4032258064516129"
+operators,Gemm,"count=1, percentage=0.4032258064516129"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 256, 256]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

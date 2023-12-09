@@ -1,0 +1,47 @@
+██████╗ ███╗   ██╗███╗   ██╗██╗  ██╗     ███████╗██╗  ██╗██████╗ ██╗      ██████╗ ██████╗ ███████╗██████╗ 
+██╔═══██╗████╗  ██║████╗  ██║╚██╗██╔╝     ██╔════╝╚██╗██╔╝██╔══██╗██║     ██╔═══██╗██╔══██╗██╔════╝██╔══██╗ 
+██║   ██║██╔██╗ ██║██╔██╗ ██║ ╚███╔╝█████╗█████╗   ╚███╔╝ ██████╔╝██║     ██║   ██║██████╔╝█████╗  ██████╔╝ 
+██║   ██║██║╚██╗██║██║╚██╗██║ ██╔██╗╚════╝██╔══╝   ██╔██╗ ██╔═══╝ ██║     ██║   ██║██╔══██╗██╔══╝  ██╔══██╗
+╚██████╔╝██║ ╚████║██║ ╚████║██╔╝ ██╗     ███████╗██╔╝ ██╗██║     ███████╗╚██████╔╝██║  ██║███████╗██║  ██║ 
+╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═══╝╚═╝  ╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝     ╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
+================================【summary】================================
+| model: ./efficientformer_l7.onnx
+| node_count: 1080
+| input_count: 1
+| output_count: 1
+| num_params: 82142353
+| model_size: 313.5805549621582
+=====================【parameter_data_types】=====================
+| FLOAT: 82139952
+| INT64: 2401
+===========================【operators-lists】===========================
+| ['Identity', 'Conv', 'Relu', 'AveragePool', 'Sub', 'Mul', 'Add', 'Constant', 'Div', 'Erf', 'Shape', 'Slice', 'Concat', 'Reshape', 'Transpose', 'ReduceMean', 'Pow', 'Sqrt', 'Gather', 'MatMul', 'Unsqueeze', 'Split', 'Softmax', 'Gemm']
+===========================【operators】===========================
+| Identity: count=7, percentage=0.6481481481481481
+| Conv: count=65, percentage=6.018518518518518
+| Relu: count=2, percentage=0.1851851851851852
+| AveragePool: count=30, percentage=2.7777777777777777
+| Sub: count=47, percentage=4.351851851851852
+| Mul: count=177, percentage=16.38888888888889
+| Add: count=189, percentage=17.5
+| Constant: count=201, percentage=18.61111111111111
+| Div: count=56, percentage=5.185185185185185
+| Erf: count=38, percentage=3.5185185185185186
+| Shape: count=17, percentage=1.574074074074074
+| Slice: count=1, percentage=0.0925925925925926
+| Concat: count=17, percentage=1.574074074074074
+| Reshape: count=17, percentage=1.574074074074074
+| Transpose: count=25, percentage=2.314814814814815
+| ReduceMean: count=35, percentage=3.2407407407407405
+| Pow: count=17, percentage=1.574074074074074
+| Sqrt: count=17, percentage=1.574074074074074
+| Gather: count=24, percentage=2.2222222222222223
+| MatMul: count=48, percentage=4.444444444444445
+| Unsqueeze: count=32, percentage=2.9629629629629632
+| Split: count=8, percentage=0.7407407407407408
+| Softmax: count=8, percentage=0.7407407407407408
+| Gemm: count=2, percentage=0.1851851851851852
+===========================【inputs】==============================
+| name=input, dtype=FLOAT, shape=[0, 3, 224, 224]
+===========================【outputs】=============================
+name=output, dtype=FLOAT, shape=[0, 1000]

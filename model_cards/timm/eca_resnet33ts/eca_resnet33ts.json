@@ -1,0 +1,114 @@
+{
+  "summary": {
+    "model": "./eca_resnet33ts.onnx",
+    "node_count": 349,
+    "input_count": 1,
+    "output_count": 1,
+    "num_params": 19656470,
+    "model_size": 75.0523910522461
+  },
+  "parameter_data_types": {
+    "FLOAT": 19656470
+  },
+  "operators": {
+    "Conv": {
+      "count": 48,
+      "percentage": 13.753581661891118
+    },
+    "Sigmoid": {
+      "count": 44,
+      "percentage": 12.607449856733524
+    },
+    "Mul": {
+      "count": 44,
+      "percentage": 12.607449856733524
+    },
+    "ReduceMean": {
+      "count": 10,
+      "percentage": 2.865329512893983
+    },
+    "Shape": {
+      "count": 30,
+      "percentage": 8.595988538681947
+    },
+    "Constant": {
+      "count": 70,
+      "percentage": 20.057306590257877
+    },
+    "Gather": {
+      "count": 20,
+      "percentage": 5.730659025787966
+    },
+    "Unsqueeze": {
+      "count": 20,
+      "percentage": 5.730659025787966
+    },
+    "Concat": {
+      "count": 20,
+      "percentage": 5.730659025787966
+    },
+    "Reshape": {
+      "count": 20,
+      "percentage": 5.730659025787966
+    },
+    "Expand": {
+      "count": 10,
+      "percentage": 2.865329512893983
+    },
+    "Add": {
+      "count": 10,
+      "percentage": 2.865329512893983
+    },
+    "GlobalAveragePool": {
+      "count": 1,
+      "percentage": 0.28653295128939826
+    },
+    "Flatten": {
+      "count": 1,
+      "percentage": 0.28653295128939826
+    },
+    "Gemm": {
+      "count": 1,
+      "percentage": 0.28653295128939826
+    }
+  },
+  "operators_list": [
+    "Conv",
+    "Sigmoid",
+    "Mul",
+    "ReduceMean",
+    "Shape",
+    "Constant",
+    "Gather",
+    "Unsqueeze",
+    "Concat",
+    "Reshape",
+    "Expand",
+    "Add",
+    "GlobalAveragePool",
+    "Flatten",
+    "Gemm"
+  ],
+  "inputs": [
+    {
+      "name": "input",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        3,
+        256,
+        256
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        1000
+      ]
+    }
+  ]
+}

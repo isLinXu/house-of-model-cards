@@ -1,0 +1,84 @@
+{
+  "summary": {
+    "model": "./regnety_006.onnx",
+    "node_count": 204,
+    "input_count": 1,
+    "output_count": 1,
+    "num_params": 6040280,
+    "model_size": 23.07592487335205
+  },
+  "parameter_data_types": {
+    "FLOAT": 6040280
+  },
+  "operators": {
+    "Conv": {
+      "count": 80,
+      "percentage": 39.21568627450981
+    },
+    "Relu": {
+      "count": 61,
+      "percentage": 29.901960784313726
+    },
+    "ReduceMean": {
+      "count": 15,
+      "percentage": 7.352941176470589
+    },
+    "Sigmoid": {
+      "count": 15,
+      "percentage": 7.352941176470589
+    },
+    "Mul": {
+      "count": 15,
+      "percentage": 7.352941176470589
+    },
+    "Add": {
+      "count": 15,
+      "percentage": 7.352941176470589
+    },
+    "GlobalAveragePool": {
+      "count": 1,
+      "percentage": 0.49019607843137253
+    },
+    "Flatten": {
+      "count": 1,
+      "percentage": 0.49019607843137253
+    },
+    "Gemm": {
+      "count": 1,
+      "percentage": 0.49019607843137253
+    }
+  },
+  "operators_list": [
+    "Conv",
+    "Relu",
+    "ReduceMean",
+    "Sigmoid",
+    "Mul",
+    "Add",
+    "GlobalAveragePool",
+    "Flatten",
+    "Gemm"
+  ],
+  "inputs": [
+    {
+      "name": "input",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        3,
+        224,
+        224
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        1000
+      ]
+    }
+  ]
+}

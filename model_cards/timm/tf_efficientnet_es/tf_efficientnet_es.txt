@@ -1,0 +1,44 @@
+██████╗ ███╗   ██╗███╗   ██╗██╗  ██╗     ███████╗██╗  ██╗██████╗ ██╗      ██████╗ ██████╗ ███████╗██████╗ 
+██╔═══██╗████╗  ██║████╗  ██║╚██╗██╔╝     ██╔════╝╚██╗██╔╝██╔══██╗██║     ██╔═══██╗██╔══██╗██╔════╝██╔══██╗ 
+██║   ██║██╔██╗ ██║██╔██╗ ██║ ╚███╔╝█████╗█████╗   ╚███╔╝ ██████╔╝██║     ██║   ██║██████╔╝█████╗  ██████╔╝ 
+██║   ██║██║╚██╗██║██║╚██╗██║ ██╔██╗╚════╝██╔══╝   ██╔██╗ ██╔═══╝ ██║     ██║   ██║██╔══██╗██╔══╝  ██╔══██╗
+╚██████╔╝██║ ╚████║██║ ╚████║██╔╝ ██╗     ███████╗██╔╝ ██╗██║     ███████╗╚██████╔╝██║  ██║███████╗██║  ██║ 
+╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═══╝╚═╝  ╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝     ╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
+================================【summary】================================
+| model: ./tf_efficientnet_es.onnx
+| node_count: 490
+| input_count: 1
+| output_count: 1
+| num_params: 5412672
+| model_size: 20.735220909118652
+=====================【parameter_data_types】=====================
+| FLOAT: 5412672
+===========================【operators-lists】===========================
+| ['Shape', 'Constant', 'Gather', 'Cast', 'Div', 'Ceil', 'Sub', 'Mul', 'Add', 'Clip', 'Unsqueeze', 'Concat', 'ConstantOfShape', 'Reshape', 'Slice', 'Transpose', 'Pad', 'Conv', 'Relu', 'GlobalAveragePool', 'Flatten', 'Gemm']
+===========================【operators】===========================
+| Shape: count=15, percentage=3.061224489795918
+| Constant: count=125, percentage=25.510204081632654
+| Gather: count=15, percentage=3.061224489795918
+| Cast: count=50, percentage=10.204081632653061
+| Div: count=20, percentage=4.081632653061225
+| Ceil: count=10, percentage=2.0408163265306123
+| Sub: count=35, percentage=7.142857142857142
+| Mul: count=10, percentage=2.0408163265306123
+| Add: count=32, percentage=6.530612244897959
+| Clip: count=10, percentage=2.0408163265306123
+| Unsqueeze: count=40, percentage=8.16326530612245
+| Concat: count=15, percentage=3.061224489795918
+| ConstantOfShape: count=5, percentage=1.0204081632653061
+| Reshape: count=10, percentage=2.0408163265306123
+| Slice: count=5, percentage=1.0204081632653061
+| Transpose: count=5, percentage=1.0204081632653061
+| Pad: count=5, percentage=1.0204081632653061
+| Conv: count=49, percentage=10.0
+| Relu: count=31, percentage=6.326530612244897
+| GlobalAveragePool: count=1, percentage=0.20408163265306123
+| Flatten: count=1, percentage=0.20408163265306123
+| Gemm: count=1, percentage=0.20408163265306123
+===========================【inputs】==============================
+| name=input, dtype=FLOAT, shape=[0, 3, 224, 224]
+===========================【outputs】=============================
+name=output, dtype=FLOAT, shape=[0, 1000]

@@ -1,0 +1,25 @@
+section,key,value
+summary,model,./resnetblur50.onnx
+summary,node_count,194
+summary,input_count,1
+summary,output_count,1
+summary,num_params,25530472
+summary,model_size,97.457275390625
+parameter_data_types,FLOAT,25530472
+operators,Conv,"count=57, percentage=29.381443298969074"
+operators,Relu,"count=49, percentage=25.257731958762886"
+operators,MaxPool,"count=1, percentage=0.5154639175257731"
+operators,Constant,"count=36, percentage=18.556701030927837"
+operators,ConstantOfShape,"count=4, percentage=2.0618556701030926"
+operators,Concat,"count=4, percentage=2.0618556701030926"
+operators,Reshape,"count=8, percentage=4.123711340206185"
+operators,Slice,"count=4, percentage=2.0618556701030926"
+operators,Transpose,"count=4, percentage=2.0618556701030926"
+operators,Cast,"count=4, percentage=2.0618556701030926"
+operators,Pad,"count=4, percentage=2.0618556701030926"
+operators,Add,"count=16, percentage=8.24742268041237"
+operators,GlobalAveragePool,"count=1, percentage=0.5154639175257731"
+operators,Flatten,"count=1, percentage=0.5154639175257731"
+operators,Gemm,"count=1, percentage=0.5154639175257731"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

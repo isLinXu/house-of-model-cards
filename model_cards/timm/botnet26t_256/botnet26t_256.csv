@@ -1,0 +1,38 @@
+section,key,value
+summary,model,./botnet26t_256.onnx
+summary,node_count,883
+summary,input_count,1
+summary,output_count,1
+summary,num_params,12477032
+summary,model_size,47.79281806945801
+parameter_data_types,FLOAT,12477032
+operators,Conv,"count=31, percentage=3.5107587768969424"
+operators,Relu,"count=27, percentage=3.057757644394111"
+operators,MaxPool,"count=1, percentage=0.11325028312570783"
+operators,Add,"count=20, percentage=2.2650056625141564"
+operators,Shape,"count=45, percentage=5.096262740656852"
+operators,Constant,"count=292, percentage=33.069082672706685"
+operators,Gather,"count=39, percentage=4.416761041902604"
+operators,Split,"count=3, percentage=0.33975084937712347"
+operators,Mul,"count=18, percentage=2.0385050962627407"
+operators,Unsqueeze,"count=108, percentage=12.231030577576444"
+operators,Concat,"count=66, percentage=7.474518686296716"
+operators,Reshape,"count=66, percentage=7.474518686296716"
+operators,Transpose,"count=30, percentage=3.397508493771234"
+operators,MatMul,"count=12, percentage=1.3590033975084939"
+operators,Sub,"count=18, percentage=2.0385050962627407"
+operators,ConstantOfShape,"count=18, percentage=2.0385050962627407"
+operators,Slice,"count=24, percentage=2.7180067950169877"
+operators,Cast,"count=18, percentage=2.0385050962627407"
+operators,Pad,"count=13, percentage=1.4722536806342015"
+operators,Flatten,"count=7, percentage=0.7927519818799547"
+operators,Equal,"count=6, percentage=0.6795016987542469"
+operators,Where,"count=6, percentage=0.6795016987542469"
+operators,Expand,"count=6, percentage=0.6795016987542469"
+operators,Softmax,"count=3, percentage=0.33975084937712347"
+operators,BatchNormalization,"count=3, percentage=0.33975084937712347"
+operators,AveragePool,"count=1, percentage=0.11325028312570783"
+operators,GlobalAveragePool,"count=1, percentage=0.11325028312570783"
+operators,Gemm,"count=1, percentage=0.11325028312570783"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 256, 256]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

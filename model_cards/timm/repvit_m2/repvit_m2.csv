@@ -1,0 +1,22 @@
+section,key,value
+summary,model,./repvit_m2.onnx
+summary,node_count,428
+summary,input_count,1
+summary,output_count,1
+summary,num_params,8770240
+summary,model_size,33.56230640411377
+parameter_data_types,FLOAT,8770240
+operators,Identity,"count=2, percentage=0.46728971962616817"
+operators,Conv,"count=116, percentage=27.102803738317753"
+operators,Constant,"count=76, percentage=17.75700934579439"
+operators,Div,"count=26, percentage=6.074766355140187"
+operators,Erf,"count=25, percentage=5.841121495327103"
+operators,Add,"count=92, percentage=21.49532710280374"
+operators,Mul,"count=59, percentage=13.785046728971961"
+operators,ReduceMean,"count=10, percentage=2.336448598130841"
+operators,Relu,"count=9, percentage=2.102803738317757"
+operators,Sigmoid,"count=9, percentage=2.102803738317757"
+operators,BatchNormalization,"count=2, percentage=0.46728971962616817"
+operators,Gemm,"count=2, percentage=0.46728971962616817"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

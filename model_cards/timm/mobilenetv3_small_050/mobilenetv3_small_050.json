@@ -1,0 +1,84 @@
+{
+  "summary": {
+    "model": "./mobilenetv3_small_050.onnx",
+    "node_count": 142,
+    "input_count": 1,
+    "output_count": 1,
+    "num_params": 1589976,
+    "model_size": 6.099270820617676
+  },
+  "parameter_data_types": {
+    "FLOAT": 1589976
+  },
+  "operators": {
+    "Conv": {
+      "count": 53,
+      "percentage": 37.32394366197183
+    },
+    "HardSigmoid": {
+      "count": 28,
+      "percentage": 19.718309859154928
+    },
+    "Mul": {
+      "count": 28,
+      "percentage": 19.718309859154928
+    },
+    "Relu": {
+      "count": 14,
+      "percentage": 9.859154929577464
+    },
+    "ReduceMean": {
+      "count": 9,
+      "percentage": 6.338028169014084
+    },
+    "Add": {
+      "count": 7,
+      "percentage": 4.929577464788732
+    },
+    "GlobalAveragePool": {
+      "count": 1,
+      "percentage": 0.7042253521126761
+    },
+    "Flatten": {
+      "count": 1,
+      "percentage": 0.7042253521126761
+    },
+    "Gemm": {
+      "count": 1,
+      "percentage": 0.7042253521126761
+    }
+  },
+  "operators_list": [
+    "Conv",
+    "HardSigmoid",
+    "Mul",
+    "Relu",
+    "ReduceMean",
+    "Add",
+    "GlobalAveragePool",
+    "Flatten",
+    "Gemm"
+  ],
+  "inputs": [
+    {
+      "name": "input",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        3,
+        224,
+        224
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        1000
+      ]
+    }
+  ]
+}

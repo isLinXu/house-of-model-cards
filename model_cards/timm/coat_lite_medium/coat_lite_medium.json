@@ -1,0 +1,179 @@
+{
+  "summary": {
+    "model": "./coat_lite_medium.onnx",
+    "node_count": 4768,
+    "input_count": 1,
+    "output_count": 1,
+    "num_params": 44571048,
+    "model_size": 170.84654903411865
+  },
+  "parameter_data_types": {
+    "FLOAT": 44571048
+  },
+  "operators": {
+    "Constant": {
+      "count": 1473,
+      "percentage": 30.893456375838923
+    },
+    "Shape": {
+      "count": 256,
+      "percentage": 5.369127516778524
+    },
+    "Gather": {
+      "count": 222,
+      "percentage": 4.656040268456376
+    },
+    "Conv": {
+      "count": 112,
+      "percentage": 2.348993288590604
+    },
+    "Slice": {
+      "count": 169,
+      "percentage": 3.5444630872483223
+    },
+    "Concat": {
+      "count": 258,
+      "percentage": 5.4110738255033555
+    },
+    "Reshape": {
+      "count": 227,
+      "percentage": 4.760906040268456
+    },
+    "Transpose": {
+      "count": 223,
+      "percentage": 4.677013422818792
+    },
+    "ReduceMean": {
+      "count": 118,
+      "percentage": 2.4748322147651005
+    },
+    "Sub": {
+      "count": 59,
+      "percentage": 1.2374161073825503
+    },
+    "Pow": {
+      "count": 59,
+      "percentage": 1.2374161073825503
+    },
+    "Add": {
+      "count": 361,
+      "percentage": 7.571308724832216
+    },
+    "Sqrt": {
+      "count": 59,
+      "percentage": 1.2374161073825503
+    },
+    "Div": {
+      "count": 113,
+      "percentage": 2.3699664429530203
+    },
+    "Mul": {
+      "count": 198,
+      "percentage": 4.152684563758389
+    },
+    "Unsqueeze": {
+      "count": 358,
+      "percentage": 7.508389261744966
+    },
+    "ConstantOfShape": {
+      "count": 31,
+      "percentage": 0.6501677852348994
+    },
+    "Equal": {
+      "count": 4,
+      "percentage": 0.08389261744966443
+    },
+    "Where": {
+      "count": 4,
+      "percentage": 0.08389261744966443
+    },
+    "Expand": {
+      "count": 4,
+      "percentage": 0.08389261744966443
+    },
+    "MatMul": {
+      "count": 162,
+      "percentage": 3.3976510067114094
+    },
+    "Cast": {
+      "count": 81,
+      "percentage": 1.6988255033557047
+    },
+    "Split": {
+      "count": 54,
+      "percentage": 1.1325503355704698
+    },
+    "Squeeze": {
+      "count": 81,
+      "percentage": 1.6988255033557047
+    },
+    "Softmax": {
+      "count": 27,
+      "percentage": 0.5662751677852349
+    },
+    "Pad": {
+      "count": 27,
+      "percentage": 0.5662751677852349
+    },
+    "Erf": {
+      "count": 27,
+      "percentage": 0.5662751677852349
+    },
+    "Gemm": {
+      "count": 1,
+      "percentage": 0.02097315436241611
+    }
+  },
+  "operators_list": [
+    "Constant",
+    "Shape",
+    "Gather",
+    "Conv",
+    "Slice",
+    "Concat",
+    "Reshape",
+    "Transpose",
+    "ReduceMean",
+    "Sub",
+    "Pow",
+    "Add",
+    "Sqrt",
+    "Div",
+    "Mul",
+    "Unsqueeze",
+    "ConstantOfShape",
+    "Equal",
+    "Where",
+    "Expand",
+    "MatMul",
+    "Cast",
+    "Split",
+    "Squeeze",
+    "Softmax",
+    "Pad",
+    "Erf",
+    "Gemm"
+  ],
+  "inputs": [
+    {
+      "name": "input",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        3,
+        224,
+        224
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        1000
+      ]
+    }
+  ]
+}

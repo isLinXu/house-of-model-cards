@@ -1,0 +1,144 @@
+{
+  "summary": {
+    "model": "./levit_192.onnx",
+    "node_count": 872,
+    "input_count": 1,
+    "output_count": 1,
+    "num_params": 11000597,
+    "model_size": 42.557854652404785
+  },
+  "parameter_data_types": {
+    "FLOAT": 11000597
+  },
+  "operators": {
+    "Identity": {
+      "count": 2,
+      "percentage": 0.22935779816513763
+    },
+    "Conv": {
+      "count": 4,
+      "percentage": 0.45871559633027525
+    },
+    "HardSigmoid": {
+      "count": 31,
+      "percentage": 3.555045871559633
+    },
+    "Mul": {
+      "count": 45,
+      "percentage": 5.160550458715597
+    },
+    "Shape": {
+      "count": 89,
+      "percentage": 10.206422018348624
+    },
+    "Constant": {
+      "count": 126,
+      "percentage": 14.449541284403669
+    },
+    "Slice": {
+      "count": 5,
+      "percentage": 0.573394495412844
+    },
+    "Concat": {
+      "count": 35,
+      "percentage": 4.013761467889909
+    },
+    "Reshape": {
+      "count": 93,
+      "percentage": 10.6651376146789
+    },
+    "Transpose": {
+      "count": 57,
+      "percentage": 6.536697247706422
+    },
+    "Gather": {
+      "count": 44,
+      "percentage": 5.045871559633028
+    },
+    "MatMul": {
+      "count": 86,
+      "percentage": 9.862385321100918
+    },
+    "Flatten": {
+      "count": 58,
+      "percentage": 6.651376146788992
+    },
+    "BatchNormalization": {
+      "count": 60,
+      "percentage": 6.8807339449541285
+    },
+    "Unsqueeze": {
+      "count": 64,
+      "percentage": 7.339449541284404
+    },
+    "Split": {
+      "count": 14,
+      "percentage": 1.6055045871559634
+    },
+    "Add": {
+      "count": 41,
+      "percentage": 4.701834862385321
+    },
+    "Softmax": {
+      "count": 14,
+      "percentage": 1.6055045871559634
+    },
+    "ReduceMean": {
+      "count": 1,
+      "percentage": 0.11467889908256881
+    },
+    "Gemm": {
+      "count": 2,
+      "percentage": 0.22935779816513763
+    },
+    "Div": {
+      "count": 1,
+      "percentage": 0.11467889908256881
+    }
+  },
+  "operators_list": [
+    "Identity",
+    "Conv",
+    "HardSigmoid",
+    "Mul",
+    "Shape",
+    "Constant",
+    "Slice",
+    "Concat",
+    "Reshape",
+    "Transpose",
+    "Gather",
+    "MatMul",
+    "Flatten",
+    "BatchNormalization",
+    "Unsqueeze",
+    "Split",
+    "Add",
+    "Softmax",
+    "ReduceMean",
+    "Gemm",
+    "Div"
+  ],
+  "inputs": [
+    {
+      "name": "input",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        3,
+        224,
+        224
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        1000
+      ]
+    }
+  ]
+}

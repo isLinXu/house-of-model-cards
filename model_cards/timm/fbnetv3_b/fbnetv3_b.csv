@@ -1,0 +1,18 @@
+section,key,value
+summary,model,./fbnetv3_b.onnx
+summary,node_count,358
+summary,input_count,1
+summary,output_count,1
+summary,num_params,8575264
+summary,model_size,32.798545837402344
+parameter_data_types,FLOAT,8575264
+operators,Conv,"count=124, percentage=34.63687150837989"
+operators,HardSigmoid,"count=95, percentage=26.536312849162012"
+operators,Mul,"count=95, percentage=26.536312849162012"
+operators,Add,"count=23, percentage=6.424581005586592"
+operators,ReduceMean,"count=18, percentage=5.027932960893855"
+operators,GlobalAveragePool,"count=1, percentage=0.27932960893854747"
+operators,Flatten,"count=1, percentage=0.27932960893854747"
+operators,Gemm,"count=1, percentage=0.27932960893854747"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

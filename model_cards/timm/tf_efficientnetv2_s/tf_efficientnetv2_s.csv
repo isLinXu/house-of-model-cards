@@ -1,0 +1,33 @@
+section,key,value
+summary,model,./tf_efficientnetv2_s.onnx
+summary,node_count,897
+summary,input_count,1
+summary,output_count,1
+summary,num_params,21381552
+summary,model_size,81.74698066711426
+parameter_data_types,FLOAT,21381552
+operators,Shape,"count=15, percentage=1.6722408026755853"
+operators,Constant,"count=125, percentage=13.935340022296543"
+operators,Gather,"count=15, percentage=1.6722408026755853"
+operators,Cast,"count=50, percentage=5.574136008918618"
+operators,Div,"count=20, percentage=2.229654403567447"
+operators,Ceil,"count=10, percentage=1.1148272017837235"
+operators,Sub,"count=35, percentage=3.901895206243032"
+operators,Mul,"count=142, percentage=15.830546265328874"
+operators,Add,"count=55, percentage=6.131549609810479"
+operators,Clip,"count=10, percentage=1.1148272017837235"
+operators,Unsqueeze,"count=40, percentage=4.459308807134894"
+operators,Concat,"count=15, percentage=1.6722408026755853"
+operators,ConstantOfShape,"count=5, percentage=0.5574136008918618"
+operators,Reshape,"count=10, percentage=1.1148272017837235"
+operators,Slice,"count=5, percentage=0.5574136008918618"
+operators,Transpose,"count=5, percentage=0.5574136008918618"
+operators,Pad,"count=5, percentage=0.5574136008918618"
+operators,Conv,"count=170, percentage=18.9520624303233"
+operators,Sigmoid,"count=132, percentage=14.715719063545151"
+operators,ReduceMean,"count=30, percentage=3.3444816053511706"
+operators,GlobalAveragePool,"count=1, percentage=0.11148272017837235"
+operators,Flatten,"count=1, percentage=0.11148272017837235"
+operators,Gemm,"count=1, percentage=0.11148272017837235"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 300, 300]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

@@ -1,0 +1,20 @@
+section,key,value
+summary,model,./legacy_senet154.onnx
+summary,node_count,664
+summary,input_count,1
+summary,output_count,1
+summary,num_params,114965208
+summary,model_size,438.6955213546753
+parameter_data_types,FLOAT,114965208
+operators,Conv,"count=257, percentage=38.704819277108435"
+operators,Relu,"count=203, percentage=30.57228915662651"
+operators,MaxPool,"count=1, percentage=0.15060240963855423"
+operators,ReduceMean,"count=50, percentage=7.530120481927711"
+operators,Sigmoid,"count=50, percentage=7.530120481927711"
+operators,Mul,"count=50, percentage=7.530120481927711"
+operators,Add,"count=50, percentage=7.530120481927711"
+operators,GlobalAveragePool,"count=1, percentage=0.15060240963855423"
+operators,Flatten,"count=1, percentage=0.15060240963855423"
+operators,Gemm,"count=1, percentage=0.15060240963855423"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

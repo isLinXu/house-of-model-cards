@@ -1,0 +1,18 @@
+section,key,value
+summary,model,./inception_v4.onnx
+summary,node_count,338
+summary,input_count,1
+summary,output_count,1
+summary,num_params,42648232
+summary,model_size,162.77616691589355
+parameter_data_types,FLOAT,42648232
+operators,Conv,"count=149, percentage=44.08284023668639"
+operators,Relu,"count=149, percentage=44.08284023668639"
+operators,MaxPool,"count=4, percentage=1.183431952662722"
+operators,Concat,"count=19, percentage=5.621301775147929"
+operators,AveragePool,"count=14, percentage=4.142011834319527"
+operators,GlobalAveragePool,"count=1, percentage=0.2958579881656805"
+operators,Flatten,"count=1, percentage=0.2958579881656805"
+operators,Gemm,"count=1, percentage=0.2958579881656805"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 299, 299]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

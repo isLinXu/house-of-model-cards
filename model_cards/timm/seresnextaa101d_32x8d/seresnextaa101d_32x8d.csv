@@ -1,0 +1,22 @@
+section,key,value
+summary,model,./seresnextaa101d_32x8d.onnx
+summary,node_count,457
+summary,input_count,1
+summary,output_count,1
+summary,num_params,93486776
+summary,model_size,356.7115707397461
+parameter_data_types,FLOAT,93486776
+operators,Conv,"count=172, percentage=37.63676148796499"
+operators,Relu,"count=135, percentage=29.540481400437635"
+operators,Constant,"count=4, percentage=0.87527352297593"
+operators,Pad,"count=4, percentage=0.87527352297593"
+operators,AveragePool,"count=7, percentage=1.5317286652078774"
+operators,ReduceMean,"count=33, percentage=7.2210065645514225"
+operators,Sigmoid,"count=33, percentage=7.2210065645514225"
+operators,Mul,"count=33, percentage=7.2210065645514225"
+operators,Add,"count=33, percentage=7.2210065645514225"
+operators,GlobalAveragePool,"count=1, percentage=0.2188183807439825"
+operators,Flatten,"count=1, percentage=0.2188183807439825"
+operators,Gemm,"count=1, percentage=0.2188183807439825"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 288, 288]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

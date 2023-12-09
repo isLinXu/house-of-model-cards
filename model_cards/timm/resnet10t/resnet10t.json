@@ -1,0 +1,79 @@
+{
+  "summary": {
+    "model": "./resnet10t.onnx",
+    "node_count": 36,
+    "input_count": 1,
+    "output_count": 1,
+    "num_params": 5432552,
+    "model_size": 20.73062229156494
+  },
+  "parameter_data_types": {
+    "FLOAT": 5432552
+  },
+  "operators": {
+    "Conv": {
+      "count": 14,
+      "percentage": 38.88888888888889
+    },
+    "Relu": {
+      "count": 11,
+      "percentage": 30.555555555555557
+    },
+    "MaxPool": {
+      "count": 1,
+      "percentage": 2.7777777777777777
+    },
+    "Add": {
+      "count": 4,
+      "percentage": 11.11111111111111
+    },
+    "AveragePool": {
+      "count": 3,
+      "percentage": 8.333333333333332
+    },
+    "GlobalAveragePool": {
+      "count": 1,
+      "percentage": 2.7777777777777777
+    },
+    "Flatten": {
+      "count": 1,
+      "percentage": 2.7777777777777777
+    },
+    "Gemm": {
+      "count": 1,
+      "percentage": 2.7777777777777777
+    }
+  },
+  "operators_list": [
+    "Conv",
+    "Relu",
+    "MaxPool",
+    "Add",
+    "AveragePool",
+    "GlobalAveragePool",
+    "Flatten",
+    "Gemm"
+  ],
+  "inputs": [
+    {
+      "name": "input",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        3,
+        176,
+        176
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        1000
+      ]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+section,key,value
+summary,model,./vgg19_bn.onnx
+summary,node_count,44
+summary,input_count,1
+summary,output_count,1
+summary,num_params,143667240
+summary,model_size,548.055591583252
+parameter_data_types,FLOAT,143667240
+operators,Conv,"count=18, percentage=40.909090909090914"
+operators,Relu,"count=18, percentage=40.909090909090914"
+operators,MaxPool,"count=5, percentage=11.363636363636363"
+operators,GlobalAveragePool,"count=1, percentage=2.272727272727273"
+operators,Flatten,"count=1, percentage=2.272727272727273"
+operators,Gemm,"count=1, percentage=2.272727272727273"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

@@ -1,0 +1,32 @@
+section,key,value
+summary,model,./tf_mobilenetv3_small_minimal_100.onnx
+summary,node_count,463
+summary,input_count,1
+summary,output_count,1
+summary,num_params,2038680
+summary,model_size,7.857226371765137
+parameter_data_types,FLOAT,2038680
+operators,Shape,"count=15, percentage=3.2397408207343417"
+operators,Constant,"count=125, percentage=26.997840172786177"
+operators,Gather,"count=15, percentage=3.2397408207343417"
+operators,Cast,"count=50, percentage=10.799136069114471"
+operators,Div,"count=20, percentage=4.319654427645788"
+operators,Ceil,"count=10, percentage=2.159827213822894"
+operators,Sub,"count=35, percentage=7.559395248380129"
+operators,Mul,"count=10, percentage=2.159827213822894"
+operators,Add,"count=26, percentage=5.615550755939525"
+operators,Clip,"count=10, percentage=2.159827213822894"
+operators,Unsqueeze,"count=40, percentage=8.639308855291576"
+operators,Concat,"count=15, percentage=3.2397408207343417"
+operators,ConstantOfShape,"count=5, percentage=1.079913606911447"
+operators,Reshape,"count=10, percentage=2.159827213822894"
+operators,Slice,"count=5, percentage=1.079913606911447"
+operators,Transpose,"count=5, percentage=1.079913606911447"
+operators,Pad,"count=5, percentage=1.079913606911447"
+operators,Conv,"count=35, percentage=7.559395248380129"
+operators,Relu,"count=24, percentage=5.183585313174946"
+operators,GlobalAveragePool,"count=1, percentage=0.21598272138228944"
+operators,Flatten,"count=1, percentage=0.21598272138228944"
+operators,Gemm,"count=1, percentage=0.21598272138228944"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

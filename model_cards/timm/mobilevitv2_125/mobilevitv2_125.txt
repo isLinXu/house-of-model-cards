@@ -1,0 +1,42 @@
+██████╗ ███╗   ██╗███╗   ██╗██╗  ██╗     ███████╗██╗  ██╗██████╗ ██╗      ██████╗ ██████╗ ███████╗██████╗ 
+██╔═══██╗████╗  ██║████╗  ██║╚██╗██╔╝     ██╔════╝╚██╗██╔╝██╔══██╗██║     ██╔═══██╗██╔══██╗██╔════╝██╔══██╗ 
+██║   ██║██╔██╗ ██║██╔██╗ ██║ ╚███╔╝█████╗█████╗   ╚███╔╝ ██████╔╝██║     ██║   ██║██████╔╝█████╗  ██████╔╝ 
+██║   ██║██║╚██╗██║██║╚██╗██║ ██╔██╗╚════╝██╔══╝   ██╔██╗ ██╔═══╝ ██║     ██║   ██║██╔══██╗██╔══╝  ██╔══██╗
+╚██████╔╝██║ ╚████║██║ ╚████║██╔╝ ██╗     ███████╗██╔╝ ██╗██║     ███████╗╚██████╔╝██║  ██║███████╗██║  ██║ 
+╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═══╝╚═╝  ╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝     ╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
+================================【summary】================================
+| model: ./mobilevitv2_125.onnx
+| node_count: 505
+| input_count: 1
+| output_count: 1
+| num_params: 7468369
+| model_size: 28.618521690368652
+=====================【parameter_data_types】=====================
+| FLOAT: 7468369
+===========================【operators-lists】===========================
+| ['Conv', 'Sigmoid', 'Mul', 'Add', 'Shape', 'Constant', 'Gather', 'Unsqueeze', 'Concat', 'Reshape', 'Transpose', 'InstanceNormalization', 'Split', 'Softmax', 'ReduceSum', 'Relu', 'Expand', 'GlobalAveragePool', 'Flatten', 'Gemm']
+===========================【operators】===========================
+| Conv: count=64, percentage=12.673267326732674
+| Sigmoid: count=25, percentage=4.9504950495049505
+| Mul: count=64, percentage=12.673267326732674
+| Add: count=40, percentage=7.920792079207921
+| Shape: count=36, percentage=7.128712871287128
+| Constant: count=105, percentage=20.792079207920793
+| Gather: count=6, percentage=1.188118811881188
+| Unsqueeze: count=24, percentage=4.752475247524752
+| Concat: count=12, percentage=2.376237623762376
+| Reshape: count=54, percentage=10.693069306930694
+| Transpose: count=6, percentage=1.188118811881188
+| InstanceNormalization: count=21, percentage=4.158415841584159
+| Split: count=9, percentage=1.782178217821782
+| Softmax: count=9, percentage=1.782178217821782
+| ReduceSum: count=9, percentage=1.782178217821782
+| Relu: count=9, percentage=1.782178217821782
+| Expand: count=9, percentage=1.782178217821782
+| GlobalAveragePool: count=1, percentage=0.19801980198019803
+| Flatten: count=1, percentage=0.19801980198019803
+| Gemm: count=1, percentage=0.19801980198019803
+===========================【inputs】==============================
+| name=input, dtype=FLOAT, shape=[0, 3, 256, 256]
+===========================【outputs】=============================
+name=output, dtype=FLOAT, shape=[0, 1000]

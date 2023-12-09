@@ -1,0 +1,28 @@
+section,key,value
+summary,model,./gmlp_s16_224.onnx
+summary,node_count,1643
+summary,input_count,1
+summary,output_count,1
+summary,num_params,19422656
+summary,model_size,74.37968635559082
+parameter_data_types,FLOAT,19422656
+operators,Conv,"count=1, percentage=0.06086427267194157"
+operators,Shape,"count=31, percentage=1.8867924528301887"
+operators,Constant,"count=396, percentage=24.102251978088862"
+operators,Slice,"count=61, percentage=3.712720632988436"
+operators,Concat,"count=1, percentage=0.06086427267194157"
+operators,Reshape,"count=1, percentage=0.06086427267194157"
+operators,Transpose,"count=61, percentage=3.712720632988436"
+operators,ReduceMean,"count=123, percentage=7.486305538648813"
+operators,Sub,"count=61, percentage=3.712720632988436"
+operators,Pow,"count=61, percentage=3.712720632988436"
+operators,Add,"count=302, percentage=18.381010346926356"
+operators,Sqrt,"count=61, percentage=3.712720632988436"
+operators,Div,"count=121, percentage=7.36457699330493"
+operators,Mul,"count=211, percentage=12.842361533779673"
+operators,MatMul,"count=90, percentage=5.477784540474741"
+operators,Erf,"count=30, percentage=1.8259281801582472"
+operators,Gather,"count=30, percentage=1.8259281801582472"
+operators,Gemm,"count=1, percentage=0.06086427267194157"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

@@ -1,0 +1,94 @@
+{
+  "summary": {
+    "model": "./densenet121.onnx",
+    "node_count": 378,
+    "input_count": 1,
+    "output_count": 1,
+    "num_params": 8040040,
+    "model_size": 30.813265800476074
+  },
+  "parameter_data_types": {
+    "FLOAT": 8040040
+  },
+  "operators": {
+    "Conv": {
+      "count": 120,
+      "percentage": 31.746031746031743
+    },
+    "Relu": {
+      "count": 121,
+      "percentage": 32.01058201058201
+    },
+    "MaxPool": {
+      "count": 1,
+      "percentage": 0.26455026455026454
+    },
+    "Concat": {
+      "count": 62,
+      "percentage": 16.402116402116402
+    },
+    "BatchNormalization": {
+      "count": 62,
+      "percentage": 16.402116402116402
+    },
+    "Constant": {
+      "count": 3,
+      "percentage": 0.7936507936507936
+    },
+    "Pad": {
+      "count": 3,
+      "percentage": 0.7936507936507936
+    },
+    "AveragePool": {
+      "count": 3,
+      "percentage": 0.7936507936507936
+    },
+    "GlobalAveragePool": {
+      "count": 1,
+      "percentage": 0.26455026455026454
+    },
+    "Flatten": {
+      "count": 1,
+      "percentage": 0.26455026455026454
+    },
+    "Gemm": {
+      "count": 1,
+      "percentage": 0.26455026455026454
+    }
+  },
+  "operators_list": [
+    "Conv",
+    "Relu",
+    "MaxPool",
+    "Concat",
+    "BatchNormalization",
+    "Constant",
+    "Pad",
+    "AveragePool",
+    "GlobalAveragePool",
+    "Flatten",
+    "Gemm"
+  ],
+  "inputs": [
+    {
+      "name": "input",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        3,
+        224,
+        224
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        1000
+      ]
+    }
+  ]
+}

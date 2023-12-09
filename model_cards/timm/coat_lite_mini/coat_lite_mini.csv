@@ -1,0 +1,38 @@
+section,key,value
+summary,model,./coat_lite_mini.onnx
+summary,node_count,1557
+summary,input_count,1
+summary,output_count,1
+summary,num_params,11011560
+summary,model_size,42.264750480651855
+parameter_data_types,FLOAT,11011560
+operators,Constant,"count=485, percentage=31.14964675658317"
+operators,Shape,"count=85, percentage=5.459216441875402"
+operators,Gather,"count=70, percentage=4.4958253050738595"
+operators,Conv,"count=36, percentage=2.312138728323699"
+operators,Slice,"count=55, percentage=3.5324341682723186"
+operators,Concat,"count=87, percentage=5.5876685934489405"
+operators,Reshape,"count=75, percentage=4.8169556840077075"
+operators,Transpose,"count=71, percentage=4.56005138086063"
+operators,ReduceMean,"count=42, percentage=2.697495183044316"
+operators,Sub,"count=21, percentage=1.348747591522158"
+operators,Pow,"count=21, percentage=1.348747591522158"
+operators,Add,"count=114, percentage=7.321772639691715"
+operators,Sqrt,"count=21, percentage=1.348747591522158"
+operators,Div,"count=37, percentage=2.3763648041104686"
+operators,Mul,"count=65, percentage=4.174694926140013"
+operators,Unsqueeze,"count=111, percentage=7.129094412331407"
+operators,ConstantOfShape,"count=12, percentage=0.7707129094412332"
+operators,Equal,"count=4, percentage=0.2569043031470777"
+operators,Where,"count=4, percentage=0.2569043031470777"
+operators,Expand,"count=4, percentage=0.2569043031470777"
+operators,MatMul,"count=48, percentage=3.0828516377649327"
+operators,Cast,"count=24, percentage=1.5414258188824663"
+operators,Split,"count=16, percentage=1.0276172125883107"
+operators,Squeeze,"count=24, percentage=1.5414258188824663"
+operators,Softmax,"count=8, percentage=0.5138086062941554"
+operators,Pad,"count=8, percentage=0.5138086062941554"
+operators,Erf,"count=8, percentage=0.5138086062941554"
+operators,Gemm,"count=1, percentage=0.06422607578676942"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

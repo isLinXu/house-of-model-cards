@@ -1,0 +1,94 @@
+{
+  "summary": {
+    "model": "./dpn107.onnx",
+    "node_count": 764,
+    "input_count": 1,
+    "output_count": 1,
+    "num_params": 86974264,
+    "model_size": 331.9199438095093
+  },
+  "parameter_data_types": {
+    "FLOAT": 86974264
+  },
+  "operators": {
+    "Identity": {
+      "count": 8,
+      "percentage": 1.0471204188481675
+    },
+    "Conv": {
+      "count": 111,
+      "percentage": 14.528795811518325
+    },
+    "Relu": {
+      "count": 111,
+      "percentage": 14.528795811518325
+    },
+    "MaxPool": {
+      "count": 1,
+      "percentage": 0.13089005235602094
+    },
+    "BatchNormalization": {
+      "count": 40,
+      "percentage": 5.2356020942408374
+    },
+    "Constant": {
+      "count": 312,
+      "percentage": 40.83769633507853
+    },
+    "Slice": {
+      "count": 78,
+      "percentage": 10.209424083769633
+    },
+    "Add": {
+      "count": 35,
+      "percentage": 4.5811518324607325
+    },
+    "Concat": {
+      "count": 66,
+      "percentage": 8.638743455497382
+    },
+    "GlobalAveragePool": {
+      "count": 1,
+      "percentage": 0.13089005235602094
+    },
+    "Flatten": {
+      "count": 1,
+      "percentage": 0.13089005235602094
+    }
+  },
+  "operators_list": [
+    "Identity",
+    "Conv",
+    "Relu",
+    "MaxPool",
+    "BatchNormalization",
+    "Constant",
+    "Slice",
+    "Add",
+    "Concat",
+    "GlobalAveragePool",
+    "Flatten"
+  ],
+  "inputs": [
+    {
+      "name": "input",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        3,
+        224,
+        224
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        1000
+      ]
+    }
+  ]
+}

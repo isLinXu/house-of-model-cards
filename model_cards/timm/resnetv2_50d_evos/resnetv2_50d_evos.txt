@@ -1,0 +1,45 @@
+██████╗ ███╗   ██╗███╗   ██╗██╗  ██╗     ███████╗██╗  ██╗██████╗ ██╗      ██████╗ ██████╗ ███████╗██████╗ 
+██╔═══██╗████╗  ██║████╗  ██║╚██╗██╔╝     ██╔════╝╚██╗██╔╝██╔══██╗██║     ██╔═══██╗██╔══██╗██╔════╝██╔══██╗ 
+██║   ██║██╔██╗ ██║██╔██╗ ██║ ╚███╔╝█████╗█████╗   ╚███╔╝ ██████╔╝██║     ██║   ██║██████╔╝█████╗  ██████╔╝ 
+██║   ██║██║╚██╗██║██║╚██╗██║ ██╔██╗╚════╝██╔══╝   ██╔██╗ ██╔═══╝ ██║     ██║   ██║██╔══██╗██╔══╝  ██╔══██╗
+╚██████╔╝██║ ╚████║██║ ╚████║██╔╝ ██╗     ███████╗██╔╝ ██╗██║     ███████╗╚██████╔╝██║  ██║███████╗██║  ██║ 
+╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═══╝╚═╝  ╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝     ╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
+================================【summary】================================
+| model: ./resnetv2_50d_evos.onnx
+| node_count: 3852
+| input_count: 1
+| output_count: 1
+| num_params: 25591368
+| model_size: 98.36306095123291
+=====================【parameter_data_types】=====================
+| FLOAT: 25591368
+===========================【operators-lists】===========================
+| ['Conv', 'Mul', 'Sigmoid', 'Shape', 'Constant', 'Gather', 'Div', 'Cast', 'Unsqueeze', 'Concat', 'Reshape', 'ReduceMean', 'Sub', 'Add', 'Sqrt', 'ConstantOfShape', 'Equal', 'Where', 'Expand', 'MaxPool', 'AveragePool', 'GlobalAveragePool', 'Flatten']
+===========================【operators】===========================
+| Conv: count=56, percentage=1.453790238836968
+| Mul: count=255, percentage=6.619937694704049
+| Sigmoid: count=51, percentage=1.32398753894081
+| Shape: count=510, percentage=13.239875389408098
+| Constant: count=714, percentage=18.53582554517134
+| Gather: count=459, percentage=11.91588785046729
+| Div: count=102, percentage=2.64797507788162
+| Cast: count=204, percentage=5.29595015576324
+| Unsqueeze: count=663, percentage=17.21183800623053
+| Concat: count=153, percentage=3.9719626168224296
+| Reshape: count=153, percentage=3.9719626168224296
+| ReduceMean: count=102, percentage=2.64797507788162
+| Sub: count=51, percentage=1.32398753894081
+| Add: count=118, percentage=3.063343717549325
+| Sqrt: count=51, percentage=1.32398753894081
+| ConstantOfShape: count=51, percentage=1.32398753894081
+| Equal: count=51, percentage=1.32398753894081
+| Where: count=51, percentage=1.32398753894081
+| Expand: count=51, percentage=1.32398753894081
+| MaxPool: count=1, percentage=0.02596053997923157
+| AveragePool: count=3, percentage=0.0778816199376947
+| GlobalAveragePool: count=1, percentage=0.02596053997923157
+| Flatten: count=1, percentage=0.02596053997923157
+===========================【inputs】==============================
+| name=input, dtype=FLOAT, shape=[0, 3, 224, 224]
+===========================【outputs】=============================
+name=output, dtype=FLOAT, shape=[0, 1000]

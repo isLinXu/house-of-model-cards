@@ -1,0 +1,31 @@
+section,key,value
+summary,model,./visformer_tiny.onnx
+summary,node_count,559
+summary,input_count,1
+summary,output_count,1
+summary,num_params,10331336
+summary,model_size,39.50387001037598
+parameter_data_types,FLOAT,10331336
+operators,Conv,"count=57, percentage=10.196779964221825"
+operators,Relu,"count=1, percentage=0.17889087656529518"
+operators,Add,"count=48, percentage=8.586762075134168"
+operators,BatchNormalization,"count=24, percentage=4.293381037567084"
+operators,Constant,"count=138, percentage=24.686940966010734"
+operators,Div,"count=22, percentage=3.9355992844364938"
+operators,Erf,"count=22, percentage=3.9355992844364938"
+operators,Mul,"count=52, percentage=9.30232558139535"
+operators,Shape,"count=24, percentage=4.293381037567084"
+operators,Gather,"count=24, percentage=4.293381037567084"
+operators,Unsqueeze,"count=32, percentage=5.724508050089446"
+operators,Concat,"count=16, percentage=2.862254025044723"
+operators,Reshape,"count=16, percentage=2.862254025044723"
+operators,Transpose,"count=24, percentage=4.293381037567084"
+operators,Split,"count=8, percentage=1.4311270125223614"
+operators,Squeeze,"count=24, percentage=4.293381037567084"
+operators,MatMul,"count=16, percentage=2.862254025044723"
+operators,Softmax,"count=8, percentage=1.4311270125223614"
+operators,GlobalAveragePool,"count=1, percentage=0.17889087656529518"
+operators,Flatten,"count=1, percentage=0.17889087656529518"
+operators,Gemm,"count=1, percentage=0.17889087656529518"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

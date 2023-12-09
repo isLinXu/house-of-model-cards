@@ -1,0 +1,24 @@
+section,key,value
+summary,model,./convnext_pico.onnx
+summary,node_count,384
+summary,input_count,1
+summary,output_count,1
+summary,num_params,9045672
+summary,model_size,34.58439350128174
+parameter_data_types,FLOAT,9045672
+operators,Conv,"count=40, percentage=10.416666666666668"
+operators,Transpose,"count=34, percentage=8.854166666666668"
+operators,ReduceMean,"count=34, percentage=8.854166666666668"
+operators,Sub,"count=17, percentage=4.427083333333334"
+operators,Constant,"count=70, percentage=18.229166666666664"
+operators,Pow,"count=17, percentage=4.427083333333334"
+operators,Add,"count=58, percentage=15.104166666666666"
+operators,Sqrt,"count=17, percentage=4.427083333333334"
+operators,Div,"count=29, percentage=7.552083333333333"
+operators,Mul,"count=53, percentage=13.802083333333334"
+operators,Erf,"count=12, percentage=3.125"
+operators,GlobalAveragePool,"count=1, percentage=0.26041666666666663"
+operators,Flatten,"count=1, percentage=0.26041666666666663"
+operators,Gemm,"count=1, percentage=0.26041666666666663"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

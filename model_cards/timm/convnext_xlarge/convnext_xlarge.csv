@@ -1,0 +1,25 @@
+section,key,value
+summary,model,./convnext_xlarge.onnx
+summary,node_count,1080
+summary,input_count,1
+summary,output_count,1
+summary,num_params,350196968
+summary,model_size,1336.1080532073975
+parameter_data_types,FLOAT,350196968
+operators,Conv,"count=40, percentage=3.7037037037037033"
+operators,Transpose,"count=82, percentage=7.592592592592593"
+operators,ReduceMean,"count=82, percentage=7.592592592592593"
+operators,Sub,"count=41, percentage=3.7962962962962963"
+operators,Constant,"count=190, percentage=17.59259259259259"
+operators,Pow,"count=41, percentage=3.7962962962962963"
+operators,Add,"count=226, percentage=20.925925925925924"
+operators,Sqrt,"count=41, percentage=3.7962962962962963"
+operators,Div,"count=77, percentage=7.12962962962963"
+operators,Mul,"count=149, percentage=13.796296296296296"
+operators,MatMul,"count=72, percentage=6.666666666666667"
+operators,Erf,"count=36, percentage=3.3333333333333335"
+operators,GlobalAveragePool,"count=1, percentage=0.0925925925925926"
+operators,Flatten,"count=1, percentage=0.0925925925925926"
+operators,Gemm,"count=1, percentage=0.0925925925925926"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

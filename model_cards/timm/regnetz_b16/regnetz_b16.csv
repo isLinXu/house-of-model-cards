@@ -1,0 +1,19 @@
+section,key,value
+summary,model,./regnetz_b16.onnx
+summary,node_count,313
+summary,input_count,1
+summary,output_count,1
+summary,num_params,9690584
+summary,model_size,37.043500900268555
+parameter_data_types,FLOAT,9690584
+operators,Conv,"count=112, percentage=35.78274760383386"
+operators,Sigmoid,"count=68, percentage=21.72523961661342"
+operators,Mul,"count=68, percentage=21.72523961661342"
+operators,ReduceMean,"count=22, percentage=7.0287539936102235"
+operators,Relu,"count=22, percentage=7.0287539936102235"
+operators,Add,"count=18, percentage=5.7507987220447285"
+operators,GlobalAveragePool,"count=1, percentage=0.3194888178913738"
+operators,Flatten,"count=1, percentage=0.3194888178913738"
+operators,Gemm,"count=1, percentage=0.3194888178913738"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

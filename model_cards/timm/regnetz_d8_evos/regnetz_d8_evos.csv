@@ -1,0 +1,33 @@
+section,key,value
+summary,model,./regnetz_d8_evos.onnx
+summary,node_count,5796
+summary,input_count,1
+summary,output_count,1
+summary,num_params,23464296
+summary,model_size,90.6722183227539
+parameter_data_types,FLOAT,23464296
+operators,Conv,"count=124, percentage=2.139406487232574"
+operators,Shape,"count=760, percentage=13.112491373360937"
+operators,Constant,"count=1064, percentage=18.357487922705314"
+operators,Gather,"count=684, percentage=11.801242236024844"
+operators,Div,"count=152, percentage=2.6224982746721874"
+operators,Cast,"count=304, percentage=5.244996549344375"
+operators,Unsqueeze,"count=988, percentage=17.04623878536922"
+operators,Concat,"count=228, percentage=3.9337474120082816"
+operators,Reshape,"count=228, percentage=3.9337474120082816"
+operators,ReduceMean,"count=176, percentage=3.036576949620428"
+operators,Sub,"count=76, percentage=1.3112491373360937"
+operators,Mul,"count=356, percentage=6.142167011732229"
+operators,Add,"count=173, percentage=2.984817115251898"
+operators,Sqrt,"count=76, percentage=1.3112491373360937"
+operators,ConstantOfShape,"count=76, percentage=1.3112491373360937"
+operators,Equal,"count=76, percentage=1.3112491373360937"
+operators,Where,"count=76, percentage=1.3112491373360937"
+operators,Expand,"count=76, percentage=1.3112491373360937"
+operators,Sigmoid,"count=76, percentage=1.3112491373360937"
+operators,Relu,"count=24, percentage=0.4140786749482402"
+operators,GlobalAveragePool,"count=1, percentage=0.01725327812284334"
+operators,Flatten,"count=1, percentage=0.01725327812284334"
+operators,Gemm,"count=1, percentage=0.01725327812284334"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 256, 256]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

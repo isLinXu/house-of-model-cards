@@ -1,0 +1,21 @@
+section,key,value
+summary,model,./dpn92.onnx
+summary,node_count,664
+summary,input_count,1
+summary,output_count,1
+summary,num_params,37721864
+summary,model_size,144.0186824798584
+parameter_data_types,FLOAT,37721864
+operators,Identity,"count=8, percentage=1.2048192771084338"
+operators,Conv,"count=96, percentage=14.457831325301203"
+operators,Relu,"count=96, percentage=14.457831325301203"
+operators,MaxPool,"count=1, percentage=0.15060240963855423"
+operators,BatchNormalization,"count=35, percentage=5.271084337349398"
+operators,Constant,"count=272, percentage=40.963855421686745"
+operators,Slice,"count=68, percentage=10.240963855421686"
+operators,Add,"count=30, percentage=4.518072289156627"
+operators,Concat,"count=56, percentage=8.433734939759036"
+operators,GlobalAveragePool,"count=1, percentage=0.15060240963855423"
+operators,Flatten,"count=1, percentage=0.15060240963855423"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

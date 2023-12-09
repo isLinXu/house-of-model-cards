@@ -1,0 +1,149 @@
+{
+  "summary": {
+    "model": "./gcresnet33ts.onnx",
+    "node_count": 629,
+    "input_count": 1,
+    "output_count": 1,
+    "num_params": 19860866,
+    "model_size": 75.89372253417969
+  },
+  "parameter_data_types": {
+    "FLOAT": 19860866
+  },
+  "operators": {
+    "Conv": {
+      "count": 68,
+      "percentage": 10.81081081081081
+    },
+    "Sigmoid": {
+      "count": 34,
+      "percentage": 5.405405405405405
+    },
+    "Mul": {
+      "count": 54,
+      "percentage": 8.585055643879173
+    },
+    "Shape": {
+      "count": 40,
+      "percentage": 6.359300476947535
+    },
+    "Constant": {
+      "count": 90,
+      "percentage": 14.308426073131955
+    },
+    "Gather": {
+      "count": 40,
+      "percentage": 6.359300476947535
+    },
+    "Unsqueeze": {
+      "count": 90,
+      "percentage": 14.308426073131955
+    },
+    "Concat": {
+      "count": 30,
+      "percentage": 4.769475357710652
+    },
+    "Reshape": {
+      "count": 30,
+      "percentage": 4.769475357710652
+    },
+    "Softmax": {
+      "count": 10,
+      "percentage": 1.5898251192368837
+    },
+    "MatMul": {
+      "count": 10,
+      "percentage": 1.5898251192368837
+    },
+    "Transpose": {
+      "count": 20,
+      "percentage": 3.1796502384737675
+    },
+    "ReduceMean": {
+      "count": 20,
+      "percentage": 3.1796502384737675
+    },
+    "Sub": {
+      "count": 10,
+      "percentage": 1.5898251192368837
+    },
+    "Pow": {
+      "count": 10,
+      "percentage": 1.5898251192368837
+    },
+    "Add": {
+      "count": 40,
+      "percentage": 6.359300476947535
+    },
+    "Sqrt": {
+      "count": 10,
+      "percentage": 1.5898251192368837
+    },
+    "Div": {
+      "count": 10,
+      "percentage": 1.5898251192368837
+    },
+    "Relu": {
+      "count": 10,
+      "percentage": 1.5898251192368837
+    },
+    "GlobalAveragePool": {
+      "count": 1,
+      "percentage": 0.1589825119236884
+    },
+    "Flatten": {
+      "count": 1,
+      "percentage": 0.1589825119236884
+    },
+    "Gemm": {
+      "count": 1,
+      "percentage": 0.1589825119236884
+    }
+  },
+  "operators_list": [
+    "Conv",
+    "Sigmoid",
+    "Mul",
+    "Shape",
+    "Constant",
+    "Gather",
+    "Unsqueeze",
+    "Concat",
+    "Reshape",
+    "Softmax",
+    "MatMul",
+    "Transpose",
+    "ReduceMean",
+    "Sub",
+    "Pow",
+    "Add",
+    "Sqrt",
+    "Div",
+    "Relu",
+    "GlobalAveragePool",
+    "Flatten",
+    "Gemm"
+  ],
+  "inputs": [
+    {
+      "name": "input",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        3,
+        256,
+        256
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        1000
+      ]
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+██████╗ ███╗   ██╗███╗   ██╗██╗  ██╗     ███████╗██╗  ██╗██████╗ ██╗      ██████╗ ██████╗ ███████╗██████╗ 
+██╔═══██╗████╗  ██║████╗  ██║╚██╗██╔╝     ██╔════╝╚██╗██╔╝██╔══██╗██║     ██╔═══██╗██╔══██╗██╔════╝██╔══██╗ 
+██║   ██║██╔██╗ ██║██╔██╗ ██║ ╚███╔╝█████╗█████╗   ╚███╔╝ ██████╔╝██║     ██║   ██║██████╔╝█████╗  ██████╔╝ 
+██║   ██║██║╚██╗██║██║╚██╗██║ ██╔██╗╚════╝██╔══╝   ██╔██╗ ██╔═══╝ ██║     ██║   ██║██╔══██╗██╔══╝  ██╔══██╗
+╚██████╔╝██║ ╚████║██║ ╚████║██╔╝ ██╗     ███████╗██╔╝ ██╗██║     ███████╗╚██████╔╝██║  ██║███████╗██║  ██║ 
+╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═══╝╚═╝  ╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝     ╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
+================================【summary】================================
+| model: ./sequencer2d_l.onnx
+| node_count: 3732
+| input_count: 1
+| output_count: 1
+| num_params: 54298216
+| model_size: 207.95756912231445
+=====================【parameter_data_types】=====================
+| FLOAT: 54298216
+===========================【operators-lists】===========================
+| ['Conv', 'Transpose', 'ReduceMean', 'Sub', 'Constant', 'Pow', 'Add', 'Sqrt', 'Div', 'Mul', 'Shape', 'Gather', 'Unsqueeze', 'Concat', 'Reshape', 'ConstantOfShape', 'LSTM', 'MatMul', 'Erf', 'Gemm']
+===========================【operators】===========================
+| Conv: count=4, percentage=0.10718113612004287
+| Transpose: count=295, percentage=7.904608788853162
+| ReduceMean: count=147, percentage=3.938906752411576
+| Sub: count=73, percentage=1.9560557341907825
+| Constant: count=830, percentage=22.240085744908896
+| Pow: count=73, percentage=1.9560557341907825
+| Add: count=362, percentage=9.69989281886388
+| Sqrt: count=73, percentage=1.9560557341907825
+| Div: count=109, percentage=2.9206859592711685
+| Mul: count=145, percentage=3.885316184351554
+| Shape: count=216, percentage=5.787781350482315
+| Gather: count=216, percentage=5.787781350482315
+| Unsqueeze: count=432, percentage=11.57556270096463
+| Concat: count=252, percentage=6.752411575562702
+| Reshape: count=216, percentage=5.787781350482315
+| ConstantOfShape: count=72, percentage=1.929260450160772
+| LSTM: count=72, percentage=1.929260450160772
+| MatMul: count=108, percentage=2.8938906752411575
+| Erf: count=36, percentage=0.964630225080386
+| Gemm: count=1, percentage=0.02679528403001072
+===========================【inputs】==============================
+| name=input, dtype=FLOAT, shape=[0, 3, 224, 224]
+===========================【outputs】=============================
+name=output, dtype=FLOAT, shape=[0, 1000]

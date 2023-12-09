@@ -1,0 +1,47 @@
+██████╗ ███╗   ██╗███╗   ██╗██╗  ██╗     ███████╗██╗  ██╗██████╗ ██╗      ██████╗ ██████╗ ███████╗██████╗ 
+██╔═══██╗████╗  ██║████╗  ██║╚██╗██╔╝     ██╔════╝╚██╗██╔╝██╔══██╗██║     ██╔═══██╗██╔══██╗██╔════╝██╔══██╗ 
+██║   ██║██╔██╗ ██║██╔██╗ ██║ ╚███╔╝█████╗█████╗   ╚███╔╝ ██████╔╝██║     ██║   ██║██████╔╝█████╗  ██████╔╝ 
+██║   ██║██║╚██╗██║██║╚██╗██║ ██╔██╗╚════╝██╔══╝   ██╔██╗ ██╔═══╝ ██║     ██║   ██║██╔══██╗██╔══╝  ██╔══██╗
+╚██████╔╝██║ ╚████║██║ ╚████║██╔╝ ██╗     ███████╗██╔╝ ██╗██║     ███████╗╚██████╔╝██║  ██║███████╗██║  ██║ 
+╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═══╝╚═╝  ╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝     ╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
+================================【summary】================================
+| model: ./efficientformer_l3.onnx
+| node_count: 668
+| input_count: 1
+| output_count: 1
+| num_params: 31349969
+| model_size: 119.73718452453613
+=====================【parameter_data_types】=====================
+| FLOAT: 31347568
+| INT64: 2401
+===========================【operators-lists】===========================
+| ['Identity', 'Conv', 'Relu', 'AveragePool', 'Sub', 'Mul', 'Add', 'Constant', 'Div', 'Erf', 'Shape', 'Slice', 'Concat', 'Reshape', 'Transpose', 'ReduceMean', 'Pow', 'Sqrt', 'Gather', 'MatMul', 'Unsqueeze', 'Split', 'Softmax', 'Gemm']
+===========================【operators】===========================
+| Identity: count=3, percentage=0.4491017964071856
+| Conv: count=49, percentage=7.335329341317365
+| Relu: count=2, percentage=0.29940119760479045
+| AveragePool: count=22, percentage=3.293413173652695
+| Sub: count=31, percentage=4.640718562874251
+| Mul: count=117, percentage=17.514970059880238
+| Add: count=117, percentage=17.514970059880238
+| Constant: count=125, percentage=18.7125748502994
+| Div: count=36, percentage=5.389221556886228
+| Erf: count=26, percentage=3.8922155688622757
+| Shape: count=9, percentage=1.347305389221557
+| Slice: count=1, percentage=0.14970059880239522
+| Concat: count=9, percentage=1.347305389221557
+| Reshape: count=9, percentage=1.347305389221557
+| Transpose: count=13, percentage=1.9461077844311379
+| ReduceMean: count=19, percentage=2.844311377245509
+| Pow: count=9, percentage=1.347305389221557
+| Sqrt: count=9, percentage=1.347305389221557
+| Gather: count=12, percentage=1.7964071856287425
+| MatMul: count=24, percentage=3.592814371257485
+| Unsqueeze: count=16, percentage=2.3952095808383236
+| Split: count=4, percentage=0.5988023952095809
+| Softmax: count=4, percentage=0.5988023952095809
+| Gemm: count=2, percentage=0.29940119760479045
+===========================【inputs】==============================
+| name=input, dtype=FLOAT, shape=[0, 3, 224, 224]
+===========================【outputs】=============================
+name=output, dtype=FLOAT, shape=[0, 1000]

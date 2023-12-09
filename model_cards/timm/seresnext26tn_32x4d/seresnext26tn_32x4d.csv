@@ -1,0 +1,21 @@
+section,key,value
+summary,model,./seresnext26tn_32x4d.onnx
+summary,node_count,121
+summary,input_count,1
+summary,output_count,1
+summary,num_params,16787656
+summary,model_size,64.0633020401001
+parameter_data_types,FLOAT,16787656
+operators,Conv,"count=47, percentage=38.84297520661157"
+operators,Relu,"count=35, percentage=28.92561983471074"
+operators,MaxPool,"count=1, percentage=0.8264462809917356"
+operators,ReduceMean,"count=8, percentage=6.6115702479338845"
+operators,Sigmoid,"count=8, percentage=6.6115702479338845"
+operators,Mul,"count=8, percentage=6.6115702479338845"
+operators,Add,"count=8, percentage=6.6115702479338845"
+operators,AveragePool,"count=3, percentage=2.479338842975207"
+operators,GlobalAveragePool,"count=1, percentage=0.8264462809917356"
+operators,Flatten,"count=1, percentage=0.8264462809917356"
+operators,Gemm,"count=1, percentage=0.8264462809917356"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

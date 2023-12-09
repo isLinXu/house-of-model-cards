@@ -1,0 +1,16 @@
+section,key,value
+summary,model,./gernet_l.onnx
+summary,node_count,131
+summary,input_count,1
+summary,output_count,1
+summary,num_params,31026984
+summary,model_size,118.38991260528564
+parameter_data_types,FLOAT,31026984
+operators,Conv,"count=57, percentage=43.51145038167939"
+operators,Relu,"count=53, percentage=40.458015267175576"
+operators,Add,"count=18, percentage=13.740458015267176"
+operators,GlobalAveragePool,"count=1, percentage=0.7633587786259541"
+operators,Flatten,"count=1, percentage=0.7633587786259541"
+operators,Gemm,"count=1, percentage=0.7633587786259541"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 256, 256]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

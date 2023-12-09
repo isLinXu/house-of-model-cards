@@ -1,0 +1,26 @@
+section,key,value
+summary,model,./nfnet_l0.onnx
+summary,node_count,817
+summary,input_count,1
+summary,output_count,1
+summary,num_params,56847796
+summary,model_size,217.16153526306152
+parameter_data_types,FLOAT,56847720
+parameter_data_types,INT64,76
+operators,Identity,"count=38, percentage=4.651162790697675"
+operators,Constant,"count=93, percentage=11.383108935128519"
+operators,ReduceMean,"count=183, percentage=22.399020807833537"
+operators,Sub,"count=57, percentage=6.976744186046512"
+operators,Mul,"count=157, percentage=19.216646266829866"
+operators,BatchNormalization,"count=57, percentage=6.976744186046512"
+operators,Reshape,"count=57, percentage=6.976744186046512"
+operators,Conv,"count=81, percentage=9.914320685434516"
+operators,Sigmoid,"count=64, percentage=7.833537331701345"
+operators,Relu,"count=12, percentage=1.4687882496940026"
+operators,Add,"count=12, percentage=1.4687882496940026"
+operators,AveragePool,"count=3, percentage=0.36719706242350064"
+operators,GlobalAveragePool,"count=1, percentage=0.12239902080783352"
+operators,Flatten,"count=1, percentage=0.12239902080783352"
+operators,Gemm,"count=1, percentage=0.12239902080783352"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

@@ -1,0 +1,84 @@
+{
+  "summary": {
+    "model": "./cs3darknet_m.onnx",
+    "node_count": 151,
+    "input_count": 1,
+    "output_count": 1,
+    "num_params": 9301768,
+    "model_size": 35.51789951324463
+  },
+  "parameter_data_types": {
+    "FLOAT": 9301768
+  },
+  "operators": {
+    "Conv": {
+      "count": 42,
+      "percentage": 27.81456953642384
+    },
+    "Sigmoid": {
+      "count": 42,
+      "percentage": 27.81456953642384
+    },
+    "Mul": {
+      "count": 42,
+      "percentage": 27.81456953642384
+    },
+    "Split": {
+      "count": 4,
+      "percentage": 2.6490066225165565
+    },
+    "Add": {
+      "count": 14,
+      "percentage": 9.271523178807946
+    },
+    "Concat": {
+      "count": 4,
+      "percentage": 2.6490066225165565
+    },
+    "GlobalAveragePool": {
+      "count": 1,
+      "percentage": 0.6622516556291391
+    },
+    "Flatten": {
+      "count": 1,
+      "percentage": 0.6622516556291391
+    },
+    "Gemm": {
+      "count": 1,
+      "percentage": 0.6622516556291391
+    }
+  },
+  "operators_list": [
+    "Conv",
+    "Sigmoid",
+    "Mul",
+    "Split",
+    "Add",
+    "Concat",
+    "GlobalAveragePool",
+    "Flatten",
+    "Gemm"
+  ],
+  "inputs": [
+    {
+      "name": "input",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        3,
+        256,
+        256
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        1000
+      ]
+    }
+  ]
+}

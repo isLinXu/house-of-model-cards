@@ -1,0 +1,17 @@
+section,key,value
+summary,model,./mobilenetv2_120d.onnx
+summary,node_count,260
+summary,input_count,1
+summary,output_count,1
+summary,num_params,5799256
+summary,model_size,22.17859649658203
+parameter_data_types,FLOAT,5799256
+operators,Conv,"count=79, percentage=30.384615384615383"
+operators,Constant,"count=106, percentage=40.76923076923077"
+operators,Clip,"count=53, percentage=20.384615384615383"
+operators,Add,"count=19, percentage=7.307692307692308"
+operators,GlobalAveragePool,"count=1, percentage=0.38461538461538464"
+operators,Flatten,"count=1, percentage=0.38461538461538464"
+operators,Gemm,"count=1, percentage=0.38461538461538464"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

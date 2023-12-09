@@ -1,0 +1,16 @@
+section,key,value
+summary,model,./efficientnet_es_pruned.onnx
+summary,node_count,95
+summary,input_count,1
+summary,output_count,1
+summary,num_params,5412672
+summary,model_size,20.67046070098877
+parameter_data_types,FLOAT,5412672
+operators,Conv,"count=49, percentage=51.578947368421055"
+operators,Relu,"count=31, percentage=32.631578947368425"
+operators,Add,"count=12, percentage=12.631578947368421"
+operators,GlobalAveragePool,"count=1, percentage=1.0526315789473684"
+operators,Flatten,"count=1, percentage=1.0526315789473684"
+operators,Gemm,"count=1, percentage=1.0526315789473684"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

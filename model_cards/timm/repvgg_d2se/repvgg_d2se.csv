@@ -1,0 +1,20 @@
+section,key,value
+summary,model,./repvgg_d2se.onnx
+summary,node_count,569
+summary,input_count,1
+summary,output_count,1
+summary,num_params,133327348
+summary,model_size,508.74920654296875
+parameter_data_types,FLOAT,133327348
+operators,Conv,"count=192, percentage=33.74340949033392"
+operators,Add,"count=91, percentage=15.992970123022848"
+operators,ReduceMean,"count=48, percentage=8.43585237258348"
+operators,Relu,"count=96, percentage=16.87170474516696"
+operators,Sigmoid,"count=48, percentage=8.43585237258348"
+operators,Mul,"count=48, percentage=8.43585237258348"
+operators,BatchNormalization,"count=43, percentage=7.5571177504393665"
+operators,GlobalAveragePool,"count=1, percentage=0.17574692442882248"
+operators,Flatten,"count=1, percentage=0.17574692442882248"
+operators,Gemm,"count=1, percentage=0.17574692442882248"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 320, 320]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

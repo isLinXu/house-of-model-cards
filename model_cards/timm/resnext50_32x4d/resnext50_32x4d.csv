@@ -1,0 +1,17 @@
+section,key,value
+summary,model,./resnext50_32x4d.onnx
+summary,node_count,122
+summary,input_count,1
+summary,output_count,1
+summary,num_params,24994792
+summary,model_size,95.37079334259033
+parameter_data_types,FLOAT,24994792
+operators,Conv,"count=53, percentage=43.44262295081967"
+operators,Relu,"count=49, percentage=40.16393442622951"
+operators,MaxPool,"count=1, percentage=0.819672131147541"
+operators,Add,"count=16, percentage=13.114754098360656"
+operators,GlobalAveragePool,"count=1, percentage=0.819672131147541"
+operators,Flatten,"count=1, percentage=0.819672131147541"
+operators,Gemm,"count=1, percentage=0.819672131147541"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

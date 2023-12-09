@@ -1,0 +1,104 @@
+{
+  "summary": {
+    "model": "./resnet50_gn.onnx",
+    "node_count": 600,
+    "input_count": 1,
+    "output_count": 1,
+    "num_params": 25556776,
+    "model_size": 97.59651756286621
+  },
+  "parameter_data_types": {
+    "FLOAT": 25556776
+  },
+  "operators": {
+    "Identity": {
+      "count": 1,
+      "percentage": 0.16666666666666669
+    },
+    "Conv": {
+      "count": 53,
+      "percentage": 8.833333333333334
+    },
+    "Constant": {
+      "count": 159,
+      "percentage": 26.5
+    },
+    "Reshape": {
+      "count": 106,
+      "percentage": 17.666666666666668
+    },
+    "InstanceNormalization": {
+      "count": 53,
+      "percentage": 8.833333333333334
+    },
+    "Shape": {
+      "count": 53,
+      "percentage": 8.833333333333334
+    },
+    "Mul": {
+      "count": 53,
+      "percentage": 8.833333333333334
+    },
+    "Add": {
+      "count": 69,
+      "percentage": 11.5
+    },
+    "Relu": {
+      "count": 49,
+      "percentage": 8.166666666666666
+    },
+    "MaxPool": {
+      "count": 1,
+      "percentage": 0.16666666666666669
+    },
+    "GlobalAveragePool": {
+      "count": 1,
+      "percentage": 0.16666666666666669
+    },
+    "Flatten": {
+      "count": 1,
+      "percentage": 0.16666666666666669
+    },
+    "Gemm": {
+      "count": 1,
+      "percentage": 0.16666666666666669
+    }
+  },
+  "operators_list": [
+    "Identity",
+    "Conv",
+    "Constant",
+    "Reshape",
+    "InstanceNormalization",
+    "Shape",
+    "Mul",
+    "Add",
+    "Relu",
+    "MaxPool",
+    "GlobalAveragePool",
+    "Flatten",
+    "Gemm"
+  ],
+  "inputs": [
+    {
+      "name": "input",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        3,
+        224,
+        224
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        1000
+      ]
+    }
+  ]
+}

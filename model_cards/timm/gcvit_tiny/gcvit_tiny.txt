@@ -1,0 +1,51 @@
+██████╗ ███╗   ██╗███╗   ██╗██╗  ██╗     ███████╗██╗  ██╗██████╗ ██╗      ██████╗ ██████╗ ███████╗██████╗ 
+██╔═══██╗████╗  ██║████╗  ██║╚██╗██╔╝     ██╔════╝╚██╗██╔╝██╔══██╗██║     ██╔═══██╗██╔══██╗██╔════╝██╔══██╗ 
+██║   ██║██╔██╗ ██║██╔██╗ ██║ ╚███╔╝█████╗█████╗   ╚███╔╝ ██████╔╝██║     ██║   ██║██████╔╝█████╗  ██████╔╝ 
+██║   ██║██║╚██╗██║██║╚██╗██║ ██╔██╗╚════╝██╔══╝   ██╔██╗ ██╔═══╝ ██║     ██║   ██║██╔══██╗██╔══╝  ██╔══██╗
+╚██████╔╝██║ ╚████║██║ ╚████║██╔╝ ██╗     ███████╗██╔╝ ██╗██║     ███████╗╚██████╔╝██║  ██║███████╗██║  ██║ 
+╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═══╝╚═╝  ╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝     ╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
+================================【summary】================================
+| model: ./gcvit_tiny.onnx
+| node_count: 4820
+| input_count: 1
+| output_count: 1
+| num_params: 34178062
+| model_size: 131.20343017578125
+=====================【parameter_data_types】=====================
+| FLOAT: 34178062
+===========================【operators-lists】===========================
+| ['Conv', 'Transpose', 'ReduceMean', 'Sub', 'Constant', 'Pow', 'Add', 'Sqrt', 'Div', 'Mul', 'Erf', 'Sigmoid', 'MaxPool', 'Shape', 'Gather', 'Cast', 'Unsqueeze', 'Concat', 'Reshape', 'MatMul', 'Split', 'Squeeze', 'Softmax', 'ConstantOfShape', 'Expand', 'Tile', 'GlobalAveragePool', 'Flatten', 'Gemm']
+===========================【operators】===========================
+| Conv: count=49, percentage=1.016597510373444
+| Transpose: count=187, percentage=3.879668049792531
+| ReduceMean: count=153, percentage=3.1742738589211617
+| Sub: count=71, percentage=1.4730290456431534
+| Constant: count=1192, percentage=24.730290456431536
+| Pow: count=71, percentage=1.4730290456431534
+| Add: count=423, percentage=8.775933609958505
+| Sqrt: count=71, percentage=1.4730290456431534
+| Div: count=200, percentage=4.149377593360995
+| Mul: count=219, percentage=4.54356846473029
+| Erf: count=53, percentage=1.099585062240664
+| Sigmoid: count=11, percentage=0.2282157676348548
+| MaxPool: count=5, percentage=0.1037344398340249
+| Shape: count=266, percentage=5.518672199170124
+| Gather: count=252, percentage=5.228215767634855
+| Cast: count=152, percentage=3.1535269709543567
+| Unsqueeze: count=583, percentage=12.095435684647303
+| Concat: count=259, percentage=5.37344398340249
+| Reshape: count=231, percentage=4.792531120331951
+| MatMul: count=186, percentage=3.858921161825726
+| Split: count=31, percentage=0.6431535269709543
+| Squeeze: count=79, percentage=1.6390041493775935
+| Softmax: count=31, percentage=0.6431535269709543
+| ConstantOfShape: count=14, percentage=0.29045643153526973
+| Expand: count=14, percentage=0.29045643153526973
+| Tile: count=14, percentage=0.29045643153526973
+| GlobalAveragePool: count=1, percentage=0.02074688796680498
+| Flatten: count=1, percentage=0.02074688796680498
+| Gemm: count=1, percentage=0.02074688796680498
+===========================【inputs】==============================
+| name=input, dtype=FLOAT, shape=[0, 3, 224, 224]
+===========================【outputs】=============================
+name=output, dtype=FLOAT, shape=[0, 1000]

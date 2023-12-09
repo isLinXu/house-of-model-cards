@@ -1,0 +1,99 @@
+{
+  "summary": {
+    "model": "./res2next50.onnx",
+    "node_count": 254,
+    "input_count": 1,
+    "output_count": 1,
+    "num_params": 24639240,
+    "model_size": 94.03991222381592
+  },
+  "parameter_data_types": {
+    "FLOAT": 24639240
+  },
+  "operators": {
+    "Conv": {
+      "count": 85,
+      "percentage": 33.46456692913386
+    },
+    "Relu": {
+      "count": 81,
+      "percentage": 31.88976377952756
+    },
+    "MaxPool": {
+      "count": 1,
+      "percentage": 0.39370078740157477
+    },
+    "Split": {
+      "count": 16,
+      "percentage": 6.299212598425196
+    },
+    "Constant": {
+      "count": 4,
+      "percentage": 1.574803149606299
+    },
+    "Pad": {
+      "count": 4,
+      "percentage": 1.574803149606299
+    },
+    "AveragePool": {
+      "count": 4,
+      "percentage": 1.574803149606299
+    },
+    "Concat": {
+      "count": 16,
+      "percentage": 6.299212598425196
+    },
+    "Add": {
+      "count": 40,
+      "percentage": 15.748031496062993
+    },
+    "GlobalAveragePool": {
+      "count": 1,
+      "percentage": 0.39370078740157477
+    },
+    "Flatten": {
+      "count": 1,
+      "percentage": 0.39370078740157477
+    },
+    "Gemm": {
+      "count": 1,
+      "percentage": 0.39370078740157477
+    }
+  },
+  "operators_list": [
+    "Conv",
+    "Relu",
+    "MaxPool",
+    "Split",
+    "Constant",
+    "Pad",
+    "AveragePool",
+    "Concat",
+    "Add",
+    "GlobalAveragePool",
+    "Flatten",
+    "Gemm"
+  ],
+  "inputs": [
+    {
+      "name": "input",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        3,
+        224,
+        224
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        1000
+      ]
+    }
+  ]
+}

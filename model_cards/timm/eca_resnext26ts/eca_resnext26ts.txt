@@ -1,0 +1,38 @@
+██████╗ ███╗   ██╗███╗   ██╗██╗  ██╗     ███████╗██╗  ██╗██████╗ ██╗      ██████╗ ██████╗ ███████╗██████╗ 
+██╔═══██╗████╗  ██║████╗  ██║╚██╗██╔╝     ██╔════╝╚██╗██╔╝██╔══██╗██║     ██╔═══██╗██╔══██╗██╔════╝██╔══██╗ 
+██║   ██║██╔██╗ ██║██╔██╗ ██║ ╚███╔╝█████╗█████╗   ╚███╔╝ ██████╔╝██║     ██║   ██║██████╔╝█████╗  ██████╔╝ 
+██║   ██║██║╚██╗██║██║╚██╗██║ ██╔██╗╚════╝██╔══╝   ██╔██╗ ██╔═══╝ ██║     ██║   ██║██╔══██╗██╔══╝  ██╔══██╗
+╚██████╔╝██║ ╚████║██║ ╚████║██╔╝ ██╗     ███████╗██╔╝ ██╗██║     ███████╗╚██████╔╝██║  ██║███████╗██║  ██║ 
+╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═══╝╚═╝  ╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝     ╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
+================================【summary】================================
+| model: ./eca_resnext26ts.onnx
+| node_count: 281
+| input_count: 1
+| output_count: 1
+| num_params: 10282508
+| model_size: 39.28020095825195
+=====================【parameter_data_types】=====================
+| FLOAT: 10282508
+===========================【operators-lists】===========================
+| ['Conv', 'Sigmoid', 'Mul', 'MaxPool', 'ReduceMean', 'Shape', 'Constant', 'Gather', 'Unsqueeze', 'Concat', 'Reshape', 'Expand', 'Add', 'GlobalAveragePool', 'Flatten', 'Gemm']
+===========================【operators】===========================
+| Conv: count=39, percentage=13.87900355871886
+| Sigmoid: count=35, percentage=12.455516014234876
+| Mul: count=35, percentage=12.455516014234876
+| MaxPool: count=1, percentage=0.3558718861209964
+| ReduceMean: count=8, percentage=2.8469750889679712
+| Shape: count=24, percentage=8.540925266903916
+| Constant: count=56, percentage=19.9288256227758
+| Gather: count=16, percentage=5.6939501779359425
+| Unsqueeze: count=16, percentage=5.6939501779359425
+| Concat: count=16, percentage=5.6939501779359425
+| Reshape: count=16, percentage=5.6939501779359425
+| Expand: count=8, percentage=2.8469750889679712
+| Add: count=8, percentage=2.8469750889679712
+| GlobalAveragePool: count=1, percentage=0.3558718861209964
+| Flatten: count=1, percentage=0.3558718861209964
+| Gemm: count=1, percentage=0.3558718861209964
+===========================【inputs】==============================
+| name=input, dtype=FLOAT, shape=[0, 3, 256, 256]
+===========================【outputs】=============================
+name=output, dtype=FLOAT, shape=[0, 1000]

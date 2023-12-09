@@ -1,0 +1,41 @@
+section,key,value
+summary,model,./convit_base.onnx
+summary,node_count,3726
+summary,input_count,1
+summary,output_count,1
+summary,num_params,86540040
+summary,model_size,339.38024520874023
+parameter_data_types,FLOAT,86540040
+operators,Constant,"count=932, percentage=25.013419216317768"
+operators,Conv,"count=1, percentage=0.026838432635534086"
+operators,Shape,"count=349, percentage=9.366612989801396"
+operators,Slice,"count=31, percentage=0.8319914117015567"
+operators,Concat,"count=117, percentage=3.140096618357488"
+operators,Reshape,"count=166, percentage=4.455179817498657"
+operators,Transpose,"count=57, percentage=1.529790660225443"
+operators,Add,"count=233, percentage=6.253354804079442"
+operators,Gather,"count=178, percentage=4.777241009125067"
+operators,Unsqueeze,"count=263, percentage=7.058507783145464"
+operators,ConstantOfShape,"count=141, percentage=3.784219001610306"
+operators,Mul,"count=212, percentage=5.689747718733226"
+operators,Equal,"count=131, percentage=3.5158346752549647"
+operators,Where,"count=131, percentage=3.5158346752549647"
+operators,Expand,"count=161, percentage=4.320987654320987"
+operators,ReduceMean,"count=50, percentage=1.3419216317767042"
+operators,Sub,"count=35, percentage=0.9393451422436929"
+operators,Pow,"count=25, percentage=0.6709608158883521"
+operators,Sqrt,"count=25, percentage=0.6709608158883521"
+operators,Div,"count=59, percentage=1.5834675254965112"
+operators,Cast,"count=154, percentage=4.13311862587225"
+operators,Range,"count=90, percentage=2.4154589371980677"
+operators,ScatterND,"count=30, percentage=0.8051529790660225"
+operators,MatMul,"count=92, percentage=2.4691358024691357"
+operators,Softmax,"count=22, percentage=0.5904455179817499"
+operators,Sigmoid,"count=10, percentage=0.2683843263553409"
+operators,ReduceSum,"count=10, percentage=0.2683843263553409"
+operators,Erf,"count=12, percentage=0.322061191626409"
+operators,Split,"count=2, percentage=0.05367686527106817"
+operators,Squeeze,"count=6, percentage=0.1610305958132045"
+operators,Gemm,"count=1, percentage=0.026838432635534086"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

@@ -1,0 +1,89 @@
+{
+  "summary": {
+    "model": "./cs3sedarknet_l.onnx",
+    "node_count": 347,
+    "input_count": 1,
+    "output_count": 1,
+    "num_params": 21899096,
+    "model_size": 83.62257862091064
+  },
+  "parameter_data_types": {
+    "FLOAT": 21899096
+  },
+  "operators": {
+    "Conv": {
+      "count": 98,
+      "percentage": 28.24207492795389
+    },
+    "Sigmoid": {
+      "count": 98,
+      "percentage": 28.24207492795389
+    },
+    "Mul": {
+      "count": 98,
+      "percentage": 28.24207492795389
+    },
+    "Split": {
+      "count": 4,
+      "percentage": 1.1527377521613833
+    },
+    "ReduceMean": {
+      "count": 21,
+      "percentage": 6.051873198847262
+    },
+    "Add": {
+      "count": 21,
+      "percentage": 6.051873198847262
+    },
+    "Concat": {
+      "count": 4,
+      "percentage": 1.1527377521613833
+    },
+    "GlobalAveragePool": {
+      "count": 1,
+      "percentage": 0.2881844380403458
+    },
+    "Flatten": {
+      "count": 1,
+      "percentage": 0.2881844380403458
+    },
+    "Gemm": {
+      "count": 1,
+      "percentage": 0.2881844380403458
+    }
+  },
+  "operators_list": [
+    "Conv",
+    "Sigmoid",
+    "Mul",
+    "Split",
+    "ReduceMean",
+    "Add",
+    "Concat",
+    "GlobalAveragePool",
+    "Flatten",
+    "Gemm"
+  ],
+  "inputs": [
+    {
+      "name": "input",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        3,
+        256,
+        256
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        1000
+      ]
+    }
+  ]
+}

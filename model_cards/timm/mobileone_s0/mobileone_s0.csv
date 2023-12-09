@@ -1,0 +1,18 @@
+section,key,value
+summary,model,./mobileone_s0.onnx
+summary,node_count,513
+summary,input_count,1
+summary,output_count,1
+summary,num_params,5268808
+summary,model_size,20.22957134246826
+parameter_data_types,FLOAT,5268808
+operators,Conv,"count=191, percentage=37.23196881091618"
+operators,Add,"count=212, percentage=41.32553606237816"
+operators,Constant,"count=29, percentage=5.653021442495127"
+operators,Relu,"count=43, percentage=8.382066276803119"
+operators,BatchNormalization,"count=35, percentage=6.82261208576998"
+operators,GlobalAveragePool,"count=1, percentage=0.1949317738791423"
+operators,Flatten,"count=1, percentage=0.1949317738791423"
+operators,Gemm,"count=1, percentage=0.1949317738791423"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

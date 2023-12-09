@@ -1,0 +1,79 @@
+{
+  "summary": {
+    "model": "./efficientnet_b5.onnx",
+    "node_count": 578,
+    "input_count": 1,
+    "output_count": 1,
+    "num_params": 30303416,
+    "model_size": 115.73463916778564
+  },
+  "parameter_data_types": {
+    "FLOAT": 30303416
+  },
+  "operators": {
+    "Conv": {
+      "count": 194,
+      "percentage": 33.56401384083045
+    },
+    "Sigmoid": {
+      "count": 155,
+      "percentage": 26.81660899653979
+    },
+    "Mul": {
+      "count": 155,
+      "percentage": 26.81660899653979
+    },
+    "ReduceMean": {
+      "count": 39,
+      "percentage": 6.747404844290658
+    },
+    "Add": {
+      "count": 32,
+      "percentage": 5.536332179930796
+    },
+    "GlobalAveragePool": {
+      "count": 1,
+      "percentage": 0.17301038062283738
+    },
+    "Flatten": {
+      "count": 1,
+      "percentage": 0.17301038062283738
+    },
+    "Gemm": {
+      "count": 1,
+      "percentage": 0.17301038062283738
+    }
+  },
+  "operators_list": [
+    "Conv",
+    "Sigmoid",
+    "Mul",
+    "ReduceMean",
+    "Add",
+    "GlobalAveragePool",
+    "Flatten",
+    "Gemm"
+  ],
+  "inputs": [
+    {
+      "name": "input",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        3,
+        448,
+        448
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        1000
+      ]
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "summary": {
+    "model": "./mixnet_s.onnx",
+    "node_count": 363,
+    "input_count": 1,
+    "output_count": 1,
+    "num_params": 4147430,
+    "model_size": 15.920287132263184
+  },
+  "parameter_data_types": {
+    "FLOAT": 4147430
+  },
+  "operators": {
+    "Conv": {
+      "count": 123,
+      "percentage": 33.88429752066116
+    },
+    "Relu": {
+      "count": 7,
+      "percentage": 1.9283746556473829
+    },
+    "Add": {
+      "count": 11,
+      "percentage": 3.0303030303030303
+    },
+    "Split": {
+      "count": 34,
+      "percentage": 9.366391184573002
+    },
+    "Concat": {
+      "count": 34,
+      "percentage": 9.366391184573002
+    },
+    "BatchNormalization": {
+      "count": 34,
+      "percentage": 9.366391184573002
+    },
+    "Sigmoid": {
+      "count": 52,
+      "percentage": 14.325068870523417
+    },
+    "Mul": {
+      "count": 52,
+      "percentage": 14.325068870523417
+    },
+    "ReduceMean": {
+      "count": 13,
+      "percentage": 3.581267217630854
+    },
+    "GlobalAveragePool": {
+      "count": 1,
+      "percentage": 0.27548209366391185
+    },
+    "Flatten": {
+      "count": 1,
+      "percentage": 0.27548209366391185
+    },
+    "Gemm": {
+      "count": 1,
+      "percentage": 0.27548209366391185
+    }
+  },
+  "operators_list": [
+    "Conv",
+    "Relu",
+    "Add",
+    "Split",
+    "Concat",
+    "BatchNormalization",
+    "Sigmoid",
+    "Mul",
+    "ReduceMean",
+    "GlobalAveragePool",
+    "Flatten",
+    "Gemm"
+  ],
+  "inputs": [
+    {
+      "name": "input",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        3,
+        224,
+        224
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        1000
+      ]
+    }
+  ]
+}

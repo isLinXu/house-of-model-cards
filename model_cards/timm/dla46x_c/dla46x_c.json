@@ -1,0 +1,74 @@
+{
+  "summary": {
+    "model": "./dla46x_c.onnx",
+    "node_count": 120,
+    "input_count": 1,
+    "output_count": 1,
+    "num_params": 1063000,
+    "model_size": 4.078094482421875
+  },
+  "parameter_data_types": {
+    "FLOAT": 1063000
+  },
+  "operators": {
+    "Conv": {
+      "count": 49,
+      "percentage": 40.833333333333336
+    },
+    "Relu": {
+      "count": 45,
+      "percentage": 37.5
+    },
+    "MaxPool": {
+      "count": 6,
+      "percentage": 5.0
+    },
+    "Add": {
+      "count": 12,
+      "percentage": 10.0
+    },
+    "Concat": {
+      "count": 6,
+      "percentage": 5.0
+    },
+    "GlobalAveragePool": {
+      "count": 1,
+      "percentage": 0.8333333333333334
+    },
+    "Flatten": {
+      "count": 1,
+      "percentage": 0.8333333333333334
+    }
+  },
+  "operators_list": [
+    "Conv",
+    "Relu",
+    "MaxPool",
+    "Add",
+    "Concat",
+    "GlobalAveragePool",
+    "Flatten"
+  ],
+  "inputs": [
+    {
+      "name": "input",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        3,
+        224,
+        224
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        1000
+      ]
+    }
+  ]
+}

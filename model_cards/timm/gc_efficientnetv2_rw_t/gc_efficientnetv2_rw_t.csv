@@ -1,0 +1,31 @@
+section,key,value
+summary,model,./gc_efficientnetv2_rw_t.onnx
+summary,node_count,1821
+summary,input_count,1
+summary,output_count,1
+summary,num_params,13618201
+summary,model_size,52.31864070892334
+parameter_data_types,FLOAT,13618201
+operators,Conv,"count=194, percentage=10.653487095002747"
+operators,Sigmoid,"count=128, percentage=7.029104887424492"
+operators,Mul,"count=186, percentage=10.214168039538714"
+operators,Add,"count=92, percentage=5.052169137836353"
+operators,Shape,"count=116, percentage=6.370126304228446"
+operators,Constant,"count=261, percentage=14.332784184514002"
+operators,Gather,"count=116, percentage=6.370126304228446"
+operators,Unsqueeze,"count=261, percentage=14.332784184514002"
+operators,Concat,"count=87, percentage=4.7775947281713345"
+operators,Reshape,"count=87, percentage=4.7775947281713345"
+operators,Softmax,"count=29, percentage=1.5925315760571115"
+operators,MatMul,"count=29, percentage=1.5925315760571115"
+operators,Transpose,"count=58, percentage=3.185063152114223"
+operators,ReduceMean,"count=58, percentage=3.185063152114223"
+operators,Sub,"count=29, percentage=1.5925315760571115"
+operators,Pow,"count=29, percentage=1.5925315760571115"
+operators,Sqrt,"count=29, percentage=1.5925315760571115"
+operators,Div,"count=29, percentage=1.5925315760571115"
+operators,GlobalAveragePool,"count=1, percentage=0.054914881933003847"
+operators,Flatten,"count=1, percentage=0.054914881933003847"
+operators,Gemm,"count=1, percentage=0.054914881933003847"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

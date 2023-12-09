@@ -1,0 +1,20 @@
+section,key,value
+summary,model,./legacy_seresnet152.onnx
+summary,node_count,660
+summary,input_count,1
+summary,output_count,1
+summary,num_params,66746136
+summary,model_size,254.75363159179688
+parameter_data_types,FLOAT,66746136
+operators,Conv,"count=255, percentage=38.63636363636363"
+operators,Relu,"count=201, percentage=30.454545454545457"
+operators,MaxPool,"count=1, percentage=0.15151515151515152"
+operators,ReduceMean,"count=50, percentage=7.575757575757576"
+operators,Sigmoid,"count=50, percentage=7.575757575757576"
+operators,Mul,"count=50, percentage=7.575757575757576"
+operators,Add,"count=50, percentage=7.575757575757576"
+operators,GlobalAveragePool,"count=1, percentage=0.15151515151515152"
+operators,Flatten,"count=1, percentage=0.15151515151515152"
+operators,Gemm,"count=1, percentage=0.15151515151515152"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

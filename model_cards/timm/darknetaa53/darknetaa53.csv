@@ -1,0 +1,19 @@
+section,key,value
+summary,model,./darknetaa53.onnx
+summary,node_count,145
+summary,input_count,1
+summary,output_count,1
+summary,num_params,36005128
+summary,model_size,137.38564682006836
+parameter_data_types,FLOAT,36005128
+operators,Conv,"count=52, percentage=35.86206896551724"
+operators,LeakyRelu,"count=52, percentage=35.86206896551724"
+operators,Constant,"count=5, percentage=3.4482758620689653"
+operators,Pad,"count=5, percentage=3.4482758620689653"
+operators,AveragePool,"count=5, percentage=3.4482758620689653"
+operators,Add,"count=23, percentage=15.862068965517242"
+operators,GlobalAveragePool,"count=1, percentage=0.6896551724137931"
+operators,Flatten,"count=1, percentage=0.6896551724137931"
+operators,Gemm,"count=1, percentage=0.6896551724137931"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 256, 256]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

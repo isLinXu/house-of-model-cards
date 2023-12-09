@@ -1,0 +1,18 @@
+section,key,value
+summary,model,./tinynet_d.onnx
+summary,node_count,164
+summary,input_count,1
+summary,output_count,1
+summary,num_params,2329542
+summary,model_size,8.924835205078125
+parameter_data_types,FLOAT,2329542
+operators,Conv,"count=56, percentage=34.146341463414636"
+operators,Sigmoid,"count=45, percentage=27.439024390243905"
+operators,Mul,"count=45, percentage=27.439024390243905"
+operators,ReduceMean,"count=11, percentage=6.707317073170732"
+operators,Add,"count=4, percentage=2.4390243902439024"
+operators,GlobalAveragePool,"count=1, percentage=0.6097560975609756"
+operators,Flatten,"count=1, percentage=0.6097560975609756"
+operators,Gemm,"count=1, percentage=0.6097560975609756"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 152, 152]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

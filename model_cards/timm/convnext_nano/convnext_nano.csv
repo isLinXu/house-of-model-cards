@@ -1,0 +1,24 @@
+section,key,value
+summary,model,./convnext_nano.onnx
+summary,node_count,436
+summary,input_count,1
+summary,output_count,1
+summary,num_params,15593560
+summary,model_size,59.573527336120605
+parameter_data_types,FLOAT,15593560
+operators,Conv,"count=46, percentage=10.550458715596331"
+operators,Transpose,"count=38, percentage=8.715596330275229"
+operators,ReduceMean,"count=38, percentage=8.715596330275229"
+operators,Sub,"count=19, percentage=4.3577981651376145"
+operators,Constant,"count=80, percentage=18.34862385321101"
+operators,Pow,"count=19, percentage=4.3577981651376145"
+operators,Add,"count=66, percentage=15.137614678899084"
+operators,Sqrt,"count=19, percentage=4.3577981651376145"
+operators,Div,"count=33, percentage=7.568807339449542"
+operators,Mul,"count=61, percentage=13.990825688073393"
+operators,Erf,"count=14, percentage=3.211009174311927"
+operators,GlobalAveragePool,"count=1, percentage=0.22935779816513763"
+operators,Flatten,"count=1, percentage=0.22935779816513763"
+operators,Gemm,"count=1, percentage=0.22935779816513763"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

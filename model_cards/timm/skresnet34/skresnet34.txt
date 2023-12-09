@@ -1,0 +1,43 @@
+██████╗ ███╗   ██╗███╗   ██╗██╗  ██╗     ███████╗██╗  ██╗██████╗ ██╗      ██████╗ ██████╗ ███████╗██████╗ 
+██╔═══██╗████╗  ██║████╗  ██║╚██╗██╔╝     ██╔════╝╚██╗██╔╝██╔══██╗██║     ██╔═══██╗██╔══██╗██╔════╝██╔══██╗ 
+██║   ██║██╔██╗ ██║██╔██╗ ██║ ╚███╔╝█████╗█████╗   ╚███╔╝ ██████╔╝██║     ██║   ██║██████╔╝█████╗  ██████╔╝ 
+██║   ██║██║╚██╗██║██║╚██╗██║ ██╔██╗╚════╝██╔══╝   ██╔██╗ ██╔═══╝ ██║     ██║   ██║██╔══██╗██╔══╝  ██╔══██╗
+╚██████╔╝██║ ╚████║██║ ╚████║██╔╝ ██╗     ███████╗██╔╝ ██╗██║     ███████╗╚██████╔╝██║  ██║███████╗██║  ██║ 
+╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═══╝╚═╝  ╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝     ╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
+================================【summary】================================
+| model: ./skresnet34.onnx
+| node_count: 713
+| input_count: 1
+| output_count: 1
+| num_params: 22269592
+| model_size: 85.07647514343262
+=====================【parameter_data_types】=====================
+| FLOAT: 22269592
+===========================【operators-lists】===========================
+| ['Conv', 'Relu', 'MaxPool', 'Split', 'Unsqueeze', 'Concat', 'ReduceSum', 'ReduceMean', 'Shape', 'Constant', 'Gather', 'Div', 'Cast', 'Reshape', 'Transpose', 'Softmax', 'Mul', 'Add', 'GlobalAveragePool', 'Flatten', 'Gemm']
+===========================【operators】===========================
+| Conv: count=84, percentage=11.781206171107995
+| Relu: count=65, percentage=9.1164095371669
+| MaxPool: count=1, percentage=0.1402524544179523
+| Split: count=16, percentage=2.244039270687237
+| Unsqueeze: count=96, percentage=13.464235624123422
+| Concat: count=32, percentage=4.488078541374474
+| ReduceSum: count=32, percentage=4.488078541374474
+| ReduceMean: count=16, percentage=2.244039270687237
+| Shape: count=64, percentage=8.976157082748948
+| Constant: count=96, percentage=13.464235624123422
+| Gather: count=64, percentage=8.976157082748948
+| Div: count=16, percentage=2.244039270687237
+| Cast: count=32, percentage=4.488078541374474
+| Reshape: count=16, percentage=2.244039270687237
+| Transpose: count=32, percentage=4.488078541374474
+| Softmax: count=16, percentage=2.244039270687237
+| Mul: count=16, percentage=2.244039270687237
+| Add: count=16, percentage=2.244039270687237
+| GlobalAveragePool: count=1, percentage=0.1402524544179523
+| Flatten: count=1, percentage=0.1402524544179523
+| Gemm: count=1, percentage=0.1402524544179523
+===========================【inputs】==============================
+| name=input, dtype=FLOAT, shape=[0, 3, 224, 224]
+===========================【outputs】=============================
+name=output, dtype=FLOAT, shape=[0, 1000]

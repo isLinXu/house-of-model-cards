@@ -1,0 +1,79 @@
+{
+  "summary": {
+    "model": "./tinynet_a.onnx",
+    "node_count": 284,
+    "input_count": 1,
+    "output_count": 1,
+    "num_params": 6161972,
+    "model_size": 23.572638511657715
+  },
+  "parameter_data_types": {
+    "FLOAT": 6161972
+  },
+  "operators": {
+    "Conv": {
+      "count": 96,
+      "percentage": 33.80281690140845
+    },
+    "Sigmoid": {
+      "count": 77,
+      "percentage": 27.11267605633803
+    },
+    "Mul": {
+      "count": 77,
+      "percentage": 27.11267605633803
+    },
+    "ReduceMean": {
+      "count": 19,
+      "percentage": 6.690140845070422
+    },
+    "Add": {
+      "count": 12,
+      "percentage": 4.225352112676056
+    },
+    "GlobalAveragePool": {
+      "count": 1,
+      "percentage": 0.35211267605633806
+    },
+    "Flatten": {
+      "count": 1,
+      "percentage": 0.35211267605633806
+    },
+    "Gemm": {
+      "count": 1,
+      "percentage": 0.35211267605633806
+    }
+  },
+  "operators_list": [
+    "Conv",
+    "Sigmoid",
+    "Mul",
+    "ReduceMean",
+    "Add",
+    "GlobalAveragePool",
+    "Flatten",
+    "Gemm"
+  ],
+  "inputs": [
+    {
+      "name": "input",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        3,
+        192,
+        192
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        1000
+      ]
+    }
+  ]
+}

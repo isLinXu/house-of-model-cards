@@ -1,0 +1,40 @@
+section,key,value
+summary,model,./swinv2_tiny_window16_256.onnx
+summary,node_count,2547
+summary,input_count,1
+summary,output_count,1
+summary,num_params,28351570
+summary,model_size,114.11466693878174
+parameter_data_types,FLOAT,28351570
+operators,Conv,"count=1, percentage=0.03926187671770711"
+operators,Transpose,"count=76, percentage=2.98390263054574"
+operators,ReduceMean,"count=59, percentage=2.316450726344719"
+operators,Sub,"count=29, percentage=1.138594424813506"
+operators,Constant,"count=706, percentage=27.718884962701217"
+operators,Pow,"count=77, percentage=3.023164507263447"
+operators,Add,"count=168, percentage=6.595995288574794"
+operators,Sqrt,"count=29, percentage=1.138594424813506"
+operators,Div,"count=95, percentage=3.729878288182175"
+operators,Mul,"count=77, percentage=3.023164507263447"
+operators,Shape,"count=143, percentage=5.614448370632116"
+operators,Gather,"count=128, percentage=5.02552021986651"
+operators,Cast,"count=60, percentage=2.3557126030624262"
+operators,Unsqueeze,"count=272, percentage=10.679230467216334"
+operators,Concat,"count=138, percentage=5.418138987043581"
+operators,Reshape,"count=154, percentage=6.046329014526894"
+operators,MatMul,"count=99, percentage=3.8869257950530036"
+operators,Split,"count=12, percentage=0.47114252061248524"
+operators,Squeeze,"count=36, percentage=1.4134275618374559"
+operators,Abs,"count=24, percentage=0.9422850412249705"
+operators,ReduceSum,"count=24, percentage=0.9422850412249705"
+operators,Clip,"count=36, percentage=1.4134275618374559"
+operators,Expand,"count=24, percentage=0.9422850412249705"
+operators,Exp,"count=12, percentage=0.47114252061248524"
+operators,Relu,"count=12, percentage=0.47114252061248524"
+operators,Sigmoid,"count=12, percentage=0.47114252061248524"
+operators,Softmax,"count=12, percentage=0.47114252061248524"
+operators,Erf,"count=12, percentage=0.47114252061248524"
+operators,Slice,"count=19, percentage=0.745975657636435"
+operators,Gemm,"count=1, percentage=0.03926187671770711"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 256, 256]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

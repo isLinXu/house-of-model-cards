@@ -1,0 +1,44 @@
+██████╗ ███╗   ██╗███╗   ██╗██╗  ██╗     ███████╗██╗  ██╗██████╗ ██╗      ██████╗ ██████╗ ███████╗██████╗ 
+██╔═══██╗████╗  ██║████╗  ██║╚██╗██╔╝     ██╔════╝╚██╗██╔╝██╔══██╗██║     ██╔═══██╗██╔══██╗██╔════╝██╔══██╗ 
+██║   ██║██╔██╗ ██║██╔██╗ ██║ ╚███╔╝█████╗█████╗   ╚███╔╝ ██████╔╝██║     ██║   ██║██████╔╝█████╗  ██████╔╝ 
+██║   ██║██║╚██╗██║██║╚██╗██║ ██╔██╗╚════╝██╔══╝   ██╔██╗ ██╔═══╝ ██║     ██║   ██║██╔══██╗██╔══╝  ██╔══██╗
+╚██████╔╝██║ ╚████║██║ ╚████║██╔╝ ██╗     ███████╗██╔╝ ██╗██║     ███████╗╚██████╔╝██║  ██║███████╗██║  ██║ 
+╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═══╝╚═╝  ╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝     ╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
+================================【summary】================================
+| model: ./levit_conv_128s.onnx
+| node_count: 533
+| input_count: 1
+| output_count: 1
+| num_params: 7758770
+| model_size: 30.10354709625244
+=====================【parameter_data_types】=====================
+| FLOAT: 7758770
+===========================【operators-lists】===========================
+| ['Identity', 'Conv', 'HardSigmoid', 'Mul', 'Shape', 'Constant', 'Gather', 'Unsqueeze', 'Concat', 'Reshape', 'Split', 'Transpose', 'MatMul', 'Add', 'Softmax', 'Sub', 'Div', 'Cast', 'AveragePool', 'ReduceMean', 'BatchNormalization', 'Gemm']
+===========================【operators】===========================
+| Identity: count=2, percentage=0.37523452157598497
+| Conv: count=50, percentage=9.380863039399625
+| HardSigmoid: count=25, percentage=4.690431519699812
+| Mul: count=47, percentage=8.818011257035648
+| Shape: count=33, percentage=6.191369606003752
+| Constant: count=101, percentage=18.94934333958724
+| Gather: count=44, percentage=8.25515947467167
+| Unsqueeze: count=57, percentage=10.694183864915573
+| Concat: count=24, percentage=4.50281425891182
+| Reshape: count=24, percentage=4.50281425891182
+| Split: count=11, percentage=2.0637898686679175
+| Transpose: count=22, percentage=4.127579737335835
+| MatMul: count=22, percentage=4.127579737335835
+| Add: count=36, percentage=6.75422138836773
+| Softmax: count=11, percentage=2.0637898686679175
+| Sub: count=4, percentage=0.7504690431519699
+| Div: count=5, percentage=0.9380863039399625
+| Cast: count=8, percentage=1.5009380863039399
+| AveragePool: count=2, percentage=0.37523452157598497
+| ReduceMean: count=1, percentage=0.18761726078799248
+| BatchNormalization: count=2, percentage=0.37523452157598497
+| Gemm: count=2, percentage=0.37523452157598497
+===========================【inputs】==============================
+| name=input, dtype=FLOAT, shape=[0, 3, 224, 224]
+===========================【outputs】=============================
+name=output, dtype=FLOAT, shape=[0, 1000]

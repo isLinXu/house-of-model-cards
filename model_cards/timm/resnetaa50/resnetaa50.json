@@ -1,0 +1,84 @@
+{
+  "summary": {
+    "model": "./resnetaa50.onnx",
+    "node_count": 133,
+    "input_count": 1,
+    "output_count": 1,
+    "num_params": 25530472,
+    "model_size": 97.41598224639893
+  },
+  "parameter_data_types": {
+    "FLOAT": 25530472
+  },
+  "operators": {
+    "Conv": {
+      "count": 53,
+      "percentage": 39.849624060150376
+    },
+    "Relu": {
+      "count": 49,
+      "percentage": 36.84210526315789
+    },
+    "Constant": {
+      "count": 4,
+      "percentage": 3.007518796992481
+    },
+    "Pad": {
+      "count": 4,
+      "percentage": 3.007518796992481
+    },
+    "AveragePool": {
+      "count": 4,
+      "percentage": 3.007518796992481
+    },
+    "Add": {
+      "count": 16,
+      "percentage": 12.030075187969924
+    },
+    "GlobalAveragePool": {
+      "count": 1,
+      "percentage": 0.7518796992481203
+    },
+    "Flatten": {
+      "count": 1,
+      "percentage": 0.7518796992481203
+    },
+    "Gemm": {
+      "count": 1,
+      "percentage": 0.7518796992481203
+    }
+  },
+  "operators_list": [
+    "Conv",
+    "Relu",
+    "Constant",
+    "Pad",
+    "AveragePool",
+    "Add",
+    "GlobalAveragePool",
+    "Flatten",
+    "Gemm"
+  ],
+  "inputs": [
+    {
+      "name": "input",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        3,
+        224,
+        224
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        1000
+      ]
+    }
+  ]
+}

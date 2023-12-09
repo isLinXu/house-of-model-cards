@@ -1,0 +1,69 @@
+{
+  "summary": {
+    "model": "./mnasnet_b1.onnx",
+    "node_count": 100,
+    "input_count": 1,
+    "output_count": 1,
+    "num_params": 4364352,
+    "model_size": 16.67258644104004
+  },
+  "parameter_data_types": {
+    "FLOAT": 4364352
+  },
+  "operators": {
+    "Conv": {
+      "count": 52,
+      "percentage": 52.0
+    },
+    "Relu": {
+      "count": 35,
+      "percentage": 35.0
+    },
+    "Add": {
+      "count": 10,
+      "percentage": 10.0
+    },
+    "GlobalAveragePool": {
+      "count": 1,
+      "percentage": 1.0
+    },
+    "Flatten": {
+      "count": 1,
+      "percentage": 1.0
+    },
+    "Gemm": {
+      "count": 1,
+      "percentage": 1.0
+    }
+  },
+  "operators_list": [
+    "Conv",
+    "Relu",
+    "Add",
+    "GlobalAveragePool",
+    "Flatten",
+    "Gemm"
+  ],
+  "inputs": [
+    {
+      "name": "input",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        3,
+        224,
+        224
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        1000
+      ]
+    }
+  ]
+}

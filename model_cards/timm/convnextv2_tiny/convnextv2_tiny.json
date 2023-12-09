@@ -1,0 +1,124 @@
+{
+  "summary": {
+    "model": "./convnextv2_tiny.onnx",
+    "node_count": 846,
+    "input_count": 1,
+    "output_count": 1,
+    "num_params": 28635496,
+    "model_size": 109.39964389801025
+  },
+  "parameter_data_types": {
+    "FLOAT": 28635496
+  },
+  "operators": {
+    "Conv": {
+      "count": 22,
+      "percentage": 2.6004728132387704
+    },
+    "Transpose": {
+      "count": 46,
+      "percentage": 5.4373522458628845
+    },
+    "ReduceMean": {
+      "count": 64,
+      "percentage": 7.5650118203309695
+    },
+    "Sub": {
+      "count": 23,
+      "percentage": 2.7186761229314422
+    },
+    "Constant": {
+      "count": 172,
+      "percentage": 20.33096926713948
+    },
+    "Pow": {
+      "count": 59,
+      "percentage": 6.973995271867612
+    },
+    "Add": {
+      "count": 172,
+      "percentage": 20.33096926713948
+    },
+    "Sqrt": {
+      "count": 23,
+      "percentage": 2.7186761229314422
+    },
+    "Div": {
+      "count": 59,
+      "percentage": 6.973995271867612
+    },
+    "Mul": {
+      "count": 113,
+      "percentage": 13.356973995271867
+    },
+    "MatMul": {
+      "count": 36,
+      "percentage": 4.25531914893617
+    },
+    "Erf": {
+      "count": 18,
+      "percentage": 2.127659574468085
+    },
+    "Abs": {
+      "count": 18,
+      "percentage": 2.127659574468085
+    },
+    "ReduceSum": {
+      "count": 18,
+      "percentage": 2.127659574468085
+    },
+    "GlobalAveragePool": {
+      "count": 1,
+      "percentage": 0.1182033096926714
+    },
+    "Flatten": {
+      "count": 1,
+      "percentage": 0.1182033096926714
+    },
+    "Gemm": {
+      "count": 1,
+      "percentage": 0.1182033096926714
+    }
+  },
+  "operators_list": [
+    "Conv",
+    "Transpose",
+    "ReduceMean",
+    "Sub",
+    "Constant",
+    "Pow",
+    "Add",
+    "Sqrt",
+    "Div",
+    "Mul",
+    "MatMul",
+    "Erf",
+    "Abs",
+    "ReduceSum",
+    "GlobalAveragePool",
+    "Flatten",
+    "Gemm"
+  ],
+  "inputs": [
+    {
+      "name": "input",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        3,
+        224,
+        224
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        1000
+      ]
+    }
+  ]
+}

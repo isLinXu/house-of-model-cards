@@ -1,0 +1,84 @@
+{
+  "summary": {
+    "model": "./regnetz_c16.onnx",
+    "node_count": 313,
+    "input_count": 1,
+    "output_count": 1,
+    "num_params": 13428392,
+    "model_size": 51.30212116241455
+  },
+  "parameter_data_types": {
+    "FLOAT": 13428392
+  },
+  "operators": {
+    "Conv": {
+      "count": 112,
+      "percentage": 35.78274760383386
+    },
+    "Sigmoid": {
+      "count": 68,
+      "percentage": 21.72523961661342
+    },
+    "Mul": {
+      "count": 68,
+      "percentage": 21.72523961661342
+    },
+    "ReduceMean": {
+      "count": 22,
+      "percentage": 7.0287539936102235
+    },
+    "Relu": {
+      "count": 22,
+      "percentage": 7.0287539936102235
+    },
+    "Add": {
+      "count": 18,
+      "percentage": 5.7507987220447285
+    },
+    "GlobalAveragePool": {
+      "count": 1,
+      "percentage": 0.3194888178913738
+    },
+    "Flatten": {
+      "count": 1,
+      "percentage": 0.3194888178913738
+    },
+    "Gemm": {
+      "count": 1,
+      "percentage": 0.3194888178913738
+    }
+  },
+  "operators_list": [
+    "Conv",
+    "Sigmoid",
+    "Mul",
+    "ReduceMean",
+    "Relu",
+    "Add",
+    "GlobalAveragePool",
+    "Flatten",
+    "Gemm"
+  ],
+  "inputs": [
+    {
+      "name": "input",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        3,
+        256,
+        256
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        1000
+      ]
+    }
+  ]
+}

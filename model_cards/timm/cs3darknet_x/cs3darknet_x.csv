@@ -1,0 +1,19 @@
+section,key,value
+summary,model,./cs3darknet_x.onnx
+summary,node_count,221
+summary,input_count,1
+summary,output_count,1
+summary,num_params,35026600
+summary,model_size,133.6674509048462
+parameter_data_types,FLOAT,35026600
+operators,Conv,"count=62, percentage=28.054298642533936"
+operators,Sigmoid,"count=62, percentage=28.054298642533936"
+operators,Mul,"count=62, percentage=28.054298642533936"
+operators,Split,"count=4, percentage=1.809954751131222"
+operators,Add,"count=24, percentage=10.85972850678733"
+operators,Concat,"count=4, percentage=1.809954751131222"
+operators,GlobalAveragePool,"count=1, percentage=0.4524886877828055"
+operators,Flatten,"count=1, percentage=0.4524886877828055"
+operators,Gemm,"count=1, percentage=0.4524886877828055"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 256, 256]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

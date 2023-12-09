@@ -1,0 +1,33 @@
+section,key,value
+summary,model,./resnetv2_50d_evos.onnx
+summary,node_count,3852
+summary,input_count,1
+summary,output_count,1
+summary,num_params,25591368
+summary,model_size,98.36306095123291
+parameter_data_types,FLOAT,25591368
+operators,Conv,"count=56, percentage=1.453790238836968"
+operators,Mul,"count=255, percentage=6.619937694704049"
+operators,Sigmoid,"count=51, percentage=1.32398753894081"
+operators,Shape,"count=510, percentage=13.239875389408098"
+operators,Constant,"count=714, percentage=18.53582554517134"
+operators,Gather,"count=459, percentage=11.91588785046729"
+operators,Div,"count=102, percentage=2.64797507788162"
+operators,Cast,"count=204, percentage=5.29595015576324"
+operators,Unsqueeze,"count=663, percentage=17.21183800623053"
+operators,Concat,"count=153, percentage=3.9719626168224296"
+operators,Reshape,"count=153, percentage=3.9719626168224296"
+operators,ReduceMean,"count=102, percentage=2.64797507788162"
+operators,Sub,"count=51, percentage=1.32398753894081"
+operators,Add,"count=118, percentage=3.063343717549325"
+operators,Sqrt,"count=51, percentage=1.32398753894081"
+operators,ConstantOfShape,"count=51, percentage=1.32398753894081"
+operators,Equal,"count=51, percentage=1.32398753894081"
+operators,Where,"count=51, percentage=1.32398753894081"
+operators,Expand,"count=51, percentage=1.32398753894081"
+operators,MaxPool,"count=1, percentage=0.02596053997923157"
+operators,AveragePool,"count=3, percentage=0.0778816199376947"
+operators,GlobalAveragePool,"count=1, percentage=0.02596053997923157"
+operators,Flatten,"count=1, percentage=0.02596053997923157"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

@@ -1,0 +1,139 @@
+{
+  "summary": {
+    "model": "./efficientformerv2_s2.onnx",
+    "node_count": 1131,
+    "input_count": 1,
+    "output_count": 1,
+    "num_params": 12589472,
+    "model_size": 48.37381362915039
+  },
+  "parameter_data_types": {
+    "FLOAT": 12589472
+  },
+  "operators": {
+    "Conv": {
+      "count": 155,
+      "percentage": 13.704686118479223
+    },
+    "Constant": {
+      "count": 339,
+      "percentage": 29.973474801061005
+    },
+    "Div": {
+      "count": 68,
+      "percentage": 6.012378426171529
+    },
+    "Erf": {
+      "count": 67,
+      "percentage": 5.92396109637489
+    },
+    "Add": {
+      "count": 124,
+      "percentage": 10.963748894783377
+    },
+    "Mul": {
+      "count": 179,
+      "percentage": 15.826702033598586
+    },
+    "Shape": {
+      "count": 9,
+      "percentage": 0.7957559681697612
+    },
+    "Gather": {
+      "count": 18,
+      "percentage": 1.5915119363395225
+    },
+    "Unsqueeze": {
+      "count": 36,
+      "percentage": 3.183023872679045
+    },
+    "Concat": {
+      "count": 36,
+      "percentage": 3.183023872679045
+    },
+    "Reshape": {
+      "count": 36,
+      "percentage": 3.183023872679045
+    },
+    "Transpose": {
+      "count": 27,
+      "percentage": 2.3872679045092835
+    },
+    "MatMul": {
+      "count": 18,
+      "percentage": 1.5915119363395225
+    },
+    "Softmax": {
+      "count": 9,
+      "percentage": 0.7957559681697612
+    },
+    "Resize": {
+      "count": 4,
+      "percentage": 0.3536693191865605
+    },
+    "Pad": {
+      "count": 1,
+      "percentage": 0.08841732979664013
+    },
+    "AveragePool": {
+      "count": 1,
+      "percentage": 0.08841732979664013
+    },
+    "BatchNormalization": {
+      "count": 1,
+      "percentage": 0.08841732979664013
+    },
+    "ReduceMean": {
+      "count": 1,
+      "percentage": 0.08841732979664013
+    },
+    "Gemm": {
+      "count": 2,
+      "percentage": 0.17683465959328026
+    }
+  },
+  "operators_list": [
+    "Conv",
+    "Constant",
+    "Div",
+    "Erf",
+    "Add",
+    "Mul",
+    "Shape",
+    "Gather",
+    "Unsqueeze",
+    "Concat",
+    "Reshape",
+    "Transpose",
+    "MatMul",
+    "Softmax",
+    "Resize",
+    "Pad",
+    "AveragePool",
+    "BatchNormalization",
+    "ReduceMean",
+    "Gemm"
+  ],
+  "inputs": [
+    {
+      "name": "input",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        3,
+        224,
+        224
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        1000
+      ]
+    }
+  ]
+}

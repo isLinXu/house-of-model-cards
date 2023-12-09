@@ -1,0 +1,37 @@
+██████╗ ███╗   ██╗███╗   ██╗██╗  ██╗     ███████╗██╗  ██╗██████╗ ██╗      ██████╗ ██████╗ ███████╗██████╗ 
+██╔═══██╗████╗  ██║████╗  ██║╚██╗██╔╝     ██╔════╝╚██╗██╔╝██╔══██╗██║     ██╔═══██╗██╔══██╗██╔════╝██╔══██╗ 
+██║   ██║██╔██╗ ██║██╔██╗ ██║ ╚███╔╝█████╗█████╗   ╚███╔╝ ██████╔╝██║     ██║   ██║██████╔╝█████╗  ██████╔╝ 
+██║   ██║██║╚██╗██║██║╚██╗██║ ██╔██╗╚════╝██╔══╝   ██╔██╗ ██╔═══╝ ██║     ██║   ██║██╔══██╗██╔══╝  ██╔══██╗
+╚██████╔╝██║ ╚████║██║ ╚████║██╔╝ ██╗     ███████╗██╔╝ ██╗██║     ███████╗╚██████╔╝██║  ██║███████╗██║  ██║ 
+╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═══╝╚═╝  ╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝     ╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
+================================【summary】================================
+| model: ./resnetblur50.onnx
+| node_count: 194
+| input_count: 1
+| output_count: 1
+| num_params: 25530472
+| model_size: 97.457275390625
+=====================【parameter_data_types】=====================
+| FLOAT: 25530472
+===========================【operators-lists】===========================
+| ['Conv', 'Relu', 'MaxPool', 'Constant', 'ConstantOfShape', 'Concat', 'Reshape', 'Slice', 'Transpose', 'Cast', 'Pad', 'Add', 'GlobalAveragePool', 'Flatten', 'Gemm']
+===========================【operators】===========================
+| Conv: count=57, percentage=29.381443298969074
+| Relu: count=49, percentage=25.257731958762886
+| MaxPool: count=1, percentage=0.5154639175257731
+| Constant: count=36, percentage=18.556701030927837
+| ConstantOfShape: count=4, percentage=2.0618556701030926
+| Concat: count=4, percentage=2.0618556701030926
+| Reshape: count=8, percentage=4.123711340206185
+| Slice: count=4, percentage=2.0618556701030926
+| Transpose: count=4, percentage=2.0618556701030926
+| Cast: count=4, percentage=2.0618556701030926
+| Pad: count=4, percentage=2.0618556701030926
+| Add: count=16, percentage=8.24742268041237
+| GlobalAveragePool: count=1, percentage=0.5154639175257731
+| Flatten: count=1, percentage=0.5154639175257731
+| Gemm: count=1, percentage=0.5154639175257731
+===========================【inputs】==============================
+| name=input, dtype=FLOAT, shape=[0, 3, 224, 224]
+===========================【outputs】=============================
+name=output, dtype=FLOAT, shape=[0, 1000]

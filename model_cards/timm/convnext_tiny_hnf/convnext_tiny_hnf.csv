@@ -1,0 +1,24 @@
+section,key,value
+summary,model,./convnext_tiny_hnf.onnx
+summary,node_count,540
+summary,input_count,1
+summary,output_count,1
+summary,num_params,28589128
+summary,model_size,109.1695556640625
+parameter_data_types,FLOAT,28589128
+operators,Conv,"count=58, percentage=10.74074074074074"
+operators,Transpose,"count=46, percentage=8.518518518518519"
+operators,ReduceMean,"count=46, percentage=8.518518518518519"
+operators,Sub,"count=23, percentage=4.2592592592592595"
+operators,Constant,"count=100, percentage=18.51851851851852"
+operators,Pow,"count=23, percentage=4.2592592592592595"
+operators,Add,"count=82, percentage=15.185185185185185"
+operators,Sqrt,"count=23, percentage=4.2592592592592595"
+operators,Div,"count=41, percentage=7.592592592592593"
+operators,Mul,"count=77, percentage=14.25925925925926"
+operators,Erf,"count=18, percentage=3.3333333333333335"
+operators,GlobalAveragePool,"count=1, percentage=0.1851851851851852"
+operators,Flatten,"count=1, percentage=0.1851851851851852"
+operators,Gemm,"count=1, percentage=0.1851851851851852"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

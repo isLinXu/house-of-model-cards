@@ -1,0 +1,79 @@
+{
+  "summary": {
+    "model": "./mobileone_s0.onnx",
+    "node_count": 513,
+    "input_count": 1,
+    "output_count": 1,
+    "num_params": 5268808,
+    "model_size": 20.22957134246826
+  },
+  "parameter_data_types": {
+    "FLOAT": 5268808
+  },
+  "operators": {
+    "Conv": {
+      "count": 191,
+      "percentage": 37.23196881091618
+    },
+    "Add": {
+      "count": 212,
+      "percentage": 41.32553606237816
+    },
+    "Constant": {
+      "count": 29,
+      "percentage": 5.653021442495127
+    },
+    "Relu": {
+      "count": 43,
+      "percentage": 8.382066276803119
+    },
+    "BatchNormalization": {
+      "count": 35,
+      "percentage": 6.82261208576998
+    },
+    "GlobalAveragePool": {
+      "count": 1,
+      "percentage": 0.1949317738791423
+    },
+    "Flatten": {
+      "count": 1,
+      "percentage": 0.1949317738791423
+    },
+    "Gemm": {
+      "count": 1,
+      "percentage": 0.1949317738791423
+    }
+  },
+  "operators_list": [
+    "Conv",
+    "Add",
+    "Constant",
+    "Relu",
+    "BatchNormalization",
+    "GlobalAveragePool",
+    "Flatten",
+    "Gemm"
+  ],
+  "inputs": [
+    {
+      "name": "input",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        3,
+        224,
+        224
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        1000
+      ]
+    }
+  ]
+}

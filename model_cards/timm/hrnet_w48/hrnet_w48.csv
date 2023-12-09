@@ -1,0 +1,18 @@
+section,key,value
+summary,model,./hrnet_w48.onnx
+summary,node_count,882
+summary,input_count,1
+summary,output_count,1
+summary,num_params,77415336
+summary,model_size,295.5403518676758
+parameter_data_types,FLOAT,77415336
+operators,Conv,"count=325, percentage=36.848072562358276"
+operators,Relu,"count=284, percentage=32.19954648526077"
+operators,Add,"count=177, percentage=20.068027210884352"
+operators,Constant,"count=62, percentage=7.029478458049887"
+operators,Resize,"count=31, percentage=3.5147392290249435"
+operators,GlobalAveragePool,"count=1, percentage=0.11337868480725624"
+operators,Flatten,"count=1, percentage=0.11337868480725624"
+operators,Gemm,"count=1, percentage=0.11337868480725624"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

@@ -1,0 +1,19 @@
+section,key,value
+summary,model,./cspresnext50.onnx
+summary,node_count,131
+summary,input_count,1
+summary,output_count,1
+summary,num_params,20541160
+summary,model_size,78.39146614074707
+parameter_data_types,FLOAT,20541160
+operators,Conv,"count=55, percentage=41.98473282442748"
+operators,LeakyRelu,"count=51, percentage=38.93129770992366"
+operators,MaxPool,"count=1, percentage=0.7633587786259541"
+operators,Split,"count=4, percentage=3.0534351145038165"
+operators,Add,"count=13, percentage=9.923664122137405"
+operators,Concat,"count=4, percentage=3.0534351145038165"
+operators,GlobalAveragePool,"count=1, percentage=0.7633587786259541"
+operators,Flatten,"count=1, percentage=0.7633587786259541"
+operators,Gemm,"count=1, percentage=0.7633587786259541"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 256, 256]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

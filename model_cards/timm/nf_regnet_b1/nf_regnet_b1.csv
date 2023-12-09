@@ -1,0 +1,26 @@
+section,key,value
+summary,model,./nf_regnet_b1.onnx
+summary,node_count,1027
+summary,input_count,1
+summary,output_count,1
+summary,num_params,15095104
+summary,model_size,57.887062072753906
+parameter_data_types,FLOAT,15095016
+parameter_data_types,INT64,88
+operators,Identity,"count=44, percentage=4.284323271665044"
+operators,Constant,"count=126, percentage=12.268743914313534"
+operators,ReduceMean,"count=218, percentage=21.226874391431352"
+operators,Sub,"count=66, percentage=6.426484907497566"
+operators,Mul,"count=207, percentage=20.155793573515094"
+operators,BatchNormalization,"count=66, percentage=6.426484907497566"
+operators,Reshape,"count=66, percentage=6.426484907497566"
+operators,Conv,"count=106, percentage=10.321324245374878"
+operators,Sigmoid,"count=81, percentage=7.8870496592015575"
+operators,AveragePool,"count=4, percentage=0.3894839337877313"
+operators,Relu,"count=20, percentage=1.9474196689386565"
+operators,Add,"count=20, percentage=1.9474196689386565"
+operators,GlobalAveragePool,"count=1, percentage=0.09737098344693282"
+operators,Flatten,"count=1, percentage=0.09737098344693282"
+operators,Gemm,"count=1, percentage=0.09737098344693282"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 256, 256]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

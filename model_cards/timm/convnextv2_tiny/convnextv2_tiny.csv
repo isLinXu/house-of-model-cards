@@ -1,0 +1,27 @@
+section,key,value
+summary,model,./convnextv2_tiny.onnx
+summary,node_count,846
+summary,input_count,1
+summary,output_count,1
+summary,num_params,28635496
+summary,model_size,109.39964389801025
+parameter_data_types,FLOAT,28635496
+operators,Conv,"count=22, percentage=2.6004728132387704"
+operators,Transpose,"count=46, percentage=5.4373522458628845"
+operators,ReduceMean,"count=64, percentage=7.5650118203309695"
+operators,Sub,"count=23, percentage=2.7186761229314422"
+operators,Constant,"count=172, percentage=20.33096926713948"
+operators,Pow,"count=59, percentage=6.973995271867612"
+operators,Add,"count=172, percentage=20.33096926713948"
+operators,Sqrt,"count=23, percentage=2.7186761229314422"
+operators,Div,"count=59, percentage=6.973995271867612"
+operators,Mul,"count=113, percentage=13.356973995271867"
+operators,MatMul,"count=36, percentage=4.25531914893617"
+operators,Erf,"count=18, percentage=2.127659574468085"
+operators,Abs,"count=18, percentage=2.127659574468085"
+operators,ReduceSum,"count=18, percentage=2.127659574468085"
+operators,GlobalAveragePool,"count=1, percentage=0.1182033096926714"
+operators,Flatten,"count=1, percentage=0.1182033096926714"
+operators,Gemm,"count=1, percentage=0.1182033096926714"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 224, 224]"
+outputs,output,"dtype=FLOAT, shape=[0, 1000]"

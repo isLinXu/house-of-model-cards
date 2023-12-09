@@ -1,0 +1,79 @@
+{
+  "summary": {
+    "model": "./fbnetv3_d.onnx",
+    "node_count": 388,
+    "input_count": 1,
+    "output_count": 1,
+    "num_params": 10277968,
+    "model_size": 39.30118274688721
+  },
+  "parameter_data_types": {
+    "FLOAT": 10277968
+  },
+  "operators": {
+    "Conv": {
+      "count": 135,
+      "percentage": 34.79381443298969
+    },
+    "HardSigmoid": {
+      "count": 103,
+      "percentage": 26.54639175257732
+    },
+    "Mul": {
+      "count": 103,
+      "percentage": 26.54639175257732
+    },
+    "Add": {
+      "count": 25,
+      "percentage": 6.443298969072164
+    },
+    "ReduceMean": {
+      "count": 19,
+      "percentage": 4.896907216494846
+    },
+    "GlobalAveragePool": {
+      "count": 1,
+      "percentage": 0.25773195876288657
+    },
+    "Flatten": {
+      "count": 1,
+      "percentage": 0.25773195876288657
+    },
+    "Gemm": {
+      "count": 1,
+      "percentage": 0.25773195876288657
+    }
+  },
+  "operators_list": [
+    "Conv",
+    "HardSigmoid",
+    "Mul",
+    "Add",
+    "ReduceMean",
+    "GlobalAveragePool",
+    "Flatten",
+    "Gemm"
+  ],
+  "inputs": [
+    {
+      "name": "input",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        3,
+        224,
+        224
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "dtype": "FLOAT",
+      "shape": [
+        0,
+        1000
+      ]
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+section,key,value
+summary,model,/Users/gatilin/PycharmProjects/onnx-easy-tools/onnx_ckpts/mmyolo/dynamic/yolov7_tiny_syncbn_fast_8x16b-300e_coco.onnx
+summary,node_count,462
+summary,input_count,1
+summary,output_count,2
+summary,num_params,6221443
+summary,model_size,23.732921600341797
+parameter_data_types,FLOAT,6221418
+parameter_data_types,INT64,25
+operators,Conv,"count=58, percentage=12.554112554112553"
+operators,LeakyRelu,"count=55, percentage=11.904761904761903"
+operators,Concat,"count=46, percentage=9.956709956709958"
+operators,MaxPool,"count=6, percentage=1.2987012987012987"
+operators,Resize,"count=2, percentage=0.4329004329004329"
+operators,Add,"count=19, percentage=4.112554112554113"
+operators,Mul,"count=34, percentage=7.35930735930736"
+operators,Shape,"count=27, percentage=5.844155844155844"
+operators,Gather,"count=55, percentage=11.904761904761903"
+operators,Unsqueeze,"count=41, percentage=8.874458874458876"
+operators,Reshape,"count=40, percentage=8.658008658008658"
+operators,Slice,"count=9, percentage=1.948051948051948"
+operators,Range,"count=9, percentage=1.948051948051948"
+operators,Cast,"count=6, percentage=1.2987012987012987"
+operators,Tile,"count=8, percentage=1.7316017316017316"
+operators,ConstantOfShape,"count=5, percentage=1.0822510822510822"
+operators,Transpose,"count=11, percentage=2.380952380952381"
+operators,Sigmoid,"count=3, percentage=0.6493506493506493"
+operators,Sub,"count=6, percentage=1.2987012987012987"
+operators,Pow,"count=2, percentage=0.4329004329004329"
+operators,Div,"count=2, percentage=0.4329004329004329"
+operators,ReduceMax,"count=1, percentage=0.21645021645021645"
+operators,Less,"count=2, percentage=0.4329004329004329"
+operators,Where,"count=4, percentage=0.8658008658008658"
+operators,TopK,"count=2, percentage=0.4329004329004329"
+operators,Flatten,"count=6, percentage=1.2987012987012987"
+operators,NonMaxSuppression,"count=1, percentage=0.21645021645021645"
+operators,Expand,"count=1, percentage=0.21645021645021645"
+operators,Equal,"count=1, percentage=0.21645021645021645"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 0, 0]"
+outputs,dets,"dtype=FLOAT, shape=[0, 0, 0]"
+outputs,labels,"dtype=INT64, shape=[0, 0]"

@@ -1,0 +1,38 @@
+section,key,value
+summary,model,/Users/gatilin/PycharmProjects/onnx-easy-tools/onnx_ckpts/mmyolo/dynamic/yolov6_t_syncbn_fast_8xb32-400e_coco.onnx
+summary,node_count,353
+summary,input_count,1
+summary,output_count,2
+summary,num_params,9695560
+summary,model_size,36.985626220703125
+parameter_data_types,FLOAT,9695539
+parameter_data_types,INT64,21
+operators,Conv,"count=56, percentage=15.864022662889518"
+operators,Relu,"count=41, percentage=11.614730878186968"
+operators,MaxPool,"count=3, percentage=0.84985835694051"
+operators,Concat,"count=29, percentage=8.21529745042493"
+operators,ConvTranspose,"count=2, percentage=0.56657223796034"
+operators,Sigmoid,"count=10, percentage=2.8328611898017"
+operators,Mul,"count=27, percentage=7.64872521246459"
+operators,Shape,"count=24, percentage=6.79886685552408"
+operators,Gather,"count=38, percentage=10.764872521246458"
+operators,Range,"count=9, percentage=2.5495750708215295"
+operators,Cast,"count=6, percentage=1.69971671388102"
+operators,Add,"count=15, percentage=4.2492917847025495"
+operators,Reshape,"count=28, percentage=7.932011331444759"
+operators,Expand,"count=7, percentage=1.9830028328611897"
+operators,Unsqueeze,"count=24, percentage=6.79886685552408"
+operators,ConstantOfShape,"count=5, percentage=1.41643059490085"
+operators,Transpose,"count=8, percentage=2.26628895184136"
+operators,Sub,"count=2, percentage=0.56657223796034"
+operators,ReduceMax,"count=1, percentage=0.28328611898017"
+operators,Less,"count=2, percentage=0.56657223796034"
+operators,Where,"count=4, percentage=1.13314447592068"
+operators,TopK,"count=2, percentage=0.56657223796034"
+operators,Flatten,"count=6, percentage=1.69971671388102"
+operators,NonMaxSuppression,"count=1, percentage=0.28328611898017"
+operators,Tile,"count=2, percentage=0.56657223796034"
+operators,Equal,"count=1, percentage=0.28328611898017"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 0, 0]"
+outputs,dets,"dtype=FLOAT, shape=[0, 0, 0]"
+outputs,labels,"dtype=INT64, shape=[0, 0]"

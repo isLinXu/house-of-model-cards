@@ -1,0 +1,52 @@
+██████╗ ███╗   ██╗███╗   ██╗██╗  ██╗     ███████╗██╗  ██╗██████╗ ██╗      ██████╗ ██████╗ ███████╗██████╗ 
+██╔═══██╗████╗  ██║████╗  ██║╚██╗██╔╝     ██╔════╝╚██╗██╔╝██╔══██╗██║     ██╔═══██╗██╔══██╗██╔════╝██╔══██╗ 
+██║   ██║██╔██╗ ██║██╔██╗ ██║ ╚███╔╝█████╗█████╗   ╚███╔╝ ██████╔╝██║     ██║   ██║██████╔╝█████╗  ██████╔╝ 
+██║   ██║██║╚██╗██║██║╚██╗██║ ██╔██╗╚════╝██╔══╝   ██╔██╗ ██╔═══╝ ██║     ██║   ██║██╔══██╗██╔══╝  ██╔══██╗
+╚██████╔╝██║ ╚████║██║ ╚████║██╔╝ ██╗     ███████╗██╔╝ ██╗██║     ███████╗╚██████╔╝██║  ██║███████╗██║  ██║ 
+╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═══╝╚═╝  ╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝     ╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
+================================【summary】================================
+| model: /Users/gatilin/PycharmProjects/onnx-easy-tools/onnx_ckpts/mmyolo/dynamic/yolov5_m-v61_fast_1xb64-50e_voc.onnx
+| node_count: 593
+| input_count: 1
+| output_count: 2
+| num_params: 20929786
+| model_size: 79.8407974243164
+=====================【parameter_data_types】=====================
+| FLOAT: 20929761
+| INT64: 25
+===========================【operators-lists】===========================
+| ['Conv', 'Sigmoid', 'Mul', 'Add', 'Concat', 'MaxPool', 'Resize', 'Shape', 'Gather', 'Unsqueeze', 'Reshape', 'Slice', 'Range', 'Cast', 'Tile', 'ConstantOfShape', 'Transpose', 'Sub', 'Pow', 'Div', 'ReduceMax', 'Less', 'Where', 'TopK', 'Flatten', 'NonMaxSuppression', 'Expand', 'Equal']
+===========================【operators】===========================
+| Conv: count=82, percentage=13.827993254637436
+| Sigmoid: count=82, percentage=13.827993254637436
+| Mul: count=110, percentage=18.54974704890388
+| Add: count=30, percentage=5.059021922428331
+| Concat: count=45, percentage=7.588532883642496
+| MaxPool: count=3, percentage=0.5059021922428331
+| Resize: count=2, percentage=0.33726812816188867
+| Shape: count=27, percentage=4.5531197301854975
+| Gather: count=55, percentage=9.27487352445194
+| Unsqueeze: count=41, percentage=6.913996627318718
+| Reshape: count=40, percentage=6.745362563237774
+| Slice: count=9, percentage=1.5177065767284992
+| Range: count=9, percentage=1.5177065767284992
+| Cast: count=6, percentage=1.0118043844856661
+| Tile: count=8, percentage=1.3490725126475547
+| ConstantOfShape: count=5, percentage=0.8431703204047217
+| Transpose: count=11, percentage=1.854974704890388
+| Sub: count=6, percentage=1.0118043844856661
+| Pow: count=2, percentage=0.33726812816188867
+| Div: count=2, percentage=0.33726812816188867
+| ReduceMax: count=1, percentage=0.16863406408094433
+| Less: count=2, percentage=0.33726812816188867
+| Where: count=4, percentage=0.6745362563237773
+| TopK: count=2, percentage=0.33726812816188867
+| Flatten: count=6, percentage=1.0118043844856661
+| NonMaxSuppression: count=1, percentage=0.16863406408094433
+| Expand: count=1, percentage=0.16863406408094433
+| Equal: count=1, percentage=0.16863406408094433
+===========================【inputs】==============================
+| name=input, dtype=FLOAT, shape=[0, 3, 0, 0]
+===========================【outputs】=============================
+name=dets, dtype=FLOAT, shape=[0, 0, 0]
+name=labels, dtype=INT64, shape=[0, 0]

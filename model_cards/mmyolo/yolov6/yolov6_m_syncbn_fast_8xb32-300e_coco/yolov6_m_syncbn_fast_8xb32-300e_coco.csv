@@ -1,0 +1,38 @@
+section,key,value
+summary,model,/Users/gatilin/PycharmProjects/onnx-easy-tools/onnx_ckpts/mmyolo/dynamic/yolov6_m_syncbn_fast_8xb32-300e_coco.onnx
+summary,node_count,493
+summary,input_count,1
+summary,output_count,2
+summary,num_params,34243257
+summary,model_size,130.62765884399414
+parameter_data_types,FLOAT,34243236
+parameter_data_types,INT64,21
+operators,Conv,"count=98, percentage=19.878296146044626"
+operators,Relu,"count=83, percentage=16.835699797160245"
+operators,Mul,"count=51, percentage=10.344827586206897"
+operators,Add,"count=39, percentage=7.910750507099391"
+operators,Concat,"count=37, percentage=7.505070993914807"
+operators,MaxPool,"count=3, percentage=0.6085192697768762"
+operators,ConvTranspose,"count=2, percentage=0.4056795131845842"
+operators,Sigmoid,"count=10, percentage=2.028397565922921"
+operators,Shape,"count=24, percentage=4.86815415821501"
+operators,Gather,"count=38, percentage=7.707910750507099"
+operators,Range,"count=9, percentage=1.8255578093306288"
+operators,Cast,"count=6, percentage=1.2170385395537524"
+operators,Reshape,"count=28, percentage=5.679513184584178"
+operators,Expand,"count=7, percentage=1.4198782961460445"
+operators,Unsqueeze,"count=24, percentage=4.86815415821501"
+operators,ConstantOfShape,"count=5, percentage=1.0141987829614605"
+operators,Transpose,"count=8, percentage=1.6227180527383367"
+operators,Sub,"count=2, percentage=0.4056795131845842"
+operators,ReduceMax,"count=1, percentage=0.2028397565922921"
+operators,Less,"count=2, percentage=0.4056795131845842"
+operators,Where,"count=4, percentage=0.8113590263691683"
+operators,TopK,"count=2, percentage=0.4056795131845842"
+operators,Flatten,"count=6, percentage=1.2170385395537524"
+operators,NonMaxSuppression,"count=1, percentage=0.2028397565922921"
+operators,Tile,"count=2, percentage=0.4056795131845842"
+operators,Equal,"count=1, percentage=0.2028397565922921"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 0, 0]"
+outputs,dets,"dtype=FLOAT, shape=[0, 0, 0]"
+outputs,labels,"dtype=INT64, shape=[0, 0]"

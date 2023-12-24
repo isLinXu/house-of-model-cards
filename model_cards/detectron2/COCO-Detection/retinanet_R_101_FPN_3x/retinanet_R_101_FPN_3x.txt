@@ -1,0 +1,66 @@
+██████╗ ███╗   ██╗███╗   ██╗██╗  ██╗     ███████╗██╗  ██╗██████╗ ██╗      ██████╗ ██████╗ ███████╗██████╗ 
+██╔═══██╗████╗  ██║████╗  ██║╚██╗██╔╝     ██╔════╝╚██╗██╔╝██╔══██╗██║     ██╔═══██╗██╔══██╗██╔════╝██╔══██╗ 
+██║   ██║██╔██╗ ██║██╔██╗ ██║ ╚███╔╝█████╗█████╗   ╚███╔╝ ██████╔╝██║     ██║   ██║██████╔╝█████╗  ██████╔╝ 
+██║   ██║██║╚██╗██║██║╚██╗██║ ██╔██╗╚════╝██╔══╝   ██╔██╗ ██╔═══╝ ██║     ██║   ██║██╔══██╗██╔══╝  ██╔══██╗
+╚██████╔╝██║ ╚████║██║ ╚████║██╔╝ ██╗     ███████╗██╔╝ ██╗██║     ███████╗╚██████╔╝██║  ██║███████╗██║  ██║ 
+╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═══╝╚═╝  ╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝     ╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
+================================【summary】================================
+| model: /Users/gatilin/PycharmProjects/onnx-easy-tools/onnx_ckpts/detectron2/COCO-Detection/retinanet_R_101_FPN_3x.onnx
+| node_count: 1709
+| input_count: 1
+| output_count: 4
+| num_params: 56908148
+| model_size: 217.0873565673828
+=====================【parameter_data_types】=====================
+| FLOAT: 56908148
+===========================【operators-lists】===========================
+| ['Constant', 'Sub', 'Div', 'ReduceMax', 'Add', 'Less', 'Xor', 'Mod', 'Equal', 'Not', 'And', 'Where', 'Mul', 'Gather', 'Unsqueeze', 'Concat', 'Shape', 'Cast', 'ConstantOfShape', 'Reshape', 'Slice', 'Transpose', 'Pad', 'Conv', 'Relu', 'MaxPool', 'Resize', 'Range', 'Expand', 'Sigmoid', 'Greater', 'NonZero', 'GatherND', 'Clip', 'TopK', 'Split', 'Squeeze', 'Exp', 'ReduceProd', 'If', 'ScatterND']
+===========================【operators】===========================
+| Constant: count=445, percentage=26.03861907548274
+| Sub: count=27, percentage=1.579871269748391
+| Div: count=22, percentage=1.2873025160912814
+| ReduceMax: count=1, percentage=0.058513750731421885
+| Add: count=75, percentage=4.388531304856641
+| Less: count=1, percentage=0.058513750731421885
+| Xor: count=1, percentage=0.058513750731421885
+| Mod: count=1, percentage=0.058513750731421885
+| Equal: count=10, percentage=0.5851375073142189
+| Not: count=1, percentage=0.058513750731421885
+| And: count=2, percentage=0.11702750146284377
+| Where: count=9, percentage=0.5266237565827969
+| Mul: count=61, percentage=3.5693387946167348
+| Gather: count=122, percentage=7.1386775892334695
+| Unsqueeze: count=127, percentage=7.43124634289058
+| Concat: count=65, percentage=3.8033937975424226
+| Shape: count=95, percentage=5.558806319485079
+| Cast: count=59, percentage=3.452311293153891
+| ConstantOfShape: count=9, percentage=0.5266237565827969
+| Reshape: count=80, percentage=4.681100058513751
+| Slice: count=34, percentage=1.989467524868344
+| Transpose: count=24, percentage=1.4043300175541251
+| Pad: count=1, percentage=0.058513750731421885
+| Conv: count=162, percentage=9.479227618490345
+| Relu: count=141, percentage=8.250438853130486
+| MaxPool: count=1, percentage=0.058513750731421885
+| Resize: count=2, percentage=0.11702750146284377
+| Range: count=18, percentage=1.0532475131655938
+| Expand: count=22, percentage=1.2873025160912814
+| Sigmoid: count=5, percentage=0.29256875365710944
+| Greater: count=7, percentage=0.40959625511995323
+| NonZero: count=13, percentage=0.7606787595084844
+| GatherND: count=8, percentage=0.4681100058513751
+| Clip: count=19, percentage=1.1117612638970158
+| TopK: count=5, percentage=0.29256875365710944
+| Split: count=6, percentage=0.3510825043885313
+| Squeeze: count=12, percentage=0.7021650087770626
+| Exp: count=10, percentage=0.5851375073142189
+| ReduceProd: count=1, percentage=0.058513750731421885
+| If: count=1, percentage=0.058513750731421885
+| ScatterND: count=4, percentage=0.23405500292568754
+===========================【inputs】==============================
+| name=x.1, dtype=FLOAT, shape=[3, 800, 1067]
+===========================【outputs】=============================
+name=b.11, dtype=FLOAT, shape=[0, 4]
+name=value.59, dtype=INT64, shape=[0]
+name=value.55, dtype=FLOAT, shape=[0]
+name=onnx::Split_2180, dtype=INT64, shape=[2]

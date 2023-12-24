@@ -1,0 +1,65 @@
+██████╗ ███╗   ██╗███╗   ██╗██╗  ██╗     ███████╗██╗  ██╗██████╗ ██╗      ██████╗ ██████╗ ███████╗██████╗ 
+██╔═══██╗████╗  ██║████╗  ██║╚██╗██╔╝     ██╔════╝╚██╗██╔╝██╔══██╗██║     ██╔═══██╗██╔══██╗██╔════╝██╔══██╗ 
+██║   ██║██╔██╗ ██║██╔██╗ ██║ ╚███╔╝█████╗█████╗   ╚███╔╝ ██████╔╝██║     ██║   ██║██████╔╝█████╗  ██████╔╝ 
+██║   ██║██║╚██╗██║██║╚██╗██║ ██╔██╗╚════╝██╔══╝   ██╔██╗ ██╔═══╝ ██║     ██║   ██║██╔══██╗██╔══╝  ██╔══██╗
+╚██████╔╝██║ ╚████║██║ ╚████║██╔╝ ██╗     ███████╗██╔╝ ██╗██║     ███████╗╚██████╔╝██║  ██║███████╗██║  ██║ 
+╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═══╝╚═╝  ╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝     ╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
+================================【summary】================================
+| model: /Users/gatilin/PycharmProjects/onnx-easy-tools/onnx_ckpts/detectron2/COCO-Detection/faster_rcnn_R_101_C4_3x.onnx
+| node_count: 812
+| input_count: 1
+| output_count: 4
+| num_params: 52784220
+| model_size: 201.35581970214844
+=====================【parameter_data_types】=====================
+| FLOAT: 52784220
+===========================【operators-lists】===========================
+| ['Constant', 'Sub', 'Div', 'ReduceMax', 'Gather', 'Unsqueeze', 'Concat', 'Shape', 'Cast', 'ConstantOfShape', 'Reshape', 'Slice', 'Transpose', 'Pad', 'Conv', 'Relu', 'MaxPool', 'Add', 'Mul', 'Range', 'Expand', 'Flatten', 'Equal', 'Where', 'Clip', 'Exp', 'TopK', 'Split', 'Squeeze', 'Greater', 'And', 'NonZero', 'GatherND', 'ReduceProd', 'If', 'RoiAlign', 'ReduceMean', 'Gemm', 'Softmax', 'NonMaxSuppression']
+===========================【operators】===========================
+| Constant: count=182, percentage=22.413793103448278
+| Sub: count=14, percentage=1.7241379310344827
+| Div: count=10, percentage=1.2315270935960592
+| ReduceMax: count=2, percentage=0.24630541871921183
+| Gather: count=54, percentage=6.65024630541872
+| Unsqueeze: count=57, percentage=7.0197044334975365
+| Concat: count=28, percentage=3.4482758620689653
+| Shape: count=26, percentage=3.201970443349754
+| Cast: count=32, percentage=3.9408866995073892
+| ConstantOfShape: count=5, percentage=0.6157635467980296
+| Reshape: count=24, percentage=2.955665024630542
+| Slice: count=16, percentage=1.9704433497536946
+| Transpose: count=9, percentage=1.1083743842364533
+| Pad: count=1, percentage=0.12315270935960591
+| Conv: count=107, percentage=13.177339901477833
+| Relu: count=101, percentage=12.438423645320198
+| MaxPool: count=1, percentage=0.12315270935960591
+| Add: count=51, percentage=6.280788177339902
+| Mul: count=23, percentage=2.832512315270936
+| Range: count=2, percentage=0.24630541871921183
+| Expand: count=5, percentage=0.6157635467980296
+| Flatten: count=2, percentage=0.24630541871921183
+| Equal: count=6, percentage=0.7389162561576355
+| Where: count=3, percentage=0.3694581280788177
+| Clip: count=13, percentage=1.600985221674877
+| Exp: count=4, percentage=0.49261083743842365
+| TopK: count=1, percentage=0.12315270935960591
+| Split: count=4, percentage=0.49261083743842365
+| Squeeze: count=4, percentage=0.49261083743842365
+| Greater: count=3, percentage=0.3694581280788177
+| And: count=1, percentage=0.12315270935960591
+| NonZero: count=6, percentage=0.7389162561576355
+| GatherND: count=5, percentage=0.6157635467980296
+| ReduceProd: count=1, percentage=0.12315270935960591
+| If: count=3, percentage=0.3694581280788177
+| RoiAlign: count=1, percentage=0.12315270935960591
+| ReduceMean: count=1, percentage=0.12315270935960591
+| Gemm: count=2, percentage=0.24630541871921183
+| Softmax: count=1, percentage=0.12315270935960591
+| NonMaxSuppression: count=1, percentage=0.12315270935960591
+===========================【inputs】==============================
+| name=x.1, dtype=FLOAT, shape=[3, 800, 1067]
+===========================【outputs】=============================
+name=boxes.23, dtype=FLOAT, shape=[0, 0]
+name=value.3, dtype=INT64, shape=[0]
+name=value, dtype=FLOAT, shape=[0]
+name=onnx::Split_538, dtype=INT64, shape=[2]

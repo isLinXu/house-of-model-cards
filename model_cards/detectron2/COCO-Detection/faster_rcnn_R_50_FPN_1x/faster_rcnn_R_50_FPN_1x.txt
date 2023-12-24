@@ -1,0 +1,73 @@
+██████╗ ███╗   ██╗███╗   ██╗██╗  ██╗     ███████╗██╗  ██╗██████╗ ██╗      ██████╗ ██████╗ ███████╗██████╗ 
+██╔═══██╗████╗  ██║████╗  ██║╚██╗██╔╝     ██╔════╝╚██╗██╔╝██╔══██╗██║     ██╔═══██╗██╔══██╗██╔════╝██╔══██╗ 
+██║   ██║██╔██╗ ██║██╔██╗ ██║ ╚███╔╝█████╗█████╗   ╚███╔╝ ██████╔╝██║     ██║   ██║██████╔╝█████╗  ██████╔╝ 
+██║   ██║██║╚██╗██║██║╚██╗██║ ██╔██╗╚════╝██╔══╝   ██╔██╗ ██╔═══╝ ██║     ██║   ██║██╔══██╗██╔══╝  ██╔══██╗
+╚██████╔╝██║ ╚████║██║ ╚████║██╔╝ ██╗     ███████╗██╔╝ ██╗██║     ███████╗╚██████╔╝██║  ██║███████╗██║  ██║ 
+╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═══╝╚═╝  ╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝     ╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
+================================【summary】================================
+| model: /Users/gatilin/PycharmProjects/onnx-easy-tools/onnx_ckpts/detectron2/COCO-Detection/faster_rcnn_R_50_FPN_1x.onnx
+| node_count: 1776
+| input_count: 1
+| output_count: 4
+| num_params: 41726496
+| model_size: 159.1739501953125
+=====================【parameter_data_types】=====================
+| FLOAT: 41726496
+===========================【operators-lists】===========================
+| ['Constant', 'Sub', 'Div', 'ReduceMax', 'Add', 'Less', 'Xor', 'Mod', 'Equal', 'Not', 'And', 'Where', 'Mul', 'Gather', 'Unsqueeze', 'Concat', 'Shape', 'Cast', 'ConstantOfShape', 'Reshape', 'Slice', 'Transpose', 'Pad', 'Conv', 'Relu', 'MaxPool', 'Resize', 'Range', 'Expand', 'Flatten', 'Clip', 'Exp', 'TopK', 'Split', 'Squeeze', 'Greater', 'NonZero', 'GatherND', 'ReduceProd', 'If', 'Sqrt', 'Log', 'Floor', 'RoiAlign', 'ScatterND', 'Gemm', 'Softmax', 'NonMaxSuppression']
+===========================【operators】===========================
+| Constant: count=523, percentage=29.4481981981982
+| Sub: count=34, percentage=1.9144144144144142
+| Div: count=29, percentage=1.6328828828828827
+| ReduceMax: count=2, percentage=0.11261261261261261
+| Add: count=72, percentage=4.054054054054054
+| Less: count=1, percentage=0.05630630630630631
+| Xor: count=1, percentage=0.05630630630630631
+| Mod: count=1, percentage=0.05630630630630631
+| Equal: count=18, percentage=1.0135135135135136
+| Not: count=1, percentage=0.05630630630630631
+| And: count=2, percentage=0.11261261261261261
+| Where: count=8, percentage=0.45045045045045046
+| Mul: count=73, percentage=4.110360360360361
+| Gather: count=136, percentage=7.657657657657657
+| Unsqueeze: count=158, percentage=8.896396396396396
+| Concat: count=96, percentage=5.405405405405405
+| Shape: count=98, percentage=5.518018018018018
+| Cast: count=67, percentage=3.772522522522523
+| ConstantOfShape: count=14, percentage=0.7882882882882882
+| Reshape: count=100, percentage=5.63063063063063
+| Slice: count=44, percentage=2.4774774774774775
+| Transpose: count=21, percentage=1.1824324324324325
+| Pad: count=1, percentage=0.05630630630630631
+| Conv: count=76, percentage=4.2792792792792795
+| Relu: count=56, percentage=3.153153153153153
+| MaxPool: count=2, percentage=0.11261261261261261
+| Resize: count=3, percentage=0.16891891891891891
+| Range: count=10, percentage=0.5630630630630631
+| Expand: count=17, percentage=0.9572072072072071
+| Flatten: count=11, percentage=0.6193693693693694
+| Clip: count=26, percentage=1.4639639639639639
+| Exp: count=12, percentage=0.6756756756756757
+| TopK: count=5, percentage=0.28153153153153154
+| Split: count=8, percentage=0.45045045045045046
+| Squeeze: count=8, percentage=0.45045045045045046
+| Greater: count=3, percentage=0.16891891891891891
+| NonZero: count=10, percentage=0.5630630630630631
+| GatherND: count=5, percentage=0.28153153153153154
+| ReduceProd: count=1, percentage=0.05630630630630631
+| If: count=6, percentage=0.33783783783783783
+| Sqrt: count=1, percentage=0.05630630630630631
+| Log: count=1, percentage=0.05630630630630631
+| Floor: count=1, percentage=0.05630630630630631
+| RoiAlign: count=4, percentage=0.22522522522522523
+| ScatterND: count=4, percentage=0.22522522522522523
+| Gemm: count=4, percentage=0.22522522522522523
+| Softmax: count=1, percentage=0.05630630630630631
+| NonMaxSuppression: count=1, percentage=0.05630630630630631
+===========================【inputs】==============================
+| name=x.1, dtype=FLOAT, shape=[3, 800, 1067]
+===========================【outputs】=============================
+name=boxes.35, dtype=FLOAT, shape=[0, 0]
+name=value.3, dtype=INT64, shape=[0]
+name=value, dtype=FLOAT, shape=[0]
+name=onnx::Split_303, dtype=INT64, shape=[2]

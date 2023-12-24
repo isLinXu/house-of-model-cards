@@ -1,0 +1,67 @@
+██████╗ ███╗   ██╗███╗   ██╗██╗  ██╗     ███████╗██╗  ██╗██████╗ ██╗      ██████╗ ██████╗ ███████╗██████╗ 
+██╔═══██╗████╗  ██║████╗  ██║╚██╗██╔╝     ██╔════╝╚██╗██╔╝██╔══██╗██║     ██╔═══██╗██╔══██╗██╔════╝██╔══██╗ 
+██║   ██║██╔██╗ ██║██╔██╗ ██║ ╚███╔╝█████╗█████╗   ╚███╔╝ ██████╔╝██║     ██║   ██║██████╔╝█████╗  ██████╔╝ 
+██║   ██║██║╚██╗██║██║╚██╗██║ ██╔██╗╚════╝██╔══╝   ██╔██╗ ██╔═══╝ ██║     ██║   ██║██╔══██╗██╔══╝  ██╔══██╗
+╚██████╔╝██║ ╚████║██║ ╚████║██╔╝ ██╗     ███████╗██╔╝ ██╗██║     ███████╗╚██████╔╝██║  ██║███████╗██║  ██║ 
+╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═══╝╚═╝  ╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝     ╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
+================================【summary】================================
+| model: /Users/gatilin/PycharmProjects/onnx-easy-tools/onnx_ckpts/detectron2/COCO-InstanceSegmentation/mask_rcnn_R_50_DC5_1x/mask_rcnn_R_50_DC5_1x.onnx
+| node_count: 787
+| input_count: 1
+| output_count: 5
+| num_params: 172380076
+| model_size: 657.5778045654297
+=====================【parameter_data_types】=====================
+| FLOAT: 172380076
+===========================【operators-lists】===========================
+| ['Constant', 'Sub', 'Div', 'ReduceMax', 'Gather', 'Unsqueeze', 'Concat', 'Shape', 'Cast', 'ConstantOfShape', 'Reshape', 'Slice', 'Transpose', 'Pad', 'Conv', 'Relu', 'MaxPool', 'Add', 'Mul', 'Range', 'Expand', 'Flatten', 'Equal', 'Where', 'Clip', 'Exp', 'TopK', 'Split', 'Squeeze', 'Greater', 'And', 'NonZero', 'GatherND', 'ReduceProd', 'If', 'RoiAlign', 'Gemm', 'Softmax', 'NonMaxSuppression', 'ConvTranspose', 'Sigmoid']
+===========================【operators】===========================
+| Constant: count=206, percentage=26.17534942820839
+| Sub: count=14, percentage=1.7789072426937738
+| Div: count=10, percentage=1.2706480304955527
+| ReduceMax: count=2, percentage=0.25412960609911056
+| Gather: count=63, percentage=8.005082592121983
+| Unsqueeze: count=62, percentage=7.878017789072427
+| Concat: count=35, percentage=4.447268106734435
+| Shape: count=32, percentage=4.066073697585769
+| Cast: count=35, percentage=4.447268106734435
+| ConstantOfShape: count=7, percentage=0.8894536213468869
+| Reshape: count=27, percentage=3.430749682337993
+| Slice: count=17, percentage=2.1601016518424396
+| Transpose: count=9, percentage=1.1435832274459974
+| Pad: count=1, percentage=0.12706480304955528
+| Conv: count=61, percentage=7.750952986022871
+| Relu: count=57, percentage=7.242693773824651
+| MaxPool: count=1, percentage=0.12706480304955528
+| Add: count=36, percentage=4.5743329097839895
+| Mul: count=26, percentage=3.303684879288437
+| Range: count=3, percentage=0.3811944091486658
+| Expand: count=7, percentage=0.8894536213468869
+| Flatten: count=4, percentage=0.5082592121982211
+| Equal: count=9, percentage=1.1435832274459974
+| Where: count=5, percentage=0.6353240152477764
+| Clip: count=13, percentage=1.6518424396442184
+| Exp: count=4, percentage=0.5082592121982211
+| TopK: count=1, percentage=0.12706480304955528
+| Split: count=6, percentage=0.7623888182973316
+| Squeeze: count=4, percentage=0.5082592121982211
+| Greater: count=3, percentage=0.3811944091486658
+| And: count=1, percentage=0.12706480304955528
+| NonZero: count=6, percentage=0.7623888182973316
+| GatherND: count=5, percentage=0.6353240152477764
+| ReduceProd: count=1, percentage=0.12706480304955528
+| If: count=4, percentage=0.5082592121982211
+| RoiAlign: count=2, percentage=0.25412960609911056
+| Gemm: count=4, percentage=0.5082592121982211
+| Softmax: count=1, percentage=0.12706480304955528
+| NonMaxSuppression: count=1, percentage=0.12706480304955528
+| ConvTranspose: count=1, percentage=0.12706480304955528
+| Sigmoid: count=1, percentage=0.12706480304955528
+===========================【inputs】==============================
+| name=x.1, dtype=FLOAT, shape=[3, 800, 1067]
+===========================【outputs】=============================
+name=boxes.23, dtype=FLOAT, shape=[0, 0]
+name=value.3, dtype=INT64, shape=[0]
+name=value.7, dtype=FLOAT, shape=[0, 0, 0, 0]
+name=value, dtype=FLOAT, shape=[0]
+name=onnx::Split_299, dtype=INT64, shape=[2]

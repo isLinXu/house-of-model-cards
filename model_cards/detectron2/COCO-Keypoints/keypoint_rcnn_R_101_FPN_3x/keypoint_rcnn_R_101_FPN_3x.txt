@@ -1,0 +1,77 @@
+██████╗ ███╗   ██╗███╗   ██╗██╗  ██╗     ███████╗██╗  ██╗██████╗ ██╗      ██████╗ ██████╗ ███████╗██████╗ 
+██╔═══██╗████╗  ██║████╗  ██║╚██╗██╔╝     ██╔════╝╚██╗██╔╝██╔══██╗██║     ██╔═══██╗██╔══██╗██╔════╝██╔══██╗ 
+██║   ██║██╔██╗ ██║██╔██╗ ██║ ╚███╔╝█████╗█████╗   ╚███╔╝ ██████╔╝██║     ██║   ██║██████╔╝█████╗  ██████╔╝ 
+██║   ██║██║╚██╗██║██║╚██╗██║ ██╔██╗╚════╝██╔══╝   ██╔██╗ ██╔═══╝ ██║     ██║   ██║██╔══██╗██╔══╝  ██╔══██╗
+╚██████╔╝██║ ╚████║██║ ╚████║██╔╝ ██╗     ███████╗██╔╝ ██╗██║     ███████╗╚██████╔╝██║  ██║███████╗██║  ██║ 
+╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═══╝╚═╝  ╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝     ╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
+================================【summary】================================
+| model: /Users/gatilin/PycharmProjects/onnx-easy-tools/onnx_ckpts/detectron2/COCO-Keypoints/keypoint_rcnn_R_101_FPN_3x.onnx
+| node_count: 2141
+| input_count: 1
+| output_count: 6
+| num_params: 78125734
+| model_size: 298.0260238647461
+=====================【parameter_data_types】=====================
+| FLOAT: 78125734
+===========================【operators-lists】===========================
+| ['Constant', 'Sub', 'Div', 'ReduceMax', 'Add', 'Less', 'Xor', 'Mod', 'Equal', 'Not', 'And', 'Where', 'Mul', 'Gather', 'Unsqueeze', 'Concat', 'Shape', 'Cast', 'ConstantOfShape', 'Reshape', 'Slice', 'Transpose', 'Pad', 'Conv', 'Relu', 'MaxPool', 'Resize', 'Range', 'Expand', 'Flatten', 'Clip', 'Exp', 'TopK', 'Split', 'Squeeze', 'Greater', 'NonZero', 'GatherND', 'ReduceProd', 'If', 'Sqrt', 'Log', 'Floor', 'RoiAlign', 'ScatterND', 'Gemm', 'Softmax', 'ConvTranspose', 'Ceil', 'Loop']
+===========================【operators】===========================
+| Constant: count=593, percentage=27.697337692666977
+| Sub: count=39, percentage=1.8215787015413358
+| Div: count=33, percentage=1.5413358243811304
+| ReduceMax: count=1, percentage=0.046707146193367584
+| Add: count=91, percentage=4.25035030359645
+| Less: count=1, percentage=0.046707146193367584
+| Xor: count=1, percentage=0.046707146193367584
+| Mod: count=1, percentage=0.046707146193367584
+| Equal: count=28, percentage=1.3078000934142924
+| Not: count=1, percentage=0.046707146193367584
+| And: count=2, percentage=0.09341429238673517
+| Where: count=10, percentage=0.4670714619336758
+| Mul: count=75, percentage=3.503035964502569
+| Gather: count=169, percentage=7.893507706679122
+| Unsqueeze: count=166, percentage=7.753386268099019
+| Concat: count=107, percentage=4.9976646426903315
+| Shape: count=115, percentage=5.371321812237272
+| Cast: count=77, percentage=3.596450256889304
+| ConstantOfShape: count=18, percentage=0.8407286314806165
+| Reshape: count=105, percentage=4.904250350303596
+| Slice: count=51, percentage=2.382064455861747
+| Transpose: count=24, percentage=1.120971508640822
+| Pad: count=1, percentage=0.046707146193367584
+| Conv: count=135, percentage=6.305464736104624
+| Relu: count=115, percentage=5.371321812237272
+| MaxPool: count=2, percentage=0.09341429238673517
+| Resize: count=4, percentage=0.18682858477347034
+| Range: count=11, percentage=0.5137786081270435
+| Expand: count=19, percentage=0.8874357776739842
+| Flatten: count=11, percentage=0.5137786081270435
+| Clip: count=29, percentage=1.35450723960766
+| Exp: count=12, percentage=0.560485754320411
+| TopK: count=5, percentage=0.2335357309668379
+| Split: count=14, percentage=0.6539000467071462
+| Squeeze: count=12, percentage=0.560485754320411
+| Greater: count=3, percentage=0.14012143858010276
+| NonZero: count=13, percentage=0.6071929005137786
+| GatherND: count=4, percentage=0.18682858477347034
+| ReduceProd: count=2, percentage=0.09341429238673517
+| If: count=10, percentage=0.4670714619336758
+| Sqrt: count=2, percentage=0.09341429238673517
+| Log: count=2, percentage=0.09341429238673517
+| Floor: count=2, percentage=0.09341429238673517
+| RoiAlign: count=8, percentage=0.37365716954694067
+| ScatterND: count=8, percentage=0.37365716954694067
+| Gemm: count=4, percentage=0.18682858477347034
+| Softmax: count=1, percentage=0.046707146193367584
+| ConvTranspose: count=1, percentage=0.046707146193367584
+| Ceil: count=2, percentage=0.09341429238673517
+| Loop: count=1, percentage=0.046707146193367584
+===========================【inputs】==============================
+| name=x.1553, dtype=FLOAT, shape=[3, 800, 1067]
+===========================【outputs】=============================
+name=boxes.35, dtype=FLOAT, shape=[0, 0]
+name=value.3, dtype=INT64, shape=[0]
+name=value.11, dtype=FLOAT, shape=[0, 0, 0, 0]
+name=value.7, dtype=FLOAT, shape=[0, 0, 0]
+name=value, dtype=FLOAT, shape=[0]
+name=onnx::Split_576, dtype=INT64, shape=[2]

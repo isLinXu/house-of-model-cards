@@ -1,4 +1,10 @@
 # Model Cards
+
+# <img src="https://img.shields.io/badge/🃏-Joker-color.svg" alt="小王"> Sota Model 
+
+---
+# <img src="https://img.shields.io/badge/%E2%99%A0-red.svg" alt="♠"> Image Classification 
+
 <table cellspacing="0" cellpadding="0">
 <!-- 第1行 -->
 <tr>
@@ -140,3 +146,15 @@
 </tr>
 <!-- 添加其他表格行 -->
 </table>
+
+---
+# <img src="https://img.shields.io/badge/%E2%99%A0-black.svg" alt="♠"> Object Detection
+
+---
+# <img src="https://img.shields.io/badge/%E2%99%A6-red.svg" alt="♦"> Semantic Segmentation
+
+---
+# <img src="https://img.shields.io/badge/%E2%99%A3-black.svg" alt="♣"> Instance Segmentation
+
+
+---

@@ -1,0 +1,52 @@
+██████╗ ███╗   ██╗███╗   ██╗██╗  ██╗     ███████╗██╗  ██╗██████╗ ██╗      ██████╗ ██████╗ ███████╗██████╗ 
+██╔═══██╗████╗  ██║████╗  ██║╚██╗██╔╝     ██╔════╝╚██╗██╔╝██╔══██╗██║     ██╔═══██╗██╔══██╗██╔════╝██╔══██╗ 
+██║   ██║██╔██╗ ██║██╔██╗ ██║ ╚███╔╝█████╗█████╗   ╚███╔╝ ██████╔╝██║     ██║   ██║██████╔╝█████╗  ██████╔╝ 
+██║   ██║██║╚██╗██║██║╚██╗██║ ██╔██╗╚════╝██╔══╝   ██╔██╗ ██╔═══╝ ██║     ██║   ██║██╔══██╗██╔══╝  ██╔══██╗
+╚██████╔╝██║ ╚████║██║ ╚████║██╔╝ ██╗     ███████╗██╔╝ ██╗██║     ███████╗╚██████╔╝██║  ██║███████╗██║  ██║ 
+╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═══╝╚═╝  ╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝     ╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
+================================【summary】================================
+| model: /Users/gatilin/PycharmProjects/onnx-easy-tools/onnx_ckpts/mmyolo/dynamic/yolov7_w-p6_syncbn_fast_8x16b-300e_coco.onnx
+| node_count: 739
+| input_count: 1
+| output_count: 2
+| num_params: 70397968
+| model_size: 268.54693603515625
+=====================【parameter_data_types】=====================
+| FLOAT: 70397941
+| INT64: 27
+===========================【operators-lists】===========================
+| ['Shape', 'Gather', 'Unsqueeze', 'Concat', 'Reshape', 'Transpose', 'Conv', 'Sigmoid', 'Mul', 'MaxPool', 'Resize', 'Add', 'Slice', 'Range', 'Cast', 'Tile', 'ConstantOfShape', 'Sub', 'Pow', 'Div', 'ReduceMax', 'Less', 'Where', 'TopK', 'Flatten', 'NonMaxSuppression', 'Expand', 'Equal']
+===========================【operators】===========================
+| Shape: count=34, percentage=4.600811907983761
+| Gather: count=67, percentage=9.066305818673884
+| Unsqueeze: count=55, percentage=7.442489851150203
+| Concat: count=58, percentage=7.848443843031124
+| Reshape: count=53, percentage=7.171853856562922
+| Transpose: count=15, percentage=2.029769959404601
+| Conv: count=107, percentage=14.479025710419485
+| Sigmoid: count=106, percentage=14.343707713125845
+| Mul: count=142, percentage=19.215155615696887
+| MaxPool: count=3, percentage=0.40595399188092013
+| Resize: count=3, percentage=0.40595399188092013
+| Add: count=21, percentage=2.841677943166441
+| Slice: count=12, percentage=1.6238159675236805
+| Range: count=11, percentage=1.4884979702300407
+| Cast: count=8, percentage=1.0825439783491204
+| Tile: count=10, percentage=1.3531799729364005
+| ConstantOfShape: count=6, percentage=0.8119079837618403
+| Sub: count=6, percentage=0.8119079837618403
+| Pow: count=2, percentage=0.2706359945872801
+| Div: count=2, percentage=0.2706359945872801
+| ReduceMax: count=1, percentage=0.13531799729364005
+| Less: count=2, percentage=0.2706359945872801
+| Where: count=4, percentage=0.5412719891745602
+| TopK: count=2, percentage=0.2706359945872801
+| Flatten: count=6, percentage=0.8119079837618403
+| NonMaxSuppression: count=1, percentage=0.13531799729364005
+| Expand: count=1, percentage=0.13531799729364005
+| Equal: count=1, percentage=0.13531799729364005
+===========================【inputs】==============================
+| name=input, dtype=FLOAT, shape=[0, 3, 0, 0]
+===========================【outputs】=============================
+name=dets, dtype=FLOAT, shape=[0, 0, 0]
+name=labels, dtype=INT64, shape=[0, 0]

@@ -1,0 +1,39 @@
+section,key,value
+summary,model,/Users/gatilin/PycharmProjects/onnx-easy-tools/onnx_ckpts/mmyolo/dynamic/rtmdet_m_syncbn_fast_8xb32-300e_coco.onnx
+summary,node_count,608
+summary,input_count,1
+summary,output_count,2
+summary,num_params,27339139
+summary,model_size,104.2905387878418
+parameter_data_types,FLOAT,27339115
+parameter_data_types,INT64,24
+operators,Conv,"count=122, percentage=20.065789473684212"
+operators,Sigmoid,"count=113, percentage=18.585526315789476"
+operators,Mul,"count=134, percentage=22.039473684210524"
+operators,Add,"count=19, percentage=3.125"
+operators,Concat,"count=37, percentage=6.0855263157894735"
+operators,GlobalAveragePool,"count=4, percentage=0.6578947368421052"
+operators,HardSigmoid,"count=4, percentage=0.6578947368421052"
+operators,MaxPool,"count=3, percentage=0.4934210526315789"
+operators,Resize,"count=2, percentage=0.3289473684210526"
+operators,Shape,"count=24, percentage=3.9473684210526314"
+operators,Gather,"count=38, percentage=6.25"
+operators,Range,"count=9, percentage=1.4802631578947367"
+operators,Cast,"count=6, percentage=0.9868421052631579"
+operators,Reshape,"count=28, percentage=4.605263157894736"
+operators,Expand,"count=7, percentage=1.151315789473684"
+operators,Unsqueeze,"count=24, percentage=3.9473684210526314"
+operators,ConstantOfShape,"count=5, percentage=0.8223684210526315"
+operators,Transpose,"count=8, percentage=1.3157894736842104"
+operators,Sub,"count=2, percentage=0.3289473684210526"
+operators,ReduceMax,"count=1, percentage=0.1644736842105263"
+operators,Less,"count=2, percentage=0.3289473684210526"
+operators,Where,"count=4, percentage=0.6578947368421052"
+operators,TopK,"count=2, percentage=0.3289473684210526"
+operators,Flatten,"count=6, percentage=0.9868421052631579"
+operators,NonMaxSuppression,"count=1, percentage=0.1644736842105263"
+operators,Tile,"count=2, percentage=0.3289473684210526"
+operators,Equal,"count=1, percentage=0.1644736842105263"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 0, 0]"
+outputs,dets,"dtype=FLOAT, shape=[0, 0, 0]"
+outputs,labels,"dtype=INT64, shape=[0, 0]"

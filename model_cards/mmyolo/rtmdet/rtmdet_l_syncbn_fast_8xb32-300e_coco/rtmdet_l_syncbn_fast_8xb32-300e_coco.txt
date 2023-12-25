@@ -1,0 +1,51 @@
+██████╗ ███╗   ██╗███╗   ██╗██╗  ██╗     ███████╗██╗  ██╗██████╗ ██╗      ██████╗ ██████╗ ███████╗██████╗ 
+██╔═══██╗████╗  ██║████╗  ██║╚██╗██╔╝     ██╔════╝╚██╗██╔╝██╔══██╗██║     ██╔═══██╗██╔══██╗██╔════╝██╔══██╗ 
+██║   ██║██╔██╗ ██║██╔██╗ ██║ ╚███╔╝█████╗█████╗   ╚███╔╝ ██████╔╝██║     ██║   ██║██████╔╝█████╗  ██████╔╝ 
+██║   ██║██║╚██╗██║██║╚██╗██║ ██╔██╗╚════╝██╔══╝   ██╔██╗ ██╔═══╝ ██║     ██║   ██║██╔══██╗██╔══╝  ██╔══██╗
+╚██████╔╝██║ ╚████║██║ ╚████║██╔╝ ██╗     ███████╗██╔╝ ██╗██║     ███████╗╚██████╔╝██║  ██║███████╗██║  ██║ 
+╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═══╝╚═╝  ╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝     ╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
+================================【summary】================================
+| model: /Users/gatilin/PycharmProjects/onnx-easy-tools/onnx_ckpts/mmyolo/dynamic/rtmdet_l_syncbn_fast_8xb32-300e_coco.onnx
+| node_count: 703
+| input_count: 1
+| output_count: 2
+| num_params: 56994555
+| model_size: 217.41697311401367
+=====================【parameter_data_types】=====================
+| FLOAT: 56994531
+| INT64: 24
+===========================【operators-lists】===========================
+| ['Conv', 'Sigmoid', 'Mul', 'Add', 'Concat', 'GlobalAveragePool', 'HardSigmoid', 'MaxPool', 'Resize', 'Shape', 'Gather', 'Range', 'Cast', 'Reshape', 'Expand', 'Unsqueeze', 'ConstantOfShape', 'Transpose', 'Sub', 'ReduceMax', 'Less', 'Where', 'TopK', 'Flatten', 'NonMaxSuppression', 'Tile', 'Equal']
+===========================【operators】===========================
+| Conv: count=152, percentage=21.62162162162162
+| Sigmoid: count=143, percentage=20.34139402560455
+| Mul: count=164, percentage=23.32859174964438
+| Add: count=24, percentage=3.4139402560455197
+| Concat: count=37, percentage=5.263157894736842
+| GlobalAveragePool: count=4, percentage=0.5689900426742532
+| HardSigmoid: count=4, percentage=0.5689900426742532
+| MaxPool: count=3, percentage=0.42674253200568996
+| Resize: count=2, percentage=0.2844950213371266
+| Shape: count=24, percentage=3.4139402560455197
+| Gather: count=38, percentage=5.405405405405405
+| Range: count=9, percentage=1.2802275960170697
+| Cast: count=6, percentage=0.8534850640113799
+| Reshape: count=28, percentage=3.982930298719772
+| Expand: count=7, percentage=0.995732574679943
+| Unsqueeze: count=24, percentage=3.4139402560455197
+| ConstantOfShape: count=5, percentage=0.7112375533428165
+| Transpose: count=8, percentage=1.1379800853485065
+| Sub: count=2, percentage=0.2844950213371266
+| ReduceMax: count=1, percentage=0.1422475106685633
+| Less: count=2, percentage=0.2844950213371266
+| Where: count=4, percentage=0.5689900426742532
+| TopK: count=2, percentage=0.2844950213371266
+| Flatten: count=6, percentage=0.8534850640113799
+| NonMaxSuppression: count=1, percentage=0.1422475106685633
+| Tile: count=2, percentage=0.2844950213371266
+| Equal: count=1, percentage=0.1422475106685633
+===========================【inputs】==============================
+| name=input, dtype=FLOAT, shape=[0, 3, 0, 0]
+===========================【outputs】=============================
+name=dets, dtype=FLOAT, shape=[0, 0, 0]
+name=labels, dtype=INT64, shape=[0, 0]

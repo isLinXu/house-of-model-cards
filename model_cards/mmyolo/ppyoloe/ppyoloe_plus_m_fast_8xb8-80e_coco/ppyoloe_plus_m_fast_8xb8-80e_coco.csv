@@ -1,0 +1,42 @@
+section,key,value
+summary,model,/Users/gatilin/PycharmProjects/onnx-easy-tools/onnx_ckpts/mmyolo/dynamic/ppyoloe_plus_m_fast_8xb8-80e_coco.onnx
+summary,node_count,613
+summary,input_count,1
+summary,output_count,2
+summary,num_params,23413554
+summary,model_size,89.31562042236328
+parameter_data_types,FLOAT,23413532
+parameter_data_types,INT64,22
+operators,Conv,"count=108, percentage=17.61827079934747"
+operators,Sigmoid,"count=96, percentage=15.660685154975528"
+operators,Mul,"count=120, percentage=19.575856443719413"
+operators,Add,"count=34, percentage=5.5464926590538335"
+operators,Concat,"count=41, percentage=6.688417618270799"
+operators,ReduceMean,"count=4, percentage=0.6525285481239804"
+operators,Div,"count=4, percentage=0.6525285481239804"
+operators,Clip,"count=4, percentage=0.6525285481239804"
+operators,MaxPool,"count=3, percentage=0.48939641109298526"
+operators,Resize,"count=2, percentage=0.3262642740619902"
+operators,Shape,"count=27, percentage=4.404567699836868"
+operators,Gather,"count=44, percentage=7.177814029363784"
+operators,GlobalAveragePool,"count=3, percentage=0.48939641109298526"
+operators,Unsqueeze,"count=27, percentage=4.404567699836868"
+operators,Reshape,"count=31, percentage=5.057096247960848"
+operators,Transpose,"count=14, percentage=2.2838499184339316"
+operators,Softmax,"count=3, percentage=0.48939641109298526"
+operators,Range,"count=9, percentage=1.468189233278956"
+operators,Cast,"count=6, percentage=0.9787928221859705"
+operators,Expand,"count=7, percentage=1.1419249592169658"
+operators,ConstantOfShape,"count=5, percentage=0.8156606851549755"
+operators,Sub,"count=2, percentage=0.3262642740619902"
+operators,ReduceMax,"count=1, percentage=0.1631321370309951"
+operators,Less,"count=2, percentage=0.3262642740619902"
+operators,Where,"count=4, percentage=0.6525285481239804"
+operators,TopK,"count=2, percentage=0.3262642740619902"
+operators,Flatten,"count=6, percentage=0.9787928221859705"
+operators,NonMaxSuppression,"count=1, percentage=0.1631321370309951"
+operators,Tile,"count=2, percentage=0.3262642740619902"
+operators,Equal,"count=1, percentage=0.1631321370309951"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 0, 0]"
+outputs,dets,"dtype=FLOAT, shape=[0, 0, 0]"
+outputs,labels,"dtype=INT64, shape=[0, 0]"

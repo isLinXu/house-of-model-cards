@@ -1,0 +1,40 @@
+section,key,value
+summary,model,/Users/gatilin/PycharmProjects/onnx-easy-tools/onnx_ckpts/mmyolo/dynamic/yolov7_w-p6_syncbn_fast_8x16b-300e_coco.onnx
+summary,node_count,739
+summary,input_count,1
+summary,output_count,2
+summary,num_params,70397968
+summary,model_size,268.54693603515625
+parameter_data_types,FLOAT,70397941
+parameter_data_types,INT64,27
+operators,Shape,"count=34, percentage=4.600811907983761"
+operators,Gather,"count=67, percentage=9.066305818673884"
+operators,Unsqueeze,"count=55, percentage=7.442489851150203"
+operators,Concat,"count=58, percentage=7.848443843031124"
+operators,Reshape,"count=53, percentage=7.171853856562922"
+operators,Transpose,"count=15, percentage=2.029769959404601"
+operators,Conv,"count=107, percentage=14.479025710419485"
+operators,Sigmoid,"count=106, percentage=14.343707713125845"
+operators,Mul,"count=142, percentage=19.215155615696887"
+operators,MaxPool,"count=3, percentage=0.40595399188092013"
+operators,Resize,"count=3, percentage=0.40595399188092013"
+operators,Add,"count=21, percentage=2.841677943166441"
+operators,Slice,"count=12, percentage=1.6238159675236805"
+operators,Range,"count=11, percentage=1.4884979702300407"
+operators,Cast,"count=8, percentage=1.0825439783491204"
+operators,Tile,"count=10, percentage=1.3531799729364005"
+operators,ConstantOfShape,"count=6, percentage=0.8119079837618403"
+operators,Sub,"count=6, percentage=0.8119079837618403"
+operators,Pow,"count=2, percentage=0.2706359945872801"
+operators,Div,"count=2, percentage=0.2706359945872801"
+operators,ReduceMax,"count=1, percentage=0.13531799729364005"
+operators,Less,"count=2, percentage=0.2706359945872801"
+operators,Where,"count=4, percentage=0.5412719891745602"
+operators,TopK,"count=2, percentage=0.2706359945872801"
+operators,Flatten,"count=6, percentage=0.8119079837618403"
+operators,NonMaxSuppression,"count=1, percentage=0.13531799729364005"
+operators,Expand,"count=1, percentage=0.13531799729364005"
+operators,Equal,"count=1, percentage=0.13531799729364005"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 0, 0]"
+outputs,dets,"dtype=FLOAT, shape=[0, 0, 0]"
+outputs,labels,"dtype=INT64, shape=[0, 0]"

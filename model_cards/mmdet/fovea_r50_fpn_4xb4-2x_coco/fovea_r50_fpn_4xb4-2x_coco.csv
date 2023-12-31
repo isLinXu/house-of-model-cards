@@ -1,0 +1,40 @@
+section,key,value
+summary,model,./onnx_ckpts/mmdet/dynamic/fovea_r50_fpn_4xb4-2x_coco.onnx
+summary,node_count,588
+summary,input_count,1
+summary,output_count,2
+summary,num_params,36393207
+summary,model_size,138.8290672302246
+parameter_data_types,FLOAT,36393183
+parameter_data_types,INT64,24
+operators,Shape,"count=31, percentage=5.272108843537415"
+operators,Slice,"count=3, percentage=0.5102040816326531"
+operators,Conv,"count=111, percentage=18.877551020408163"
+operators,Relu,"count=89, percentage=15.136054421768709"
+operators,MaxPool,"count=1, percentage=0.17006802721088435"
+operators,Add,"count=44, percentage=7.482993197278912"
+operators,Gather,"count=63, percentage=10.714285714285714"
+operators,Concat,"count=30, percentage=5.1020408163265305"
+operators,Resize,"count=2, percentage=0.3401360544217687"
+operators,Range,"count=12, percentage=2.0408163265306123"
+operators,Cast,"count=12, percentage=2.0408163265306123"
+operators,Mul,"count=36, percentage=6.122448979591836"
+operators,Reshape,"count=36, percentage=6.122448979591836"
+operators,Expand,"count=11, percentage=1.870748299319728"
+operators,Unsqueeze,"count=38, percentage=6.462585034013606"
+operators,Transpose,"count=12, percentage=2.0408163265306123"
+operators,Sigmoid,"count=5, percentage=0.8503401360544218"
+operators,Exp,"count=5, percentage=0.8503401360544218"
+operators,Sub,"count=12, percentage=2.0408163265306123"
+operators,Clip,"count=20, percentage=3.4013605442176873"
+operators,NonMaxSuppression,"count=1, percentage=0.17006802721088435"
+operators,Flatten,"count=4, percentage=0.6802721088435374"
+operators,Tile,"count=2, percentage=0.3401360544217687"
+operators,Equal,"count=1, percentage=0.17006802721088435"
+operators,Where,"count=3, percentage=0.5102040816326531"
+operators,ConstantOfShape,"count=2, percentage=0.3401360544217687"
+operators,Less,"count=1, percentage=0.17006802721088435"
+operators,TopK,"count=1, percentage=0.17006802721088435"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 0, 0]"
+outputs,dets,"dtype=FLOAT, shape=[0, 0, 0]"
+outputs,labels,"dtype=INT64, shape=[0, 0]"

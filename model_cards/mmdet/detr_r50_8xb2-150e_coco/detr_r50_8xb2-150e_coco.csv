@@ -1,0 +1,38 @@
+section,key,value
+summary,model,./onnx_ckpts/mmdet/dynamic/detr_r50_8xb2-150e_coco.onnx
+summary,node_count,948
+summary,input_count,1
+summary,output_count,2
+summary,num_params,41547466
+summary,model_size,158.49100494384766
+parameter_data_types,FLOAT,41547441
+parameter_data_types,INT64,25
+operators,Conv,"count=54, percentage=5.69620253164557"
+operators,Relu,"count=63, percentage=6.645569620253164"
+operators,MaxPool,"count=1, percentage=0.10548523206751054"
+operators,Add,"count=243, percentage=25.63291139240506"
+operators,Reshape,"count=68, percentage=7.172995780590717"
+operators,Transpose,"count=69, percentage=7.2784810126582276"
+operators,MatMul,"count=129, percentage=13.60759493670886"
+operators,Div,"count=55, percentage=5.80168776371308"
+operators,Softmax,"count=18, percentage=1.89873417721519"
+operators,ReduceMean,"count=70, percentage=7.383966244725738"
+operators,Sub,"count=37, percentage=3.9029535864978904"
+operators,Pow,"count=35, percentage=3.691983122362869"
+operators,Sqrt,"count=35, percentage=3.691983122362869"
+operators,Mul,"count=42, percentage=4.430379746835443"
+operators,Unsqueeze,"count=8, percentage=0.8438818565400843"
+operators,Concat,"count=3, percentage=0.31645569620253167"
+operators,Sigmoid,"count=1, percentage=0.10548523206751054"
+operators,Gather,"count=4, percentage=0.42194092827004215"
+operators,Slice,"count=1, percentage=0.10548523206751054"
+operators,ReduceMax,"count=1, percentage=0.10548523206751054"
+operators,ArgMax,"count=1, percentage=0.10548523206751054"
+operators,TopK,"count=1, percentage=0.10548523206751054"
+operators,Flatten,"count=2, percentage=0.21097046413502107"
+operators,Squeeze,"count=1, percentage=0.10548523206751054"
+operators,Split,"count=2, percentage=0.21097046413502107"
+operators,Clip,"count=4, percentage=0.42194092827004215"
+inputs,input,"dtype=FLOAT, shape=[1, 3, 800, 1333]"
+outputs,dets,"dtype=FLOAT, shape=[1, 100, 5]"
+outputs,labels,"dtype=INT64, shape=[1, 100]"

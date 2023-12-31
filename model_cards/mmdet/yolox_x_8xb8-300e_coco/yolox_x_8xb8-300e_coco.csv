@@ -1,0 +1,41 @@
+section,key,value
+summary,model,./onnx_ckpts/mmdet/dynamic/yolox_x_8xb8-300e_coco.onnx
+summary,node_count,751
+summary,input_count,1
+summary,output_count,2
+summary,num_params,99029413
+summary,model_size,377.7672309875488
+parameter_data_types,FLOAT,99029384
+parameter_data_types,INT64,29
+operators,Shape,"count=28, percentage=3.7283621837549936"
+operators,Gather,"count=41, percentage=5.459387483355526"
+operators,Unsqueeze,"count=24, percentage=3.1957390146471374"
+operators,Concat,"count=41, percentage=5.459387483355526"
+operators,Reshape,"count=33, percentage=4.394141145139813"
+operators,Transpose,"count=12, percentage=1.5978695073235687"
+operators,Conv,"count=155, percentage=20.63914780292943"
+operators,Sigmoid,"count=148, percentage=19.70705725699068"
+operators,Mul,"count=163, percentage=21.70439414114514"
+operators,Add,"count=46, percentage=6.125166444740346"
+operators,MaxPool,"count=3, percentage=0.3994673768308922"
+operators,Resize,"count=2, percentage=0.2663115845539281"
+operators,Range,"count=8, percentage=1.0652463382157125"
+operators,Cast,"count=6, percentage=0.7989347536617843"
+operators,Expand,"count=7, percentage=0.9320905459387484"
+operators,Slice,"count=4, percentage=0.5326231691078562"
+operators,Exp,"count=1, percentage=0.13315579227696406"
+operators,Div,"count=2, percentage=0.2663115845539281"
+operators,Sub,"count=2, percentage=0.2663115845539281"
+operators,ReduceMax,"count=2, percentage=0.2663115845539281"
+operators,Less,"count=3, percentage=0.3994673768308922"
+operators,Not,"count=1, percentage=0.13315579227696406"
+operators,Where,"count=5, percentage=0.6657789613848202"
+operators,TopK,"count=2, percentage=0.2663115845539281"
+operators,Flatten,"count=6, percentage=0.7989347536617843"
+operators,NonMaxSuppression,"count=1, percentage=0.13315579227696406"
+operators,Tile,"count=2, percentage=0.2663115845539281"
+operators,Equal,"count=1, percentage=0.13315579227696406"
+operators,ConstantOfShape,"count=2, percentage=0.2663115845539281"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 0, 0]"
+outputs,dets,"dtype=FLOAT, shape=[0, 0, 0]"
+outputs,labels,"dtype=INT64, shape=[0, 0]"

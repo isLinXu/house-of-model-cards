@@ -1,0 +1,51 @@
+██████╗ ███╗   ██╗███╗   ██╗██╗  ██╗     ███████╗██╗  ██╗██████╗ ██╗      ██████╗ ██████╗ ███████╗██████╗ 
+██╔═══██╗████╗  ██║████╗  ██║╚██╗██╔╝     ██╔════╝╚██╗██╔╝██╔══██╗██║     ██╔═══██╗██╔══██╗██╔════╝██╔══██╗ 
+██║   ██║██╔██╗ ██║██╔██╗ ██║ ╚███╔╝█████╗█████╗   ╚███╔╝ ██████╔╝██║     ██║   ██║██████╔╝█████╗  ██████╔╝ 
+██║   ██║██║╚██╗██║██║╚██╗██║ ██╔██╗╚════╝██╔══╝   ██╔██╗ ██╔═══╝ ██║     ██║   ██║██╔══██╗██╔══╝  ██╔══██╗
+╚██████╔╝██║ ╚████║██║ ╚████║██╔╝ ██╗     ███████╗██╔╝ ██╗██║     ███████╗╚██████╔╝██║  ██║███████╗██║  ██║ 
+╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═══╝╚═╝  ╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝     ╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
+================================【summary】================================
+| model: ./onnx_ckpts/mmdet/dynamic/ssdlite_mobilenetv2-scratch_8xb24-600e_coco.onnx
+| node_count: 760
+| input_count: 1
+| output_count: 2
+| num_params: 4204569
+| model_size: 16.03915786743164
+=====================【parameter_data_types】=====================
+| FLOAT: 4204539
+| INT64: 30
+===========================【operators-lists】===========================
+| ['Shape', 'Slice', 'Conv', 'Clip', 'Add', 'Gather', 'Range', 'Cast', 'Mul', 'Unsqueeze', 'Tile', 'Reshape', 'Concat', 'Transpose', 'Softmax', 'ReduceMax', 'Less', 'Where', 'TopK', 'Flatten', 'Sub', 'Exp', 'Div', 'NonMaxSuppression', 'Expand', 'Equal', 'ConstantOfShape']
+===========================【operators】===========================
+| Shape: count=78, percentage=10.263157894736842
+| Slice: count=18, percentage=2.368421052631579
+| Conv: count=88, percentage=11.578947368421053
+| Clip: count=64, percentage=8.421052631578947
+| Add: count=53, percentage=6.973684210526315
+| Gather: count=113, percentage=14.868421052631579
+| Range: count=15, percentage=1.9736842105263157
+| Cast: count=16, percentage=2.1052631578947367
+| Mul: count=47, percentage=6.184210526315789
+| Unsqueeze: count=52, percentage=6.842105263157896
+| Tile: count=14, percentage=1.8421052631578945
+| Reshape: count=65, percentage=8.552631578947368
+| Concat: count=48, percentage=6.315789473684211
+| Transpose: count=14, percentage=1.8421052631578945
+| Softmax: count=6, percentage=0.7894736842105263
+| ReduceMax: count=7, percentage=0.9210526315789472
+| Less: count=8, percentage=1.0526315789473684
+| Where: count=10, percentage=1.3157894736842104
+| TopK: count=8, percentage=1.0526315789473684
+| Flatten: count=24, percentage=3.1578947368421053
+| Sub: count=2, percentage=0.2631578947368421
+| Exp: count=1, percentage=0.13157894736842105
+| Div: count=4, percentage=0.5263157894736842
+| NonMaxSuppression: count=1, percentage=0.13157894736842105
+| Expand: count=1, percentage=0.13157894736842105
+| Equal: count=1, percentage=0.13157894736842105
+| ConstantOfShape: count=2, percentage=0.2631578947368421
+===========================【inputs】==============================
+| name=input, dtype=FLOAT, shape=[0, 3, 0, 0]
+===========================【outputs】=============================
+name=dets, dtype=FLOAT, shape=[0, 0, 0]
+name=labels, dtype=INT64, shape=[0, 0]

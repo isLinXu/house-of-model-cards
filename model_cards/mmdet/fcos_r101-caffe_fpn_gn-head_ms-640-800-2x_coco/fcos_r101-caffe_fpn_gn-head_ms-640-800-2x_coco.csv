@@ -1,0 +1,43 @@
+section,key,value
+summary,model,./onnx_ckpts/mmdet/dynamic/fcos_r101-caffe_fpn_gn-head_ms-640-800-2x_coco.onnx
+summary,node_count,1168
+summary,input_count,1
+summary,output_count,2
+summary,num_params,51234883
+summary,model_size,195.4455680847168
+parameter_data_types,FLOAT,51234853
+parameter_data_types,INT64,30
+operators,Shape,"count=120, percentage=10.273972602739725"
+operators,Slice,"count=3, percentage=0.2568493150684931"
+operators,Conv,"count=167, percentage=14.29794520547945"
+operators,Relu,"count=141, percentage=12.071917808219178"
+operators,MaxPool,"count=1, percentage=0.08561643835616438"
+operators,Add,"count=121, percentage=10.35958904109589"
+operators,Gather,"count=106, percentage=9.075342465753424"
+operators,Concat,"count=51, percentage=4.366438356164384"
+operators,Resize,"count=2, percentage=0.17123287671232876"
+operators,Reshape,"count=149, percentage=12.756849315068495"
+operators,InstanceNormalization,"count=40, percentage=3.4246575342465753"
+operators,Mul,"count=93, percentage=7.962328767123288"
+operators,Exp,"count=5, percentage=0.4280821917808219"
+operators,Range,"count=13, percentage=1.1130136986301369"
+operators,Cast,"count=14, percentage=1.1986301369863013"
+operators,Expand,"count=11, percentage=0.9417808219178082"
+operators,Unsqueeze,"count=33, percentage=2.8253424657534243"
+operators,Transpose,"count=17, percentage=1.4554794520547945"
+operators,Sigmoid,"count=10, percentage=0.8561643835616438"
+operators,ReduceMax,"count=6, percentage=0.5136986301369862"
+operators,Less,"count=7, percentage=0.5993150684931506"
+operators,Where,"count=9, percentage=0.7705479452054794"
+operators,TopK,"count=7, percentage=0.5993150684931506"
+operators,Flatten,"count=26, percentage=2.2260273972602738"
+operators,Sub,"count=2, percentage=0.17123287671232876"
+operators,Div,"count=4, percentage=0.3424657534246575"
+operators,Clip,"count=4, percentage=0.3424657534246575"
+operators,NonMaxSuppression,"count=1, percentage=0.08561643835616438"
+operators,Tile,"count=2, percentage=0.17123287671232876"
+operators,Equal,"count=1, percentage=0.08561643835616438"
+operators,ConstantOfShape,"count=2, percentage=0.17123287671232876"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 0, 0]"
+outputs,dets,"dtype=FLOAT, shape=[0, 0, 0]"
+outputs,labels,"dtype=INT64, shape=[0, 0]"

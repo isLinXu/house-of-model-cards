@@ -1,0 +1,50 @@
+██████╗ ███╗   ██╗███╗   ██╗██╗  ██╗     ███████╗██╗  ██╗██████╗ ██╗      ██████╗ ██████╗ ███████╗██████╗ 
+██╔═══██╗████╗  ██║████╗  ██║╚██╗██╔╝     ██╔════╝╚██╗██╔╝██╔══██╗██║     ██╔═══██╗██╔══██╗██╔════╝██╔══██╗ 
+██║   ██║██╔██╗ ██║██╔██╗ ██║ ╚███╔╝█████╗█████╗   ╚███╔╝ ██████╔╝██║     ██║   ██║██████╔╝█████╗  ██████╔╝ 
+██║   ██║██║╚██╗██║██║╚██╗██║ ██╔██╗╚════╝██╔══╝   ██╔██╗ ██╔═══╝ ██║     ██║   ██║██╔══██╗██╔══╝  ██╔══██╗
+╚██████╔╝██║ ╚████║██║ ╚████║██╔╝ ██╗     ███████╗██╔╝ ██╗██║     ███████╗╚██████╔╝██║  ██║███████╗██║  ██║ 
+╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═══╝╚═╝  ╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝     ╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
+================================【summary】================================
+| model: ./onnx_ckpts/mmdet/dynamic/detr_r50_8xb2-150e_coco.onnx
+| node_count: 948
+| input_count: 1
+| output_count: 2
+| num_params: 41547466
+| model_size: 158.49100494384766
+=====================【parameter_data_types】=====================
+| FLOAT: 41547441
+| INT64: 25
+===========================【operators-lists】===========================
+| ['Conv', 'Relu', 'MaxPool', 'Add', 'Reshape', 'Transpose', 'MatMul', 'Div', 'Softmax', 'ReduceMean', 'Sub', 'Pow', 'Sqrt', 'Mul', 'Unsqueeze', 'Concat', 'Sigmoid', 'Gather', 'Slice', 'ReduceMax', 'ArgMax', 'TopK', 'Flatten', 'Squeeze', 'Split', 'Clip']
+===========================【operators】===========================
+| Conv: count=54, percentage=5.69620253164557
+| Relu: count=63, percentage=6.645569620253164
+| MaxPool: count=1, percentage=0.10548523206751054
+| Add: count=243, percentage=25.63291139240506
+| Reshape: count=68, percentage=7.172995780590717
+| Transpose: count=69, percentage=7.2784810126582276
+| MatMul: count=129, percentage=13.60759493670886
+| Div: count=55, percentage=5.80168776371308
+| Softmax: count=18, percentage=1.89873417721519
+| ReduceMean: count=70, percentage=7.383966244725738
+| Sub: count=37, percentage=3.9029535864978904
+| Pow: count=35, percentage=3.691983122362869
+| Sqrt: count=35, percentage=3.691983122362869
+| Mul: count=42, percentage=4.430379746835443
+| Unsqueeze: count=8, percentage=0.8438818565400843
+| Concat: count=3, percentage=0.31645569620253167
+| Sigmoid: count=1, percentage=0.10548523206751054
+| Gather: count=4, percentage=0.42194092827004215
+| Slice: count=1, percentage=0.10548523206751054
+| ReduceMax: count=1, percentage=0.10548523206751054
+| ArgMax: count=1, percentage=0.10548523206751054
+| TopK: count=1, percentage=0.10548523206751054
+| Flatten: count=2, percentage=0.21097046413502107
+| Squeeze: count=1, percentage=0.10548523206751054
+| Split: count=2, percentage=0.21097046413502107
+| Clip: count=4, percentage=0.42194092827004215
+===========================【inputs】==============================
+| name=input, dtype=FLOAT, shape=[1, 3, 800, 1333]
+===========================【outputs】=============================
+name=dets, dtype=FLOAT, shape=[1, 100, 5]
+name=labels, dtype=INT64, shape=[1, 100]

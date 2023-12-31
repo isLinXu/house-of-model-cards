@@ -1,0 +1,39 @@
+section,key,value
+summary,model,./onnx_ckpts/mmdet/dynamic/yolov3_mobilenetv2_8xb24-320-300e_coco.onnx
+summary,node_count,453
+summary,input_count,1
+summary,output_count,2
+summary,num_params,3307335
+summary,model_size,12.61648178100586
+parameter_data_types,FLOAT,3307307
+parameter_data_types,INT64,28
+operators,Conv,"count=74, percentage=16.335540838852097"
+operators,LeakyRelu,"count=54, percentage=11.920529801324504"
+operators,Add,"count=34, percentage=7.505518763796909"
+operators,Resize,"count=2, percentage=0.44150110375275936"
+operators,Concat,"count=30, percentage=6.622516556291391"
+operators,Shape,"count=24, percentage=5.298013245033113"
+operators,Gather,"count=53, percentage=11.699779249448124"
+operators,Range,"count=8, percentage=1.7660044150110374"
+operators,Mul,"count=27, percentage=5.960264900662252"
+operators,Unsqueeze,"count=39, percentage=8.609271523178808"
+operators,Tile,"count=8, percentage=1.7660044150110374"
+operators,Reshape,"count=24, percentage=5.298013245033113"
+operators,Cast,"count=3, percentage=0.6622516556291391"
+operators,Transpose,"count=5, percentage=1.1037527593818985"
+operators,Slice,"count=24, percentage=5.298013245033113"
+operators,Sigmoid,"count=9, percentage=1.9867549668874174"
+operators,Sub,"count=12, percentage=2.6490066225165565"
+operators,Exp,"count=3, percentage=0.6622516556291391"
+operators,ReduceMax,"count=1, percentage=0.22075055187637968"
+operators,Less,"count=2, percentage=0.44150110375275936"
+operators,Where,"count=4, percentage=0.8830022075055187"
+operators,TopK,"count=2, percentage=0.44150110375275936"
+operators,Flatten,"count=6, percentage=1.3245033112582782"
+operators,NonMaxSuppression,"count=1, percentage=0.22075055187637968"
+operators,Expand,"count=1, percentage=0.22075055187637968"
+operators,Equal,"count=1, percentage=0.22075055187637968"
+operators,ConstantOfShape,"count=2, percentage=0.44150110375275936"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 0, 0]"
+outputs,dets,"dtype=FLOAT, shape=[0, 0, 0]"
+outputs,labels,"dtype=INT64, shape=[0, 0]"

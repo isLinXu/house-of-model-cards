@@ -1,0 +1,51 @@
+section,key,value
+summary,model,./onnx_ckpts/mmdet/dynamic/cascade-rcnn_r50_fpn_20e_coco.onnx
+summary,node_count,1347
+summary,input_count,1
+summary,output_count,2
+summary,num_params,69368398
+summary,model_size,264.6194381713867
+parameter_data_types,FLOAT,69368343
+parameter_data_types,INT64,55
+operators,Shape,"count=129, percentage=9.57683741648107"
+operators,Slice,"count=42, percentage=3.11804008908686"
+operators,Conv,"count=76, percentage=5.642167780252413"
+operators,Relu,"count=60, percentage=4.4543429844097995"
+operators,MaxPool,"count=2, percentage=0.14847809948032664"
+operators,Add,"count=95, percentage=7.052709725315516"
+operators,Gather,"count=216, percentage=16.035634743875278"
+operators,Concat,"count=103, percentage=7.646622123236822"
+operators,Resize,"count=3, percentage=0.22271714922048996"
+operators,Range,"count=16, percentage=1.1878247958426131"
+operators,Mul,"count=79, percentage=5.864884929472903"
+operators,Unsqueeze,"count=109, percentage=8.092056421677803"
+operators,Tile,"count=13, percentage=0.9651076466221231"
+operators,Reshape,"count=101, percentage=7.498144023756496"
+operators,Cast,"count=25, percentage=1.855976243504083"
+operators,Transpose,"count=26, percentage=1.9302152932442462"
+operators,Sigmoid,"count=5, percentage=0.3711952487008166"
+operators,Squeeze,"count=31, percentage=2.3014105419450632"
+operators,Less,"count=9, percentage=0.6681514476614699"
+operators,Where,"count=13, percentage=0.9651076466221231"
+operators,TopK,"count=9, percentage=0.6681514476614699"
+operators,Flatten,"count=29, percentage=2.1529324424647367"
+operators,Sub,"count=15, percentage=1.1135857461024499"
+operators,Clip,"count=23, percentage=1.7074981440237564"
+operators,Exp,"count=4, percentage=0.2969561989606533"
+operators,Div,"count=23, percentage=1.7074981440237564"
+operators,ReduceMax,"count=2, percentage=0.14847809948032664"
+operators,NonMaxSuppression,"count=2, percentage=0.14847809948032664"
+operators,Expand,"count=3, percentage=0.22271714922048996"
+operators,Equal,"count=15, percentage=1.1135857461024499"
+operators,ConstantOfShape,"count=11, percentage=0.8166295471417966"
+operators,Sqrt,"count=3, percentage=0.22271714922048996"
+operators,Log,"count=3, percentage=0.22271714922048996"
+operators,Floor,"count=3, percentage=0.22271714922048996"
+operators,NonZero,"count=12, percentage=0.8908685968819599"
+operators,RoiAlign,"count=12, percentage=0.8908685968819599"
+operators,ScatterND,"count=12, percentage=0.8908685968819599"
+operators,Gemm,"count=12, percentage=0.8908685968819599"
+operators,Softmax,"count=1, percentage=0.07423904974016332"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 0, 0]"
+outputs,dets,"dtype=FLOAT, shape=[0, 0, 0]"
+outputs,labels,"dtype=INT64, shape=[0, 0]"

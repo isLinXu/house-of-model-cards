@@ -1,0 +1,42 @@
+section,key,value
+summary,model,./onnx_ckpts/mmdet/dynamic/fsaf_r50_fpn_1x_coco.onnx
+summary,node_count,745
+summary,input_count,1
+summary,output_count,2
+summary,num_params,36393234
+summary,model_size,138.82917022705078
+parameter_data_types,FLOAT,36393204
+parameter_data_types,INT64,30
+operators,Shape,"count=71, percentage=9.53020134228188"
+operators,Slice,"count=7, percentage=0.9395973154362416"
+operators,Conv,"count=111, percentage=14.899328859060404"
+operators,Relu,"count=94, percentage=12.61744966442953"
+operators,MaxPool,"count=1, percentage=0.1342281879194631"
+operators,Add,"count=55, percentage=7.38255033557047"
+operators,Gather,"count=98, percentage=13.154362416107382"
+operators,Concat,"count=45, percentage=6.0402684563758395"
+operators,Resize,"count=2, percentage=0.2684563758389262"
+operators,Range,"count=13, percentage=1.74496644295302"
+operators,Cast,"count=14, percentage=1.8791946308724832"
+operators,Mul,"count=40, percentage=5.369127516778524"
+operators,Unsqueeze,"count=41, percentage=5.503355704697987"
+operators,Tile,"count=12, percentage=1.6107382550335572"
+operators,Reshape,"count=55, percentage=7.38255033557047"
+operators,Transpose,"count=12, percentage=1.6107382550335572"
+operators,Sigmoid,"count=5, percentage=0.6711409395973155"
+operators,ReduceMax,"count=6, percentage=0.8053691275167786"
+operators,Less,"count=7, percentage=0.9395973154362416"
+operators,Where,"count=9, percentage=1.2080536912751678"
+operators,TopK,"count=7, percentage=0.9395973154362416"
+operators,Flatten,"count=21, percentage=2.8187919463087248"
+operators,Div,"count=5, percentage=0.6711409395973155"
+operators,Sub,"count=3, percentage=0.4026845637583893"
+operators,Split,"count=2, percentage=0.2684563758389262"
+operators,Clip,"count=4, percentage=0.5369127516778524"
+operators,NonMaxSuppression,"count=1, percentage=0.1342281879194631"
+operators,Expand,"count=1, percentage=0.1342281879194631"
+operators,Equal,"count=1, percentage=0.1342281879194631"
+operators,ConstantOfShape,"count=2, percentage=0.2684563758389262"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 0, 0]"
+outputs,dets,"dtype=FLOAT, shape=[0, 0, 0]"
+outputs,labels,"dtype=INT64, shape=[0, 0]"

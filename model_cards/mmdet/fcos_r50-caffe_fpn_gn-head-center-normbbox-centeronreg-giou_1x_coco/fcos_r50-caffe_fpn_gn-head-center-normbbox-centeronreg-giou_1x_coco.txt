@@ -1,0 +1,54 @@
+██████╗ ███╗   ██╗███╗   ██╗██╗  ██╗     ███████╗██╗  ██╗██████╗ ██╗      ██████╗ ██████╗ ███████╗██████╗ 
+██╔═══██╗████╗  ██║████╗  ██║╚██╗██╔╝     ██╔════╝╚██╗██╔╝██╔══██╗██║     ██╔═══██╗██╔══██╗██╔════╝██╔══██╗ 
+██║   ██║██╔██╗ ██║██╔██╗ ██║ ╚███╔╝█████╗█████╗   ╚███╔╝ ██████╔╝██║     ██║   ██║██████╔╝█████╗  ██████╔╝ 
+██║   ██║██║╚██╗██║██║╚██╗██║ ██╔██╗╚════╝██╔══╝   ██╔██╗ ██╔═══╝ ██║     ██║   ██║██╔══██╗██╔══╝  ██╔══██╗
+╚██████╔╝██║ ╚████║██║ ╚████║██╔╝ ██╗     ███████╗██╔╝ ██╗██║     ███████╗╚██████╔╝██║  ██║███████╗██║  ██║ 
+╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═══╝╚═╝  ╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝     ╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
+================================【summary】================================
+| model: ./onnx_ckpts/mmdet/dynamic/fcos_r50-caffe_fpn_gn-head-center-normbbox-centeronreg-giou_1x_coco.onnx
+| node_count: 1054
+| input_count: 1
+| output_count: 2
+| num_params: 32270915
+| model_size: 123.1037712097168
+=====================【parameter_data_types】=====================
+| FLOAT: 32270885
+| INT64: 30
+===========================【operators-lists】===========================
+| ['Shape', 'Slice', 'Conv', 'Relu', 'MaxPool', 'Add', 'Gather', 'Concat', 'Resize', 'Reshape', 'InstanceNormalization', 'Mul', 'Clip', 'Range', 'Cast', 'Expand', 'Unsqueeze', 'Transpose', 'Sigmoid', 'ReduceMax', 'Less', 'Where', 'TopK', 'Flatten', 'Sub', 'Div', 'NonMaxSuppression', 'Tile', 'Equal', 'ConstantOfShape']
+===========================【operators】===========================
+| Shape: count=120, percentage=11.385199240986717
+| Slice: count=3, percentage=0.2846299810246679
+| Conv: count=116, percentage=11.005692599620494
+| Relu: count=90, percentage=8.538899430740038
+| MaxPool: count=1, percentage=0.09487666034155598
+| Add: count=104, percentage=9.867172675521822
+| Gather: count=106, percentage=10.056925996204933
+| Concat: count=51, percentage=4.838709677419355
+| Resize: count=2, percentage=0.18975332068311196
+| Reshape: count=149, percentage=14.13662239089184
+| InstanceNormalization: count=40, percentage=3.795066413662239
+| Mul: count=98, percentage=9.297912713472485
+| Clip: count=9, percentage=0.8538899430740038
+| Range: count=13, percentage=1.2333965844402277
+| Cast: count=14, percentage=1.3282732447817838
+| Expand: count=11, percentage=1.0436432637571158
+| Unsqueeze: count=33, percentage=3.130929791271347
+| Transpose: count=17, percentage=1.6129032258064515
+| Sigmoid: count=10, percentage=0.9487666034155597
+| ReduceMax: count=6, percentage=0.5692599620493358
+| Less: count=7, percentage=0.6641366223908919
+| Where: count=9, percentage=0.8538899430740038
+| TopK: count=7, percentage=0.6641366223908919
+| Flatten: count=26, percentage=2.4667931688804554
+| Sub: count=2, percentage=0.18975332068311196
+| Div: count=4, percentage=0.3795066413662239
+| NonMaxSuppression: count=1, percentage=0.09487666034155598
+| Tile: count=2, percentage=0.18975332068311196
+| Equal: count=1, percentage=0.09487666034155598
+| ConstantOfShape: count=2, percentage=0.18975332068311196
+===========================【inputs】==============================
+| name=input, dtype=FLOAT, shape=[0, 3, 0, 0]
+===========================【outputs】=============================
+name=dets, dtype=FLOAT, shape=[0, 0, 0]
+name=labels, dtype=INT64, shape=[0, 0]

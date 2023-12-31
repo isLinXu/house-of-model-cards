@@ -1,0 +1,51 @@
+██████╗ ███╗   ██╗███╗   ██╗██╗  ██╗     ███████╗██╗  ██╗██████╗ ██╗      ██████╗ ██████╗ ███████╗██████╗ 
+██╔═══██╗████╗  ██║████╗  ██║╚██╗██╔╝     ██╔════╝╚██╗██╔╝██╔══██╗██║     ██╔═══██╗██╔══██╗██╔════╝██╔══██╗ 
+██║   ██║██╔██╗ ██║██╔██╗ ██║ ╚███╔╝█████╗█████╗   ╚███╔╝ ██████╔╝██║     ██║   ██║██████╔╝█████╗  ██████╔╝ 
+██║   ██║██║╚██╗██║██║╚██╗██║ ██╔██╗╚════╝██╔══╝   ██╔██╗ ██╔═══╝ ██║     ██║   ██║██╔══██╗██╔══╝  ██╔══██╗
+╚██████╔╝██║ ╚████║██║ ╚████║██╔╝ ██╗     ███████╗██╔╝ ██╗██║     ███████╗╚██████╔╝██║  ██║███████╗██║  ██║ 
+╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═══╝╚═╝  ╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝     ╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
+================================【summary】================================
+| model: ./onnx_ckpts/mmdet/dynamic/yolov3_mobilenetv2_8xb24-320-300e_coco.onnx
+| node_count: 453
+| input_count: 1
+| output_count: 2
+| num_params: 3307335
+| model_size: 12.61648178100586
+=====================【parameter_data_types】=====================
+| FLOAT: 3307307
+| INT64: 28
+===========================【operators-lists】===========================
+| ['Conv', 'LeakyRelu', 'Add', 'Resize', 'Concat', 'Shape', 'Gather', 'Range', 'Mul', 'Unsqueeze', 'Tile', 'Reshape', 'Cast', 'Transpose', 'Slice', 'Sigmoid', 'Sub', 'Exp', 'ReduceMax', 'Less', 'Where', 'TopK', 'Flatten', 'NonMaxSuppression', 'Expand', 'Equal', 'ConstantOfShape']
+===========================【operators】===========================
+| Conv: count=74, percentage=16.335540838852097
+| LeakyRelu: count=54, percentage=11.920529801324504
+| Add: count=34, percentage=7.505518763796909
+| Resize: count=2, percentage=0.44150110375275936
+| Concat: count=30, percentage=6.622516556291391
+| Shape: count=24, percentage=5.298013245033113
+| Gather: count=53, percentage=11.699779249448124
+| Range: count=8, percentage=1.7660044150110374
+| Mul: count=27, percentage=5.960264900662252
+| Unsqueeze: count=39, percentage=8.609271523178808
+| Tile: count=8, percentage=1.7660044150110374
+| Reshape: count=24, percentage=5.298013245033113
+| Cast: count=3, percentage=0.6622516556291391
+| Transpose: count=5, percentage=1.1037527593818985
+| Slice: count=24, percentage=5.298013245033113
+| Sigmoid: count=9, percentage=1.9867549668874174
+| Sub: count=12, percentage=2.6490066225165565
+| Exp: count=3, percentage=0.6622516556291391
+| ReduceMax: count=1, percentage=0.22075055187637968
+| Less: count=2, percentage=0.44150110375275936
+| Where: count=4, percentage=0.8830022075055187
+| TopK: count=2, percentage=0.44150110375275936
+| Flatten: count=6, percentage=1.3245033112582782
+| NonMaxSuppression: count=1, percentage=0.22075055187637968
+| Expand: count=1, percentage=0.22075055187637968
+| Equal: count=1, percentage=0.22075055187637968
+| ConstantOfShape: count=2, percentage=0.44150110375275936
+===========================【inputs】==============================
+| name=input, dtype=FLOAT, shape=[0, 3, 0, 0]
+===========================【outputs】=============================
+name=dets, dtype=FLOAT, shape=[0, 0, 0]
+name=labels, dtype=INT64, shape=[0, 0]

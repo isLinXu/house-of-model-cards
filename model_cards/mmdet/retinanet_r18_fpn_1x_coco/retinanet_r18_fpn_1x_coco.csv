@@ -1,0 +1,42 @@
+section,key,value
+summary,model,./onnx_ckpts/mmdet/dynamic/retinanet_r18_fpn_1x_coco.onnx
+summary,node_count,679
+summary,input_count,1
+summary,output_count,2
+summary,num_params,21405532
+summary,model_size,81.65562438964844
+parameter_data_types,FLOAT,21405501
+parameter_data_types,INT64,31
+operators,Shape,"count=72, percentage=10.603829160530191"
+operators,Slice,"count=7, percentage=1.0309278350515463"
+operators,Conv,"count=78, percentage=11.487481590574374"
+operators,Relu,"count=57, percentage=8.394698085419734"
+operators,MaxPool,"count=1, percentage=0.14727540500736377"
+operators,Add,"count=48, percentage=7.069219440353461"
+operators,Gather,"count=102, percentage=15.022091310751104"
+operators,Concat,"count=45, percentage=6.62739322533137"
+operators,Resize,"count=2, percentage=0.29455081001472755"
+operators,Range,"count=13, percentage=1.914580265095729"
+operators,Cast,"count=14, percentage=2.0618556701030926"
+operators,Mul,"count=42, percentage=6.185567010309279"
+operators,Unsqueeze,"count=46, percentage=6.774668630338733"
+operators,Tile,"count=12, percentage=1.7673048600883652"
+operators,Reshape,"count=56, percentage=8.24742268041237"
+operators,Transpose,"count=12, percentage=1.7673048600883652"
+operators,Sigmoid,"count=5, percentage=0.7363770250368188"
+operators,ReduceMax,"count=6, percentage=0.8836524300441826"
+operators,Less,"count=7, percentage=1.0309278350515463"
+operators,Where,"count=9, percentage=1.3254786450662739"
+operators,TopK,"count=7, percentage=1.0309278350515463"
+operators,Flatten,"count=21, percentage=3.0927835051546393"
+operators,Sub,"count=2, percentage=0.29455081001472755"
+operators,Clip,"count=5, percentage=0.7363770250368188"
+operators,Exp,"count=1, percentage=0.14727540500736377"
+operators,Div,"count=4, percentage=0.5891016200294551"
+operators,NonMaxSuppression,"count=1, percentage=0.14727540500736377"
+operators,Expand,"count=1, percentage=0.14727540500736377"
+operators,Equal,"count=1, percentage=0.14727540500736377"
+operators,ConstantOfShape,"count=2, percentage=0.29455081001472755"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 0, 0]"
+outputs,dets,"dtype=FLOAT, shape=[0, 0, 0]"
+outputs,labels,"dtype=INT64, shape=[0, 0]"

@@ -1,0 +1,41 @@
+section,key,value
+summary,model,./onnx_ckpts/mmdet/dynamic/rtmdet_m_8xb32-300e_coco.onnx
+summary,node_count,611
+summary,input_count,1
+summary,output_count,2
+summary,num_params,27339143
+summary,model_size,104.29055404663086
+parameter_data_types,FLOAT,27339119
+parameter_data_types,INT64,24
+operators,Conv,"count=122, percentage=19.967266775777414"
+operators,Sigmoid,"count=113, percentage=18.494271685761046"
+operators,Mul,"count=133, percentage=21.76759410801964"
+operators,Add,"count=27, percentage=4.4189852700491"
+operators,Concat,"count=36, percentage=5.8919803600654665"
+operators,GlobalAveragePool,"count=4, percentage=0.6546644844517185"
+operators,HardSigmoid,"count=4, percentage=0.6546644844517185"
+operators,MaxPool,"count=3, percentage=0.4909983633387889"
+operators,Resize,"count=2, percentage=0.32733224222585927"
+operators,Exp,"count=3, percentage=0.4909983633387889"
+operators,Shape,"count=25, percentage=4.091653027823241"
+operators,Gather,"count=38, percentage=6.219312602291326"
+operators,Range,"count=8, percentage=1.309328968903437"
+operators,Cast,"count=6, percentage=0.9819967266775778"
+operators,Reshape,"count=27, percentage=4.4189852700491"
+operators,Expand,"count=7, percentage=1.1456628477905073"
+operators,Unsqueeze,"count=18, percentage=2.9459901800327333"
+operators,Transpose,"count=8, percentage=1.309328968903437"
+operators,Sub,"count=2, percentage=0.32733224222585927"
+operators,ReduceMax,"count=2, percentage=0.32733224222585927"
+operators,Less,"count=3, percentage=0.4909983633387889"
+operators,Not,"count=1, percentage=0.16366612111292964"
+operators,Where,"count=5, percentage=0.8183306055646482"
+operators,TopK,"count=2, percentage=0.32733224222585927"
+operators,Flatten,"count=6, percentage=0.9819967266775778"
+operators,NonMaxSuppression,"count=1, percentage=0.16366612111292964"
+operators,Tile,"count=2, percentage=0.32733224222585927"
+operators,Equal,"count=1, percentage=0.16366612111292964"
+operators,ConstantOfShape,"count=2, percentage=0.32733224222585927"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 0, 0]"
+outputs,dets,"dtype=FLOAT, shape=[0, 0, 0]"
+outputs,labels,"dtype=INT64, shape=[0, 0]"

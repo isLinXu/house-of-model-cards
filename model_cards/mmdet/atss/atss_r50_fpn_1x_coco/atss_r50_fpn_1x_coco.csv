@@ -1,0 +1,43 @@
+section,key,value
+summary,model,./onnx_ckpts/mmdet/dynamic/atss_r50_fpn_1x_coco.onnx
+summary,node_count,1080
+summary,input_count,1
+summary,output_count,2
+summary,num_params,32268901
+summary,model_size,123.09608840942383
+parameter_data_types,FLOAT,32268867
+parameter_data_types,INT64,34
+operators,Shape,"count=122, percentage=11.296296296296296"
+operators,Slice,"count=7, percentage=0.6481481481481481"
+operators,Conv,"count=116, percentage=10.74074074074074"
+operators,Relu,"count=89, percentage=8.24074074074074"
+operators,MaxPool,"count=1, percentage=0.0925925925925926"
+operators,Add,"count=101, percentage=9.351851851851851"
+operators,Gather,"count=117, percentage=10.833333333333334"
+operators,Concat,"count=52, percentage=4.814814814814815"
+operators,Resize,"count=2, percentage=0.1851851851851852"
+operators,Reshape,"count=146, percentage=13.518518518518519"
+operators,InstanceNormalization,"count=40, percentage=3.7037037037037033"
+operators,Mul,"count=98, percentage=9.074074074074074"
+operators,Range,"count=13, percentage=1.2037037037037037"
+operators,Cast,"count=14, percentage=1.2962962962962963"
+operators,Unsqueeze,"count=51, percentage=4.722222222222222"
+operators,Tile,"count=12, percentage=1.1111111111111112"
+operators,Transpose,"count=17, percentage=1.574074074074074"
+operators,Sigmoid,"count=10, percentage=0.9259259259259258"
+operators,ReduceMax,"count=6, percentage=0.5555555555555556"
+operators,Less,"count=7, percentage=0.6481481481481481"
+operators,Where,"count=9, percentage=0.8333333333333334"
+operators,TopK,"count=7, percentage=0.6481481481481481"
+operators,Flatten,"count=26, percentage=2.4074074074074074"
+operators,Sub,"count=2, percentage=0.1851851851851852"
+operators,Clip,"count=5, percentage=0.4629629629629629"
+operators,Exp,"count=1, percentage=0.0925925925925926"
+operators,Div,"count=4, percentage=0.3703703703703704"
+operators,NonMaxSuppression,"count=1, percentage=0.0925925925925926"
+operators,Expand,"count=1, percentage=0.0925925925925926"
+operators,Equal,"count=1, percentage=0.0925925925925926"
+operators,ConstantOfShape,"count=2, percentage=0.1851851851851852"
+inputs,input,"dtype=FLOAT, shape=[0, 3, 0, 0]"
+outputs,dets,"dtype=FLOAT, shape=[0, 0, 0]"
+outputs,labels,"dtype=INT64, shape=[0, 0]"

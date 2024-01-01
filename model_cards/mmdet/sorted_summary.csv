@@ -1,4 +1,6 @@
 File Name,Model,Node Count,Input Count,Output Count,Num Params,Model Size
+atss_r101_fpn_1x_coco,atss_r101_fpn_1x_coco.onnx,1199,1,2,51234917,195.44569778442383
+atss_r50_fpn_1x_coco,atss_r50_fpn_1x_coco.onnx,1080,1,2,32268901,123.09608840942383
 cascade-rcnn_r101_fpn_20e_coco,cascade-rcnn_r101_fpn_20e_coco.onnx,1466,1,2,88334414,336.9690475463867
 cascade-rcnn_r50_fpn_20e_coco,cascade-rcnn_r50_fpn_20e_coco.onnx,1347,1,2,69368398,264.6194381713867
 cascade-rcnn_x101-32x4d_fpn_1x_coco,cascade-rcnn_x101-32x4d_fpn_1x_coco.onnx,1466,1,2,87946702,335.4900436401367

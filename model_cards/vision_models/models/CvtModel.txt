@@ -1,0 +1,637 @@
+CvtModel(
+  (encoder): CvtEncoder(
+    (stages): ModuleList(
+      (0): CvtStage(
+        (embedding): CvtEmbeddings(
+          (convolution_embeddings): CvtConvEmbeddings(
+            (projection): Conv2d(3, 64, kernel_size=(7, 7), stride=(4, 4), padding=(2, 2))
+            (normalization): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+          )
+          (dropout): Dropout(p=0.0, inplace=False)
+        )
+        (layers): Sequential(
+          (0): CvtLayer(
+            (attention): CvtAttention(
+              (attention): CvtSelfAttention(
+                (convolution_projection_query): CvtSelfAttentionProjection(
+                  (convolution_projection): CvtSelfAttentionConvProjection(
+                    (convolution): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+                    (normalization): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                  )
+                  (linear_projection): CvtSelfAttentionLinearProjection()
+                )
+                (convolution_projection_key): CvtSelfAttentionProjection(
+                  (convolution_projection): CvtSelfAttentionConvProjection(
+                    (convolution): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=64, bias=False)
+                    (normalization): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                  )
+                  (linear_projection): CvtSelfAttentionLinearProjection()
+                )
+                (convolution_projection_value): CvtSelfAttentionProjection(
+                  (convolution_projection): CvtSelfAttentionConvProjection(
+                    (convolution): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=64, bias=False)
+                    (normalization): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                  )
+                  (linear_projection): CvtSelfAttentionLinearProjection()
+                )
+                (projection_query): Linear(in_features=64, out_features=64, bias=True)
+                (projection_key): Linear(in_features=64, out_features=64, bias=True)
+                (projection_value): Linear(in_features=64, out_features=64, bias=True)
+                (dropout): Dropout(p=0.0, inplace=False)
+              )
+              (output): CvtSelfOutput(
+                (dense): Linear(in_features=64, out_features=64, bias=True)
+                (dropout): Dropout(p=0.0, inplace=False)
+              )
+            )
+            (intermediate): CvtIntermediate(
+              (dense): Linear(in_features=64, out_features=256, bias=True)
+              (activation): GELU(approximate='none')
+            )
+            (output): CvtOutput(
+              (dense): Linear(in_features=256, out_features=64, bias=True)
+              (dropout): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path): Identity()
+            (layernorm_before): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+            (layernorm_after): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+          )
+        )
+      )
+      (1): CvtStage(
+        (embedding): CvtEmbeddings(
+          (convolution_embeddings): CvtConvEmbeddings(
+            (projection): Conv2d(64, 192, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+            (normalization): LayerNorm((192,), eps=1e-05, elementwise_affine=True)
+          )
+          (dropout): Dropout(p=0.0, inplace=False)
+        )
+        (layers): Sequential(
+          (0): CvtLayer(
+            (attention): CvtAttention(
+              (attention): CvtSelfAttention(
+                (convolution_projection_query): CvtSelfAttentionProjection(
+                  (convolution_projection): CvtSelfAttentionConvProjection(
+                    (convolution): Conv2d(192, 192, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=192, bias=False)
+                    (normalization): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                  )
+                  (linear_projection): CvtSelfAttentionLinearProjection()
+                )
+                (convolution_projection_key): CvtSelfAttentionProjection(
+                  (convolution_projection): CvtSelfAttentionConvProjection(
+                    (convolution): Conv2d(192, 192, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=192, bias=False)
+                    (normalization): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                  )
+                  (linear_projection): CvtSelfAttentionLinearProjection()
+                )
+                (convolution_projection_value): CvtSelfAttentionProjection(
+                  (convolution_projection): CvtSelfAttentionConvProjection(
+                    (convolution): Conv2d(192, 192, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=192, bias=False)
+                    (normalization): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                  )
+                  (linear_projection): CvtSelfAttentionLinearProjection()
+                )
+                (projection_query): Linear(in_features=192, out_features=192, bias=True)
+                (projection_key): Linear(in_features=192, out_features=192, bias=True)
+                (projection_value): Linear(in_features=192, out_features=192, bias=True)
+                (dropout): Dropout(p=0.0, inplace=False)
+              )
+              (output): CvtSelfOutput(
+                (dense): Linear(in_features=192, out_features=192, bias=True)
+                (dropout): Dropout(p=0.0, inplace=False)
+              )
+            )
+            (intermediate): CvtIntermediate(
+              (dense): Linear(in_features=192, out_features=768, bias=True)
+              (activation): GELU(approximate='none')
+            )
+            (output): CvtOutput(
+              (dense): Linear(in_features=768, out_features=192, bias=True)
+              (dropout): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path): Identity()
+            (layernorm_before): LayerNorm((192,), eps=1e-05, elementwise_affine=True)
+            (layernorm_after): LayerNorm((192,), eps=1e-05, elementwise_affine=True)
+          )
+          (1): CvtLayer(
+            (attention): CvtAttention(
+              (attention): CvtSelfAttention(
+                (convolution_projection_query): CvtSelfAttentionProjection(
+                  (convolution_projection): CvtSelfAttentionConvProjection(
+                    (convolution): Conv2d(192, 192, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=192, bias=False)
+                    (normalization): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                  )
+                  (linear_projection): CvtSelfAttentionLinearProjection()
+                )
+                (convolution_projection_key): CvtSelfAttentionProjection(
+                  (convolution_projection): CvtSelfAttentionConvProjection(
+                    (convolution): Conv2d(192, 192, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=192, bias=False)
+                    (normalization): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                  )
+                  (linear_projection): CvtSelfAttentionLinearProjection()
+                )
+                (convolution_projection_value): CvtSelfAttentionProjection(
+                  (convolution_projection): CvtSelfAttentionConvProjection(
+                    (convolution): Conv2d(192, 192, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=192, bias=False)
+                    (normalization): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                  )
+                  (linear_projection): CvtSelfAttentionLinearProjection()
+                )
+                (projection_query): Linear(in_features=192, out_features=192, bias=True)
+                (projection_key): Linear(in_features=192, out_features=192, bias=True)
+                (projection_value): Linear(in_features=192, out_features=192, bias=True)
+                (dropout): Dropout(p=0.0, inplace=False)
+              )
+              (output): CvtSelfOutput(
+                (dense): Linear(in_features=192, out_features=192, bias=True)
+                (dropout): Dropout(p=0.0, inplace=False)
+              )
+            )
+            (intermediate): CvtIntermediate(
+              (dense): Linear(in_features=192, out_features=768, bias=True)
+              (activation): GELU(approximate='none')
+            )
+            (output): CvtOutput(
+              (dense): Linear(in_features=768, out_features=192, bias=True)
+              (dropout): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path): Identity()
+            (layernorm_before): LayerNorm((192,), eps=1e-05, elementwise_affine=True)
+            (layernorm_after): LayerNorm((192,), eps=1e-05, elementwise_affine=True)
+          )
+        )
+      )
+      (2): CvtStage(
+        (embedding): CvtEmbeddings(
+          (convolution_embeddings): CvtConvEmbeddings(
+            (projection): Conv2d(192, 384, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+            (normalization): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+          )
+          (dropout): Dropout(p=0.0, inplace=False)
+        )
+        (layers): Sequential(
+          (0): CvtLayer(
+            (attention): CvtAttention(
+              (attention): CvtSelfAttention(
+                (convolution_projection_query): CvtSelfAttentionProjection(
+                  (convolution_projection): CvtSelfAttentionConvProjection(
+                    (convolution): Conv2d(384, 384, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=384, bias=False)
+                    (normalization): BatchNorm2d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                  )
+                  (linear_projection): CvtSelfAttentionLinearProjection()
+                )
+                (convolution_projection_key): CvtSelfAttentionProjection(
+                  (convolution_projection): CvtSelfAttentionConvProjection(
+                    (convolution): Conv2d(384, 384, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=384, bias=False)
+                    (normalization): BatchNorm2d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                  )
+                  (linear_projection): CvtSelfAttentionLinearProjection()
+                )
+                (convolution_projection_value): CvtSelfAttentionProjection(
+                  (convolution_projection): CvtSelfAttentionConvProjection(
+                    (convolution): Conv2d(384, 384, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=384, bias=False)
+                    (normalization): BatchNorm2d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                  )
+                  (linear_projection): CvtSelfAttentionLinearProjection()
+                )
+                (projection_query): Linear(in_features=384, out_features=384, bias=True)
+                (projection_key): Linear(in_features=384, out_features=384, bias=True)
+                (projection_value): Linear(in_features=384, out_features=384, bias=True)
+                (dropout): Dropout(p=0.0, inplace=False)
+              )
+              (output): CvtSelfOutput(
+                (dense): Linear(in_features=384, out_features=384, bias=True)
+                (dropout): Dropout(p=0.0, inplace=False)
+              )
+            )
+            (intermediate): CvtIntermediate(
+              (dense): Linear(in_features=384, out_features=1536, bias=True)
+              (activation): GELU(approximate='none')
+            )
+            (output): CvtOutput(
+              (dense): Linear(in_features=1536, out_features=384, bias=True)
+              (dropout): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path): CvtDropPath(p=0.02222222276031971)
+            (layernorm_before): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+            (layernorm_after): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+          )
+          (1): CvtLayer(
+            (attention): CvtAttention(
+              (attention): CvtSelfAttention(
+                (convolution_projection_query): CvtSelfAttentionProjection(
+                  (convolution_projection): CvtSelfAttentionConvProjection(
+                    (convolution): Conv2d(384, 384, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=384, bias=False)
+                    (normalization): BatchNorm2d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                  )
+                  (linear_projection): CvtSelfAttentionLinearProjection()
+                )
+                (convolution_projection_key): CvtSelfAttentionProjection(
+                  (convolution_projection): CvtSelfAttentionConvProjection(
+                    (convolution): Conv2d(384, 384, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=384, bias=False)
+                    (normalization): BatchNorm2d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                  )
+                  (linear_projection): CvtSelfAttentionLinearProjection()
+                )
+                (convolution_projection_value): CvtSelfAttentionProjection(
+                  (convolution_projection): CvtSelfAttentionConvProjection(
+                    (convolution): Conv2d(384, 384, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=384, bias=False)
+                    (normalization): BatchNorm2d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                  )
+                  (linear_projection): CvtSelfAttentionLinearProjection()
+                )
+                (projection_query): Linear(in_features=384, out_features=384, bias=True)
+                (projection_key): Linear(in_features=384, out_features=384, bias=True)
+                (projection_value): Linear(in_features=384, out_features=384, bias=True)
+                (dropout): Dropout(p=0.0, inplace=False)
+              )
+              (output): CvtSelfOutput(
+                (dense): Linear(in_features=384, out_features=384, bias=True)
+                (dropout): Dropout(p=0.0, inplace=False)
+              )
+            )
+            (intermediate): CvtIntermediate(
+              (dense): Linear(in_features=384, out_features=1536, bias=True)
+              (activation): GELU(approximate='none')
+            )
+            (output): CvtOutput(
+              (dense): Linear(in_features=1536, out_features=384, bias=True)
+              (dropout): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path): CvtDropPath(p=0.02222222276031971)
+            (layernorm_before): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+            (layernorm_after): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+          )
+          (2): CvtLayer(
+            (attention): CvtAttention(
+              (attention): CvtSelfAttention(
+                (convolution_projection_query): CvtSelfAttentionProjection(
+                  (convolution_projection): CvtSelfAttentionConvProjection(
+                    (convolution): Conv2d(384, 384, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=384, bias=False)
+                    (normalization): BatchNorm2d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                  )
+                  (linear_projection): CvtSelfAttentionLinearProjection()
+                )
+                (convolution_projection_key): CvtSelfAttentionProjection(
+                  (convolution_projection): CvtSelfAttentionConvProjection(
+                    (convolution): Conv2d(384, 384, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=384, bias=False)
+                    (normalization): BatchNorm2d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                  )
+                  (linear_projection): CvtSelfAttentionLinearProjection()
+                )
+                (convolution_projection_value): CvtSelfAttentionProjection(
+                  (convolution_projection): CvtSelfAttentionConvProjection(
+                    (convolution): Conv2d(384, 384, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=384, bias=False)
+                    (normalization): BatchNorm2d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                  )
+                  (linear_projection): CvtSelfAttentionLinearProjection()
+                )
+                (projection_query): Linear(in_features=384, out_features=384, bias=True)
+                (projection_key): Linear(in_features=384, out_features=384, bias=True)
+                (projection_value): Linear(in_features=384, out_features=384, bias=True)
+                (dropout): Dropout(p=0.0, inplace=False)
+              )
+              (output): CvtSelfOutput(
+                (dense): Linear(in_features=384, out_features=384, bias=True)
+                (dropout): Dropout(p=0.0, inplace=False)
+              )
+            )
+            (intermediate): CvtIntermediate(
+              (dense): Linear(in_features=384, out_features=1536, bias=True)
+              (activation): GELU(approximate='none')
+            )
+            (output): CvtOutput(
+              (dense): Linear(in_features=1536, out_features=384, bias=True)
+              (dropout): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path): CvtDropPath(p=0.02222222276031971)
+            (layernorm_before): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+            (layernorm_after): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+          )
+          (3): CvtLayer(
+            (attention): CvtAttention(
+              (attention): CvtSelfAttention(
+                (convolution_projection_query): CvtSelfAttentionProjection(
+                  (convolution_projection): CvtSelfAttentionConvProjection(
+                    (convolution): Conv2d(384, 384, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=384, bias=False)
+                    (normalization): BatchNorm2d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                  )
+                  (linear_projection): CvtSelfAttentionLinearProjection()
+                )
+                (convolution_projection_key): CvtSelfAttentionProjection(
+                  (convolution_projection): CvtSelfAttentionConvProjection(
+                    (convolution): Conv2d(384, 384, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=384, bias=False)
+                    (normalization): BatchNorm2d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                  )
+                  (linear_projection): CvtSelfAttentionLinearProjection()
+                )
+                (convolution_projection_value): CvtSelfAttentionProjection(
+                  (convolution_projection): CvtSelfAttentionConvProjection(
+                    (convolution): Conv2d(384, 384, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=384, bias=False)
+                    (normalization): BatchNorm2d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                  )
+                  (linear_projection): CvtSelfAttentionLinearProjection()
+                )
+                (projection_query): Linear(in_features=384, out_features=384, bias=True)
+                (projection_key): Linear(in_features=384, out_features=384, bias=True)
+                (projection_value): Linear(in_features=384, out_features=384, bias=True)
+                (dropout): Dropout(p=0.0, inplace=False)
+              )
+              (output): CvtSelfOutput(
+                (dense): Linear(in_features=384, out_features=384, bias=True)
+                (dropout): Dropout(p=0.0, inplace=False)
+              )
+            )
+            (intermediate): CvtIntermediate(
+              (dense): Linear(in_features=384, out_features=1536, bias=True)
+              (activation): GELU(approximate='none')
+            )
+            (output): CvtOutput(
+              (dense): Linear(in_features=1536, out_features=384, bias=True)
+              (dropout): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path): CvtDropPath(p=0.02222222276031971)
+            (layernorm_before): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+            (layernorm_after): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+          )
+          (4): CvtLayer(
+            (attention): CvtAttention(
+              (attention): CvtSelfAttention(
+                (convolution_projection_query): CvtSelfAttentionProjection(
+                  (convolution_projection): CvtSelfAttentionConvProjection(
+                    (convolution): Conv2d(384, 384, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=384, bias=False)
+                    (normalization): BatchNorm2d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                  )
+                  (linear_projection): CvtSelfAttentionLinearProjection()
+                )
+                (convolution_projection_key): CvtSelfAttentionProjection(
+                  (convolution_projection): CvtSelfAttentionConvProjection(
+                    (convolution): Conv2d(384, 384, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=384, bias=False)
+                    (normalization): BatchNorm2d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                  )
+                  (linear_projection): CvtSelfAttentionLinearProjection()
+                )
+                (convolution_projection_value): CvtSelfAttentionProjection(
+                  (convolution_projection): CvtSelfAttentionConvProjection(
+                    (convolution): Conv2d(384, 384, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=384, bias=False)
+                    (normalization): BatchNorm2d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                  )
+                  (linear_projection): CvtSelfAttentionLinearProjection()
+                )
+                (projection_query): Linear(in_features=384, out_features=384, bias=True)
+                (projection_key): Linear(in_features=384, out_features=384, bias=True)
+                (projection_value): Linear(in_features=384, out_features=384, bias=True)
+                (dropout): Dropout(p=0.0, inplace=False)
+              )
+              (output): CvtSelfOutput(
+                (dense): Linear(in_features=384, out_features=384, bias=True)
+                (dropout): Dropout(p=0.0, inplace=False)
+              )
+            )
+            (intermediate): CvtIntermediate(
+              (dense): Linear(in_features=384, out_features=1536, bias=True)
+              (activation): GELU(approximate='none')
+            )
+            (output): CvtOutput(
+              (dense): Linear(in_features=1536, out_features=384, bias=True)
+              (dropout): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path): CvtDropPath(p=0.02222222276031971)
+            (layernorm_before): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+            (layernorm_after): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+          )
+          (5): CvtLayer(
+            (attention): CvtAttention(
+              (attention): CvtSelfAttention(
+                (convolution_projection_query): CvtSelfAttentionProjection(
+                  (convolution_projection): CvtSelfAttentionConvProjection(
+                    (convolution): Conv2d(384, 384, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=384, bias=False)
+                    (normalization): BatchNorm2d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                  )
+                  (linear_projection): CvtSelfAttentionLinearProjection()
+                )
+                (convolution_projection_key): CvtSelfAttentionProjection(
+                  (convolution_projection): CvtSelfAttentionConvProjection(
+                    (convolution): Conv2d(384, 384, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=384, bias=False)
+                    (normalization): BatchNorm2d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                  )
+                  (linear_projection): CvtSelfAttentionLinearProjection()
+                )
+                (convolution_projection_value): CvtSelfAttentionProjection(
+                  (convolution_projection): CvtSelfAttentionConvProjection(
+                    (convolution): Conv2d(384, 384, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=384, bias=False)
+                    (normalization): BatchNorm2d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                  )
+                  (linear_projection): CvtSelfAttentionLinearProjection()
+                )
+                (projection_query): Linear(in_features=384, out_features=384, bias=True)
+                (projection_key): Linear(in_features=384, out_features=384, bias=True)
+                (projection_value): Linear(in_features=384, out_features=384, bias=True)
+                (dropout): Dropout(p=0.0, inplace=False)
+              )
+              (output): CvtSelfOutput(
+                (dense): Linear(in_features=384, out_features=384, bias=True)
+                (dropout): Dropout(p=0.0, inplace=False)
+              )
+            )
+            (intermediate): CvtIntermediate(
+              (dense): Linear(in_features=384, out_features=1536, bias=True)
+              (activation): GELU(approximate='none')
+            )
+            (output): CvtOutput(
+              (dense): Linear(in_features=1536, out_features=384, bias=True)
+              (dropout): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path): CvtDropPath(p=0.02222222276031971)
+            (layernorm_before): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+            (layernorm_after): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+          )
+          (6): CvtLayer(
+            (attention): CvtAttention(
+              (attention): CvtSelfAttention(
+                (convolution_projection_query): CvtSelfAttentionProjection(
+                  (convolution_projection): CvtSelfAttentionConvProjection(
+                    (convolution): Conv2d(384, 384, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=384, bias=False)
+                    (normalization): BatchNorm2d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                  )
+                  (linear_projection): CvtSelfAttentionLinearProjection()
+                )
+                (convolution_projection_key): CvtSelfAttentionProjection(
+                  (convolution_projection): CvtSelfAttentionConvProjection(
+                    (convolution): Conv2d(384, 384, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=384, bias=False)
+                    (normalization): BatchNorm2d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                  )
+                  (linear_projection): CvtSelfAttentionLinearProjection()
+                )
+                (convolution_projection_value): CvtSelfAttentionProjection(
+                  (convolution_projection): CvtSelfAttentionConvProjection(
+                    (convolution): Conv2d(384, 384, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=384, bias=False)
+                    (normalization): BatchNorm2d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                  )
+                  (linear_projection): CvtSelfAttentionLinearProjection()
+                )
+                (projection_query): Linear(in_features=384, out_features=384, bias=True)
+                (projection_key): Linear(in_features=384, out_features=384, bias=True)
+                (projection_value): Linear(in_features=384, out_features=384, bias=True)
+                (dropout): Dropout(p=0.0, inplace=False)
+              )
+              (output): CvtSelfOutput(
+                (dense): Linear(in_features=384, out_features=384, bias=True)
+                (dropout): Dropout(p=0.0, inplace=False)
+              )
+            )
+            (intermediate): CvtIntermediate(
+              (dense): Linear(in_features=384, out_features=1536, bias=True)
+              (activation): GELU(approximate='none')
+            )
+            (output): CvtOutput(
+              (dense): Linear(in_features=1536, out_features=384, bias=True)
+              (dropout): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path): CvtDropPath(p=0.02222222276031971)
+            (layernorm_before): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+            (layernorm_after): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+          )
+          (7): CvtLayer(
+            (attention): CvtAttention(
+              (attention): CvtSelfAttention(
+                (convolution_projection_query): CvtSelfAttentionProjection(
+                  (convolution_projection): CvtSelfAttentionConvProjection(
+                    (convolution): Conv2d(384, 384, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=384, bias=False)
+                    (normalization): BatchNorm2d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                  )
+                  (linear_projection): CvtSelfAttentionLinearProjection()
+                )
+                (convolution_projection_key): CvtSelfAttentionProjection(
+                  (convolution_projection): CvtSelfAttentionConvProjection(
+                    (convolution): Conv2d(384, 384, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=384, bias=False)
+                    (normalization): BatchNorm2d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                  )
+                  (linear_projection): CvtSelfAttentionLinearProjection()
+                )
+                (convolution_projection_value): CvtSelfAttentionProjection(
+                  (convolution_projection): CvtSelfAttentionConvProjection(
+                    (convolution): Conv2d(384, 384, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=384, bias=False)
+                    (normalization): BatchNorm2d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                  )
+                  (linear_projection): CvtSelfAttentionLinearProjection()
+                )
+                (projection_query): Linear(in_features=384, out_features=384, bias=True)
+                (projection_key): Linear(in_features=384, out_features=384, bias=True)
+                (projection_value): Linear(in_features=384, out_features=384, bias=True)
+                (dropout): Dropout(p=0.0, inplace=False)
+              )
+              (output): CvtSelfOutput(
+                (dense): Linear(in_features=384, out_features=384, bias=True)
+                (dropout): Dropout(p=0.0, inplace=False)
+              )
+            )
+            (intermediate): CvtIntermediate(
+              (dense): Linear(in_features=384, out_features=1536, bias=True)
+              (activation): GELU(approximate='none')
+            )
+            (output): CvtOutput(
+              (dense): Linear(in_features=1536, out_features=384, bias=True)
+              (dropout): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path): CvtDropPath(p=0.02222222276031971)
+            (layernorm_before): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+            (layernorm_after): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+          )
+          (8): CvtLayer(
+            (attention): CvtAttention(
+              (attention): CvtSelfAttention(
+                (convolution_projection_query): CvtSelfAttentionProjection(
+                  (convolution_projection): CvtSelfAttentionConvProjection(
+                    (convolution): Conv2d(384, 384, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=384, bias=False)
+                    (normalization): BatchNorm2d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                  )
+                  (linear_projection): CvtSelfAttentionLinearProjection()
+                )
+                (convolution_projection_key): CvtSelfAttentionProjection(
+                  (convolution_projection): CvtSelfAttentionConvProjection(
+                    (convolution): Conv2d(384, 384, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=384, bias=False)
+                    (normalization): BatchNorm2d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                  )
+                  (linear_projection): CvtSelfAttentionLinearProjection()
+                )
+                (convolution_projection_value): CvtSelfAttentionProjection(
+                  (convolution_projection): CvtSelfAttentionConvProjection(
+                    (convolution): Conv2d(384, 384, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=384, bias=False)
+                    (normalization): BatchNorm2d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                  )
+                  (linear_projection): CvtSelfAttentionLinearProjection()
+                )
+                (projection_query): Linear(in_features=384, out_features=384, bias=True)
+                (projection_key): Linear(in_features=384, out_features=384, bias=True)
+                (projection_value): Linear(in_features=384, out_features=384, bias=True)
+                (dropout): Dropout(p=0.0, inplace=False)
+              )
+              (output): CvtSelfOutput(
+                (dense): Linear(in_features=384, out_features=384, bias=True)
+                (dropout): Dropout(p=0.0, inplace=False)
+              )
+            )
+            (intermediate): CvtIntermediate(
+              (dense): Linear(in_features=384, out_features=1536, bias=True)
+              (activation): GELU(approximate='none')
+            )
+            (output): CvtOutput(
+              (dense): Linear(in_features=1536, out_features=384, bias=True)
+              (dropout): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path): CvtDropPath(p=0.02222222276031971)
+            (layernorm_before): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+            (layernorm_after): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+          )
+          (9): CvtLayer(
+            (attention): CvtAttention(
+              (attention): CvtSelfAttention(
+                (convolution_projection_query): CvtSelfAttentionProjection(
+                  (convolution_projection): CvtSelfAttentionConvProjection(
+                    (convolution): Conv2d(384, 384, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=384, bias=False)
+                    (normalization): BatchNorm2d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                  )
+                  (linear_projection): CvtSelfAttentionLinearProjection()
+                )
+                (convolution_projection_key): CvtSelfAttentionProjection(
+                  (convolution_projection): CvtSelfAttentionConvProjection(
+                    (convolution): Conv2d(384, 384, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=384, bias=False)
+                    (normalization): BatchNorm2d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                  )
+                  (linear_projection): CvtSelfAttentionLinearProjection()
+                )
+                (convolution_projection_value): CvtSelfAttentionProjection(
+                  (convolution_projection): CvtSelfAttentionConvProjection(
+                    (convolution): Conv2d(384, 384, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=384, bias=False)
+                    (normalization): BatchNorm2d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                  )
+                  (linear_projection): CvtSelfAttentionLinearProjection()
+                )
+                (projection_query): Linear(in_features=384, out_features=384, bias=True)
+                (projection_key): Linear(in_features=384, out_features=384, bias=True)
+                (projection_value): Linear(in_features=384, out_features=384, bias=True)
+                (dropout): Dropout(p=0.0, inplace=False)
+              )
+              (output): CvtSelfOutput(
+                (dense): Linear(in_features=384, out_features=384, bias=True)
+                (dropout): Dropout(p=0.0, inplace=False)
+              )
+            )
+            (intermediate): CvtIntermediate(
+              (dense): Linear(in_features=384, out_features=1536, bias=True)
+              (activation): GELU(approximate='none')
+            )
+            (output): CvtOutput(
+              (dense): Linear(in_features=1536, out_features=384, bias=True)
+              (dropout): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path): CvtDropPath(p=0.02222222276031971)
+            (layernorm_before): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+            (layernorm_after): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+          )
+        )
+      )
+    )
+  )
+)

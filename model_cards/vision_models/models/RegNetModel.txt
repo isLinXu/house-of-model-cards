@@ -1,0 +1,702 @@
+RegNetModel(
+  (embedder): RegNetEmbeddings(
+    (embedder): RegNetConvLayer(
+      (convolution): Conv2d(3, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (normalization): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (activation): ReLU()
+    )
+  )
+  (encoder): RegNetEncoder(
+    (stages): ModuleList(
+      (0): RegNetStage(
+        (layers): Sequential(
+          (0): RegNetYLayer(
+            (shortcut): RegNetShortCut(
+              (convolution): Conv2d(32, 128, kernel_size=(1, 1), stride=(2, 2), bias=False)
+              (normalization): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            )
+            (layer): Sequential(
+              (0): RegNetConvLayer(
+                (convolution): Conv2d(32, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (normalization): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                (activation): ReLU()
+              )
+              (1): RegNetConvLayer(
+                (convolution): Conv2d(128, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=2, bias=False)
+                (normalization): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                (activation): ReLU()
+              )
+              (2): RegNetSELayer(
+                (pooler): AdaptiveAvgPool2d(output_size=(1, 1))
+                (attention): Sequential(
+                  (0): Conv2d(128, 8, kernel_size=(1, 1), stride=(1, 1))
+                  (1): ReLU()
+                  (2): Conv2d(8, 128, kernel_size=(1, 1), stride=(1, 1))
+                  (3): Sigmoid()
+                )
+              )
+              (3): RegNetConvLayer(
+                (convolution): Conv2d(128, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (normalization): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                (activation): Identity()
+              )
+            )
+            (activation): ReLU()
+          )
+          (1): RegNetYLayer(
+            (shortcut): Identity()
+            (layer): Sequential(
+              (0): RegNetConvLayer(
+                (convolution): Conv2d(128, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (normalization): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                (activation): ReLU()
+              )
+              (1): RegNetConvLayer(
+                (convolution): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=2, bias=False)
+                (normalization): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                (activation): ReLU()
+              )
+              (2): RegNetSELayer(
+                (pooler): AdaptiveAvgPool2d(output_size=(1, 1))
+                (attention): Sequential(
+                  (0): Conv2d(128, 32, kernel_size=(1, 1), stride=(1, 1))
+                  (1): ReLU()
+                  (2): Conv2d(32, 128, kernel_size=(1, 1), stride=(1, 1))
+                  (3): Sigmoid()
+                )
+              )
+              (3): RegNetConvLayer(
+                (convolution): Conv2d(128, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (normalization): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                (activation): Identity()
+              )
+            )
+            (activation): ReLU()
+          )
+        )
+      )
+      (1): RegNetStage(
+        (layers): Sequential(
+          (0): RegNetYLayer(
+            (shortcut): RegNetShortCut(
+              (convolution): Conv2d(128, 192, kernel_size=(1, 1), stride=(2, 2), bias=False)
+              (normalization): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            )
+            (layer): Sequential(
+              (0): RegNetConvLayer(
+                (convolution): Conv2d(128, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (normalization): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                (activation): ReLU()
+              )
+              (1): RegNetConvLayer(
+                (convolution): Conv2d(192, 192, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=3, bias=False)
+                (normalization): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                (activation): ReLU()
+              )
+              (2): RegNetSELayer(
+                (pooler): AdaptiveAvgPool2d(output_size=(1, 1))
+                (attention): Sequential(
+                  (0): Conv2d(192, 32, kernel_size=(1, 1), stride=(1, 1))
+                  (1): ReLU()
+                  (2): Conv2d(32, 192, kernel_size=(1, 1), stride=(1, 1))
+                  (3): Sigmoid()
+                )
+              )
+              (3): RegNetConvLayer(
+                (convolution): Conv2d(192, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (normalization): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                (activation): Identity()
+              )
+            )
+            (activation): ReLU()
+          )
+          (1): RegNetYLayer(
+            (shortcut): Identity()
+            (layer): Sequential(
+              (0): RegNetConvLayer(
+                (convolution): Conv2d(192, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (normalization): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                (activation): ReLU()
+              )
+              (1): RegNetConvLayer(
+                (convolution): Conv2d(192, 192, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=3, bias=False)
+                (normalization): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                (activation): ReLU()
+              )
+              (2): RegNetSELayer(
+                (pooler): AdaptiveAvgPool2d(output_size=(1, 1))
+                (attention): Sequential(
+                  (0): Conv2d(192, 48, kernel_size=(1, 1), stride=(1, 1))
+                  (1): ReLU()
+                  (2): Conv2d(48, 192, kernel_size=(1, 1), stride=(1, 1))
+                  (3): Sigmoid()
+                )
+              )
+              (3): RegNetConvLayer(
+                (convolution): Conv2d(192, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (normalization): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                (activation): Identity()
+              )
+            )
+            (activation): ReLU()
+          )
+          (2): RegNetYLayer(
+            (shortcut): Identity()
+            (layer): Sequential(
+              (0): RegNetConvLayer(
+                (convolution): Conv2d(192, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (normalization): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                (activation): ReLU()
+              )
+              (1): RegNetConvLayer(
+                (convolution): Conv2d(192, 192, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=3, bias=False)
+                (normalization): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                (activation): ReLU()
+              )
+              (2): RegNetSELayer(
+                (pooler): AdaptiveAvgPool2d(output_size=(1, 1))
+                (attention): Sequential(
+                  (0): Conv2d(192, 48, kernel_size=(1, 1), stride=(1, 1))
+                  (1): ReLU()
+                  (2): Conv2d(48, 192, kernel_size=(1, 1), stride=(1, 1))
+                  (3): Sigmoid()
+                )
+              )
+              (3): RegNetConvLayer(
+                (convolution): Conv2d(192, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (normalization): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                (activation): Identity()
+              )
+            )
+            (activation): ReLU()
+          )
+          (3): RegNetYLayer(
+            (shortcut): Identity()
+            (layer): Sequential(
+              (0): RegNetConvLayer(
+                (convolution): Conv2d(192, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (normalization): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                (activation): ReLU()
+              )
+              (1): RegNetConvLayer(
+                (convolution): Conv2d(192, 192, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=3, bias=False)
+                (normalization): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                (activation): ReLU()
+              )
+              (2): RegNetSELayer(
+                (pooler): AdaptiveAvgPool2d(output_size=(1, 1))
+                (attention): Sequential(
+                  (0): Conv2d(192, 48, kernel_size=(1, 1), stride=(1, 1))
+                  (1): ReLU()
+                  (2): Conv2d(48, 192, kernel_size=(1, 1), stride=(1, 1))
+                  (3): Sigmoid()
+                )
+              )
+              (3): RegNetConvLayer(
+                (convolution): Conv2d(192, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (normalization): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                (activation): Identity()
+              )
+            )
+            (activation): ReLU()
+          )
+          (4): RegNetYLayer(
+            (shortcut): Identity()
+            (layer): Sequential(
+              (0): RegNetConvLayer(
+                (convolution): Conv2d(192, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (normalization): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                (activation): ReLU()
+              )
+              (1): RegNetConvLayer(
+                (convolution): Conv2d(192, 192, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=3, bias=False)
+                (normalization): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                (activation): ReLU()
+              )
+              (2): RegNetSELayer(
+                (pooler): AdaptiveAvgPool2d(output_size=(1, 1))
+                (attention): Sequential(
+                  (0): Conv2d(192, 48, kernel_size=(1, 1), stride=(1, 1))
+                  (1): ReLU()
+                  (2): Conv2d(48, 192, kernel_size=(1, 1), stride=(1, 1))
+                  (3): Sigmoid()
+                )
+              )
+              (3): RegNetConvLayer(
+                (convolution): Conv2d(192, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (normalization): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                (activation): Identity()
+              )
+            )
+            (activation): ReLU()
+          )
+          (5): RegNetYLayer(
+            (shortcut): Identity()
+            (layer): Sequential(
+              (0): RegNetConvLayer(
+                (convolution): Conv2d(192, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (normalization): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                (activation): ReLU()
+              )
+              (1): RegNetConvLayer(
+                (convolution): Conv2d(192, 192, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=3, bias=False)
+                (normalization): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                (activation): ReLU()
+              )
+              (2): RegNetSELayer(
+                (pooler): AdaptiveAvgPool2d(output_size=(1, 1))
+                (attention): Sequential(
+                  (0): Conv2d(192, 48, kernel_size=(1, 1), stride=(1, 1))
+                  (1): ReLU()
+                  (2): Conv2d(48, 192, kernel_size=(1, 1), stride=(1, 1))
+                  (3): Sigmoid()
+                )
+              )
+              (3): RegNetConvLayer(
+                (convolution): Conv2d(192, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (normalization): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                (activation): Identity()
+              )
+            )
+            (activation): ReLU()
+          )
+        )
+      )
+      (2): RegNetStage(
+        (layers): Sequential(
+          (0): RegNetYLayer(
+            (shortcut): RegNetShortCut(
+              (convolution): Conv2d(192, 512, kernel_size=(1, 1), stride=(2, 2), bias=False)
+              (normalization): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            )
+            (layer): Sequential(
+              (0): RegNetConvLayer(
+                (convolution): Conv2d(192, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (normalization): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                (activation): ReLU()
+              )
+              (1): RegNetConvLayer(
+                (convolution): Conv2d(512, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=8, bias=False)
+                (normalization): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                (activation): ReLU()
+              )
+              (2): RegNetSELayer(
+                (pooler): AdaptiveAvgPool2d(output_size=(1, 1))
+                (attention): Sequential(
+                  (0): Conv2d(512, 48, kernel_size=(1, 1), stride=(1, 1))
+                  (1): ReLU()
+                  (2): Conv2d(48, 512, kernel_size=(1, 1), stride=(1, 1))
+                  (3): Sigmoid()
+                )
+              )
+              (3): RegNetConvLayer(
+                (convolution): Conv2d(512, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (normalization): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                (activation): Identity()
+              )
+            )
+            (activation): ReLU()
+          )
+          (1): RegNetYLayer(
+            (shortcut): Identity()
+            (layer): Sequential(
+              (0): RegNetConvLayer(
+                (convolution): Conv2d(512, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (normalization): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                (activation): ReLU()
+              )
+              (1): RegNetConvLayer(
+                (convolution): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=8, bias=False)
+                (normalization): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                (activation): ReLU()
+              )
+              (2): RegNetSELayer(
+                (pooler): AdaptiveAvgPool2d(output_size=(1, 1))
+                (attention): Sequential(
+                  (0): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1))
+                  (1): ReLU()
+                  (2): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1))
+                  (3): Sigmoid()
+                )
+              )
+              (3): RegNetConvLayer(
+                (convolution): Conv2d(512, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (normalization): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                (activation): Identity()
+              )
+            )
+            (activation): ReLU()
+          )
+          (2): RegNetYLayer(
+            (shortcut): Identity()
+            (layer): Sequential(
+              (0): RegNetConvLayer(
+                (convolution): Conv2d(512, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (normalization): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                (activation): ReLU()
+              )
+              (1): RegNetConvLayer(
+                (convolution): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=8, bias=False)
+                (normalization): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                (activation): ReLU()
+              )
+              (2): RegNetSELayer(
+                (pooler): AdaptiveAvgPool2d(output_size=(1, 1))
+                (attention): Sequential(
+                  (0): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1))
+                  (1): ReLU()
+                  (2): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1))
+                  (3): Sigmoid()
+                )
+              )
+              (3): RegNetConvLayer(
+                (convolution): Conv2d(512, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (normalization): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                (activation): Identity()
+              )
+            )
+            (activation): ReLU()
+          )
+          (3): RegNetYLayer(
+            (shortcut): Identity()
+            (layer): Sequential(
+              (0): RegNetConvLayer(
+                (convolution): Conv2d(512, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (normalization): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                (activation): ReLU()
+              )
+              (1): RegNetConvLayer(
+                (convolution): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=8, bias=False)
+                (normalization): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                (activation): ReLU()
+              )
+              (2): RegNetSELayer(
+                (pooler): AdaptiveAvgPool2d(output_size=(1, 1))
+                (attention): Sequential(
+                  (0): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1))
+                  (1): ReLU()
+                  (2): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1))
+                  (3): Sigmoid()
+                )
+              )
+              (3): RegNetConvLayer(
+                (convolution): Conv2d(512, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (normalization): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                (activation): Identity()
+              )
+            )
+            (activation): ReLU()
+          )
+          (4): RegNetYLayer(
+            (shortcut): Identity()
+            (layer): Sequential(
+              (0): RegNetConvLayer(
+                (convolution): Conv2d(512, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (normalization): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                (activation): ReLU()
+              )
+              (1): RegNetConvLayer(
+                (convolution): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=8, bias=False)
+                (normalization): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                (activation): ReLU()
+              )
+              (2): RegNetSELayer(
+                (pooler): AdaptiveAvgPool2d(output_size=(1, 1))
+                (attention): Sequential(
+                  (0): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1))
+                  (1): ReLU()
+                  (2): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1))
+                  (3): Sigmoid()
+                )
+              )
+              (3): RegNetConvLayer(
+                (convolution): Conv2d(512, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (normalization): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                (activation): Identity()
+              )
+            )
+            (activation): ReLU()
+          )
+          (5): RegNetYLayer(
+            (shortcut): Identity()
+            (layer): Sequential(
+              (0): RegNetConvLayer(
+                (convolution): Conv2d(512, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (normalization): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                (activation): ReLU()
+              )
+              (1): RegNetConvLayer(
+                (convolution): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=8, bias=False)
+                (normalization): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                (activation): ReLU()
+              )
+              (2): RegNetSELayer(
+                (pooler): AdaptiveAvgPool2d(output_size=(1, 1))
+                (attention): Sequential(
+                  (0): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1))
+                  (1): ReLU()
+                  (2): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1))
+                  (3): Sigmoid()
+                )
+              )
+              (3): RegNetConvLayer(
+                (convolution): Conv2d(512, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (normalization): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                (activation): Identity()
+              )
+            )
+            (activation): ReLU()
+          )
+          (6): RegNetYLayer(
+            (shortcut): Identity()
+            (layer): Sequential(
+              (0): RegNetConvLayer(
+                (convolution): Conv2d(512, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (normalization): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                (activation): ReLU()
+              )
+              (1): RegNetConvLayer(
+                (convolution): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=8, bias=False)
+                (normalization): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                (activation): ReLU()
+              )
+              (2): RegNetSELayer(
+                (pooler): AdaptiveAvgPool2d(output_size=(1, 1))
+                (attention): Sequential(
+                  (0): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1))
+                  (1): ReLU()
+                  (2): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1))
+                  (3): Sigmoid()
+                )
+              )
+              (3): RegNetConvLayer(
+                (convolution): Conv2d(512, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (normalization): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                (activation): Identity()
+              )
+            )
+            (activation): ReLU()
+          )
+          (7): RegNetYLayer(
+            (shortcut): Identity()
+            (layer): Sequential(
+              (0): RegNetConvLayer(
+                (convolution): Conv2d(512, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (normalization): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                (activation): ReLU()
+              )
+              (1): RegNetConvLayer(
+                (convolution): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=8, bias=False)
+                (normalization): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                (activation): ReLU()
+              )
+              (2): RegNetSELayer(
+                (pooler): AdaptiveAvgPool2d(output_size=(1, 1))
+                (attention): Sequential(
+                  (0): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1))
+                  (1): ReLU()
+                  (2): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1))
+                  (3): Sigmoid()
+                )
+              )
+              (3): RegNetConvLayer(
+                (convolution): Conv2d(512, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (normalization): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                (activation): Identity()
+              )
+            )
+            (activation): ReLU()
+          )
+          (8): RegNetYLayer(
+            (shortcut): Identity()
+            (layer): Sequential(
+              (0): RegNetConvLayer(
+                (convolution): Conv2d(512, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (normalization): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                (activation): ReLU()
+              )
+              (1): RegNetConvLayer(
+                (convolution): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=8, bias=False)
+                (normalization): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                (activation): ReLU()
+              )
+              (2): RegNetSELayer(
+                (pooler): AdaptiveAvgPool2d(output_size=(1, 1))
+                (attention): Sequential(
+                  (0): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1))
+                  (1): ReLU()
+                  (2): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1))
+                  (3): Sigmoid()
+                )
+              )
+              (3): RegNetConvLayer(
+                (convolution): Conv2d(512, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (normalization): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                (activation): Identity()
+              )
+            )
+            (activation): ReLU()
+          )
+          (9): RegNetYLayer(
+            (shortcut): Identity()
+            (layer): Sequential(
+              (0): RegNetConvLayer(
+                (convolution): Conv2d(512, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (normalization): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                (activation): ReLU()
+              )
+              (1): RegNetConvLayer(
+                (convolution): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=8, bias=False)
+                (normalization): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                (activation): ReLU()
+              )
+              (2): RegNetSELayer(
+                (pooler): AdaptiveAvgPool2d(output_size=(1, 1))
+                (attention): Sequential(
+                  (0): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1))
+                  (1): ReLU()
+                  (2): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1))
+                  (3): Sigmoid()
+                )
+              )
+              (3): RegNetConvLayer(
+                (convolution): Conv2d(512, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (normalization): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                (activation): Identity()
+              )
+            )
+            (activation): ReLU()
+          )
+          (10): RegNetYLayer(
+            (shortcut): Identity()
+            (layer): Sequential(
+              (0): RegNetConvLayer(
+                (convolution): Conv2d(512, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (normalization): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                (activation): ReLU()
+              )
+              (1): RegNetConvLayer(
+                (convolution): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=8, bias=False)
+                (normalization): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                (activation): ReLU()
+              )
+              (2): RegNetSELayer(
+                (pooler): AdaptiveAvgPool2d(output_size=(1, 1))
+                (attention): Sequential(
+                  (0): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1))
+                  (1): ReLU()
+                  (2): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1))
+                  (3): Sigmoid()
+                )
+              )
+              (3): RegNetConvLayer(
+                (convolution): Conv2d(512, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (normalization): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                (activation): Identity()
+              )
+            )
+            (activation): ReLU()
+          )
+          (11): RegNetYLayer(
+            (shortcut): Identity()
+            (layer): Sequential(
+              (0): RegNetConvLayer(
+                (convolution): Conv2d(512, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (normalization): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                (activation): ReLU()
+              )
+              (1): RegNetConvLayer(
+                (convolution): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=8, bias=False)
+                (normalization): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                (activation): ReLU()
+              )
+              (2): RegNetSELayer(
+                (pooler): AdaptiveAvgPool2d(output_size=(1, 1))
+                (attention): Sequential(
+                  (0): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1))
+                  (1): ReLU()
+                  (2): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1))
+                  (3): Sigmoid()
+                )
+              )
+              (3): RegNetConvLayer(
+                (convolution): Conv2d(512, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (normalization): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                (activation): Identity()
+              )
+            )
+            (activation): ReLU()
+          )
+        )
+      )
+      (3): RegNetStage(
+        (layers): Sequential(
+          (0): RegNetYLayer(
+            (shortcut): RegNetShortCut(
+              (convolution): Conv2d(512, 1088, kernel_size=(1, 1), stride=(2, 2), bias=False)
+              (normalization): BatchNorm2d(1088, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            )
+            (layer): Sequential(
+              (0): RegNetConvLayer(
+                (convolution): Conv2d(512, 1088, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (normalization): BatchNorm2d(1088, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                (activation): ReLU()
+              )
+              (1): RegNetConvLayer(
+                (convolution): Conv2d(1088, 1088, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=17, bias=False)
+                (normalization): BatchNorm2d(1088, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                (activation): ReLU()
+              )
+              (2): RegNetSELayer(
+                (pooler): AdaptiveAvgPool2d(output_size=(1, 1))
+                (attention): Sequential(
+                  (0): Conv2d(1088, 128, kernel_size=(1, 1), stride=(1, 1))
+                  (1): ReLU()
+                  (2): Conv2d(128, 1088, kernel_size=(1, 1), stride=(1, 1))
+                  (3): Sigmoid()
+                )
+              )
+              (3): RegNetConvLayer(
+                (convolution): Conv2d(1088, 1088, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (normalization): BatchNorm2d(1088, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                (activation): Identity()
+              )
+            )
+            (activation): ReLU()
+          )
+          (1): RegNetYLayer(
+            (shortcut): Identity()
+            (layer): Sequential(
+              (0): RegNetConvLayer(
+                (convolution): Conv2d(1088, 1088, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (normalization): BatchNorm2d(1088, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                (activation): ReLU()
+              )
+              (1): RegNetConvLayer(
+                (convolution): Conv2d(1088, 1088, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=17, bias=False)
+                (normalization): BatchNorm2d(1088, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                (activation): ReLU()
+              )
+              (2): RegNetSELayer(
+                (pooler): AdaptiveAvgPool2d(output_size=(1, 1))
+                (attention): Sequential(
+                  (0): Conv2d(1088, 272, kernel_size=(1, 1), stride=(1, 1))
+                  (1): ReLU()
+                  (2): Conv2d(272, 1088, kernel_size=(1, 1), stride=(1, 1))
+                  (3): Sigmoid()
+                )
+              )
+              (3): RegNetConvLayer(
+                (convolution): Conv2d(1088, 1088, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (normalization): BatchNorm2d(1088, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                (activation): Identity()
+              )
+            )
+            (activation): ReLU()
+          )
+        )
+      )
+    )
+  )
+  (pooler): AdaptiveAvgPool2d(output_size=(1, 1))
+)

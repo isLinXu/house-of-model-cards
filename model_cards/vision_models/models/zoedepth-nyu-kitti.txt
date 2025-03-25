@@ -1,0 +1,790 @@
+ZoeDepthForDepthEstimation(
+  (backbone): BeitBackbone(
+    (embeddings): BeitEmbeddings(
+      (patch_embeddings): BeitPatchEmbeddings(
+        (projection): Conv2d(3, 1024, kernel_size=(16, 16), stride=(16, 16))
+      )
+      (dropout): Dropout(p=0.0, inplace=False)
+    )
+    (encoder): BeitEncoder(
+      (layer): ModuleList(
+        (0): BeitLayer(
+          (attention): BeitAttention(
+            (attention): BeitSelfAttention(
+              (query): Linear(in_features=1024, out_features=1024, bias=True)
+              (key): Linear(in_features=1024, out_features=1024, bias=False)
+              (value): Linear(in_features=1024, out_features=1024, bias=True)
+              (dropout): Dropout(p=0.0, inplace=False)
+              (relative_position_bias): BeitRelativePositionBias()
+            )
+            (output): BeitSelfOutput(
+              (dense): Linear(in_features=1024, out_features=1024, bias=True)
+              (dropout): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (intermediate): BeitIntermediate(
+            (dense): Linear(in_features=1024, out_features=4096, bias=True)
+            (intermediate_act_fn): GELUActivation()
+          )
+          (output): BeitOutput(
+            (dense): Linear(in_features=4096, out_features=1024, bias=True)
+            (dropout): Dropout(p=0.0, inplace=False)
+          )
+          (layernorm_before): LayerNorm((1024,), eps=1e-12, elementwise_affine=True)
+          (drop_path): Identity()
+          (layernorm_after): LayerNorm((1024,), eps=1e-12, elementwise_affine=True)
+        )
+        (1): BeitLayer(
+          (attention): BeitAttention(
+            (attention): BeitSelfAttention(
+              (query): Linear(in_features=1024, out_features=1024, bias=True)
+              (key): Linear(in_features=1024, out_features=1024, bias=False)
+              (value): Linear(in_features=1024, out_features=1024, bias=True)
+              (dropout): Dropout(p=0.0, inplace=False)
+              (relative_position_bias): BeitRelativePositionBias()
+            )
+            (output): BeitSelfOutput(
+              (dense): Linear(in_features=1024, out_features=1024, bias=True)
+              (dropout): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (intermediate): BeitIntermediate(
+            (dense): Linear(in_features=1024, out_features=4096, bias=True)
+            (intermediate_act_fn): GELUActivation()
+          )
+          (output): BeitOutput(
+            (dense): Linear(in_features=4096, out_features=1024, bias=True)
+            (dropout): Dropout(p=0.0, inplace=False)
+          )
+          (layernorm_before): LayerNorm((1024,), eps=1e-12, elementwise_affine=True)
+          (drop_path): BeitDropPath(p=0.004347826354205608)
+          (layernorm_after): LayerNorm((1024,), eps=1e-12, elementwise_affine=True)
+        )
+        (2): BeitLayer(
+          (attention): BeitAttention(
+            (attention): BeitSelfAttention(
+              (query): Linear(in_features=1024, out_features=1024, bias=True)
+              (key): Linear(in_features=1024, out_features=1024, bias=False)
+              (value): Linear(in_features=1024, out_features=1024, bias=True)
+              (dropout): Dropout(p=0.0, inplace=False)
+              (relative_position_bias): BeitRelativePositionBias()
+            )
+            (output): BeitSelfOutput(
+              (dense): Linear(in_features=1024, out_features=1024, bias=True)
+              (dropout): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (intermediate): BeitIntermediate(
+            (dense): Linear(in_features=1024, out_features=4096, bias=True)
+            (intermediate_act_fn): GELUActivation()
+          )
+          (output): BeitOutput(
+            (dense): Linear(in_features=4096, out_features=1024, bias=True)
+            (dropout): Dropout(p=0.0, inplace=False)
+          )
+          (layernorm_before): LayerNorm((1024,), eps=1e-12, elementwise_affine=True)
+          (drop_path): BeitDropPath(p=0.008695652708411217)
+          (layernorm_after): LayerNorm((1024,), eps=1e-12, elementwise_affine=True)
+        )
+        (3): BeitLayer(
+          (attention): BeitAttention(
+            (attention): BeitSelfAttention(
+              (query): Linear(in_features=1024, out_features=1024, bias=True)
+              (key): Linear(in_features=1024, out_features=1024, bias=False)
+              (value): Linear(in_features=1024, out_features=1024, bias=True)
+              (dropout): Dropout(p=0.0, inplace=False)
+              (relative_position_bias): BeitRelativePositionBias()
+            )
+            (output): BeitSelfOutput(
+              (dense): Linear(in_features=1024, out_features=1024, bias=True)
+              (dropout): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (intermediate): BeitIntermediate(
+            (dense): Linear(in_features=1024, out_features=4096, bias=True)
+            (intermediate_act_fn): GELUActivation()
+          )
+          (output): BeitOutput(
+            (dense): Linear(in_features=4096, out_features=1024, bias=True)
+            (dropout): Dropout(p=0.0, inplace=False)
+          )
+          (layernorm_before): LayerNorm((1024,), eps=1e-12, elementwise_affine=True)
+          (drop_path): BeitDropPath(p=0.013043479062616825)
+          (layernorm_after): LayerNorm((1024,), eps=1e-12, elementwise_affine=True)
+        )
+        (4): BeitLayer(
+          (attention): BeitAttention(
+            (attention): BeitSelfAttention(
+              (query): Linear(in_features=1024, out_features=1024, bias=True)
+              (key): Linear(in_features=1024, out_features=1024, bias=False)
+              (value): Linear(in_features=1024, out_features=1024, bias=True)
+              (dropout): Dropout(p=0.0, inplace=False)
+              (relative_position_bias): BeitRelativePositionBias()
+            )
+            (output): BeitSelfOutput(
+              (dense): Linear(in_features=1024, out_features=1024, bias=True)
+              (dropout): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (intermediate): BeitIntermediate(
+            (dense): Linear(in_features=1024, out_features=4096, bias=True)
+            (intermediate_act_fn): GELUActivation()
+          )
+          (output): BeitOutput(
+            (dense): Linear(in_features=4096, out_features=1024, bias=True)
+            (dropout): Dropout(p=0.0, inplace=False)
+          )
+          (layernorm_before): LayerNorm((1024,), eps=1e-12, elementwise_affine=True)
+          (drop_path): BeitDropPath(p=0.017391305416822433)
+          (layernorm_after): LayerNorm((1024,), eps=1e-12, elementwise_affine=True)
+        )
+        (5): BeitLayer(
+          (attention): BeitAttention(
+            (attention): BeitSelfAttention(
+              (query): Linear(in_features=1024, out_features=1024, bias=True)
+              (key): Linear(in_features=1024, out_features=1024, bias=False)
+              (value): Linear(in_features=1024, out_features=1024, bias=True)
+              (dropout): Dropout(p=0.0, inplace=False)
+              (relative_position_bias): BeitRelativePositionBias()
+            )
+            (output): BeitSelfOutput(
+              (dense): Linear(in_features=1024, out_features=1024, bias=True)
+              (dropout): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (intermediate): BeitIntermediate(
+            (dense): Linear(in_features=1024, out_features=4096, bias=True)
+            (intermediate_act_fn): GELUActivation()
+          )
+          (output): BeitOutput(
+            (dense): Linear(in_features=4096, out_features=1024, bias=True)
+            (dropout): Dropout(p=0.0, inplace=False)
+          )
+          (layernorm_before): LayerNorm((1024,), eps=1e-12, elementwise_affine=True)
+          (drop_path): BeitDropPath(p=0.021739132702350616)
+          (layernorm_after): LayerNorm((1024,), eps=1e-12, elementwise_affine=True)
+        )
+        (6): BeitLayer(
+          (attention): BeitAttention(
+            (attention): BeitSelfAttention(
+              (query): Linear(in_features=1024, out_features=1024, bias=True)
+              (key): Linear(in_features=1024, out_features=1024, bias=False)
+              (value): Linear(in_features=1024, out_features=1024, bias=True)
+              (dropout): Dropout(p=0.0, inplace=False)
+              (relative_position_bias): BeitRelativePositionBias()
+            )
+            (output): BeitSelfOutput(
+              (dense): Linear(in_features=1024, out_features=1024, bias=True)
+              (dropout): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (intermediate): BeitIntermediate(
+            (dense): Linear(in_features=1024, out_features=4096, bias=True)
+            (intermediate_act_fn): GELUActivation()
+          )
+          (output): BeitOutput(
+            (dense): Linear(in_features=4096, out_features=1024, bias=True)
+            (dropout): Dropout(p=0.0, inplace=False)
+          )
+          (layernorm_before): LayerNorm((1024,), eps=1e-12, elementwise_affine=True)
+          (drop_path): BeitDropPath(p=0.02608695812523365)
+          (layernorm_after): LayerNorm((1024,), eps=1e-12, elementwise_affine=True)
+        )
+        (7): BeitLayer(
+          (attention): BeitAttention(
+            (attention): BeitSelfAttention(
+              (query): Linear(in_features=1024, out_features=1024, bias=True)
+              (key): Linear(in_features=1024, out_features=1024, bias=False)
+              (value): Linear(in_features=1024, out_features=1024, bias=True)
+              (dropout): Dropout(p=0.0, inplace=False)
+              (relative_position_bias): BeitRelativePositionBias()
+            )
+            (output): BeitSelfOutput(
+              (dense): Linear(in_features=1024, out_features=1024, bias=True)
+              (dropout): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (intermediate): BeitIntermediate(
+            (dense): Linear(in_features=1024, out_features=4096, bias=True)
+            (intermediate_act_fn): GELUActivation()
+          )
+          (output): BeitOutput(
+            (dense): Linear(in_features=4096, out_features=1024, bias=True)
+            (dropout): Dropout(p=0.0, inplace=False)
+          )
+          (layernorm_before): LayerNorm((1024,), eps=1e-12, elementwise_affine=True)
+          (drop_path): BeitDropPath(p=0.030434783548116684)
+          (layernorm_after): LayerNorm((1024,), eps=1e-12, elementwise_affine=True)
+        )
+        (8): BeitLayer(
+          (attention): BeitAttention(
+            (attention): BeitSelfAttention(
+              (query): Linear(in_features=1024, out_features=1024, bias=True)
+              (key): Linear(in_features=1024, out_features=1024, bias=False)
+              (value): Linear(in_features=1024, out_features=1024, bias=True)
+              (dropout): Dropout(p=0.0, inplace=False)
+              (relative_position_bias): BeitRelativePositionBias()
+            )
+            (output): BeitSelfOutput(
+              (dense): Linear(in_features=1024, out_features=1024, bias=True)
+              (dropout): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (intermediate): BeitIntermediate(
+            (dense): Linear(in_features=1024, out_features=4096, bias=True)
+            (intermediate_act_fn): GELUActivation()
+          )
+          (output): BeitOutput(
+            (dense): Linear(in_features=4096, out_features=1024, bias=True)
+            (dropout): Dropout(p=0.0, inplace=False)
+          )
+          (layernorm_before): LayerNorm((1024,), eps=1e-12, elementwise_affine=True)
+          (drop_path): BeitDropPath(p=0.03478261083364487)
+          (layernorm_after): LayerNorm((1024,), eps=1e-12, elementwise_affine=True)
+        )
+        (9): BeitLayer(
+          (attention): BeitAttention(
+            (attention): BeitSelfAttention(
+              (query): Linear(in_features=1024, out_features=1024, bias=True)
+              (key): Linear(in_features=1024, out_features=1024, bias=False)
+              (value): Linear(in_features=1024, out_features=1024, bias=True)
+              (dropout): Dropout(p=0.0, inplace=False)
+              (relative_position_bias): BeitRelativePositionBias()
+            )
+            (output): BeitSelfOutput(
+              (dense): Linear(in_features=1024, out_features=1024, bias=True)
+              (dropout): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (intermediate): BeitIntermediate(
+            (dense): Linear(in_features=1024, out_features=4096, bias=True)
+            (intermediate_act_fn): GELUActivation()
+          )
+          (output): BeitOutput(
+            (dense): Linear(in_features=4096, out_features=1024, bias=True)
+            (dropout): Dropout(p=0.0, inplace=False)
+          )
+          (layernorm_before): LayerNorm((1024,), eps=1e-12, elementwise_affine=True)
+          (drop_path): BeitDropPath(p=0.03913043811917305)
+          (layernorm_after): LayerNorm((1024,), eps=1e-12, elementwise_affine=True)
+        )
+        (10): BeitLayer(
+          (attention): BeitAttention(
+            (attention): BeitSelfAttention(
+              (query): Linear(in_features=1024, out_features=1024, bias=True)
+              (key): Linear(in_features=1024, out_features=1024, bias=False)
+              (value): Linear(in_features=1024, out_features=1024, bias=True)
+              (dropout): Dropout(p=0.0, inplace=False)
+              (relative_position_bias): BeitRelativePositionBias()
+            )
+            (output): BeitSelfOutput(
+              (dense): Linear(in_features=1024, out_features=1024, bias=True)
+              (dropout): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (intermediate): BeitIntermediate(
+            (dense): Linear(in_features=1024, out_features=4096, bias=True)
+            (intermediate_act_fn): GELUActivation()
+          )
+          (output): BeitOutput(
+            (dense): Linear(in_features=4096, out_features=1024, bias=True)
+            (dropout): Dropout(p=0.0, inplace=False)
+          )
+          (layernorm_before): LayerNorm((1024,), eps=1e-12, elementwise_affine=True)
+          (drop_path): BeitDropPath(p=0.04347826540470123)
+          (layernorm_after): LayerNorm((1024,), eps=1e-12, elementwise_affine=True)
+        )
+        (11): BeitLayer(
+          (attention): BeitAttention(
+            (attention): BeitSelfAttention(
+              (query): Linear(in_features=1024, out_features=1024, bias=True)
+              (key): Linear(in_features=1024, out_features=1024, bias=False)
+              (value): Linear(in_features=1024, out_features=1024, bias=True)
+              (dropout): Dropout(p=0.0, inplace=False)
+              (relative_position_bias): BeitRelativePositionBias()
+            )
+            (output): BeitSelfOutput(
+              (dense): Linear(in_features=1024, out_features=1024, bias=True)
+              (dropout): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (intermediate): BeitIntermediate(
+            (dense): Linear(in_features=1024, out_features=4096, bias=True)
+            (intermediate_act_fn): GELUActivation()
+          )
+          (output): BeitOutput(
+            (dense): Linear(in_features=4096, out_features=1024, bias=True)
+            (dropout): Dropout(p=0.0, inplace=False)
+          )
+          (layernorm_before): LayerNorm((1024,), eps=1e-12, elementwise_affine=True)
+          (drop_path): BeitDropPath(p=0.04782608896493912)
+          (layernorm_after): LayerNorm((1024,), eps=1e-12, elementwise_affine=True)
+        )
+        (12): BeitLayer(
+          (attention): BeitAttention(
+            (attention): BeitSelfAttention(
+              (query): Linear(in_features=1024, out_features=1024, bias=True)
+              (key): Linear(in_features=1024, out_features=1024, bias=False)
+              (value): Linear(in_features=1024, out_features=1024, bias=True)
+              (dropout): Dropout(p=0.0, inplace=False)
+              (relative_position_bias): BeitRelativePositionBias()
+            )
+            (output): BeitSelfOutput(
+              (dense): Linear(in_features=1024, out_features=1024, bias=True)
+              (dropout): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (intermediate): BeitIntermediate(
+            (dense): Linear(in_features=1024, out_features=4096, bias=True)
+            (intermediate_act_fn): GELUActivation()
+          )
+          (output): BeitOutput(
+            (dense): Linear(in_features=4096, out_features=1024, bias=True)
+            (dropout): Dropout(p=0.0, inplace=False)
+          )
+          (layernorm_before): LayerNorm((1024,), eps=1e-12, elementwise_affine=True)
+          (drop_path): BeitDropPath(p=0.052173912525177)
+          (layernorm_after): LayerNorm((1024,), eps=1e-12, elementwise_affine=True)
+        )
+        (13): BeitLayer(
+          (attention): BeitAttention(
+            (attention): BeitSelfAttention(
+              (query): Linear(in_features=1024, out_features=1024, bias=True)
+              (key): Linear(in_features=1024, out_features=1024, bias=False)
+              (value): Linear(in_features=1024, out_features=1024, bias=True)
+              (dropout): Dropout(p=0.0, inplace=False)
+              (relative_position_bias): BeitRelativePositionBias()
+            )
+            (output): BeitSelfOutput(
+              (dense): Linear(in_features=1024, out_features=1024, bias=True)
+              (dropout): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (intermediate): BeitIntermediate(
+            (dense): Linear(in_features=1024, out_features=4096, bias=True)
+            (intermediate_act_fn): GELUActivation()
+          )
+          (output): BeitOutput(
+            (dense): Linear(in_features=4096, out_features=1024, bias=True)
+            (dropout): Dropout(p=0.0, inplace=False)
+          )
+          (layernorm_before): LayerNorm((1024,), eps=1e-12, elementwise_affine=True)
+          (drop_path): BeitDropPath(p=0.056521736085414886)
+          (layernorm_after): LayerNorm((1024,), eps=1e-12, elementwise_affine=True)
+        )
+        (14): BeitLayer(
+          (attention): BeitAttention(
+            (attention): BeitSelfAttention(
+              (query): Linear(in_features=1024, out_features=1024, bias=True)
+              (key): Linear(in_features=1024, out_features=1024, bias=False)
+              (value): Linear(in_features=1024, out_features=1024, bias=True)
+              (dropout): Dropout(p=0.0, inplace=False)
+              (relative_position_bias): BeitRelativePositionBias()
+            )
+            (output): BeitSelfOutput(
+              (dense): Linear(in_features=1024, out_features=1024, bias=True)
+              (dropout): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (intermediate): BeitIntermediate(
+            (dense): Linear(in_features=1024, out_features=4096, bias=True)
+            (intermediate_act_fn): GELUActivation()
+          )
+          (output): BeitOutput(
+            (dense): Linear(in_features=4096, out_features=1024, bias=True)
+            (dropout): Dropout(p=0.0, inplace=False)
+          )
+          (layernorm_before): LayerNorm((1024,), eps=1e-12, elementwise_affine=True)
+          (drop_path): BeitDropPath(p=0.06086956337094307)
+          (layernorm_after): LayerNorm((1024,), eps=1e-12, elementwise_affine=True)
+        )
+        (15): BeitLayer(
+          (attention): BeitAttention(
+            (attention): BeitSelfAttention(
+              (query): Linear(in_features=1024, out_features=1024, bias=True)
+              (key): Linear(in_features=1024, out_features=1024, bias=False)
+              (value): Linear(in_features=1024, out_features=1024, bias=True)
+              (dropout): Dropout(p=0.0, inplace=False)
+              (relative_position_bias): BeitRelativePositionBias()
+            )
+            (output): BeitSelfOutput(
+              (dense): Linear(in_features=1024, out_features=1024, bias=True)
+              (dropout): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (intermediate): BeitIntermediate(
+            (dense): Linear(in_features=1024, out_features=4096, bias=True)
+            (intermediate_act_fn): GELUActivation()
+          )
+          (output): BeitOutput(
+            (dense): Linear(in_features=4096, out_features=1024, bias=True)
+            (dropout): Dropout(p=0.0, inplace=False)
+          )
+          (layernorm_before): LayerNorm((1024,), eps=1e-12, elementwise_affine=True)
+          (drop_path): BeitDropPath(p=0.06521739065647125)
+          (layernorm_after): LayerNorm((1024,), eps=1e-12, elementwise_affine=True)
+        )
+        (16): BeitLayer(
+          (attention): BeitAttention(
+            (attention): BeitSelfAttention(
+              (query): Linear(in_features=1024, out_features=1024, bias=True)
+              (key): Linear(in_features=1024, out_features=1024, bias=False)
+              (value): Linear(in_features=1024, out_features=1024, bias=True)
+              (dropout): Dropout(p=0.0, inplace=False)
+              (relative_position_bias): BeitRelativePositionBias()
+            )
+            (output): BeitSelfOutput(
+              (dense): Linear(in_features=1024, out_features=1024, bias=True)
+              (dropout): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (intermediate): BeitIntermediate(
+            (dense): Linear(in_features=1024, out_features=4096, bias=True)
+            (intermediate_act_fn): GELUActivation()
+          )
+          (output): BeitOutput(
+            (dense): Linear(in_features=4096, out_features=1024, bias=True)
+            (dropout): Dropout(p=0.0, inplace=False)
+          )
+          (layernorm_before): LayerNorm((1024,), eps=1e-12, elementwise_affine=True)
+          (drop_path): BeitDropPath(p=0.06956521421670914)
+          (layernorm_after): LayerNorm((1024,), eps=1e-12, elementwise_affine=True)
+        )
+        (17): BeitLayer(
+          (attention): BeitAttention(
+            (attention): BeitSelfAttention(
+              (query): Linear(in_features=1024, out_features=1024, bias=True)
+              (key): Linear(in_features=1024, out_features=1024, bias=False)
+              (value): Linear(in_features=1024, out_features=1024, bias=True)
+              (dropout): Dropout(p=0.0, inplace=False)
+              (relative_position_bias): BeitRelativePositionBias()
+            )
+            (output): BeitSelfOutput(
+              (dense): Linear(in_features=1024, out_features=1024, bias=True)
+              (dropout): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (intermediate): BeitIntermediate(
+            (dense): Linear(in_features=1024, out_features=4096, bias=True)
+            (intermediate_act_fn): GELUActivation()
+          )
+          (output): BeitOutput(
+            (dense): Linear(in_features=4096, out_features=1024, bias=True)
+            (dropout): Dropout(p=0.0, inplace=False)
+          )
+          (layernorm_before): LayerNorm((1024,), eps=1e-12, elementwise_affine=True)
+          (drop_path): BeitDropPath(p=0.07391304522752762)
+          (layernorm_after): LayerNorm((1024,), eps=1e-12, elementwise_affine=True)
+        )
+        (18): BeitLayer(
+          (attention): BeitAttention(
+            (attention): BeitSelfAttention(
+              (query): Linear(in_features=1024, out_features=1024, bias=True)
+              (key): Linear(in_features=1024, out_features=1024, bias=False)
+              (value): Linear(in_features=1024, out_features=1024, bias=True)
+              (dropout): Dropout(p=0.0, inplace=False)
+              (relative_position_bias): BeitRelativePositionBias()
+            )
+            (output): BeitSelfOutput(
+              (dense): Linear(in_features=1024, out_features=1024, bias=True)
+              (dropout): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (intermediate): BeitIntermediate(
+            (dense): Linear(in_features=1024, out_features=4096, bias=True)
+            (intermediate_act_fn): GELUActivation()
+          )
+          (output): BeitOutput(
+            (dense): Linear(in_features=4096, out_features=1024, bias=True)
+            (dropout): Dropout(p=0.0, inplace=False)
+          )
+          (layernorm_before): LayerNorm((1024,), eps=1e-12, elementwise_affine=True)
+          (drop_path): BeitDropPath(p=0.0782608687877655)
+          (layernorm_after): LayerNorm((1024,), eps=1e-12, elementwise_affine=True)
+        )
+        (19): BeitLayer(
+          (attention): BeitAttention(
+            (attention): BeitSelfAttention(
+              (query): Linear(in_features=1024, out_features=1024, bias=True)
+              (key): Linear(in_features=1024, out_features=1024, bias=False)
+              (value): Linear(in_features=1024, out_features=1024, bias=True)
+              (dropout): Dropout(p=0.0, inplace=False)
+              (relative_position_bias): BeitRelativePositionBias()
+            )
+            (output): BeitSelfOutput(
+              (dense): Linear(in_features=1024, out_features=1024, bias=True)
+              (dropout): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (intermediate): BeitIntermediate(
+            (dense): Linear(in_features=1024, out_features=4096, bias=True)
+            (intermediate_act_fn): GELUActivation()
+          )
+          (output): BeitOutput(
+            (dense): Linear(in_features=4096, out_features=1024, bias=True)
+            (dropout): Dropout(p=0.0, inplace=False)
+          )
+          (layernorm_before): LayerNorm((1024,), eps=1e-12, elementwise_affine=True)
+          (drop_path): BeitDropPath(p=0.08260869979858398)
+          (layernorm_after): LayerNorm((1024,), eps=1e-12, elementwise_affine=True)
+        )
+        (20): BeitLayer(
+          (attention): BeitAttention(
+            (attention): BeitSelfAttention(
+              (query): Linear(in_features=1024, out_features=1024, bias=True)
+              (key): Linear(in_features=1024, out_features=1024, bias=False)
+              (value): Linear(in_features=1024, out_features=1024, bias=True)
+              (dropout): Dropout(p=0.0, inplace=False)
+              (relative_position_bias): BeitRelativePositionBias()
+            )
+            (output): BeitSelfOutput(
+              (dense): Linear(in_features=1024, out_features=1024, bias=True)
+              (dropout): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (intermediate): BeitIntermediate(
+            (dense): Linear(in_features=1024, out_features=4096, bias=True)
+            (intermediate_act_fn): GELUActivation()
+          )
+          (output): BeitOutput(
+            (dense): Linear(in_features=4096, out_features=1024, bias=True)
+            (dropout): Dropout(p=0.0, inplace=False)
+          )
+          (layernorm_before): LayerNorm((1024,), eps=1e-12, elementwise_affine=True)
+          (drop_path): BeitDropPath(p=0.08695652335882187)
+          (layernorm_after): LayerNorm((1024,), eps=1e-12, elementwise_affine=True)
+        )
+        (21): BeitLayer(
+          (attention): BeitAttention(
+            (attention): BeitSelfAttention(
+              (query): Linear(in_features=1024, out_features=1024, bias=True)
+              (key): Linear(in_features=1024, out_features=1024, bias=False)
+              (value): Linear(in_features=1024, out_features=1024, bias=True)
+              (dropout): Dropout(p=0.0, inplace=False)
+              (relative_position_bias): BeitRelativePositionBias()
+            )
+            (output): BeitSelfOutput(
+              (dense): Linear(in_features=1024, out_features=1024, bias=True)
+              (dropout): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (intermediate): BeitIntermediate(
+            (dense): Linear(in_features=1024, out_features=4096, bias=True)
+            (intermediate_act_fn): GELUActivation()
+          )
+          (output): BeitOutput(
+            (dense): Linear(in_features=4096, out_features=1024, bias=True)
+            (dropout): Dropout(p=0.0, inplace=False)
+          )
+          (layernorm_before): LayerNorm((1024,), eps=1e-12, elementwise_affine=True)
+          (drop_path): BeitDropPath(p=0.09130434691905975)
+          (layernorm_after): LayerNorm((1024,), eps=1e-12, elementwise_affine=True)
+        )
+        (22): BeitLayer(
+          (attention): BeitAttention(
+            (attention): BeitSelfAttention(
+              (query): Linear(in_features=1024, out_features=1024, bias=True)
+              (key): Linear(in_features=1024, out_features=1024, bias=False)
+              (value): Linear(in_features=1024, out_features=1024, bias=True)
+              (dropout): Dropout(p=0.0, inplace=False)
+              (relative_position_bias): BeitRelativePositionBias()
+            )
+            (output): BeitSelfOutput(
+              (dense): Linear(in_features=1024, out_features=1024, bias=True)
+              (dropout): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (intermediate): BeitIntermediate(
+            (dense): Linear(in_features=1024, out_features=4096, bias=True)
+            (intermediate_act_fn): GELUActivation()
+          )
+          (output): BeitOutput(
+            (dense): Linear(in_features=4096, out_features=1024, bias=True)
+            (dropout): Dropout(p=0.0, inplace=False)
+          )
+          (layernorm_before): LayerNorm((1024,), eps=1e-12, elementwise_affine=True)
+          (drop_path): BeitDropPath(p=0.09565217792987823)
+          (layernorm_after): LayerNorm((1024,), eps=1e-12, elementwise_affine=True)
+        )
+        (23): BeitLayer(
+          (attention): BeitAttention(
+            (attention): BeitSelfAttention(
+              (query): Linear(in_features=1024, out_features=1024, bias=True)
+              (key): Linear(in_features=1024, out_features=1024, bias=False)
+              (value): Linear(in_features=1024, out_features=1024, bias=True)
+              (dropout): Dropout(p=0.0, inplace=False)
+              (relative_position_bias): BeitRelativePositionBias()
+            )
+            (output): BeitSelfOutput(
+              (dense): Linear(in_features=1024, out_features=1024, bias=True)
+              (dropout): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (intermediate): BeitIntermediate(
+            (dense): Linear(in_features=1024, out_features=4096, bias=True)
+            (intermediate_act_fn): GELUActivation()
+          )
+          (output): BeitOutput(
+            (dense): Linear(in_features=4096, out_features=1024, bias=True)
+            (dropout): Dropout(p=0.0, inplace=False)
+          )
+          (layernorm_before): LayerNorm((1024,), eps=1e-12, elementwise_affine=True)
+          (drop_path): BeitDropPath(p=0.10000000149011612)
+          (layernorm_after): LayerNorm((1024,), eps=1e-12, elementwise_affine=True)
+        )
+      )
+    )
+  )
+  (neck): ZoeDepthNeck(
+    (reassemble_stage): ZoeDepthReassembleStage(
+      (layers): ModuleList(
+        (0): ZoeDepthReassembleLayer(
+          (projection): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1))
+          (resize): ConvTranspose2d(256, 256, kernel_size=(4, 4), stride=(4, 4))
+        )
+        (1): ZoeDepthReassembleLayer(
+          (projection): Conv2d(1024, 512, kernel_size=(1, 1), stride=(1, 1))
+          (resize): ConvTranspose2d(512, 512, kernel_size=(2, 2), stride=(2, 2))
+        )
+        (2): ZoeDepthReassembleLayer(
+          (projection): Conv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1))
+          (resize): Identity()
+        )
+        (3): ZoeDepthReassembleLayer(
+          (projection): Conv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1))
+          (resize): Conv2d(1024, 1024, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        )
+      )
+      (readout_projects): ModuleList(
+        (0-3): 4 x Sequential(
+          (0): Linear(in_features=2048, out_features=1024, bias=True)
+          (1): GELUActivation()
+        )
+      )
+    )
+    (convs): ModuleList(
+      (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (1): Conv2d(512, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (2-3): 2 x Conv2d(1024, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    )
+    (fusion_stage): ZoeDepthFeatureFusionStage(
+      (layers): ModuleList(
+        (0-3): 4 x ZoeDepthFeatureFusionLayer(
+          (projection): Conv2d(256, 256, kernel_size=(1, 1), stride=(1, 1))
+          (residual_layer1): ZoeDepthPreActResidualLayer(
+            (activation1): ReLU()
+            (convolution1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (activation2): ReLU()
+            (convolution2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          )
+          (residual_layer2): ZoeDepthPreActResidualLayer(
+            (activation1): ReLU()
+            (convolution1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (activation2): ReLU()
+            (convolution2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          )
+        )
+      )
+    )
+  )
+  (relative_head): ZoeDepthRelativeDepthEstimationHead(
+    (conv1): Conv2d(256, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (upsample): Upsample(scale_factor=2.0, mode='bilinear')
+    (conv2): Conv2d(128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (conv3): Conv2d(32, 1, kernel_size=(1, 1), stride=(1, 1))
+  )
+  (metric_head): ZoeDepthMultipleMetricDepthEstimationHeads(
+    (conv2): Conv2d(256, 256, kernel_size=(1, 1), stride=(1, 1))
+    (patch_transformer): ZoeDepthPatchTransformerEncoder(
+      (transformer_encoder): ModuleList(
+        (0-3): 4 x ZoeDepthTransformerEncoderLayer(
+          (self_attn): ZoeDepthMultiheadAttention(
+            (query): Linear(in_features=128, out_features=128, bias=True)
+            (key): Linear(in_features=128, out_features=128, bias=True)
+            (value): Linear(in_features=128, out_features=128, bias=True)
+            (out_proj): Linear(in_features=128, out_features=128, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+          (linear1): Linear(in_features=128, out_features=1024, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (linear2): Linear(in_features=1024, out_features=128, bias=True)
+          (norm1): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+          (norm2): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+          (dropout1): Dropout(p=0.1, inplace=False)
+          (dropout2): Dropout(p=0.1, inplace=False)
+          (activation): ReLU()
+        )
+      )
+      (embedding_convPxP): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1))
+    )
+    (mlp_classifier): ZoeDepthMLPClassifier(
+      (linear1): Linear(in_features=128, out_features=128, bias=True)
+      (activation): ReLU()
+      (linear2): Linear(in_features=128, out_features=2, bias=True)
+    )
+    (seed_bin_regressors): ModuleDict(
+      (nyu): ZoeDepthSeedBinRegressor(
+        (conv1): Conv2d(256, 64, kernel_size=(1, 1), stride=(1, 1))
+        (act1): ReLU(inplace=True)
+        (conv2): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1))
+        (act2): Softplus(beta=1, threshold=20)
+      )
+      (kitti): ZoeDepthSeedBinRegressor(
+        (conv1): Conv2d(256, 64, kernel_size=(1, 1), stride=(1, 1))
+        (act1): ReLU(inplace=True)
+        (conv2): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1))
+        (act2): Softplus(beta=1, threshold=20)
+      )
+    )
+    (seed_projector): ZoeDepthProjector(
+      (conv1): Conv2d(256, 64, kernel_size=(1, 1), stride=(1, 1))
+      (act): ReLU(inplace=True)
+      (conv2): Conv2d(64, 128, kernel_size=(1, 1), stride=(1, 1))
+    )
+    (projectors): ModuleList(
+      (0-3): 4 x ZoeDepthProjector(
+        (conv1): Conv2d(256, 64, kernel_size=(1, 1), stride=(1, 1))
+        (act): ReLU(inplace=True)
+        (conv2): Conv2d(64, 128, kernel_size=(1, 1), stride=(1, 1))
+      )
+    )
+    (attractors): ModuleDict(
+      (nyu): ModuleList(
+        (0-3): 4 x ZoeDepthAttractorLayerUnnormed(
+          (conv1): Conv2d(128, 128, kernel_size=(1, 1), stride=(1, 1))
+          (act1): ReLU(inplace=True)
+          (conv2): Conv2d(128, 16, kernel_size=(1, 1), stride=(1, 1))
+          (act2): Softplus(beta=1, threshold=20)
+        )
+      )
+      (kitti): ModuleList(
+        (0-3): 4 x ZoeDepthAttractorLayerUnnormed(
+          (conv1): Conv2d(128, 128, kernel_size=(1, 1), stride=(1, 1))
+          (act1): ReLU(inplace=True)
+          (conv2): Conv2d(128, 16, kernel_size=(1, 1), stride=(1, 1))
+          (act2): Softplus(beta=1, threshold=20)
+        )
+      )
+    )
+    (conditional_log_binomial): ModuleDict(
+      (nyu): ZoeDepthConditionalLogBinomialSoftmax(
+        (mlp): Sequential(
+          (0): Conv2d(160, 40, kernel_size=(1, 1), stride=(1, 1))
+          (1): GELU(approximate='none')
+          (2): Conv2d(40, 4, kernel_size=(1, 1), stride=(1, 1))
+          (3): Softplus(beta=1, threshold=20)
+        )
+        (log_binomial_transform): LogBinomialSoftmax()
+      )
+      (kitti): ZoeDepthConditionalLogBinomialSoftmax(
+        (mlp): Sequential(
+          (0): Conv2d(160, 40, kernel_size=(1, 1), stride=(1, 1))
+          (1): GELU(approximate='none')
+          (2): Conv2d(40, 4, kernel_size=(1, 1), stride=(1, 1))
+          (3): Softplus(beta=1, threshold=20)
+        )
+        (log_binomial_transform): LogBinomialSoftmax()
+      )
+    )
+  )
+)

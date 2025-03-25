@@ -1,0 +1,172 @@
+SwiftFormerModel(
+  (patch_embed): SwiftFormerPatchEmbedding(
+    (patch_embedding): Sequential(
+      (0): Conv2d(3, 24, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+      (1): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): ReLU()
+      (3): Conv2d(24, 48, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+      (4): BatchNorm2d(48, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (5): ReLU()
+    )
+  )
+  (encoder): SwiftFormerEncoder(
+    (network): ModuleList(
+      (0): SwiftFormerStage(
+        (blocks): ModuleList(
+          (0-1): 2 x SwiftFormerConvEncoder(
+            (depth_wise_conv): Conv2d(48, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=48)
+            (norm): BatchNorm2d(48, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (point_wise_conv1): Conv2d(48, 192, kernel_size=(1, 1), stride=(1, 1))
+            (act): GELU(approximate='none')
+            (point_wise_conv2): Conv2d(192, 48, kernel_size=(1, 1), stride=(1, 1))
+            (drop_path): Dropout(p=0.0, inplace=False)
+          )
+          (2): SwiftFormerEncoderBlock(
+            (local_representation): SwiftFormerLocalRepresentation(
+              (depth_wise_conv): Conv2d(48, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=48)
+              (norm): BatchNorm2d(48, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              (point_wise_conv1): Conv2d(48, 48, kernel_size=(1, 1), stride=(1, 1))
+              (act): GELU(approximate='none')
+              (point_wise_conv2): Conv2d(48, 48, kernel_size=(1, 1), stride=(1, 1))
+              (drop_path): Identity()
+            )
+            (attn): SwiftFormerEfficientAdditiveAttention(
+              (to_query): Linear(in_features=48, out_features=48, bias=True)
+              (to_key): Linear(in_features=48, out_features=48, bias=True)
+              (proj): Linear(in_features=48, out_features=48, bias=True)
+              (final): Linear(in_features=48, out_features=48, bias=True)
+            )
+            (linear): SwiftFormerMlp(
+              (norm1): BatchNorm2d(48, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              (fc1): Conv2d(48, 192, kernel_size=(1, 1), stride=(1, 1))
+              (act): GELUActivation()
+              (fc2): Conv2d(192, 48, kernel_size=(1, 1), stride=(1, 1))
+              (drop): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path): Identity()
+          )
+        )
+      )
+      (1): SwiftFormerEmbeddings(
+        (proj): Conv2d(48, 56, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (norm): BatchNorm2d(56, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (2): SwiftFormerStage(
+        (blocks): ModuleList(
+          (0-1): 2 x SwiftFormerConvEncoder(
+            (depth_wise_conv): Conv2d(56, 56, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=56)
+            (norm): BatchNorm2d(56, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (point_wise_conv1): Conv2d(56, 224, kernel_size=(1, 1), stride=(1, 1))
+            (act): GELU(approximate='none')
+            (point_wise_conv2): Conv2d(224, 56, kernel_size=(1, 1), stride=(1, 1))
+            (drop_path): Dropout(p=0.0, inplace=False)
+          )
+          (2): SwiftFormerEncoderBlock(
+            (local_representation): SwiftFormerLocalRepresentation(
+              (depth_wise_conv): Conv2d(56, 56, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=56)
+              (norm): BatchNorm2d(56, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              (point_wise_conv1): Conv2d(56, 56, kernel_size=(1, 1), stride=(1, 1))
+              (act): GELU(approximate='none')
+              (point_wise_conv2): Conv2d(56, 56, kernel_size=(1, 1), stride=(1, 1))
+              (drop_path): Identity()
+            )
+            (attn): SwiftFormerEfficientAdditiveAttention(
+              (to_query): Linear(in_features=56, out_features=56, bias=True)
+              (to_key): Linear(in_features=56, out_features=56, bias=True)
+              (proj): Linear(in_features=56, out_features=56, bias=True)
+              (final): Linear(in_features=56, out_features=56, bias=True)
+            )
+            (linear): SwiftFormerMlp(
+              (norm1): BatchNorm2d(56, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              (fc1): Conv2d(56, 224, kernel_size=(1, 1), stride=(1, 1))
+              (act): GELUActivation()
+              (fc2): Conv2d(224, 56, kernel_size=(1, 1), stride=(1, 1))
+              (drop): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path): Identity()
+          )
+        )
+      )
+      (3): SwiftFormerEmbeddings(
+        (proj): Conv2d(56, 112, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (norm): BatchNorm2d(112, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (4): SwiftFormerStage(
+        (blocks): ModuleList(
+          (0-4): 5 x SwiftFormerConvEncoder(
+            (depth_wise_conv): Conv2d(112, 112, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=112)
+            (norm): BatchNorm2d(112, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (point_wise_conv1): Conv2d(112, 448, kernel_size=(1, 1), stride=(1, 1))
+            (act): GELU(approximate='none')
+            (point_wise_conv2): Conv2d(448, 112, kernel_size=(1, 1), stride=(1, 1))
+            (drop_path): Dropout(p=0.0, inplace=False)
+          )
+          (5): SwiftFormerEncoderBlock(
+            (local_representation): SwiftFormerLocalRepresentation(
+              (depth_wise_conv): Conv2d(112, 112, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=112)
+              (norm): BatchNorm2d(112, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              (point_wise_conv1): Conv2d(112, 112, kernel_size=(1, 1), stride=(1, 1))
+              (act): GELU(approximate='none')
+              (point_wise_conv2): Conv2d(112, 112, kernel_size=(1, 1), stride=(1, 1))
+              (drop_path): Identity()
+            )
+            (attn): SwiftFormerEfficientAdditiveAttention(
+              (to_query): Linear(in_features=112, out_features=112, bias=True)
+              (to_key): Linear(in_features=112, out_features=112, bias=True)
+              (proj): Linear(in_features=112, out_features=112, bias=True)
+              (final): Linear(in_features=112, out_features=112, bias=True)
+            )
+            (linear): SwiftFormerMlp(
+              (norm1): BatchNorm2d(112, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              (fc1): Conv2d(112, 448, kernel_size=(1, 1), stride=(1, 1))
+              (act): GELUActivation()
+              (fc2): Conv2d(448, 112, kernel_size=(1, 1), stride=(1, 1))
+              (drop): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path): Identity()
+          )
+        )
+      )
+      (5): SwiftFormerEmbeddings(
+        (proj): Conv2d(112, 220, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (norm): BatchNorm2d(220, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (6): SwiftFormerStage(
+        (blocks): ModuleList(
+          (0-2): 3 x SwiftFormerConvEncoder(
+            (depth_wise_conv): Conv2d(220, 220, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=220)
+            (norm): BatchNorm2d(220, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (point_wise_conv1): Conv2d(220, 880, kernel_size=(1, 1), stride=(1, 1))
+            (act): GELU(approximate='none')
+            (point_wise_conv2): Conv2d(880, 220, kernel_size=(1, 1), stride=(1, 1))
+            (drop_path): Dropout(p=0.0, inplace=False)
+          )
+          (3): SwiftFormerEncoderBlock(
+            (local_representation): SwiftFormerLocalRepresentation(
+              (depth_wise_conv): Conv2d(220, 220, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=220)
+              (norm): BatchNorm2d(220, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              (point_wise_conv1): Conv2d(220, 220, kernel_size=(1, 1), stride=(1, 1))
+              (act): GELU(approximate='none')
+              (point_wise_conv2): Conv2d(220, 220, kernel_size=(1, 1), stride=(1, 1))
+              (drop_path): Identity()
+            )
+            (attn): SwiftFormerEfficientAdditiveAttention(
+              (to_query): Linear(in_features=220, out_features=220, bias=True)
+              (to_key): Linear(in_features=220, out_features=220, bias=True)
+              (proj): Linear(in_features=220, out_features=220, bias=True)
+              (final): Linear(in_features=220, out_features=220, bias=True)
+            )
+            (linear): SwiftFormerMlp(
+              (norm1): BatchNorm2d(220, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              (fc1): Conv2d(220, 880, kernel_size=(1, 1), stride=(1, 1))
+              (act): GELUActivation()
+              (fc2): Conv2d(880, 220, kernel_size=(1, 1), stride=(1, 1))
+              (drop): Dropout(p=0.0, inplace=False)
+            )
+            (drop_path): Identity()
+          )
+        )
+      )
+    )
+  )
+)

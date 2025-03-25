@@ -1,0 +1,132 @@
+HieraModel(
+  (embeddings): HieraEmbeddings(
+    (patch_embeddings): HieraPatchEmbeddings(
+      (projection): Conv2d(3, 96, kernel_size=(7, 7), stride=(4, 4), padding=(3, 3))
+    )
+  )
+  (encoder): HieraEncoder(
+    (stages): ModuleList(
+      (0): HieraStage(
+        (layers): ModuleList(
+          (0-1): 2 x HieraLayer(
+            (layernorm_before): LayerNorm((96,), eps=1e-06, elementwise_affine=True)
+            (attn): HieraMaskUnitAttention(
+              (qkv): Linear(in_features=96, out_features=288, bias=True)
+              (proj): Linear(in_features=96, out_features=96, bias=True)
+            )
+            (layernorm_after): LayerNorm((96,), eps=1e-06, elementwise_affine=True)
+            (mlp): HieraMlp(
+              (activation_fn): GELUActivation()
+              (fc1): Linear(in_features=96, out_features=384, bias=True)
+              (fc2): Linear(in_features=384, out_features=96, bias=True)
+            )
+            (drop_path): Identity()
+          )
+        )
+      )
+      (1): HieraStage(
+        (layers): ModuleList(
+          (0): HieraLayer(
+            (layernorm_before): LayerNorm((96,), eps=1e-06, elementwise_affine=True)
+            (attn): HieraMaskUnitAttention(
+              (qkv): Linear(in_features=96, out_features=576, bias=True)
+              (proj): Linear(in_features=192, out_features=192, bias=True)
+            )
+            (layernorm_after): LayerNorm((192,), eps=1e-06, elementwise_affine=True)
+            (mlp): HieraMlp(
+              (activation_fn): GELUActivation()
+              (fc1): Linear(in_features=192, out_features=768, bias=True)
+              (fc2): Linear(in_features=768, out_features=192, bias=True)
+            )
+            (drop_path): Identity()
+            (proj): Linear(in_features=96, out_features=192, bias=True)
+          )
+          (1-2): 2 x HieraLayer(
+            (layernorm_before): LayerNorm((192,), eps=1e-06, elementwise_affine=True)
+            (attn): HieraMaskUnitAttention(
+              (qkv): Linear(in_features=192, out_features=576, bias=True)
+              (proj): Linear(in_features=192, out_features=192, bias=True)
+            )
+            (layernorm_after): LayerNorm((192,), eps=1e-06, elementwise_affine=True)
+            (mlp): HieraMlp(
+              (activation_fn): GELUActivation()
+              (fc1): Linear(in_features=192, out_features=768, bias=True)
+              (fc2): Linear(in_features=768, out_features=192, bias=True)
+            )
+            (drop_path): Identity()
+          )
+        )
+      )
+      (2): HieraStage(
+        (layers): ModuleList(
+          (0): HieraLayer(
+            (layernorm_before): LayerNorm((192,), eps=1e-06, elementwise_affine=True)
+            (attn): HieraMaskUnitAttention(
+              (qkv): Linear(in_features=192, out_features=1152, bias=True)
+              (proj): Linear(in_features=384, out_features=384, bias=True)
+            )
+            (layernorm_after): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+            (mlp): HieraMlp(
+              (activation_fn): GELUActivation()
+              (fc1): Linear(in_features=384, out_features=1536, bias=True)
+              (fc2): Linear(in_features=1536, out_features=384, bias=True)
+            )
+            (drop_path): Identity()
+            (proj): Linear(in_features=192, out_features=384, bias=True)
+          )
+          (1-15): 15 x HieraLayer(
+            (layernorm_before): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+            (attn): HieraMaskUnitAttention(
+              (qkv): Linear(in_features=384, out_features=1152, bias=True)
+              (proj): Linear(in_features=384, out_features=384, bias=True)
+            )
+            (layernorm_after): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+            (mlp): HieraMlp(
+              (activation_fn): GELUActivation()
+              (fc1): Linear(in_features=384, out_features=1536, bias=True)
+              (fc2): Linear(in_features=1536, out_features=384, bias=True)
+            )
+            (drop_path): Identity()
+          )
+        )
+      )
+      (3): HieraStage(
+        (layers): ModuleList(
+          (0): HieraLayer(
+            (layernorm_before): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+            (attn): HieraMaskUnitAttention(
+              (qkv): Linear(in_features=384, out_features=2304, bias=True)
+              (proj): Linear(in_features=768, out_features=768, bias=True)
+            )
+            (layernorm_after): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+            (mlp): HieraMlp(
+              (activation_fn): GELUActivation()
+              (fc1): Linear(in_features=768, out_features=3072, bias=True)
+              (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            )
+            (drop_path): Identity()
+            (proj): Linear(in_features=384, out_features=768, bias=True)
+          )
+          (1-2): 2 x HieraLayer(
+            (layernorm_before): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+            (attn): HieraMaskUnitAttention(
+              (qkv): Linear(in_features=768, out_features=2304, bias=True)
+              (proj): Linear(in_features=768, out_features=768, bias=True)
+            )
+            (layernorm_after): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+            (mlp): HieraMlp(
+              (activation_fn): GELUActivation()
+              (fc1): Linear(in_features=768, out_features=3072, bias=True)
+              (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            )
+            (drop_path): Identity()
+          )
+        )
+      )
+    )
+  )
+  (pooler): HieraPooler(
+    (layernorm): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+    (pooler): AdaptiveAvgPool1d(output_size=1)
+  )
+)

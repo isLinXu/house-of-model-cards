@@ -1,0 +1,331 @@
+LevitModel(
+  (patch_embeddings): LevitPatchEmbeddings(
+    (embedding_layer_1): LevitConvEmbeddings(
+      (convolution): Conv2d(3, 16, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (batch_norm): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (activation_layer_1): Hardswish()
+    (embedding_layer_2): LevitConvEmbeddings(
+      (convolution): Conv2d(16, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (batch_norm): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (activation_layer_2): Hardswish()
+    (embedding_layer_3): LevitConvEmbeddings(
+      (convolution): Conv2d(32, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (batch_norm): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (activation_layer_3): Hardswish()
+    (embedding_layer_4): LevitConvEmbeddings(
+      (convolution): Conv2d(64, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (batch_norm): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (encoder): LevitEncoder(
+    (stages): ModuleList(
+      (0): LevitStage(
+        (layers): ModuleList(
+          (0): LevitResidualLayer(
+            (module): LevitAttention(
+              (queries_keys_values): MLPLayerWithBN(
+                (linear): Linear(in_features=128, out_features=256, bias=False)
+                (batch_norm): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              )
+              (activation): Hardswish()
+              (projection): MLPLayerWithBN(
+                (linear): Linear(in_features=128, out_features=128, bias=False)
+                (batch_norm): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              )
+            )
+          )
+          (1): LevitResidualLayer(
+            (module): LevitMLPLayer(
+              (linear_up): MLPLayerWithBN(
+                (linear): Linear(in_features=128, out_features=256, bias=False)
+                (batch_norm): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              )
+              (activation): Hardswish()
+              (linear_down): MLPLayerWithBN(
+                (linear): Linear(in_features=256, out_features=128, bias=False)
+                (batch_norm): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              )
+            )
+          )
+          (2): LevitResidualLayer(
+            (module): LevitAttention(
+              (queries_keys_values): MLPLayerWithBN(
+                (linear): Linear(in_features=128, out_features=256, bias=False)
+                (batch_norm): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              )
+              (activation): Hardswish()
+              (projection): MLPLayerWithBN(
+                (linear): Linear(in_features=128, out_features=128, bias=False)
+                (batch_norm): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              )
+            )
+          )
+          (3): LevitResidualLayer(
+            (module): LevitMLPLayer(
+              (linear_up): MLPLayerWithBN(
+                (linear): Linear(in_features=128, out_features=256, bias=False)
+                (batch_norm): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              )
+              (activation): Hardswish()
+              (linear_down): MLPLayerWithBN(
+                (linear): Linear(in_features=256, out_features=128, bias=False)
+                (batch_norm): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              )
+            )
+          )
+          (4): LevitAttentionSubsample(
+            (keys_values): MLPLayerWithBN(
+              (linear): Linear(in_features=128, out_features=640, bias=False)
+              (batch_norm): BatchNorm1d(640, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            )
+            (queries_subsample): LevitSubsample()
+            (queries): MLPLayerWithBN(
+              (linear): Linear(in_features=128, out_features=128, bias=False)
+              (batch_norm): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            )
+            (activation): Hardswish()
+            (projection): MLPLayerWithBN(
+              (linear): Linear(in_features=512, out_features=256, bias=False)
+              (batch_norm): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            )
+          )
+          (5): LevitResidualLayer(
+            (module): LevitMLPLayer(
+              (linear_up): MLPLayerWithBN(
+                (linear): Linear(in_features=256, out_features=512, bias=False)
+                (batch_norm): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              )
+              (activation): Hardswish()
+              (linear_down): MLPLayerWithBN(
+                (linear): Linear(in_features=512, out_features=256, bias=False)
+                (batch_norm): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              )
+            )
+          )
+        )
+      )
+      (1): LevitStage(
+        (layers): ModuleList(
+          (0): LevitResidualLayer(
+            (module): LevitAttention(
+              (queries_keys_values): MLPLayerWithBN(
+                (linear): Linear(in_features=256, out_features=384, bias=False)
+                (batch_norm): BatchNorm1d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              )
+              (activation): Hardswish()
+              (projection): MLPLayerWithBN(
+                (linear): Linear(in_features=192, out_features=256, bias=False)
+                (batch_norm): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              )
+            )
+          )
+          (1): LevitResidualLayer(
+            (module): LevitMLPLayer(
+              (linear_up): MLPLayerWithBN(
+                (linear): Linear(in_features=256, out_features=512, bias=False)
+                (batch_norm): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              )
+              (activation): Hardswish()
+              (linear_down): MLPLayerWithBN(
+                (linear): Linear(in_features=512, out_features=256, bias=False)
+                (batch_norm): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              )
+            )
+          )
+          (2): LevitResidualLayer(
+            (module): LevitAttention(
+              (queries_keys_values): MLPLayerWithBN(
+                (linear): Linear(in_features=256, out_features=384, bias=False)
+                (batch_norm): BatchNorm1d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              )
+              (activation): Hardswish()
+              (projection): MLPLayerWithBN(
+                (linear): Linear(in_features=192, out_features=256, bias=False)
+                (batch_norm): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              )
+            )
+          )
+          (3): LevitResidualLayer(
+            (module): LevitMLPLayer(
+              (linear_up): MLPLayerWithBN(
+                (linear): Linear(in_features=256, out_features=512, bias=False)
+                (batch_norm): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              )
+              (activation): Hardswish()
+              (linear_down): MLPLayerWithBN(
+                (linear): Linear(in_features=512, out_features=256, bias=False)
+                (batch_norm): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              )
+            )
+          )
+          (4): LevitResidualLayer(
+            (module): LevitAttention(
+              (queries_keys_values): MLPLayerWithBN(
+                (linear): Linear(in_features=256, out_features=384, bias=False)
+                (batch_norm): BatchNorm1d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              )
+              (activation): Hardswish()
+              (projection): MLPLayerWithBN(
+                (linear): Linear(in_features=192, out_features=256, bias=False)
+                (batch_norm): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              )
+            )
+          )
+          (5): LevitResidualLayer(
+            (module): LevitMLPLayer(
+              (linear_up): MLPLayerWithBN(
+                (linear): Linear(in_features=256, out_features=512, bias=False)
+                (batch_norm): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              )
+              (activation): Hardswish()
+              (linear_down): MLPLayerWithBN(
+                (linear): Linear(in_features=512, out_features=256, bias=False)
+                (batch_norm): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              )
+            )
+          )
+          (6): LevitAttentionSubsample(
+            (keys_values): MLPLayerWithBN(
+              (linear): Linear(in_features=256, out_features=1280, bias=False)
+              (batch_norm): BatchNorm1d(1280, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            )
+            (queries_subsample): LevitSubsample()
+            (queries): MLPLayerWithBN(
+              (linear): Linear(in_features=256, out_features=256, bias=False)
+              (batch_norm): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            )
+            (activation): Hardswish()
+            (projection): MLPLayerWithBN(
+              (linear): Linear(in_features=1024, out_features=384, bias=False)
+              (batch_norm): BatchNorm1d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            )
+          )
+          (7): LevitResidualLayer(
+            (module): LevitMLPLayer(
+              (linear_up): MLPLayerWithBN(
+                (linear): Linear(in_features=384, out_features=768, bias=False)
+                (batch_norm): BatchNorm1d(768, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              )
+              (activation): Hardswish()
+              (linear_down): MLPLayerWithBN(
+                (linear): Linear(in_features=768, out_features=384, bias=False)
+                (batch_norm): BatchNorm1d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              )
+            )
+          )
+        )
+      )
+      (2): LevitStage(
+        (layers): ModuleList(
+          (0): LevitResidualLayer(
+            (module): LevitAttention(
+              (queries_keys_values): MLPLayerWithBN(
+                (linear): Linear(in_features=384, out_features=512, bias=False)
+                (batch_norm): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              )
+              (activation): Hardswish()
+              (projection): MLPLayerWithBN(
+                (linear): Linear(in_features=256, out_features=384, bias=False)
+                (batch_norm): BatchNorm1d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              )
+            )
+          )
+          (1): LevitResidualLayer(
+            (module): LevitMLPLayer(
+              (linear_up): MLPLayerWithBN(
+                (linear): Linear(in_features=384, out_features=768, bias=False)
+                (batch_norm): BatchNorm1d(768, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              )
+              (activation): Hardswish()
+              (linear_down): MLPLayerWithBN(
+                (linear): Linear(in_features=768, out_features=384, bias=False)
+                (batch_norm): BatchNorm1d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              )
+            )
+          )
+          (2): LevitResidualLayer(
+            (module): LevitAttention(
+              (queries_keys_values): MLPLayerWithBN(
+                (linear): Linear(in_features=384, out_features=512, bias=False)
+                (batch_norm): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              )
+              (activation): Hardswish()
+              (projection): MLPLayerWithBN(
+                (linear): Linear(in_features=256, out_features=384, bias=False)
+                (batch_norm): BatchNorm1d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              )
+            )
+          )
+          (3): LevitResidualLayer(
+            (module): LevitMLPLayer(
+              (linear_up): MLPLayerWithBN(
+                (linear): Linear(in_features=384, out_features=768, bias=False)
+                (batch_norm): BatchNorm1d(768, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              )
+              (activation): Hardswish()
+              (linear_down): MLPLayerWithBN(
+                (linear): Linear(in_features=768, out_features=384, bias=False)
+                (batch_norm): BatchNorm1d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              )
+            )
+          )
+          (4): LevitResidualLayer(
+            (module): LevitAttention(
+              (queries_keys_values): MLPLayerWithBN(
+                (linear): Linear(in_features=384, out_features=512, bias=False)
+                (batch_norm): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              )
+              (activation): Hardswish()
+              (projection): MLPLayerWithBN(
+                (linear): Linear(in_features=256, out_features=384, bias=False)
+                (batch_norm): BatchNorm1d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              )
+            )
+          )
+          (5): LevitResidualLayer(
+            (module): LevitMLPLayer(
+              (linear_up): MLPLayerWithBN(
+                (linear): Linear(in_features=384, out_features=768, bias=False)
+                (batch_norm): BatchNorm1d(768, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              )
+              (activation): Hardswish()
+              (linear_down): MLPLayerWithBN(
+                (linear): Linear(in_features=768, out_features=384, bias=False)
+                (batch_norm): BatchNorm1d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              )
+            )
+          )
+          (6): LevitResidualLayer(
+            (module): LevitAttention(
+              (queries_keys_values): MLPLayerWithBN(
+                (linear): Linear(in_features=384, out_features=512, bias=False)
+                (batch_norm): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              )
+              (activation): Hardswish()
+              (projection): MLPLayerWithBN(
+                (linear): Linear(in_features=256, out_features=384, bias=False)
+                (batch_norm): BatchNorm1d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              )
+            )
+          )
+          (7): LevitResidualLayer(
+            (module): LevitMLPLayer(
+              (linear_up): MLPLayerWithBN(
+                (linear): Linear(in_features=384, out_features=768, bias=False)
+                (batch_norm): BatchNorm1d(768, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              )
+              (activation): Hardswish()
+              (linear_down): MLPLayerWithBN(
+                (linear): Linear(in_features=768, out_features=384, bias=False)
+                (batch_norm): BatchNorm1d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              )
+            )
+          )
+        )
+      )
+    )
+  )
+)

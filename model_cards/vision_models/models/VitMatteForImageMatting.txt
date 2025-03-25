@@ -1,0 +1,85 @@
+VitMatteForImageMatting(
+  (backbone): VitDetBackbone(
+    (embeddings): VitDetEmbeddings(
+      (projection): Conv2d(3, 768, kernel_size=(16, 16), stride=(16, 16))
+    )
+    (encoder): VitDetEncoder(
+      (layer): ModuleList(
+        (0-11): 12 x VitDetLayer(
+          (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (attention): VitDetAttention(
+            (qkv): Linear(in_features=768, out_features=2304, bias=True)
+            (proj): Linear(in_features=768, out_features=768, bias=True)
+          )
+          (drop_path): Identity()
+          (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): VitDetMlp(
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (act): GELUActivation()
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+      )
+    )
+  )
+  (decoder): VitMatteDetailCaptureModule(
+    (convstream): VitMatteConvStream(
+      (convs): ModuleList(
+        (0): VitMatteBasicConv3x3(
+          (conv): Conv2d(3, 48, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(48, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU()
+        )
+        (1): VitMatteBasicConv3x3(
+          (conv): Conv2d(48, 96, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(96, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU()
+        )
+        (2): VitMatteBasicConv3x3(
+          (conv): Conv2d(96, 192, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU()
+        )
+      )
+    )
+    (fusion_blocks): ModuleList(
+      (0): VitMatteFusionBlock(
+        (conv): VitMatteBasicConv3x3(
+          (conv): Conv2d(576, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU()
+        )
+      )
+      (1): VitMatteFusionBlock(
+        (conv): VitMatteBasicConv3x3(
+          (conv): Conv2d(352, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU()
+        )
+      )
+      (2): VitMatteFusionBlock(
+        (conv): VitMatteBasicConv3x3(
+          (conv): Conv2d(176, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU()
+        )
+      )
+      (3): VitMatteFusionBlock(
+        (conv): VitMatteBasicConv3x3(
+          (conv): Conv2d(67, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (batch_norm): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU()
+        )
+      )
+    )
+    (matting_head): VitMatteHead(
+      (matting_convs): Sequential(
+        (0): Conv2d(32, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (2): ReLU(inplace=True)
+        (3): Conv2d(16, 1, kernel_size=(1, 1), stride=(1, 1))
+      )
+    )
+  )
+)

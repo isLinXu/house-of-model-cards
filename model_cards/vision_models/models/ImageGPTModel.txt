@@ -1,0 +1,24 @@
+ImageGPTModel(
+  (wte): Embedding(513, 512)
+  (wpe): Embedding(1024, 512)
+  (drop): Dropout(p=0.1, inplace=False)
+  (h): ModuleList(
+    (0-23): 24 x ImageGPTBlock(
+      (ln_1): ImageGPTLayerNorm()
+      (attn): ImageGPTAttention(
+        (c_attn): Conv1D(nf=1536, nx=512)
+        (c_proj): Conv1D(nf=512, nx=512)
+        (attn_dropout): Dropout(p=0.1, inplace=False)
+        (resid_dropout): Dropout(p=0.1, inplace=False)
+      )
+      (ln_2): ImageGPTLayerNorm()
+      (mlp): ImageGPTMLP(
+        (c_fc): Conv1D(nf=2048, nx=512)
+        (c_proj): Conv1D(nf=512, nx=2048)
+        (act): QuickGELUActivation()
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+    )
+  )
+  (ln_f): ImageGPTLayerNorm()
+)

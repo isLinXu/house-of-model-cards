@@ -1,0 +1,126 @@
+EfficientFormerModel(
+  (patch_embed): EfficientFormerConvStem(
+    (convolution1): Conv2d(3, 24, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+    (batchnorm_before): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (convolution2): Conv2d(24, 48, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+    (batchnorm_after): BatchNorm2d(48, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (activation): ReLU()
+  )
+  (encoder): EfficientFormerEncoder(
+    (intermediate_stages): ModuleList(
+      (0): EfficientFormerIntermediateStage(
+        (meta4D_layers): EfficientFormerMeta4DLayers(
+          (blocks): ModuleList(
+            (0-2): 3 x EfficientFormerMeta4D(
+              (token_mixer): EfficientFormerPooling(
+                (pool): AvgPool2d(kernel_size=3, stride=1, padding=1)
+              )
+              (mlp): EfficientFormerConvMlp(
+                (convolution1): Conv2d(48, 192, kernel_size=(1, 1), stride=(1, 1))
+                (activation): GELUActivation()
+                (convolution2): Conv2d(192, 48, kernel_size=(1, 1), stride=(1, 1))
+                (dropout): Dropout(p=0.0, inplace=False)
+                (batchnorm_before): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                (batchnorm_after): BatchNorm2d(48, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              )
+              (drop_path): Identity()
+            )
+          )
+        )
+      )
+      (1): EfficientFormerPatchEmbeddings(
+        (projection): Conv2d(48, 96, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (norm): BatchNorm2d(96, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (2): EfficientFormerIntermediateStage(
+        (meta4D_layers): EfficientFormerMeta4DLayers(
+          (blocks): ModuleList(
+            (0-1): 2 x EfficientFormerMeta4D(
+              (token_mixer): EfficientFormerPooling(
+                (pool): AvgPool2d(kernel_size=3, stride=1, padding=1)
+              )
+              (mlp): EfficientFormerConvMlp(
+                (convolution1): Conv2d(96, 384, kernel_size=(1, 1), stride=(1, 1))
+                (activation): GELUActivation()
+                (convolution2): Conv2d(384, 96, kernel_size=(1, 1), stride=(1, 1))
+                (dropout): Dropout(p=0.0, inplace=False)
+                (batchnorm_before): BatchNorm2d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                (batchnorm_after): BatchNorm2d(96, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              )
+              (drop_path): Identity()
+            )
+          )
+        )
+      )
+      (3): EfficientFormerPatchEmbeddings(
+        (projection): Conv2d(96, 224, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (norm): BatchNorm2d(224, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (4): EfficientFormerIntermediateStage(
+        (meta4D_layers): EfficientFormerMeta4DLayers(
+          (blocks): ModuleList(
+            (0-5): 6 x EfficientFormerMeta4D(
+              (token_mixer): EfficientFormerPooling(
+                (pool): AvgPool2d(kernel_size=3, stride=1, padding=1)
+              )
+              (mlp): EfficientFormerConvMlp(
+                (convolution1): Conv2d(224, 896, kernel_size=(1, 1), stride=(1, 1))
+                (activation): GELUActivation()
+                (convolution2): Conv2d(896, 224, kernel_size=(1, 1), stride=(1, 1))
+                (dropout): Dropout(p=0.0, inplace=False)
+                (batchnorm_before): BatchNorm2d(896, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                (batchnorm_after): BatchNorm2d(224, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              )
+              (drop_path): Identity()
+            )
+          )
+        )
+      )
+      (5): EfficientFormerPatchEmbeddings(
+        (projection): Conv2d(224, 448, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (norm): BatchNorm2d(448, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (last_stage): EfficientFormerLastStage(
+      (meta4D_layers): EfficientFormerMeta4DLayers(
+        (blocks): ModuleList(
+          (0-2): 3 x EfficientFormerMeta4D(
+            (token_mixer): EfficientFormerPooling(
+              (pool): AvgPool2d(kernel_size=3, stride=1, padding=1)
+            )
+            (mlp): EfficientFormerConvMlp(
+              (convolution1): Conv2d(448, 1792, kernel_size=(1, 1), stride=(1, 1))
+              (activation): GELUActivation()
+              (convolution2): Conv2d(1792, 448, kernel_size=(1, 1), stride=(1, 1))
+              (dropout): Dropout(p=0.0, inplace=False)
+              (batchnorm_before): BatchNorm2d(1792, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              (batchnorm_after): BatchNorm2d(448, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            )
+            (drop_path): Identity()
+          )
+        )
+      )
+      (flat): EfficientFormerFlat()
+      (meta3D_layers): EfficientFormerMeta3DLayers(
+        (blocks): ModuleList(
+          (0): EfficientFormerMeta3D(
+            (token_mixer): EfficientFormerSelfAttention(
+              (qkv): Linear(in_features=448, out_features=1536, bias=True)
+              (projection): Linear(in_features=1024, out_features=448, bias=True)
+            )
+            (layernorm1): LayerNorm((448,), eps=1e-12, elementwise_affine=True)
+            (layernorm2): LayerNorm((448,), eps=1e-12, elementwise_affine=True)
+            (mlp): EfficientFormerDenseMlp(
+              (linear_in): Linear(in_features=448, out_features=1792, bias=True)
+              (activation): GELUActivation()
+              (dropout): Dropout(p=0.0, inplace=False)
+              (linear_out): Linear(in_features=1792, out_features=448, bias=True)
+            )
+            (drop_path): Identity()
+          )
+        )
+      )
+    )
+  )
+  (layernorm): LayerNorm((448,), eps=1e-12, elementwise_affine=True)
+)

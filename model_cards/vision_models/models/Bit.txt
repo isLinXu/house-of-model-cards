@@ -1,0 +1,340 @@
+BitModel(
+  (embedder): BitEmbeddings(
+    (convolution): WeightStandardizedConv2d(3, 64, kernel_size=(7, 7), stride=(2, 2), padding=(3, 3), bias=False)
+    (pooler): BitMaxPool2d(
+      kernel_size=(3, 3), stride=(2, 2), padding=(0, 0), dilation=(1, 1), ceil_mode=False
+      (pad): Identity()
+    )
+    (pad): ConstantPad2d(padding=(1, 1, 1, 1), value=0.0)
+    (norm): Identity()
+  )
+  (encoder): BitEncoder(
+    (stages): ModuleList(
+      (0): BitStage(
+        (layers): Sequential(
+          (0): BitPreActivationBottleneckLayer(
+            (downsample): BitDownsampleConv(
+              (conv): WeightStandardizedConv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+              (norm): Identity()
+            )
+            (norm1): BitGroupNormActivation(
+              32, 64, eps=1e-05, affine=True
+              (activation): ReLU()
+            )
+            (conv1): WeightStandardizedConv2d(64, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (norm2): BitGroupNormActivation(
+              32, 64, eps=1e-05, affine=True
+              (activation): ReLU()
+            )
+            (conv2): WeightStandardizedConv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+            (norm3): BitGroupNormActivation(
+              32, 64, eps=1e-05, affine=True
+              (activation): ReLU()
+            )
+            (conv3): WeightStandardizedConv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (drop_path): Identity()
+          )
+          (1): BitPreActivationBottleneckLayer(
+            (norm1): BitGroupNormActivation(
+              32, 256, eps=1e-05, affine=True
+              (activation): ReLU()
+            )
+            (conv1): WeightStandardizedConv2d(256, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (norm2): BitGroupNormActivation(
+              32, 64, eps=1e-05, affine=True
+              (activation): ReLU()
+            )
+            (conv2): WeightStandardizedConv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+            (norm3): BitGroupNormActivation(
+              32, 64, eps=1e-05, affine=True
+              (activation): ReLU()
+            )
+            (conv3): WeightStandardizedConv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (drop_path): Identity()
+          )
+          (2): BitPreActivationBottleneckLayer(
+            (norm1): BitGroupNormActivation(
+              32, 256, eps=1e-05, affine=True
+              (activation): ReLU()
+            )
+            (conv1): WeightStandardizedConv2d(256, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (norm2): BitGroupNormActivation(
+              32, 64, eps=1e-05, affine=True
+              (activation): ReLU()
+            )
+            (conv2): WeightStandardizedConv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+            (norm3): BitGroupNormActivation(
+              32, 64, eps=1e-05, affine=True
+              (activation): ReLU()
+            )
+            (conv3): WeightStandardizedConv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (drop_path): Identity()
+          )
+        )
+      )
+      (1): BitStage(
+        (layers): Sequential(
+          (0): BitPreActivationBottleneckLayer(
+            (downsample): BitDownsampleConv(
+              (conv): WeightStandardizedConv2d(256, 512, kernel_size=(1, 1), stride=(2, 2), bias=False)
+              (norm): Identity()
+            )
+            (norm1): BitGroupNormActivation(
+              32, 256, eps=1e-05, affine=True
+              (activation): ReLU()
+            )
+            (conv1): WeightStandardizedConv2d(256, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (norm2): BitGroupNormActivation(
+              32, 128, eps=1e-05, affine=True
+              (activation): ReLU()
+            )
+            (conv2): WeightStandardizedConv2d(128, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+            (norm3): BitGroupNormActivation(
+              32, 128, eps=1e-05, affine=True
+              (activation): ReLU()
+            )
+            (conv3): WeightStandardizedConv2d(128, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (drop_path): Identity()
+          )
+          (1): BitPreActivationBottleneckLayer(
+            (norm1): BitGroupNormActivation(
+              32, 512, eps=1e-05, affine=True
+              (activation): ReLU()
+            )
+            (conv1): WeightStandardizedConv2d(512, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (norm2): BitGroupNormActivation(
+              32, 128, eps=1e-05, affine=True
+              (activation): ReLU()
+            )
+            (conv2): WeightStandardizedConv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+            (norm3): BitGroupNormActivation(
+              32, 128, eps=1e-05, affine=True
+              (activation): ReLU()
+            )
+            (conv3): WeightStandardizedConv2d(128, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (drop_path): Identity()
+          )
+          (2): BitPreActivationBottleneckLayer(
+            (norm1): BitGroupNormActivation(
+              32, 512, eps=1e-05, affine=True
+              (activation): ReLU()
+            )
+            (conv1): WeightStandardizedConv2d(512, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (norm2): BitGroupNormActivation(
+              32, 128, eps=1e-05, affine=True
+              (activation): ReLU()
+            )
+            (conv2): WeightStandardizedConv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+            (norm3): BitGroupNormActivation(
+              32, 128, eps=1e-05, affine=True
+              (activation): ReLU()
+            )
+            (conv3): WeightStandardizedConv2d(128, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (drop_path): Identity()
+          )
+          (3): BitPreActivationBottleneckLayer(
+            (norm1): BitGroupNormActivation(
+              32, 512, eps=1e-05, affine=True
+              (activation): ReLU()
+            )
+            (conv1): WeightStandardizedConv2d(512, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (norm2): BitGroupNormActivation(
+              32, 128, eps=1e-05, affine=True
+              (activation): ReLU()
+            )
+            (conv2): WeightStandardizedConv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+            (norm3): BitGroupNormActivation(
+              32, 128, eps=1e-05, affine=True
+              (activation): ReLU()
+            )
+            (conv3): WeightStandardizedConv2d(128, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (drop_path): Identity()
+          )
+        )
+      )
+      (2): BitStage(
+        (layers): Sequential(
+          (0): BitPreActivationBottleneckLayer(
+            (downsample): BitDownsampleConv(
+              (conv): WeightStandardizedConv2d(512, 1024, kernel_size=(1, 1), stride=(2, 2), bias=False)
+              (norm): Identity()
+            )
+            (norm1): BitGroupNormActivation(
+              32, 512, eps=1e-05, affine=True
+              (activation): ReLU()
+            )
+            (conv1): WeightStandardizedConv2d(512, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (norm2): BitGroupNormActivation(
+              32, 256, eps=1e-05, affine=True
+              (activation): ReLU()
+            )
+            (conv2): WeightStandardizedConv2d(256, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+            (norm3): BitGroupNormActivation(
+              32, 256, eps=1e-05, affine=True
+              (activation): ReLU()
+            )
+            (conv3): WeightStandardizedConv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (drop_path): Identity()
+          )
+          (1): BitPreActivationBottleneckLayer(
+            (norm1): BitGroupNormActivation(
+              32, 1024, eps=1e-05, affine=True
+              (activation): ReLU()
+            )
+            (conv1): WeightStandardizedConv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (norm2): BitGroupNormActivation(
+              32, 256, eps=1e-05, affine=True
+              (activation): ReLU()
+            )
+            (conv2): WeightStandardizedConv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+            (norm3): BitGroupNormActivation(
+              32, 256, eps=1e-05, affine=True
+              (activation): ReLU()
+            )
+            (conv3): WeightStandardizedConv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (drop_path): Identity()
+          )
+          (2): BitPreActivationBottleneckLayer(
+            (norm1): BitGroupNormActivation(
+              32, 1024, eps=1e-05, affine=True
+              (activation): ReLU()
+            )
+            (conv1): WeightStandardizedConv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (norm2): BitGroupNormActivation(
+              32, 256, eps=1e-05, affine=True
+              (activation): ReLU()
+            )
+            (conv2): WeightStandardizedConv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+            (norm3): BitGroupNormActivation(
+              32, 256, eps=1e-05, affine=True
+              (activation): ReLU()
+            )
+            (conv3): WeightStandardizedConv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (drop_path): Identity()
+          )
+          (3): BitPreActivationBottleneckLayer(
+            (norm1): BitGroupNormActivation(
+              32, 1024, eps=1e-05, affine=True
+              (activation): ReLU()
+            )
+            (conv1): WeightStandardizedConv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (norm2): BitGroupNormActivation(
+              32, 256, eps=1e-05, affine=True
+              (activation): ReLU()
+            )
+            (conv2): WeightStandardizedConv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+            (norm3): BitGroupNormActivation(
+              32, 256, eps=1e-05, affine=True
+              (activation): ReLU()
+            )
+            (conv3): WeightStandardizedConv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (drop_path): Identity()
+          )
+          (4): BitPreActivationBottleneckLayer(
+            (norm1): BitGroupNormActivation(
+              32, 1024, eps=1e-05, affine=True
+              (activation): ReLU()
+            )
+            (conv1): WeightStandardizedConv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (norm2): BitGroupNormActivation(
+              32, 256, eps=1e-05, affine=True
+              (activation): ReLU()
+            )
+            (conv2): WeightStandardizedConv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+            (norm3): BitGroupNormActivation(
+              32, 256, eps=1e-05, affine=True
+              (activation): ReLU()
+            )
+            (conv3): WeightStandardizedConv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (drop_path): Identity()
+          )
+          (5): BitPreActivationBottleneckLayer(
+            (norm1): BitGroupNormActivation(
+              32, 1024, eps=1e-05, affine=True
+              (activation): ReLU()
+            )
+            (conv1): WeightStandardizedConv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (norm2): BitGroupNormActivation(
+              32, 256, eps=1e-05, affine=True
+              (activation): ReLU()
+            )
+            (conv2): WeightStandardizedConv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+            (norm3): BitGroupNormActivation(
+              32, 256, eps=1e-05, affine=True
+              (activation): ReLU()
+            )
+            (conv3): WeightStandardizedConv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (drop_path): Identity()
+          )
+        )
+      )
+      (3): BitStage(
+        (layers): Sequential(
+          (0): BitPreActivationBottleneckLayer(
+            (downsample): BitDownsampleConv(
+              (conv): WeightStandardizedConv2d(1024, 2048, kernel_size=(1, 1), stride=(2, 2), bias=False)
+              (norm): Identity()
+            )
+            (norm1): BitGroupNormActivation(
+              32, 1024, eps=1e-05, affine=True
+              (activation): ReLU()
+            )
+            (conv1): WeightStandardizedConv2d(1024, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (norm2): BitGroupNormActivation(
+              32, 512, eps=1e-05, affine=True
+              (activation): ReLU()
+            )
+            (conv2): WeightStandardizedConv2d(512, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+            (norm3): BitGroupNormActivation(
+              32, 512, eps=1e-05, affine=True
+              (activation): ReLU()
+            )
+            (conv3): WeightStandardizedConv2d(512, 2048, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (drop_path): Identity()
+          )
+          (1): BitPreActivationBottleneckLayer(
+            (norm1): BitGroupNormActivation(
+              32, 2048, eps=1e-05, affine=True
+              (activation): ReLU()
+            )
+            (conv1): WeightStandardizedConv2d(2048, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (norm2): BitGroupNormActivation(
+              32, 512, eps=1e-05, affine=True
+              (activation): ReLU()
+            )
+            (conv2): WeightStandardizedConv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+            (norm3): BitGroupNormActivation(
+              32, 512, eps=1e-05, affine=True
+              (activation): ReLU()
+            )
+            (conv3): WeightStandardizedConv2d(512, 2048, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (drop_path): Identity()
+          )
+          (2): BitPreActivationBottleneckLayer(
+            (norm1): BitGroupNormActivation(
+              32, 2048, eps=1e-05, affine=True
+              (activation): ReLU()
+            )
+            (conv1): WeightStandardizedConv2d(2048, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (norm2): BitGroupNormActivation(
+              32, 512, eps=1e-05, affine=True
+              (activation): ReLU()
+            )
+            (conv2): WeightStandardizedConv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+            (norm3): BitGroupNormActivation(
+              32, 512, eps=1e-05, affine=True
+              (activation): ReLU()
+            )
+            (conv3): WeightStandardizedConv2d(512, 2048, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (drop_path): Identity()
+          )
+        )
+      )
+    )
+  )
+  (norm): BitGroupNormActivation(
+    32, 2048, eps=1e-05, affine=True
+    (activation): ReLU()
+  )
+  (pooler): AdaptiveAvgPool2d(output_size=(1, 1))
+)

@@ -1,0 +1,140 @@
+MobileNetV1Model(
+  (conv_stem): MobileNetV1ConvLayer(
+    (convolution): Conv2d(3, 32, kernel_size=(3, 3), stride=(2, 2), bias=False)
+    (normalization): BatchNorm2d(32, eps=0.001, momentum=0.9997, affine=True, track_running_stats=True)
+    (activation): ReLU6()
+  )
+  (layer): ModuleList(
+    (0): MobileNetV1ConvLayer(
+      (convolution): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), groups=32, bias=False)
+      (normalization): BatchNorm2d(32, eps=0.001, momentum=0.9997, affine=True, track_running_stats=True)
+      (activation): ReLU6()
+    )
+    (1): MobileNetV1ConvLayer(
+      (convolution): Conv2d(32, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (normalization): BatchNorm2d(64, eps=0.001, momentum=0.9997, affine=True, track_running_stats=True)
+      (activation): ReLU6()
+    )
+    (2): MobileNetV1ConvLayer(
+      (convolution): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), groups=64, bias=False)
+      (normalization): BatchNorm2d(64, eps=0.001, momentum=0.9997, affine=True, track_running_stats=True)
+      (activation): ReLU6()
+    )
+    (3): MobileNetV1ConvLayer(
+      (convolution): Conv2d(64, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (normalization): BatchNorm2d(128, eps=0.001, momentum=0.9997, affine=True, track_running_stats=True)
+      (activation): ReLU6()
+    )
+    (4): MobileNetV1ConvLayer(
+      (convolution): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), groups=128, bias=False)
+      (normalization): BatchNorm2d(128, eps=0.001, momentum=0.9997, affine=True, track_running_stats=True)
+      (activation): ReLU6()
+    )
+    (5): MobileNetV1ConvLayer(
+      (convolution): Conv2d(128, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (normalization): BatchNorm2d(128, eps=0.001, momentum=0.9997, affine=True, track_running_stats=True)
+      (activation): ReLU6()
+    )
+    (6): MobileNetV1ConvLayer(
+      (convolution): Conv2d(128, 128, kernel_size=(3, 3), stride=(2, 2), groups=128, bias=False)
+      (normalization): BatchNorm2d(128, eps=0.001, momentum=0.9997, affine=True, track_running_stats=True)
+      (activation): ReLU6()
+    )
+    (7): MobileNetV1ConvLayer(
+      (convolution): Conv2d(128, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (normalization): BatchNorm2d(256, eps=0.001, momentum=0.9997, affine=True, track_running_stats=True)
+      (activation): ReLU6()
+    )
+    (8): MobileNetV1ConvLayer(
+      (convolution): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), groups=256, bias=False)
+      (normalization): BatchNorm2d(256, eps=0.001, momentum=0.9997, affine=True, track_running_stats=True)
+      (activation): ReLU6()
+    )
+    (9): MobileNetV1ConvLayer(
+      (convolution): Conv2d(256, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (normalization): BatchNorm2d(256, eps=0.001, momentum=0.9997, affine=True, track_running_stats=True)
+      (activation): ReLU6()
+    )
+    (10): MobileNetV1ConvLayer(
+      (convolution): Conv2d(256, 256, kernel_size=(3, 3), stride=(2, 2), groups=256, bias=False)
+      (normalization): BatchNorm2d(256, eps=0.001, momentum=0.9997, affine=True, track_running_stats=True)
+      (activation): ReLU6()
+    )
+    (11): MobileNetV1ConvLayer(
+      (convolution): Conv2d(256, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (normalization): BatchNorm2d(512, eps=0.001, momentum=0.9997, affine=True, track_running_stats=True)
+      (activation): ReLU6()
+    )
+    (12): MobileNetV1ConvLayer(
+      (convolution): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), groups=512, bias=False)
+      (normalization): BatchNorm2d(512, eps=0.001, momentum=0.9997, affine=True, track_running_stats=True)
+      (activation): ReLU6()
+    )
+    (13): MobileNetV1ConvLayer(
+      (convolution): Conv2d(512, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (normalization): BatchNorm2d(512, eps=0.001, momentum=0.9997, affine=True, track_running_stats=True)
+      (activation): ReLU6()
+    )
+    (14): MobileNetV1ConvLayer(
+      (convolution): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), groups=512, bias=False)
+      (normalization): BatchNorm2d(512, eps=0.001, momentum=0.9997, affine=True, track_running_stats=True)
+      (activation): ReLU6()
+    )
+    (15): MobileNetV1ConvLayer(
+      (convolution): Conv2d(512, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (normalization): BatchNorm2d(512, eps=0.001, momentum=0.9997, affine=True, track_running_stats=True)
+      (activation): ReLU6()
+    )
+    (16): MobileNetV1ConvLayer(
+      (convolution): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), groups=512, bias=False)
+      (normalization): BatchNorm2d(512, eps=0.001, momentum=0.9997, affine=True, track_running_stats=True)
+      (activation): ReLU6()
+    )
+    (17): MobileNetV1ConvLayer(
+      (convolution): Conv2d(512, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (normalization): BatchNorm2d(512, eps=0.001, momentum=0.9997, affine=True, track_running_stats=True)
+      (activation): ReLU6()
+    )
+    (18): MobileNetV1ConvLayer(
+      (convolution): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), groups=512, bias=False)
+      (normalization): BatchNorm2d(512, eps=0.001, momentum=0.9997, affine=True, track_running_stats=True)
+      (activation): ReLU6()
+    )
+    (19): MobileNetV1ConvLayer(
+      (convolution): Conv2d(512, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (normalization): BatchNorm2d(512, eps=0.001, momentum=0.9997, affine=True, track_running_stats=True)
+      (activation): ReLU6()
+    )
+    (20): MobileNetV1ConvLayer(
+      (convolution): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), groups=512, bias=False)
+      (normalization): BatchNorm2d(512, eps=0.001, momentum=0.9997, affine=True, track_running_stats=True)
+      (activation): ReLU6()
+    )
+    (21): MobileNetV1ConvLayer(
+      (convolution): Conv2d(512, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (normalization): BatchNorm2d(512, eps=0.001, momentum=0.9997, affine=True, track_running_stats=True)
+      (activation): ReLU6()
+    )
+    (22): MobileNetV1ConvLayer(
+      (convolution): Conv2d(512, 512, kernel_size=(3, 3), stride=(2, 2), groups=512, bias=False)
+      (normalization): BatchNorm2d(512, eps=0.001, momentum=0.9997, affine=True, track_running_stats=True)
+      (activation): ReLU6()
+    )
+    (23): MobileNetV1ConvLayer(
+      (convolution): Conv2d(512, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (normalization): BatchNorm2d(1024, eps=0.001, momentum=0.9997, affine=True, track_running_stats=True)
+      (activation): ReLU6()
+    )
+    (24): MobileNetV1ConvLayer(
+      (convolution): Conv2d(1024, 1024, kernel_size=(3, 3), stride=(1, 1), groups=1024, bias=False)
+      (normalization): BatchNorm2d(1024, eps=0.001, momentum=0.9997, affine=True, track_running_stats=True)
+      (activation): ReLU6()
+    )
+    (25): MobileNetV1ConvLayer(
+      (convolution): Conv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (normalization): BatchNorm2d(1024, eps=0.001, momentum=0.9997, affine=True, track_running_stats=True)
+      (activation): ReLU6()
+    )
+  )
+  (pooler): AdaptiveAvgPool2d(output_size=(1, 1))
+)

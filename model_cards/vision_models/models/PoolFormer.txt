@@ -1,0 +1,88 @@
+PoolFormerModel(
+  (encoder): PoolFormerEncoder(
+    (patch_embeddings): ModuleList(
+      (0): PoolFormerEmbeddings(
+        (projection): Conv2d(3, 64, kernel_size=(7, 7), stride=(4, 4), padding=(2, 2))
+        (norm): Identity()
+      )
+      (1): PoolFormerEmbeddings(
+        (projection): Conv2d(64, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (norm): Identity()
+      )
+      (2): PoolFormerEmbeddings(
+        (projection): Conv2d(128, 320, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (norm): Identity()
+      )
+      (3): PoolFormerEmbeddings(
+        (projection): Conv2d(320, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (norm): Identity()
+      )
+    )
+    (block): ModuleList(
+      (0): ModuleList(
+        (0-1): 2 x PoolFormerLayer(
+          (pooling): PoolFormerPooling(
+            (pool): AvgPool2d(kernel_size=3, stride=1, padding=1)
+          )
+          (output): PoolFormerOutput(
+            (conv1): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1))
+            (conv2): Conv2d(256, 64, kernel_size=(1, 1), stride=(1, 1))
+            (drop): PoolFormerDropPath(p=0.0)
+            (act_fn): GELUActivation()
+          )
+          (before_norm): PoolFormerGroupNorm(1, 64, eps=1e-05, affine=True)
+          (after_norm): PoolFormerGroupNorm(1, 64, eps=1e-05, affine=True)
+          (drop_path): Identity()
+        )
+      )
+      (1): ModuleList(
+        (0-1): 2 x PoolFormerLayer(
+          (pooling): PoolFormerPooling(
+            (pool): AvgPool2d(kernel_size=3, stride=1, padding=1)
+          )
+          (output): PoolFormerOutput(
+            (conv1): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1))
+            (conv2): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1))
+            (drop): PoolFormerDropPath(p=0.0)
+            (act_fn): GELUActivation()
+          )
+          (before_norm): PoolFormerGroupNorm(1, 128, eps=1e-05, affine=True)
+          (after_norm): PoolFormerGroupNorm(1, 128, eps=1e-05, affine=True)
+          (drop_path): Identity()
+        )
+      )
+      (2): ModuleList(
+        (0-5): 6 x PoolFormerLayer(
+          (pooling): PoolFormerPooling(
+            (pool): AvgPool2d(kernel_size=3, stride=1, padding=1)
+          )
+          (output): PoolFormerOutput(
+            (conv1): Conv2d(320, 1280, kernel_size=(1, 1), stride=(1, 1))
+            (conv2): Conv2d(1280, 320, kernel_size=(1, 1), stride=(1, 1))
+            (drop): PoolFormerDropPath(p=0.0)
+            (act_fn): GELUActivation()
+          )
+          (before_norm): PoolFormerGroupNorm(1, 320, eps=1e-05, affine=True)
+          (after_norm): PoolFormerGroupNorm(1, 320, eps=1e-05, affine=True)
+          (drop_path): Identity()
+        )
+      )
+      (3): ModuleList(
+        (0-1): 2 x PoolFormerLayer(
+          (pooling): PoolFormerPooling(
+            (pool): AvgPool2d(kernel_size=3, stride=1, padding=1)
+          )
+          (output): PoolFormerOutput(
+            (conv1): Conv2d(512, 2048, kernel_size=(1, 1), stride=(1, 1))
+            (conv2): Conv2d(2048, 512, kernel_size=(1, 1), stride=(1, 1))
+            (drop): PoolFormerDropPath(p=0.0)
+            (act_fn): GELUActivation()
+          )
+          (before_norm): PoolFormerGroupNorm(1, 512, eps=1e-05, affine=True)
+          (after_norm): PoolFormerGroupNorm(1, 512, eps=1e-05, affine=True)
+          (drop_path): Identity()
+        )
+      )
+    )
+  )
+)

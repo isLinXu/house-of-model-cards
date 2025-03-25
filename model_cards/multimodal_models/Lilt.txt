@@ -1,0 +1,68 @@
+LiltModel(
+  (embeddings): LiltTextEmbeddings(
+    (word_embeddings): Embedding(30522, 768, padding_idx=0)
+    (position_embeddings): Embedding(512, 768, padding_idx=0)
+    (token_type_embeddings): Embedding(2, 768)
+    (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+    (dropout): Dropout(p=0.1, inplace=False)
+  )
+  (layout_embeddings): LiltLayoutEmbeddings(
+    (x_position_embeddings): Embedding(1024, 128)
+    (y_position_embeddings): Embedding(1024, 128)
+    (h_position_embeddings): Embedding(1024, 128)
+    (w_position_embeddings): Embedding(1024, 128)
+    (box_position_embeddings): Embedding(512, 192, padding_idx=0)
+    (box_linear_embeddings): Linear(in_features=768, out_features=192, bias=True)
+    (LayerNorm): LayerNorm((192,), eps=1e-12, elementwise_affine=True)
+    (dropout): Dropout(p=0.1, inplace=False)
+  )
+  (encoder): LiltEncoder(
+    (layer): ModuleList(
+      (0-11): 12 x LiltLayer(
+        (attention): LiltAttention(
+          (self): LiltSelfAttention(
+            (query): Linear(in_features=768, out_features=768, bias=True)
+            (key): Linear(in_features=768, out_features=768, bias=True)
+            (value): Linear(in_features=768, out_features=768, bias=True)
+            (layout_query): Linear(in_features=192, out_features=192, bias=True)
+            (layout_key): Linear(in_features=192, out_features=192, bias=True)
+            (layout_value): Linear(in_features=192, out_features=192, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+          (output): LiltSelfOutput(
+            (dense): Linear(in_features=768, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+          (layout_output): LiltSelfOutput(
+            (dense): Linear(in_features=192, out_features=192, bias=True)
+            (LayerNorm): LayerNorm((192,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (intermediate): LiltIntermediate(
+          (dense): Linear(in_features=768, out_features=3072, bias=True)
+          (intermediate_act_fn): GELUActivation()
+        )
+        (output): LiltOutput(
+          (dense): Linear(in_features=3072, out_features=768, bias=True)
+          (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (layout_intermediate): LiltIntermediate(
+          (dense): Linear(in_features=192, out_features=768, bias=True)
+          (intermediate_act_fn): GELUActivation()
+        )
+        (layout_output): LiltOutput(
+          (dense): Linear(in_features=768, out_features=192, bias=True)
+          (LayerNorm): LayerNorm((192,), eps=1e-12, elementwise_affine=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+      )
+    )
+  )
+  (pooler): LiltPooler(
+    (dense): Linear(in_features=768, out_features=768, bias=True)
+    (activation): Tanh()
+  )
+)

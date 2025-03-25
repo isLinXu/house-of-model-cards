@@ -1,0 +1,67 @@
+Kosmos2ForConditionalGeneration(
+  (text_model): Kosmos2TextForCausalLM(
+    (model): Kosmos2TextTransformer(
+      (embed_tokens): Embedding(65037, 2048, padding_idx=1)
+      (embed_positions): Kosmos2TextSinusoidalPositionalEmbedding()
+      (layers): ModuleList(
+        (0-23): 24 x Kosmos2TextBlock(
+          (self_attn): KosmosTextAttention(
+            (k_proj): Linear(in_features=2048, out_features=2048, bias=True)
+            (v_proj): Linear(in_features=2048, out_features=2048, bias=True)
+            (q_proj): Linear(in_features=2048, out_features=2048, bias=True)
+            (out_proj): Linear(in_features=2048, out_features=2048, bias=True)
+            (inner_attn_ln): LayerNorm((2048,), eps=1e-05, elementwise_affine=True)
+          )
+          (self_attn_layer_norm): LayerNorm((2048,), eps=1e-05, elementwise_affine=True)
+          (ffn): Kosmos2TextFFN(
+            (activation_fn): GELUActivation()
+            (fc1): Linear(in_features=2048, out_features=8192, bias=True)
+            (fc2): Linear(in_features=8192, out_features=2048, bias=True)
+            (ffn_layernorm): LayerNorm((8192,), eps=1e-05, elementwise_affine=True)
+          )
+          (final_layer_norm): LayerNorm((2048,), eps=1e-05, elementwise_affine=True)
+        )
+      )
+      (layer_norm): LayerNorm((2048,), eps=1e-05, elementwise_affine=True)
+    )
+    (lm_head): Linear(in_features=2048, out_features=65037, bias=False)
+  )
+  (vision_model): Kosmos2VisionModel(
+    (model): Kosmos2VisionTransformer(
+      (embeddings): Kosmos2VisionEmbeddings(
+        (patch_embedding): Conv2d(3, 1024, kernel_size=(14, 14), stride=(14, 14), bias=False)
+        (position_embedding): Embedding(257, 1024)
+      )
+      (pre_layrnorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+      (encoder): Kosmos2VisionEncoder(
+        (layers): ModuleList(
+          (0-23): 24 x Kosmos2VisionEncoderLayer(
+            (self_attn): Kosmos2VisionAttention(
+              (k_proj): Linear(in_features=1024, out_features=1024, bias=True)
+              (v_proj): Linear(in_features=1024, out_features=1024, bias=True)
+              (q_proj): Linear(in_features=1024, out_features=1024, bias=True)
+              (out_proj): Linear(in_features=1024, out_features=1024, bias=True)
+            )
+            (layer_norm1): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+            (mlp): Kosmos2VisionMLP(
+              (activation_fn): QuickGELUActivation()
+              (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+              (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+            )
+            (layer_norm2): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+          )
+        )
+      )
+      (post_layernorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+    )
+  )
+  (image_to_text_projection): Kosmos2ImageToTextProjection(
+    (dense): Linear(in_features=1024, out_features=2048, bias=True)
+    (x_attn): KosmosTextAttention(
+      (k_proj): Linear(in_features=2048, out_features=2048, bias=True)
+      (v_proj): Linear(in_features=2048, out_features=2048, bias=True)
+      (q_proj): Linear(in_features=2048, out_features=2048, bias=True)
+      (out_proj): Linear(in_features=2048, out_features=2048, bias=True)
+    )
+  )
+)

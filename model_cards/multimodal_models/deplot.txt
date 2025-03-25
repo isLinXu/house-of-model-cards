@@ -1,0 +1,107 @@
+Pix2StructForConditionalGeneration(
+  (encoder): Pix2StructVisionModel(
+    (embeddings): Pix2StructVisionEmbeddings(
+      (patch_projection): Linear(in_features=768, out_features=768, bias=True)
+      (row_embedder): Embedding(4096, 768)
+      (column_embedder): Embedding(4096, 768)
+      (dropout): Dropout(p=0.0, inplace=False)
+    )
+    (encoder): Pix2StructVisionEncoder(
+      (layer): ModuleList(
+        (0-11): 12 x Pix2StructVisionLayer(
+          (attention): Pix2StructVisionAttention(
+            (query): Linear(in_features=768, out_features=768, bias=False)
+            (key): Linear(in_features=768, out_features=768, bias=False)
+            (value): Linear(in_features=768, out_features=768, bias=False)
+            (output): Linear(in_features=768, out_features=768, bias=False)
+          )
+          (mlp): Pix2StructVisionMlp(
+            (wi_0): Linear(in_features=768, out_features=2048, bias=False)
+            (wi_1): Linear(in_features=768, out_features=2048, bias=False)
+            (wo): Linear(in_features=2048, out_features=768, bias=False)
+            (dropout): Dropout(p=0.0, inplace=False)
+            (act): NewGELUActivation()
+          )
+          (pre_mlp_layer_norm): Pix2StructLayerNorm()
+          (pre_attention_layer_norm): Pix2StructLayerNorm()
+        )
+      )
+    )
+    (layernorm): Pix2StructLayerNorm()
+  )
+  (decoder): Pix2StructTextModel(
+    (embed_tokens): Embedding(50244, 768)
+    (layer): ModuleList(
+      (0): Pix2StructTextBlock(
+        (self_attention): Pix2StructTextLayerSelfAttention(
+          (attention): Pix2StructTextAttention(
+            (query): Linear(in_features=768, out_features=768, bias=False)
+            (key): Linear(in_features=768, out_features=768, bias=False)
+            (value): Linear(in_features=768, out_features=768, bias=False)
+            (output): Linear(in_features=768, out_features=768, bias=False)
+            (relative_attention_bias): Embedding(32, 12)
+          )
+          (layer_norm): Pix2StructLayerNorm()
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (encoder_decoder_attention): Pix2StructTextLayerCrossAttention(
+          (attention): Pix2StructTextAttention(
+            (query): Linear(in_features=768, out_features=768, bias=False)
+            (key): Linear(in_features=768, out_features=768, bias=False)
+            (value): Linear(in_features=768, out_features=768, bias=False)
+            (output): Linear(in_features=768, out_features=768, bias=False)
+          )
+          (layer_norm): Pix2StructLayerNorm()
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (mlp): Pix2StructTextLayerFF(
+          (DenseReluDense): Pix2StructTextDenseGatedActDense(
+            (wi_0): Linear(in_features=768, out_features=2048, bias=False)
+            (wi_1): Linear(in_features=768, out_features=2048, bias=False)
+            (wo): Linear(in_features=2048, out_features=768, bias=False)
+            (dropout): Dropout(p=0.1, inplace=False)
+            (act): NewGELUActivation()
+          )
+          (layer_norm): Pix2StructLayerNorm()
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+      )
+      (1-11): 11 x Pix2StructTextBlock(
+        (self_attention): Pix2StructTextLayerSelfAttention(
+          (attention): Pix2StructTextAttention(
+            (query): Linear(in_features=768, out_features=768, bias=False)
+            (key): Linear(in_features=768, out_features=768, bias=False)
+            (value): Linear(in_features=768, out_features=768, bias=False)
+            (output): Linear(in_features=768, out_features=768, bias=False)
+          )
+          (layer_norm): Pix2StructLayerNorm()
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (encoder_decoder_attention): Pix2StructTextLayerCrossAttention(
+          (attention): Pix2StructTextAttention(
+            (query): Linear(in_features=768, out_features=768, bias=False)
+            (key): Linear(in_features=768, out_features=768, bias=False)
+            (value): Linear(in_features=768, out_features=768, bias=False)
+            (output): Linear(in_features=768, out_features=768, bias=False)
+          )
+          (layer_norm): Pix2StructLayerNorm()
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (mlp): Pix2StructTextLayerFF(
+          (DenseReluDense): Pix2StructTextDenseGatedActDense(
+            (wi_0): Linear(in_features=768, out_features=2048, bias=False)
+            (wi_1): Linear(in_features=768, out_features=2048, bias=False)
+            (wo): Linear(in_features=2048, out_features=768, bias=False)
+            (dropout): Dropout(p=0.1, inplace=False)
+            (act): NewGELUActivation()
+          )
+          (layer_norm): Pix2StructLayerNorm()
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+      )
+    )
+    (final_layer_norm): Pix2StructLayerNorm()
+    (dropout): Dropout(p=0.1, inplace=False)
+    (lm_head): Linear(in_features=768, out_features=50244, bias=False)
+  )
+)

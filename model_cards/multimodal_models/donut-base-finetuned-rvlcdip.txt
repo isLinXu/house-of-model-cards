@@ -1,0 +1,177 @@
+VisionEncoderDecoderModel(
+  (encoder): DonutSwinModel(
+    (embeddings): DonutSwinEmbeddings(
+      (patch_embeddings): DonutSwinPatchEmbeddings(
+        (projection): Conv2d(3, 128, kernel_size=(4, 4), stride=(4, 4))
+      )
+      (norm): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+      (dropout): Dropout(p=0.0, inplace=False)
+    )
+    (encoder): DonutSwinEncoder(
+      (layers): ModuleList(
+        (0): DonutSwinStage(
+          (blocks): ModuleList(
+            (0-1): 2 x DonutSwinLayer(
+              (layernorm_before): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+              (attention): DonutSwinAttention(
+                (self): DonutSwinSelfAttention(
+                  (query): Linear(in_features=128, out_features=128, bias=True)
+                  (key): Linear(in_features=128, out_features=128, bias=True)
+                  (value): Linear(in_features=128, out_features=128, bias=True)
+                  (dropout): Dropout(p=0.0, inplace=False)
+                )
+                (output): DonutSwinSelfOutput(
+                  (dense): Linear(in_features=128, out_features=128, bias=True)
+                  (dropout): Dropout(p=0.0, inplace=False)
+                )
+              )
+              (drop_path): DonutSwinDropPath(p=0.1)
+              (layernorm_after): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+              (intermediate): DonutSwinIntermediate(
+                (dense): Linear(in_features=128, out_features=512, bias=True)
+                (intermediate_act_fn): GELUActivation()
+              )
+              (output): DonutSwinOutput(
+                (dense): Linear(in_features=512, out_features=128, bias=True)
+                (dropout): Dropout(p=0.0, inplace=False)
+              )
+            )
+          )
+          (downsample): DonutSwinPatchMerging(
+            (reduction): Linear(in_features=512, out_features=256, bias=False)
+            (norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+          )
+        )
+        (1): DonutSwinStage(
+          (blocks): ModuleList(
+            (0-1): 2 x DonutSwinLayer(
+              (layernorm_before): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+              (attention): DonutSwinAttention(
+                (self): DonutSwinSelfAttention(
+                  (query): Linear(in_features=256, out_features=256, bias=True)
+                  (key): Linear(in_features=256, out_features=256, bias=True)
+                  (value): Linear(in_features=256, out_features=256, bias=True)
+                  (dropout): Dropout(p=0.0, inplace=False)
+                )
+                (output): DonutSwinSelfOutput(
+                  (dense): Linear(in_features=256, out_features=256, bias=True)
+                  (dropout): Dropout(p=0.0, inplace=False)
+                )
+              )
+              (drop_path): DonutSwinDropPath(p=0.1)
+              (layernorm_after): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+              (intermediate): DonutSwinIntermediate(
+                (dense): Linear(in_features=256, out_features=1024, bias=True)
+                (intermediate_act_fn): GELUActivation()
+              )
+              (output): DonutSwinOutput(
+                (dense): Linear(in_features=1024, out_features=256, bias=True)
+                (dropout): Dropout(p=0.0, inplace=False)
+              )
+            )
+          )
+          (downsample): DonutSwinPatchMerging(
+            (reduction): Linear(in_features=1024, out_features=512, bias=False)
+            (norm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+          )
+        )
+        (2): DonutSwinStage(
+          (blocks): ModuleList(
+            (0-13): 14 x DonutSwinLayer(
+              (layernorm_before): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+              (attention): DonutSwinAttention(
+                (self): DonutSwinSelfAttention(
+                  (query): Linear(in_features=512, out_features=512, bias=True)
+                  (key): Linear(in_features=512, out_features=512, bias=True)
+                  (value): Linear(in_features=512, out_features=512, bias=True)
+                  (dropout): Dropout(p=0.0, inplace=False)
+                )
+                (output): DonutSwinSelfOutput(
+                  (dense): Linear(in_features=512, out_features=512, bias=True)
+                  (dropout): Dropout(p=0.0, inplace=False)
+                )
+              )
+              (drop_path): DonutSwinDropPath(p=0.1)
+              (layernorm_after): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+              (intermediate): DonutSwinIntermediate(
+                (dense): Linear(in_features=512, out_features=2048, bias=True)
+                (intermediate_act_fn): GELUActivation()
+              )
+              (output): DonutSwinOutput(
+                (dense): Linear(in_features=2048, out_features=512, bias=True)
+                (dropout): Dropout(p=0.0, inplace=False)
+              )
+            )
+          )
+          (downsample): DonutSwinPatchMerging(
+            (reduction): Linear(in_features=2048, out_features=1024, bias=False)
+            (norm): LayerNorm((2048,), eps=1e-05, elementwise_affine=True)
+          )
+        )
+        (3): DonutSwinStage(
+          (blocks): ModuleList(
+            (0-1): 2 x DonutSwinLayer(
+              (layernorm_before): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+              (attention): DonutSwinAttention(
+                (self): DonutSwinSelfAttention(
+                  (query): Linear(in_features=1024, out_features=1024, bias=True)
+                  (key): Linear(in_features=1024, out_features=1024, bias=True)
+                  (value): Linear(in_features=1024, out_features=1024, bias=True)
+                  (dropout): Dropout(p=0.0, inplace=False)
+                )
+                (output): DonutSwinSelfOutput(
+                  (dense): Linear(in_features=1024, out_features=1024, bias=True)
+                  (dropout): Dropout(p=0.0, inplace=False)
+                )
+              )
+              (drop_path): DonutSwinDropPath(p=0.1)
+              (layernorm_after): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+              (intermediate): DonutSwinIntermediate(
+                (dense): Linear(in_features=1024, out_features=4096, bias=True)
+                (intermediate_act_fn): GELUActivation()
+              )
+              (output): DonutSwinOutput(
+                (dense): Linear(in_features=4096, out_features=1024, bias=True)
+                (dropout): Dropout(p=0.0, inplace=False)
+              )
+            )
+          )
+        )
+      )
+    )
+    (pooler): AdaptiveAvgPool1d(output_size=1)
+  )
+  (decoder): MBartForCausalLM(
+    (model): MBartDecoderWrapper(
+      (decoder): MBartDecoder(
+        (embed_tokens): MBartScaledWordEmbedding(57544, 1024, padding_idx=1)
+        (embed_positions): MBartLearnedPositionalEmbedding(10, 1024)
+        (layers): ModuleList(
+          (0-3): 4 x MBartDecoderLayer(
+            (self_attn): MBartSdpaAttention(
+              (k_proj): Linear(in_features=1024, out_features=1024, bias=True)
+              (v_proj): Linear(in_features=1024, out_features=1024, bias=True)
+              (q_proj): Linear(in_features=1024, out_features=1024, bias=True)
+              (out_proj): Linear(in_features=1024, out_features=1024, bias=True)
+            )
+            (activation_fn): GELUActivation()
+            (self_attn_layer_norm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+            (encoder_attn): MBartSdpaAttention(
+              (k_proj): Linear(in_features=1024, out_features=1024, bias=True)
+              (v_proj): Linear(in_features=1024, out_features=1024, bias=True)
+              (q_proj): Linear(in_features=1024, out_features=1024, bias=True)
+              (out_proj): Linear(in_features=1024, out_features=1024, bias=True)
+            )
+            (encoder_attn_layer_norm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+            (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+            (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+            (final_layer_norm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+          )
+        )
+        (layernorm_embedding): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (layer_norm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+      )
+    )
+    (lm_head): Linear(in_features=1024, out_features=57544, bias=False)
+  )
+)

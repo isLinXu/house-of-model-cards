@@ -1,0 +1,112 @@
+ClvpModelForConditionalGeneration(
+  (conditioning_encoder): ClvpConditioningEncoder(
+    (text_token_embedding): Embedding(256, 1024)
+    (text_position_embedding): Embedding(404, 1024)
+    (mel_conv): Conv1d(80, 1024, kernel_size=(1,), stride=(1,))
+    (group_norms): ModuleList(
+      (0-5): 6 x GroupNorm(32, 1024, eps=1e-05, affine=True)
+    )
+    (mel_attn_blocks): ModuleList(
+      (0-5): 6 x ClvpSelfAttention(
+        (k_proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (v_proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (q_proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (out_proj): Linear(in_features=1024, out_features=1024, bias=True)
+      )
+    )
+  )
+  (speech_decoder_model): ClvpForCausalLM(
+    (model): ClvpModel(
+      (decoder): ClvpDecoder(
+        (input_embeds_layer): Embedding(8194, 1024)
+        (position_embeds_layer): Embedding(608, 1024)
+        (drop): Dropout(p=0.1, inplace=False)
+        (layers): ModuleList(
+          (0-29): 30 x ClvpDecoderLayer(
+            (input_layernorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+            (attn): ClvpSelfAttention(
+              (k_proj): Linear(in_features=1024, out_features=1024, bias=True)
+              (v_proj): Linear(in_features=1024, out_features=1024, bias=True)
+              (q_proj): Linear(in_features=1024, out_features=1024, bias=True)
+              (out_proj): Linear(in_features=1024, out_features=1024, bias=True)
+            )
+            (post_attention_layernorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+            (mlp): ClvpDecoderMLP(
+              (c_fc): Conv1D(nf=4096, nx=1024)
+              (c_proj): Conv1D(nf=1024, nx=4096)
+              (act): NewGELUActivation()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+        (layer_norm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+      )
+    )
+    (final_norm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+    (lm_head): Linear(in_features=1024, out_features=8194, bias=True)
+  )
+  (text_encoder_model): ClvpEncoder(
+    (token_embedding): Embedding(256, 768)
+    (rotary_pos_emb): ClvpRotaryPositionalEmbedding()
+    (layers): ModuleList(
+      (0-19): 20 x ClvpEncoderLayer(
+        (self_attn): ClvpSelfAttention(
+          (k_proj): Linear(in_features=768, out_features=768, bias=False)
+          (v_proj): Linear(in_features=768, out_features=768, bias=False)
+          (q_proj): Linear(in_features=768, out_features=768, bias=False)
+          (out_proj): Linear(in_features=768, out_features=768, bias=True)
+        )
+        (mlp): ClvpEncoderMLP(
+          (fc1): ClvpGatedLinearUnit(
+            (activation_fn): GELUActivation()
+            (proj): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (fc2): Linear(in_features=1536, out_features=768, bias=True)
+          (dropout_layer): Dropout(p=0.1, inplace=False)
+        )
+        (input_rmsnorm): ClvpRMSNorm((768,), eps=1e-05)
+        (post_attention_rmsnorm): ClvpRMSNorm((768,), eps=1e-05)
+      )
+    )
+    (sequence_summary): SequenceSummary(
+      (summary): Identity()
+      (activation): Identity()
+      (first_dropout): Identity()
+      (last_dropout): Identity()
+    )
+    (final_layer_norm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+    (projection): Linear(in_features=768, out_features=768, bias=False)
+  )
+  (speech_encoder_model): ClvpEncoder(
+    (token_embedding): Embedding(8192, 768)
+    (rotary_pos_emb): ClvpRotaryPositionalEmbedding()
+    (layers): ModuleList(
+      (0-19): 20 x ClvpEncoderLayer(
+        (self_attn): ClvpSelfAttention(
+          (k_proj): Linear(in_features=768, out_features=768, bias=False)
+          (v_proj): Linear(in_features=768, out_features=768, bias=False)
+          (q_proj): Linear(in_features=768, out_features=768, bias=False)
+          (out_proj): Linear(in_features=768, out_features=768, bias=True)
+        )
+        (mlp): ClvpEncoderMLP(
+          (fc1): ClvpGatedLinearUnit(
+            (activation_fn): GELUActivation()
+            (proj): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (fc2): Linear(in_features=1536, out_features=768, bias=True)
+          (dropout_layer): Dropout(p=0.1, inplace=False)
+        )
+        (input_rmsnorm): ClvpRMSNorm((768,), eps=1e-05)
+        (post_attention_rmsnorm): ClvpRMSNorm((768,), eps=1e-05)
+      )
+    )
+    (sequence_summary): SequenceSummary(
+      (summary): Identity()
+      (activation): Identity()
+      (first_dropout): Identity()
+      (last_dropout): Identity()
+    )
+    (final_layer_norm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+    (projection): Linear(in_features=768, out_features=768, bias=False)
+  )
+)

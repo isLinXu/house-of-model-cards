@@ -1,0 +1,75 @@
+VisionEncoderDecoderModel(
+  (encoder): ViTModel(
+    (embeddings): ViTEmbeddings(
+      (patch_embeddings): ViTPatchEmbeddings(
+        (projection): Conv2d(3, 768, kernel_size=(16, 16), stride=(16, 16))
+      )
+      (dropout): Dropout(p=0.0, inplace=False)
+    )
+    (encoder): ViTEncoder(
+      (layer): ModuleList(
+        (0-11): 12 x ViTLayer(
+          (attention): ViTAttention(
+            (attention): ViTSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=False)
+              (key): Linear(in_features=768, out_features=768, bias=False)
+              (value): Linear(in_features=768, out_features=768, bias=False)
+              (dropout): Dropout(p=0.0, inplace=False)
+            )
+            (output): ViTSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.0, inplace=False)
+            )
+          )
+          (intermediate): ViTIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+            (intermediate_act_fn): GELUActivation()
+          )
+          (output): ViTOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (dropout): Dropout(p=0.0, inplace=False)
+          )
+          (layernorm_before): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+          (layernorm_after): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+        )
+      )
+    )
+    (layernorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+    (pooler): ViTPooler(
+      (dense): Linear(in_features=768, out_features=768, bias=True)
+      (activation): Tanh()
+    )
+  )
+  (decoder): TrOCRForCausalLM(
+    (model): TrOCRDecoderWrapper(
+      (decoder): TrOCRDecoder(
+        (embed_tokens): TrOCRScaledWordEmbedding(50265, 1024, padding_idx=1)
+        (embed_positions): TrOCRLearnedPositionalEmbedding(514, 1024)
+        (layernorm_embedding): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (layers): ModuleList(
+          (0-11): 12 x TrOCRDecoderLayer(
+            (self_attn): TrOCRAttention(
+              (k_proj): Linear(in_features=1024, out_features=1024, bias=True)
+              (v_proj): Linear(in_features=1024, out_features=1024, bias=True)
+              (q_proj): Linear(in_features=1024, out_features=1024, bias=True)
+              (out_proj): Linear(in_features=1024, out_features=1024, bias=True)
+            )
+            (activation_fn): GELUActivation()
+            (self_attn_layer_norm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+            (encoder_attn): TrOCRAttention(
+              (k_proj): Linear(in_features=768, out_features=1024, bias=True)
+              (v_proj): Linear(in_features=768, out_features=1024, bias=True)
+              (q_proj): Linear(in_features=1024, out_features=1024, bias=True)
+              (out_proj): Linear(in_features=1024, out_features=1024, bias=True)
+            )
+            (encoder_attn_layer_norm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+            (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+            (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+            (final_layer_norm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+          )
+        )
+      )
+    )
+    (output_projection): Linear(in_features=1024, out_features=50265, bias=False)
+  )
+)

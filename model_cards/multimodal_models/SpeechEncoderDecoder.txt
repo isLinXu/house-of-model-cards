@@ -1,0 +1,117 @@
+SpeechEncoderDecoderModel(
+  (encoder): Wav2Vec2Model(
+    (feature_extractor): Wav2Vec2FeatureEncoder(
+      (conv_layers): ModuleList(
+        (0): Wav2Vec2GroupNormConvLayer(
+          (conv): Conv1d(1, 512, kernel_size=(10,), stride=(5,), bias=False)
+          (activation): GELUActivation()
+          (layer_norm): GroupNorm(512, 512, eps=1e-05, affine=True)
+        )
+        (1-4): 4 x Wav2Vec2NoLayerNormConvLayer(
+          (conv): Conv1d(512, 512, kernel_size=(3,), stride=(2,), bias=False)
+          (activation): GELUActivation()
+        )
+        (5-6): 2 x Wav2Vec2NoLayerNormConvLayer(
+          (conv): Conv1d(512, 512, kernel_size=(2,), stride=(2,), bias=False)
+          (activation): GELUActivation()
+        )
+      )
+    )
+    (feature_projection): Wav2Vec2FeatureProjection(
+      (layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+      (projection): Linear(in_features=512, out_features=768, bias=True)
+      (dropout): Dropout(p=0.0, inplace=False)
+    )
+    (encoder): Wav2Vec2Encoder(
+      (pos_conv_embed): Wav2Vec2PositionalConvEmbedding(
+        (conv): Conv1d(768, 768, kernel_size=(128,), stride=(1,), padding=(64,), groups=16)
+        (padding): Wav2Vec2SamePadLayer()
+        (activation): GELUActivation()
+      )
+      (layer_norm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (dropout): Dropout(p=0.1, inplace=False)
+      (layers): ModuleList(
+        (0-11): 12 x Wav2Vec2EncoderLayer(
+          (attention): Wav2Vec2Attention(
+            (k_proj): Linear(in_features=768, out_features=768, bias=True)
+            (v_proj): Linear(in_features=768, out_features=768, bias=True)
+            (q_proj): Linear(in_features=768, out_features=768, bias=True)
+            (out_proj): Linear(in_features=768, out_features=768, bias=True)
+          )
+          (dropout): Dropout(p=0.1, inplace=False)
+          (layer_norm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+          (feed_forward): Wav2Vec2FeedForward(
+            (intermediate_dropout): Dropout(p=0.1, inplace=False)
+            (intermediate_dense): Linear(in_features=768, out_features=3072, bias=True)
+            (intermediate_act_fn): GELUActivation()
+            (output_dense): Linear(in_features=3072, out_features=768, bias=True)
+            (output_dropout): Dropout(p=0.1, inplace=False)
+          )
+          (final_layer_norm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+        )
+      )
+    )
+  )
+  (decoder): BertLMHeadModel(
+    (bert): BertModel(
+      (embeddings): BertEmbeddings(
+        (word_embeddings): Embedding(30522, 768, padding_idx=0)
+        (position_embeddings): Embedding(512, 768)
+        (token_type_embeddings): Embedding(2, 768)
+        (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (encoder): BertEncoder(
+        (layer): ModuleList(
+          (0-11): 12 x BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (crossattention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+              (intermediate_act_fn): GELUActivation()
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+      )
+    )
+    (cls): BertOnlyMLMHead(
+      (predictions): BertLMPredictionHead(
+        (transform): BertPredictionHeadTransform(
+          (dense): Linear(in_features=768, out_features=768, bias=True)
+          (transform_act_fn): GELUActivation()
+          (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+        )
+        (decoder): Linear(in_features=768, out_features=30522, bias=True)
+      )
+    )
+  )
+)

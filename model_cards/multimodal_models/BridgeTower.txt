@@ -1,0 +1,181 @@
+BridgeTowerForContrastiveLearning(
+  (bridgetower): BridgeTowerModel(
+    (cross_modal_text_transform): Linear(in_features=1024, out_features=1024, bias=True)
+    (cross_modal_image_transform): Linear(in_features=1024, out_features=1024, bias=True)
+    (token_type_embeddings): Embedding(2, 1024)
+    (vision_model): BridgeTowerVisionModel(
+      (visual): BridgeTowerVisionTransformer(
+        (embeddings): BridgeTowerVisionEmbeddings(
+          (patch_embedding): Conv2d(3, 1024, kernel_size=(14, 14), stride=(14, 14), bias=False)
+          (position_embedding): Embedding(442, 1024)
+        )
+        (ln_pre): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (transformer): BridgeTowerTransformer(
+          (resblocks): ModuleList(
+            (0-23): 24 x BridgeTowerResidualAttention(
+              (attn): MultiheadAttention(
+                (out_proj): NonDynamicallyQuantizableLinear(in_features=1024, out_features=1024, bias=True)
+              )
+              (ln_1): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+              (mlp): ModuleDict(
+                (c_fc): Linear(in_features=1024, out_features=4096, bias=True)
+                (gelu): QuickGELUActivation()
+                (c_proj): Linear(in_features=4096, out_features=1024, bias=True)
+              )
+              (ln_2): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+            )
+          )
+        )
+        (ln_post): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+      )
+    )
+    (text_model): BridgeTowerTextModel(
+      (embeddings): BridgeTowerTextEmbeddings(
+        (word_embeddings): Embedding(50265, 1024, padding_idx=1)
+        (position_embeddings): Embedding(514, 1024, padding_idx=1)
+        (token_type_embeddings): Embedding(1, 1024)
+        (LayerNorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (encoder): BridgeTowerTextEncoder(
+        (layer): ModuleList(
+          (0-23): 24 x BridgeTowerTextLayer(
+            (attention): BridgeTowerAttention(
+              (self): BridgeTowerSelfAttention(
+                (query): Linear(in_features=1024, out_features=1024, bias=True)
+                (key): Linear(in_features=1024, out_features=1024, bias=True)
+                (value): Linear(in_features=1024, out_features=1024, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BridgeTowerSelfOutput(
+                (dense): Linear(in_features=1024, out_features=1024, bias=True)
+                (LayerNorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BridgeTowerIntermediate(
+              (dense): Linear(in_features=1024, out_features=4096, bias=True)
+              (intermediate_act_fn): GELUActivation()
+            )
+            (output): BridgeTowerOutput(
+              (dense): Linear(in_features=4096, out_features=1024, bias=True)
+              (LayerNorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+      )
+      (pooler): BridgeTowerPooler(
+        (dense): Linear(in_features=1024, out_features=1024, bias=True)
+        (activation): Tanh()
+      )
+    )
+    (cross_modal_image_layers): ModuleList(
+      (0-5): 6 x BridgeTowerBertCrossLayer(
+        (attention): BridgeTowerAttention(
+          (self): BridgeTowerSelfAttention(
+            (query): Linear(in_features=1024, out_features=1024, bias=True)
+            (key): Linear(in_features=1024, out_features=1024, bias=True)
+            (value): Linear(in_features=1024, out_features=1024, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+          (output): BridgeTowerSelfOutput(
+            (dense): Linear(in_features=1024, out_features=1024, bias=True)
+            (LayerNorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (crossattention): BridgeTowerAttention(
+          (self): BridgeTowerSelfAttention(
+            (query): Linear(in_features=1024, out_features=1024, bias=True)
+            (key): Linear(in_features=1024, out_features=1024, bias=True)
+            (value): Linear(in_features=1024, out_features=1024, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+          (output): BridgeTowerSelfOutput(
+            (dense): Linear(in_features=1024, out_features=1024, bias=True)
+            (LayerNorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (intermediate): BridgeTowerIntermediate(
+          (dense): Linear(in_features=1024, out_features=4096, bias=True)
+          (intermediate_act_fn): GELUActivation()
+        )
+        (output): BridgeTowerOutput(
+          (dense): Linear(in_features=4096, out_features=1024, bias=True)
+          (LayerNorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+      )
+    )
+    (cross_modal_text_layers): ModuleList(
+      (0-5): 6 x BridgeTowerBertCrossLayer(
+        (attention): BridgeTowerAttention(
+          (self): BridgeTowerSelfAttention(
+            (query): Linear(in_features=1024, out_features=1024, bias=True)
+            (key): Linear(in_features=1024, out_features=1024, bias=True)
+            (value): Linear(in_features=1024, out_features=1024, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+          (output): BridgeTowerSelfOutput(
+            (dense): Linear(in_features=1024, out_features=1024, bias=True)
+            (LayerNorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (crossattention): BridgeTowerAttention(
+          (self): BridgeTowerSelfAttention(
+            (query): Linear(in_features=1024, out_features=1024, bias=True)
+            (key): Linear(in_features=1024, out_features=1024, bias=True)
+            (value): Linear(in_features=1024, out_features=1024, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+          (output): BridgeTowerSelfOutput(
+            (dense): Linear(in_features=1024, out_features=1024, bias=True)
+            (LayerNorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (intermediate): BridgeTowerIntermediate(
+          (dense): Linear(in_features=1024, out_features=4096, bias=True)
+          (intermediate_act_fn): GELUActivation()
+        )
+        (output): BridgeTowerOutput(
+          (dense): Linear(in_features=4096, out_features=1024, bias=True)
+          (LayerNorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+      )
+    )
+    (cross_modal_image_pooler): BridgeTowerPooler(
+      (dense): Linear(in_features=1024, out_features=1024, bias=True)
+      (activation): Tanh()
+    )
+    (cross_modal_text_pooler): BridgeTowerPooler(
+      (dense): Linear(in_features=1024, out_features=1024, bias=True)
+      (activation): Tanh()
+    )
+    (cross_modal_text_layernorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+    (cross_modal_image_layernorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+    (cross_modal_text_link_tower): ModuleList(
+      (0-4): 5 x BridgeTowerLinkTower(
+        (LayerNorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+      )
+    )
+    (cross_modal_image_link_tower): ModuleList(
+      (0-4): 5 x BridgeTowerLinkTower(
+        (LayerNorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+      )
+    )
+  )
+  (itc_text_head): BridgeTowerContrastiveHead(
+    (fc): Linear(in_features=1024, out_features=512, bias=True)
+  )
+  (itc_image_head): BridgeTowerContrastiveHead(
+    (fc): Linear(in_features=1024, out_features=512, bias=True)
+  )
+  (itc_cross_modal_head): BridgeTowerContrastiveHead(
+    (fc): Linear(in_features=2048, out_features=512, bias=True)
+  )
+)

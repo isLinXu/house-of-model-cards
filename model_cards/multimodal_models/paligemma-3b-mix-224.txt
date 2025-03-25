@@ -1,0 +1,59 @@
+PaliGemmaForConditionalGeneration(
+  (vision_tower): SiglipVisionModel(
+    (vision_model): SiglipVisionTransformer(
+      (embeddings): SiglipVisionEmbeddings(
+        (patch_embedding): Conv2d(3, 1152, kernel_size=(14, 14), stride=(14, 14), padding=valid)
+        (position_embedding): Embedding(256, 1152)
+      )
+      (encoder): SiglipEncoder(
+        (layers): ModuleList(
+          (0-26): 27 x SiglipEncoderLayer(
+            (self_attn): SiglipAttention(
+              (k_proj): Linear(in_features=1152, out_features=1152, bias=True)
+              (v_proj): Linear(in_features=1152, out_features=1152, bias=True)
+              (q_proj): Linear(in_features=1152, out_features=1152, bias=True)
+              (out_proj): Linear(in_features=1152, out_features=1152, bias=True)
+            )
+            (layer_norm1): LayerNorm((1152,), eps=1e-06, elementwise_affine=True)
+            (mlp): SiglipMLP(
+              (activation_fn): PytorchGELUTanh()
+              (fc1): Linear(in_features=1152, out_features=4304, bias=True)
+              (fc2): Linear(in_features=4304, out_features=1152, bias=True)
+            )
+            (layer_norm2): LayerNorm((1152,), eps=1e-06, elementwise_affine=True)
+          )
+        )
+      )
+      (post_layernorm): LayerNorm((1152,), eps=1e-06, elementwise_affine=True)
+    )
+  )
+  (multi_modal_projector): PaliGemmaMultiModalProjector(
+    (linear): Linear(in_features=1152, out_features=2048, bias=True)
+  )
+  (language_model): GemmaForCausalLM(
+    (model): GemmaModel(
+      (embed_tokens): Embedding(257216, 2048, padding_idx=0)
+      (layers): ModuleList(
+        (0-17): 18 x GemmaDecoderLayer(
+          (self_attn): GemmaAttention(
+            (q_proj): Linear(in_features=2048, out_features=2048, bias=False)
+            (k_proj): Linear(in_features=2048, out_features=256, bias=False)
+            (v_proj): Linear(in_features=2048, out_features=256, bias=False)
+            (o_proj): Linear(in_features=2048, out_features=2048, bias=False)
+            (rotary_emb): GemmaRotaryEmbedding()
+          )
+          (mlp): GemmaMLP(
+            (gate_proj): Linear(in_features=2048, out_features=16384, bias=False)
+            (up_proj): Linear(in_features=2048, out_features=16384, bias=False)
+            (down_proj): Linear(in_features=16384, out_features=2048, bias=False)
+            (act_fn): PytorchGELUTanh()
+          )
+          (input_layernorm): GemmaRMSNorm((2048,), eps=1e-06)
+          (post_attention_layernorm): GemmaRMSNorm((2048,), eps=1e-06)
+        )
+      )
+      (norm): GemmaRMSNorm((2048,), eps=1e-06)
+    )
+    (lm_head): Linear(in_features=2048, out_features=257216, bias=False)
+  )
+)

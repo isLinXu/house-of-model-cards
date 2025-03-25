@@ -1,0 +1,68 @@
+ChineseCLIPModel(
+  (text_model): ChineseCLIPTextModel(
+    (embeddings): ChineseCLIPTextEmbeddings(
+      (word_embeddings): Embedding(21128, 768, padding_idx=0)
+      (position_embeddings): Embedding(512, 768)
+      (token_type_embeddings): Embedding(2, 768)
+      (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+    (encoder): ChineseCLIPTextEncoder(
+      (layer): ModuleList(
+        (0-11): 12 x ChineseCLIPTextLayer(
+          (attention): ChineseCLIPTextAttention(
+            (self): ChineseCLIPTextSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): ChineseCLIPTextSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): ChineseCLIPTextIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+            (intermediate_act_fn): GELUActivation()
+          )
+          (output): ChineseCLIPTextOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+      )
+    )
+  )
+  (vision_model): ChineseCLIPVisionTransformer(
+    (embeddings): ChineseCLIPVisionEmbeddings(
+      (patch_embedding): Conv2d(3, 768, kernel_size=(16, 16), stride=(16, 16), bias=False)
+      (position_embedding): Embedding(197, 768)
+    )
+    (pre_layrnorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+    (encoder): ChineseCLIPVisionEncoder(
+      (layers): ModuleList(
+        (0-11): 12 x ChineseCLIPVisionLayer(
+          (self_attn): ChineseCLIPVisionAttention(
+            (k_proj): Linear(in_features=768, out_features=768, bias=True)
+            (v_proj): Linear(in_features=768, out_features=768, bias=True)
+            (q_proj): Linear(in_features=768, out_features=768, bias=True)
+            (out_proj): Linear(in_features=768, out_features=768, bias=True)
+          )
+          (layer_norm1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+          (mlp): ChineseCLIPVisionMLP(
+            (activation_fn): QuickGELUActivation()
+            (fc1): Linear(in_features=768, out_features=3072, bias=True)
+            (fc2): Linear(in_features=3072, out_features=768, bias=True)
+          )
+          (layer_norm2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+        )
+      )
+    )
+    (post_layernorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+  )
+  (visual_projection): Linear(in_features=768, out_features=512, bias=False)
+  (text_projection): Linear(in_features=768, out_features=512, bias=False)
+)

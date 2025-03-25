@@ -1,0 +1,159 @@
+TvpModel(
+  (vision_model): TvpVisionModel(
+    (backbone): ResNetBackbone(
+      (embedder): ResNetEmbeddings(
+        (embedder): ResNetConvLayer(
+          (convolution): Conv2d(3, 64, kernel_size=(7, 7), stride=(2, 2), padding=(3, 3), bias=False)
+          (normalization): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (activation): ReLU()
+        )
+        (pooler): MaxPool2d(kernel_size=3, stride=2, padding=1, dilation=1, ceil_mode=False)
+      )
+      (encoder): ResNetEncoder(
+        (stages): ModuleList(
+          (0): ResNetStage(
+            (layers): Sequential(
+              (0): ResNetBottleNeckLayer(
+                (shortcut): Identity()
+                (layer): Sequential(
+                  (0): ResNetConvLayer(
+                    (convolution): Conv2d(64, 16, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                    (normalization): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                    (activation): ReLU()
+                  )
+                  (1): ResNetConvLayer(
+                    (convolution): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                    (normalization): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                    (activation): ReLU()
+                  )
+                  (2): ResNetConvLayer(
+                    (convolution): Conv2d(16, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                    (normalization): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                    (activation): Identity()
+                  )
+                )
+                (activation): ReLU()
+              )
+              (1): ResNetBottleNeckLayer(
+                (shortcut): Identity()
+                (layer): Sequential(
+                  (0): ResNetConvLayer(
+                    (convolution): Conv2d(64, 16, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                    (normalization): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                    (activation): ReLU()
+                  )
+                  (1): ResNetConvLayer(
+                    (convolution): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                    (normalization): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                    (activation): ReLU()
+                  )
+                  (2): ResNetConvLayer(
+                    (convolution): Conv2d(16, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                    (normalization): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                    (activation): Identity()
+                  )
+                )
+                (activation): ReLU()
+              )
+            )
+          )
+          (1): ResNetStage(
+            (layers): Sequential(
+              (0): ResNetBottleNeckLayer(
+                (shortcut): ResNetShortCut(
+                  (convolution): Conv2d(64, 128, kernel_size=(1, 1), stride=(2, 2), bias=False)
+                  (normalization): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                )
+                (layer): Sequential(
+                  (0): ResNetConvLayer(
+                    (convolution): Conv2d(64, 32, kernel_size=(1, 1), stride=(2, 2), bias=False)
+                    (normalization): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                    (activation): ReLU()
+                  )
+                  (1): ResNetConvLayer(
+                    (convolution): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                    (normalization): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                    (activation): ReLU()
+                  )
+                  (2): ResNetConvLayer(
+                    (convolution): Conv2d(32, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                    (normalization): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                    (activation): Identity()
+                  )
+                )
+                (activation): ReLU()
+              )
+              (1): ResNetBottleNeckLayer(
+                (shortcut): Identity()
+                (layer): Sequential(
+                  (0): ResNetConvLayer(
+                    (convolution): Conv2d(128, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                    (normalization): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                    (activation): ReLU()
+                  )
+                  (1): ResNetConvLayer(
+                    (convolution): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                    (normalization): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                    (activation): ReLU()
+                  )
+                  (2): ResNetConvLayer(
+                    (convolution): Conv2d(32, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                    (normalization): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                    (activation): Identity()
+                  )
+                )
+                (activation): ReLU()
+              )
+            )
+          )
+        )
+      )
+    )
+    (grid_encoder_conv): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+  )
+  (embeddings): TvpTextInputEmbeddings(
+    (word_embeddings): Embedding(30522, 128, padding_idx=0)
+    (position_embeddings): Embedding(128, 128)
+    (token_type_embeddings): Embedding(2, 128)
+    (layer_norm): LayerNorm((128,), eps=1e-12, elementwise_affine=True)
+    (dropout): Dropout(p=0.1, inplace=False)
+  )
+  (visual_embeddings): TvpVisualInputEmbedding(
+    (position_embeddings): Embedding(128, 128)
+    (row_position_embeddings): Embedding(100, 128)
+    (col_position_embeddings): Embedding(100, 128)
+    (token_type_embeddings): Embedding(1, 128)
+    (layer_norm): LayerNorm((128,), eps=1e-12, elementwise_affine=True)
+    (dropout): Dropout(p=0.1, inplace=False)
+  )
+  (encoder): TvpEncoder(
+    (layer): ModuleList(
+      (0-3): 4 x TvpEncodeLayer(
+        (attention): TvpAttention(
+          (query): Linear(in_features=128, out_features=128, bias=True)
+          (key): Linear(in_features=128, out_features=128, bias=True)
+          (value): Linear(in_features=128, out_features=128, bias=True)
+          (attn_dropout): Dropout(p=0.1, inplace=False)
+          (dense): Linear(in_features=128, out_features=128, bias=True)
+          (layer_norm): LayerNorm((128,), eps=1e-12, elementwise_affine=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (intermediate): TvpIntermediate(
+          (dense): Linear(in_features=128, out_features=384, bias=True)
+          (intermediate_act_fn): GELUActivation()
+        )
+        (output): TvpOutputLayer(
+          (dense): Linear(in_features=384, out_features=128, bias=True)
+          (layer_norm): LayerNorm((128,), eps=1e-12, elementwise_affine=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+      )
+    )
+  )
+  (pooler): TvpPooler(
+    (dense): Linear(in_features=128, out_features=128, bias=True)
+    (activation): Tanh()
+  )
+  (dropout): Dropout(p=0.1, inplace=False)
+  (visual_prompter): TvpFramePadPrompter()
+)

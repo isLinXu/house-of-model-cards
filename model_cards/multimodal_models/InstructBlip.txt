@@ -1,0 +1,24 @@
+InstructBlipVisionModel(
+  (embeddings): InstructBlipVisionEmbeddings(
+    (patch_embedding): Conv2d(3, 1408, kernel_size=(14, 14), stride=(14, 14))
+  )
+  (encoder): InstructBlipEncoder(
+    (layers): ModuleList(
+      (0-38): 39 x InstructBlipEncoderLayer(
+        (self_attn): InstructBlipAttention(
+          (dropout): Dropout(p=0.0, inplace=False)
+          (qkv): Linear(in_features=1408, out_features=4224, bias=True)
+          (projection): Linear(in_features=1408, out_features=1408, bias=True)
+        )
+        (layer_norm1): LayerNorm((1408,), eps=1e-06, elementwise_affine=True)
+        (mlp): InstructBlipMLP(
+          (activation_fn): GELUActivation()
+          (fc1): Linear(in_features=1408, out_features=6144, bias=True)
+          (fc2): Linear(in_features=6144, out_features=1408, bias=True)
+        )
+        (layer_norm2): LayerNorm((1408,), eps=1e-06, elementwise_affine=True)
+      )
+    )
+  )
+  (post_layernorm): LayerNorm((1408,), eps=1e-06, elementwise_affine=True)
+)

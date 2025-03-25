@@ -1,0 +1,28 @@
+GroupViTTextModel(
+  (text_model): GroupViTTextTransformer(
+    (embeddings): GroupViTTextEmbeddings(
+      (token_embedding): Embedding(49408, 256)
+      (position_embedding): Embedding(77, 256)
+    )
+    (encoder): GroupViTTextEncoder(
+      (layers): ModuleList(
+        (0-11): 12 x GroupViTEncoderLayer(
+          (self_attn): GroupViTAttention(
+            (k_proj): Linear(in_features=256, out_features=256, bias=True)
+            (v_proj): Linear(in_features=256, out_features=256, bias=True)
+            (q_proj): Linear(in_features=256, out_features=256, bias=True)
+            (out_proj): Linear(in_features=256, out_features=256, bias=True)
+          )
+          (layer_norm1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (mlp): GroupViTMLP(
+            (activation_fn): QuickGELUActivation()
+            (fc1): Linear(in_features=256, out_features=1024, bias=True)
+            (fc2): Linear(in_features=1024, out_features=256, bias=True)
+          )
+          (layer_norm2): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+        )
+      )
+    )
+    (final_layer_norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+  )
+)

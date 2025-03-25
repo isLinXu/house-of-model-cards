@@ -1,0 +1,329 @@
+GroundingDinoForObjectDetection(
+  (model): GroundingDinoModel(
+    (backbone): GroundingDinoConvModel(
+      (conv_encoder): GroundingDinoConvEncoder(
+        (model): SwinBackbone(
+          (embeddings): SwinEmbeddings(
+            (patch_embeddings): SwinPatchEmbeddings(
+              (projection): Conv2d(3, 96, kernel_size=(4, 4), stride=(4, 4))
+            )
+            (norm): LayerNorm((96,), eps=1e-05, elementwise_affine=True)
+            (dropout): Dropout(p=0.0, inplace=False)
+          )
+          (encoder): SwinEncoder(
+            (layers): ModuleList(
+              (0): SwinStage(
+                (blocks): ModuleList(
+                  (0-1): 2 x SwinLayer(
+                    (layernorm_before): LayerNorm((96,), eps=1e-05, elementwise_affine=True)
+                    (attention): SwinAttention(
+                      (self): SwinSelfAttention(
+                        (query): Linear(in_features=96, out_features=96, bias=True)
+                        (key): Linear(in_features=96, out_features=96, bias=True)
+                        (value): Linear(in_features=96, out_features=96, bias=True)
+                        (dropout): Dropout(p=0.0, inplace=False)
+                      )
+                      (output): SwinSelfOutput(
+                        (dense): Linear(in_features=96, out_features=96, bias=True)
+                        (dropout): Dropout(p=0.0, inplace=False)
+                      )
+                    )
+                    (drop_path): SwinDropPath(p=0.1)
+                    (layernorm_after): LayerNorm((96,), eps=1e-05, elementwise_affine=True)
+                    (intermediate): SwinIntermediate(
+                      (dense): Linear(in_features=96, out_features=384, bias=True)
+                      (intermediate_act_fn): GELUActivation()
+                    )
+                    (output): SwinOutput(
+                      (dense): Linear(in_features=384, out_features=96, bias=True)
+                      (dropout): Dropout(p=0.0, inplace=False)
+                    )
+                  )
+                )
+                (downsample): SwinPatchMerging(
+                  (reduction): Linear(in_features=384, out_features=192, bias=False)
+                  (norm): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+                )
+              )
+              (1): SwinStage(
+                (blocks): ModuleList(
+                  (0-1): 2 x SwinLayer(
+                    (layernorm_before): LayerNorm((192,), eps=1e-05, elementwise_affine=True)
+                    (attention): SwinAttention(
+                      (self): SwinSelfAttention(
+                        (query): Linear(in_features=192, out_features=192, bias=True)
+                        (key): Linear(in_features=192, out_features=192, bias=True)
+                        (value): Linear(in_features=192, out_features=192, bias=True)
+                        (dropout): Dropout(p=0.0, inplace=False)
+                      )
+                      (output): SwinSelfOutput(
+                        (dense): Linear(in_features=192, out_features=192, bias=True)
+                        (dropout): Dropout(p=0.0, inplace=False)
+                      )
+                    )
+                    (drop_path): SwinDropPath(p=0.1)
+                    (layernorm_after): LayerNorm((192,), eps=1e-05, elementwise_affine=True)
+                    (intermediate): SwinIntermediate(
+                      (dense): Linear(in_features=192, out_features=768, bias=True)
+                      (intermediate_act_fn): GELUActivation()
+                    )
+                    (output): SwinOutput(
+                      (dense): Linear(in_features=768, out_features=192, bias=True)
+                      (dropout): Dropout(p=0.0, inplace=False)
+                    )
+                  )
+                )
+                (downsample): SwinPatchMerging(
+                  (reduction): Linear(in_features=768, out_features=384, bias=False)
+                  (norm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+                )
+              )
+              (2): SwinStage(
+                (blocks): ModuleList(
+                  (0-5): 6 x SwinLayer(
+                    (layernorm_before): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+                    (attention): SwinAttention(
+                      (self): SwinSelfAttention(
+                        (query): Linear(in_features=384, out_features=384, bias=True)
+                        (key): Linear(in_features=384, out_features=384, bias=True)
+                        (value): Linear(in_features=384, out_features=384, bias=True)
+                        (dropout): Dropout(p=0.0, inplace=False)
+                      )
+                      (output): SwinSelfOutput(
+                        (dense): Linear(in_features=384, out_features=384, bias=True)
+                        (dropout): Dropout(p=0.0, inplace=False)
+                      )
+                    )
+                    (drop_path): SwinDropPath(p=0.1)
+                    (layernorm_after): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+                    (intermediate): SwinIntermediate(
+                      (dense): Linear(in_features=384, out_features=1536, bias=True)
+                      (intermediate_act_fn): GELUActivation()
+                    )
+                    (output): SwinOutput(
+                      (dense): Linear(in_features=1536, out_features=384, bias=True)
+                      (dropout): Dropout(p=0.0, inplace=False)
+                    )
+                  )
+                )
+                (downsample): SwinPatchMerging(
+                  (reduction): Linear(in_features=1536, out_features=768, bias=False)
+                  (norm): LayerNorm((1536,), eps=1e-05, elementwise_affine=True)
+                )
+              )
+              (3): SwinStage(
+                (blocks): ModuleList(
+                  (0-1): 2 x SwinLayer(
+                    (layernorm_before): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+                    (attention): SwinAttention(
+                      (self): SwinSelfAttention(
+                        (query): Linear(in_features=768, out_features=768, bias=True)
+                        (key): Linear(in_features=768, out_features=768, bias=True)
+                        (value): Linear(in_features=768, out_features=768, bias=True)
+                        (dropout): Dropout(p=0.0, inplace=False)
+                      )
+                      (output): SwinSelfOutput(
+                        (dense): Linear(in_features=768, out_features=768, bias=True)
+                        (dropout): Dropout(p=0.0, inplace=False)
+                      )
+                    )
+                    (drop_path): SwinDropPath(p=0.1)
+                    (layernorm_after): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+                    (intermediate): SwinIntermediate(
+                      (dense): Linear(in_features=768, out_features=3072, bias=True)
+                      (intermediate_act_fn): GELUActivation()
+                    )
+                    (output): SwinOutput(
+                      (dense): Linear(in_features=3072, out_features=768, bias=True)
+                      (dropout): Dropout(p=0.0, inplace=False)
+                    )
+                  )
+                )
+              )
+            )
+          )
+          (hidden_states_norms): ModuleDict(
+            (stage2): LayerNorm((192,), eps=1e-05, elementwise_affine=True)
+            (stage3): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+            (stage4): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+          )
+        )
+      )
+      (position_embedding): GroundingDinoSinePositionEmbedding()
+    )
+    (input_proj_vision): ModuleList(
+      (0): Sequential(
+        (0): Conv2d(192, 256, kernel_size=(1, 1), stride=(1, 1))
+        (1): GroupNorm(32, 256, eps=1e-05, affine=True)
+      )
+      (1): Sequential(
+        (0): Conv2d(384, 256, kernel_size=(1, 1), stride=(1, 1))
+        (1): GroupNorm(32, 256, eps=1e-05, affine=True)
+      )
+      (2): Sequential(
+        (0): Conv2d(768, 256, kernel_size=(1, 1), stride=(1, 1))
+        (1): GroupNorm(32, 256, eps=1e-05, affine=True)
+      )
+      (3): Sequential(
+        (0): Conv2d(768, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+        (1): GroupNorm(32, 256, eps=1e-05, affine=True)
+      )
+    )
+    (text_backbone): BertModel(
+      (embeddings): BertEmbeddings(
+        (word_embeddings): Embedding(30522, 768, padding_idx=0)
+        (position_embeddings): Embedding(512, 768)
+        (token_type_embeddings): Embedding(2, 768)
+        (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (encoder): BertEncoder(
+        (layer): ModuleList(
+          (0-11): 12 x BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+              (intermediate_act_fn): GELUActivation()
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+      )
+    )
+    (text_projection): Linear(in_features=768, out_features=256, bias=True)
+    (query_position_embeddings): Embedding(900, 256)
+    (encoder): GroundingDinoEncoder(
+      (layers): ModuleList(
+        (0-5): 6 x GroundingDinoEncoderLayer(
+          (text_enhancer_layer): GroundingDinoTextEnhancerLayer(
+            (self_attn): GroundingDinoMultiheadAttention(
+              (query): Linear(in_features=256, out_features=256, bias=True)
+              (key): Linear(in_features=256, out_features=256, bias=True)
+              (value): Linear(in_features=256, out_features=256, bias=True)
+              (out_proj): Linear(in_features=256, out_features=256, bias=True)
+              (dropout): Dropout(p=0.0, inplace=False)
+            )
+            (fc1): Linear(in_features=256, out_features=1024, bias=True)
+            (fc2): Linear(in_features=1024, out_features=256, bias=True)
+            (layer_norm_before): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+            (layer_norm_after): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+            (activation): ReLU()
+          )
+          (fusion_layer): GroundingDinoFusionLayer(
+            (layer_norm_vision): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+            (layer_norm_text): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+            (attn): GroundingDinoBiMultiHeadAttention(
+              (vision_proj): Linear(in_features=256, out_features=1024, bias=True)
+              (text_proj): Linear(in_features=256, out_features=1024, bias=True)
+              (values_vision_proj): Linear(in_features=256, out_features=1024, bias=True)
+              (values_text_proj): Linear(in_features=256, out_features=1024, bias=True)
+              (out_vision_proj): Linear(in_features=1024, out_features=256, bias=True)
+              (out_text_proj): Linear(in_features=1024, out_features=256, bias=True)
+            )
+            (drop_path): GroundingDinoDropPath(p=0.1)
+          )
+          (deformable_layer): GroundingDinoDeformableLayer(
+            (self_attn): GroundingDinoMultiscaleDeformableAttention(
+              (sampling_offsets): Linear(in_features=256, out_features=256, bias=True)
+              (attention_weights): Linear(in_features=256, out_features=128, bias=True)
+              (value_proj): Linear(in_features=256, out_features=256, bias=True)
+              (output_proj): Linear(in_features=256, out_features=256, bias=True)
+            )
+            (self_attn_layer_norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+            (activation_fn): ReLU()
+            (fc1): Linear(in_features=256, out_features=2048, bias=True)
+            (fc2): Linear(in_features=2048, out_features=256, bias=True)
+            (final_layer_norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          )
+        )
+      )
+    )
+    (decoder): GroundingDinoDecoder(
+      (layer_norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+      (layers): ModuleList(
+        (0-5): 6 x GroundingDinoDecoderLayer(
+          (self_attn): GroundingDinoMultiheadAttention(
+            (query): Linear(in_features=256, out_features=256, bias=True)
+            (key): Linear(in_features=256, out_features=256, bias=True)
+            (value): Linear(in_features=256, out_features=256, bias=True)
+            (out_proj): Linear(in_features=256, out_features=256, bias=True)
+            (dropout): Dropout(p=0.0, inplace=False)
+          )
+          (activation_fn): ReLU()
+          (self_attn_layer_norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (encoder_attn_text): GroundingDinoMultiheadAttention(
+            (query): Linear(in_features=256, out_features=256, bias=True)
+            (key): Linear(in_features=256, out_features=256, bias=True)
+            (value): Linear(in_features=256, out_features=256, bias=True)
+            (out_proj): Linear(in_features=256, out_features=256, bias=True)
+            (dropout): Dropout(p=0.0, inplace=False)
+          )
+          (encoder_attn_text_layer_norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (encoder_attn): GroundingDinoMultiscaleDeformableAttention(
+            (sampling_offsets): Linear(in_features=256, out_features=256, bias=True)
+            (attention_weights): Linear(in_features=256, out_features=128, bias=True)
+            (value_proj): Linear(in_features=256, out_features=256, bias=True)
+            (output_proj): Linear(in_features=256, out_features=256, bias=True)
+          )
+          (encoder_attn_layer_norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (fc1): Linear(in_features=256, out_features=2048, bias=True)
+          (fc2): Linear(in_features=2048, out_features=256, bias=True)
+          (final_layer_norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+        )
+      )
+      (reference_points_head): GroundingDinoMLPPredictionHead(
+        (layers): ModuleList(
+          (0): Linear(in_features=512, out_features=256, bias=True)
+          (1): Linear(in_features=256, out_features=256, bias=True)
+        )
+      )
+      (bbox_embed): ModuleList(
+        (0-5): 6 x GroundingDinoMLPPredictionHead(
+          (layers): ModuleList(
+            (0-1): 2 x Linear(in_features=256, out_features=256, bias=True)
+            (2): Linear(in_features=256, out_features=4, bias=True)
+          )
+        )
+      )
+      (class_embed): ModuleList(
+        (0-5): 6 x GroundingDinoContrastiveEmbedding()
+      )
+    )
+    (enc_output): Linear(in_features=256, out_features=256, bias=True)
+    (enc_output_norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+    (encoder_output_bbox_embed): GroundingDinoMLPPredictionHead(
+      (layers): ModuleList(
+        (0-1): 2 x Linear(in_features=256, out_features=256, bias=True)
+        (2): Linear(in_features=256, out_features=4, bias=True)
+      )
+    )
+    (encoder_output_class_embed): GroundingDinoContrastiveEmbedding()
+  )
+  (bbox_embed): ModuleList(
+    (0-5): 6 x GroundingDinoMLPPredictionHead(
+      (layers): ModuleList(
+        (0-1): 2 x Linear(in_features=256, out_features=256, bias=True)
+        (2): Linear(in_features=256, out_features=4, bias=True)
+      )
+    )
+  )
+  (class_embed): ModuleList(
+    (0-5): 6 x GroundingDinoContrastiveEmbedding()
+  )
+)

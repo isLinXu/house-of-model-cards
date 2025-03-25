@@ -1,0 +1,50 @@
+TapasForQuestionAnswering(
+  (tapas): TapasModel(
+    (embeddings): TapasEmbeddings(
+      (word_embeddings): Embedding(30522, 768, padding_idx=0)
+      (position_embeddings): Embedding(1024, 768)
+      (token_type_embeddings_0): Embedding(3, 768)
+      (token_type_embeddings_1): Embedding(256, 768)
+      (token_type_embeddings_2): Embedding(256, 768)
+      (token_type_embeddings_3): Embedding(2, 768)
+      (token_type_embeddings_4): Embedding(256, 768)
+      (token_type_embeddings_5): Embedding(256, 768)
+      (token_type_embeddings_6): Embedding(10, 768)
+      (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+      (dropout): Dropout(p=0.07, inplace=False)
+    )
+    (encoder): TapasEncoder(
+      (layer): ModuleList(
+        (0-11): 12 x TapasLayer(
+          (attention): TapasAttention(
+            (self): TapasSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.0, inplace=False)
+            )
+            (output): TapasSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.07, inplace=False)
+            )
+          )
+          (intermediate): TapasIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+            (intermediate_act_fn): GELUActivation()
+          )
+          (output): TapasOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.07, inplace=False)
+          )
+        )
+      )
+    )
+    (pooler): TapasPooler(
+      (dense): Linear(in_features=768, out_features=768, bias=True)
+      (activation): Tanh()
+    )
+  )
+  (dropout): Dropout(p=0.07, inplace=False)
+)
